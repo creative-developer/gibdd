@@ -189,22 +189,6 @@ $('form').each( function() {
 	validator = $(this).validate();
 });
 
-// function validateMainForm() {
-// 	const inputsContainer = $('.tab-content__wrap');
-// 	const inputElements = inputsContainer.find('input, select');
-
-// 	inputElements.each(function (index, el) {
-// 		$(el).on('input', function (e) {
-// 			if (validateStep(inputsContainer)) {
-// 				console.log('true');
-// 			}else {
-// 				console.log('false');
-// 			}
-// 		})
-// 	})
-// }
-// validateMainForm();
-
 function addMethodValidator(methodName, regExp) {
 	$.validator.addMethod(methodName, function(value, element) {
 		return this.optional(element) || regExp.test(value);
@@ -605,13 +589,6 @@ const tabs = () => {
 }
 // // init tabs
 tabs();
-// // init tabs
-// tabs($('a[data-toggle="tab"]'), $('.tab-content__wrap .js-tab'));
-// tabs($('.tab-content .feedback-input__link'), $('.tab-content .feedback-input .js-tab'));
-// tabs($('.step-card .feedback-input__link'), $('.step-card .feedback-input .js-tab'));
-// tabs($('.payment-form .feedback-input__link'), $('.payment-form .feedback-input .js-tab'));
-// tabs($('.signin-popup .feedback-input__link'), $('.signin-popup .feedback-input .js-tab'));
-// tabs($('.forget-password-popup .feedback-input__link'), $('.forget-password-popup .feedback-input .js-tab'));
 
 //uiScroll scroll bar
 function uiScroll(rootCls, scroller) {
@@ -921,16 +898,6 @@ function initFixCollapse() {
 			);
 	}
 	
-	// if ($('.penalty-table__popular-penalties-wrap').length && window.innerWidth > 992) {
-	// 	fixAsking(
-	// 		'.penalty-table__scrolling-wrap',
-	// 		'.penalty-table__row',
-	// 		'.penalty-table__col--right',
-	// 		'.penalty-table__scrolling-wrap',
-	// 		'penalty-table__scrolling-wrap--scrolled'
-	// 	);
-	// }
-
 	if ($('.fine-nav').length && window.innerWidth > 992) {
 		fixAsking(
 			'.car-check-single__scrolling-wrap',
@@ -1442,39 +1409,3 @@ $('.popular-penalty-icons__link').click(function (e) {
 $(window).on('scroll', function () {
 	// scrollUpdate();
 })
-
-// function scrollUpdate() {
-// 	let scrollTop = $(window).scrollTop();
-// 	let oldState = $('.fine-table.active').prev().length ? $('.fine-table.active').prev().offset().top: 0;
-// 	let currentState = $('.fine-table.active').length ? $('.fine-table.active').offset().top: 0;
-// 	if (currentState >= scrollTop) {
-// 		tableLeftMenuSmartScroll()
-// 	}
-
-// }
-// scrollUpdate();
-
-// function tableLeftMenuSmartScroll() {
-// 	const containerOffsetTop = $('.car-check-single__scrolling').scrollTop();
-// 	const index = $('.fine-nav__item--active').index();
-// 	let arr = [];
-// 	let newArr = [];
-
-// 	$('.fine-nav__item').each(function (idx, el) {
-// 		arr.push($(el).outerHeight());
-// 	})
-	
-// 	for (let i = 0; i < index; i++) {
-// 		newArr.push(arr[i]);
-// 	}
-
-// 	const totalHeight = newArr.reduce((item, acc)=>{
-// 		acc += item;
-// 		return acc;
-// 	}, 0)
-
-// 	$('.car-check-single__scrolling').animate({
-// 		scrollTop: totalHeight
-// 	}, 700);
-// 	return false;
-// }
