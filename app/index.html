@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="path/to/image.jpg">
+	<meta name="theme-color" content="#fff">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Главная | ГИБДД</title>
+</head>
+<body>
+	<!-- Header-->
+	<header class="header">
+		<div class="header__top-line">
+			<div class="header__container container">
+				<div class="header__row">
+					<div class="header__col">
+						<div class="header__logo-wrap"><a class="logo header__logo" href="index.html"><span class="logo__img-wrap"><img class="logo__img" src="img/logo/new-logo.svg" alt=""></span><span class="logo__text">Штрафы ГИБДД</span></a>
+							<div class="header__logo-title xsm-title">Онлайн сервис проверки автомобиля и штрафов</div>
+						</div>
+					</div>
+					<div class="header__col">
+						<div class="header__geo-link-wrap">
+							<div class="header__icon"><svg class="icon icon--geo">
+									<use xlink:href="img/svg-sprite.svg#geo"></use>
+								</svg></div>
+							<div class="header__geo-link-title-wrap">
+								<div class="header__geo-link-title xsm-title">Ваш регион:</div><a class="header__geo-link md-title js-popup" href="#choose-country"><span class="header__geo-link-text">Москва и МО</span><span class="header__geo-link-icon"><svg class="icon icon--triangle"><use xlink:href="img/svg-sprite.svg#triangle"></use></svg></span></a>
+							</div>
+							<div class="region-checker region-checker--disabled">
+								<div class="region-checker__content">
+									<div class="region-checker__title-wrap"><span>Ваш регион –</span><b>Москва</b></div><a class="region-checker__btn btn js-popup-close" href="#">Да, спасибо</a><a class="region-checker__link js-popup" href="#choose-country">Нет, другой</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__col">
+						<div class="header__support-wrap">
+							<div class="header__support-title xsm-title">Техническая поддержка</div><a class="phone header__phone sm-title" href="tel:+78095054777"><span class="phone__icon"><svg class="icon icon--phone"><use xlink:href="img/svg-sprite.svg#phone"></use></svg></span><span class="phone__text">+7 (809) 505-4777</span></a><a class="email header__email sm-title" href="mailto:info@gbdd.com"><span class="email__icon"><svg class="icon icon--email"><use xlink:href="img/svg-sprite.svg#email"></use></svg></span><span class="email__text">info@gbdd.com</span></a>
+						</div>
+					</div>
+					<div class="header__col"><a class="header__user-panel-btn trs-btn js-popup" href="#sign-in"><span class="header__user-panel-btn-icon"><svg class="icon icon--user"><use xlink:href="img/svg-sprite.svg#user"></use></svg></span><span class="header__user-panel-btn-text">Личный кабинет</span></a></div>
+					<div class="header__col header__col--mobile"><button class="hamburger hamburger--slider js-menu" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></div>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom-line">
+			<div class="header__container container">
+				<nav class="nav header__nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a class="nav__link nav__link--active" href="check.html">Проверить штрафы</a></li>
+						<li class="nav__item"><a class="nav__link" href="#">Проверить автомобиль</a></li>
+						<li class="nav__item"><a class="nav__link" href="#">Подбор ОСАГО</a></li>
+						<li class="nav__item"><a class="nav__link" href="articles.html">Новости</a></li>
+						<li class="nav__item"><a class="nav__link" href="faq.html">FAQ</a></li>
+						<li class="nav__item"><a class="nav__link" href="/contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="mobile-menu">
+			<div class="mobile-menu__container container">
+				<div class="mobile-menu__row mobile-menu__row--top">
+					<div class="geo">
+						<div class="geo__icon"><svg class="icon icon--geo">
+								<use xlink:href="img/svg-sprite.svg#geo"></use>
+							</svg></div><a class="geo__link md-title" href="#"><span class="geo__link-text">Москва и МО</span><span class="geo__link-icon"><svg class="icon icon--triangle"><use xlink:href="img/svg-sprite.svg#triangle"></use></svg></span></a>
+					</div><button class="hamburger hamburger--slider js-menu" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+				</div>
+				<div class="mobile-menu__row mobile-menu__row--center"></div>
+			</div>
+			<div class="mobile-menu__bottom-content">
+				<div class="mobile-menu__container container">
+					<div class="mobile-menu__row mobile-menu__row--bottom">
+						<div class="mobile-menu__social-wrap">
+							<div class="mobile-menu__social-title xsm-title">Мы соцсетях</div>
+							<ul class="socials mobile-menu__social">
+								<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--vk">
+											<use xlink:href="img/svg-sprite.svg#vk"></use>
+										</svg></a></li>
+								<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--youtube">
+											<use xlink:href="img/svg-sprite.svg#youtube"></use>
+										</svg></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-menu__city-popup">
+				<div class="container">
+					<div class="choose-country choose-country--mobile">
+						<form class="choose-country__form">
+							<div class="input input--search input--active choose-country__input">
+								<div class="input__title">Выберите свой город</div>
+								<div class="input__wrap"><input type="text" name="choose-country" placeholder="Укажите ваш город..."><span class="input__icon"></span><button class="input__search-icon" type="submit"><svg class="icon icon--simple-search">
+											<use xlink:href="img/svg-sprite.svg#simple-search"></use>
+										</svg></button>
+									<div class="search-list-popup-wrap">
+										<div class="baron__track">
+											<div class="baron__bar"></div>
+										</div>
+										<ul class="search-list-popup">
+											<li class="search-list-popup__item search-list-popup__item--active"><a class="search-list-popup__link" href="#">Камчатский край</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Карачаево-Черкесская Республика</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Кемеровская область</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Кировская область</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Костромская область</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Краснодарский край</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Красноярский край</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Курганская область</a></li>
+											<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Курская область</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class="list choose-country__list">
+								<li class="list__item"><a class="list__link" href="#">Москва</a></li>
+								<li class="list__item"><a class="list__link" href="#">Санкт-Петербург</a></li>
+								<li class="list__item"><a class="list__link" href="#">Екатеринбург, Свердловская область</a></li>
+								<li class="list__item"><a class="list__link" href="#">Нижний Новгород, Нижегородская область</a></li>
+								<li class="list__item"><a class="list__link" href="#">Пермь, Пермский Край</a></li>
+								<li class="list__item"><a class="list__link" href="#">Новосибирск, Новосибирская область</a></li>
+								<li class="list__item"><a class="list__link" href="#">Казань, Татарстан республика</a></li>
+								<li class="list__item"><a class="list__link" href="#">Челябинск, Челябинская область</a></li>
+								<li class="list__item"><a class="list__link" href="#">Краснодар, Краснодарский Край</a></li>
+								<li class="list__item"><a class="list__link" href="#">Самара, Самарская область</a></li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header><!-- content-->
+	<main class="main-page page">
+		<!-- Sections-->
+		<section class="main">
+			<div class="main__container container">
+				<div class="main__row">
+					<div class="main__col">
+						<div class="main__top-line">
+							<div class="tab-card">
+								<h1 class="tab-card__title">Проверить штрафы ГИБДД онлайн с фото нарушения</h1>
+								<nav class="tab-nav">
+									<ul class="tab-nav__list">
+										<li class="tab-nav__item tab--active"><a class="tab-nav__link" href="#certificate" data-toggle="tab">По СТС</a></li>
+										<li class="tab-nav__item"><a class="tab-nav__link" href="#uin" data-toggle="tab">По постановлении</a></li>
+										<li class="tab-nav__item"><a class="tab-nav__link" href="#driver-license" data-toggle="tab">Водитель. удостов.</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="tab-content">
+								<form class="tab-content__form">
+									<div class="tab-content__wrap">
+										<div class="tab-content__certificate js-tab tab--active certificate" style="display: flex">
+											<div class="tab-content__col">
+												<div class="input">
+													<div class="input__title">Госномер</div>
+													<div class="input__wrap"><input type="text" name="licensePlate" placeholder="A 007 AA | 197"><span class="input__icon"></span><span class="input__answer-icon"><svg class="icon icon--answer"><use xlink:href="img/svg-sprite.svg#answer"></use></svg></span>
+														<div class="car-checker-popup">
+															<div class="car-checker-popup__top-line">
+																<div class="car-checker-popup__row">
+																	<div class="car-checker-popup__col">
+																		<div class="car-checker-popup__title">Авто:</div>
+																	</div>
+																	<div class="car-checker-popup__col">
+																		<div class="car-checker-popup__value">BMW 375E</div>
+																	</div>
+																</div>
+																<div class="car-checker-popup__row">
+																	<div class="car-checker-popup__col">
+																		<div class="car-checker-popup__title">Гос. номер:</div>
+																	</div>
+																	<div class="car-checker-popup__col">
+																		<div class="car-checker-popup__value">А001АА97</div>
+																	</div>
+																</div>
+																<div class="car-checker-popup__row">
+																	<div class="car-checker-popup__col">
+																		<div class="car-checker-popup__title">СТС:</div>
+																	</div>
+																	<div class="car-checker-popup__col">
+																		<div class="car-checker-popup__value">33******94</div>
+																	</div>
+																</div>
+															</div>
+															<div class="car-checker-popup__bottom-line">
+																<div class="car-checker-popup__small-title sm-title">Это ваша машина?</div>
+																<div class="car-checker-popup__btn-wrap"><a class="trs-btn trs-btn--bolder car-checker-popup__trs-btn" href="#">Другое авто</a><a class="btn btn--bolder car-checker-popup__btn" href="#">Да, верно</a></div>
+															</div>
+														</div>
+														<div class="answer-popup">
+															<div class="answer-popup__left-col">
+																<div class="answer-popup__top-line">
+																	<div class="answer-popup__warning-icon"><img class="answer-popup__icon" src="img/icons/warning.png" alt=""></div>
+																	<div class="answer-popup__title lg-title">Госномер</div>
+																</div>
+																<div class="answer-popup__desc xsm-desc">Индивидуальный регистрационный знак (номер) автомобиля. Состоит из буквенно-цифрового сочетания и регионального кода.</div>
+																<div class="answer-popup__small-title">Например:<span>A 007 AA | 197</span></div>
+															</div>
+															<div class="answer-popup__right-col">
+																<div class="answer-popup__img-wrap"><img class="answer-popup__img" src="img/documents/license.jpg" alt=""></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tab-content__col">
+												<div class="input">
+													<div class="input__title">СТС</div>
+													<div class="input__wrap"><input type="text" name="certificate" placeholder="00 АБ 000000"><span class="input__icon"></span><span class="input__answer-icon"><svg class="icon icon--answer"><use xlink:href="img/svg-sprite.svg#answer"></use></svg></span>
+														<div class="answer-popup">
+															<div class="answer-popup__left-col">
+																<div class="answer-popup__top-line">
+																	<div class="answer-popup__warning-icon"><img class="answer-popup__icon" src="img/icons/warning.png" alt=""></div>
+																	<div class="answer-popup__title lg-title">СТС</div>
+																</div>
+																<div class="answer-popup__desc xsm-desc">Свидетельство о регистрации ТС документ выдаваемый при постановке транспортного средства на учет.</div>
+																<div class="answer-popup__small-title">Например:<span>12 АА 654111</span></div>
+															</div>
+															<div class="answer-popup__right-col">
+																<div class="answer-popup__img-wrap"><img class="answer-popup__img" src="img/documents/vehicle-certificate.jpg" alt=""></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-content__uin js-tab uin">
+											<div class="input">
+												<div class="input__title">Укажите номер квитанции (УИН)</div>
+												<div class="input__wrap"><input type="text" name="receiptNumber" placeholder="18810100000000001234" disabled><span class="input__icon"></span><span class="input__answer-icon"><svg class="icon icon--answer"><use xlink:href="img/svg-sprite.svg#answer"></use></svg></span>
+													<div class="answer-popup">
+														<div class="answer-popup__left-col">
+															<div class="answer-popup__top-line">
+																<div class="answer-popup__warning-icon"><img class="answer-popup__icon" src="img/icons/warning.png" alt=""></div>
+																<div class="answer-popup__title lg-title">Номер квитанции</div>
+															</div>
+															<div class="answer-popup__desc xsm-desc">Уникальный идентификатор начисления (или сокращенно УИН) предназначен для быстрой и точной идентификации платежа и плательщика.</div>
+															<div class="answer-popup__small-title">Например:<span>12 АА 654111</span></div>
+														</div>
+														<div class="answer-popup__right-col">
+															<div class="answer-popup__img-wrap"><img class="answer-popup__img" src="img/documents/license-number.jpg" alt=""></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-content__driver-license js-tab driver-license">
+											<div class="input">
+												<div class="input__title input__title--desktop">Укажите номер водительского удостоверения</div>
+												<div class="input__title input__title--mobile">Номер водительского удостоверения</div>
+												<div class="input__wrap"><input type="text" name="driverLicense" placeholder="77 01 397000" disabled><span class="input__icon"></span><span class="input__answer-icon"><svg class="icon icon--answer"><use xlink:href="img/svg-sprite.svg#answer"></use></svg></span>
+													<div class="answer-popup">
+														<div class="answer-popup__left-col">
+															<div class="answer-popup__top-line">
+																<div class="answer-popup__warning-icon"><img class="answer-popup__icon" src="img/icons/warning.png" alt=""></div>
+																<div class="answer-popup__title lg-title">Водительское удостоверение</div>
+															</div>
+															<div class="answer-popup__desc xsm-desc">водительское удостоверение — документ, подтверждающий право на управление транспортным средством. </div>
+															<div class="answer-popup__small-title">Например:<span>77 01 397000</span></div>
+														</div>
+														<div class="answer-popup__right-col">
+															<div class="answer-popup__img-wrap"><img class="answer-popup__img" src="img/documents/driver-license.jpg" alt=""></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="feedback-input">
+										<div class="feedback-input__top-line">
+											<nav class="feedback-input__nav">
+												<ul class="feedback-input__list">
+													<li class="feedback-input__item tab--active"><a class="feedback-input__link" href="#email" data-toggle="tab">E-mail</a></li>
+													<li class="feedback-input__item"><a class="feedback-input__link" href="#phone" data-toggle="tab">Телефон</a></li>
+												</ul>
+											</nav><label class="checkbox feedback-input__checkbox"><input class="checkbox__input" type="checkbox" name="notification" checked><span class="checkbox__icon"><svg class="icon icon--check"><use xlink:href="img/svg-sprite.svg#check"></use></svg></span><span class="checkbox__text">Уведомлять о штрафах</span></label>
+										</div>
+										<div class="input js-tab tab--active email" style="display: block">
+											<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+										</div>
+										<div class="input js-tab phone">
+											<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+										</div>
+									</div>
+									<div class="sources">
+										<div class="sources__title md-title">Источники:</div>
+										<div class="sources__icons-wrap">
+											<div class="source-icon">
+												<div class="source-icon__img"><img src="img/logo/gibdd.png" alt=""></div>
+												<div class="source-icon__title sm-title">ГИБДД</div>
+											</div>
+											<div class="source-icon">
+												<div class="source-icon__img"><img src="img/logo/gis.png" alt=""></div>
+												<div class="source-icon__title sm-title">ГИС ГМП</div>
+											</div>
+											<div class="source-icon source-icon--more">
+												<div class="source-icon__img"><img src="img/logo/moscow-department.png" alt=""></div>
+												<div class="source-icon__title source-icon__title--desktop sm-title">Департамент Москвы</div>
+												<div class="source-icon__title source-icon__title--mobile sm-title">Деп.Москвы</div>
+											</div>
+										</div>
+									</div>
+									<div class="agreement"><label class="checkbox checkbox--start agreement__checkbox"><input class="checkbox__input" type="checkbox" name="agreement" checked><span class="checkbox__icon"><svg class="icon icon--check"><use xlink:href="img/svg-sprite.svg#check"></use></svg></span><span class="checkbox__text">Соглашаюсь на <a href="#">персон. данных</a> и<br> <a href="#">пользовательских соглашений</a> .</span></label><button class="btn js-search-btn agreement__btn" type="submit"><span class="btn__text">Проверить штрафы</span><span class="btn__icon"><svg class="icon icon--arrow-right"><use xlink:href="img/svg-sprite.svg#arrow-right"></use></svg></span><span class="btn-search-content"><span class="btn-search-content__overlay"></span><span class="btn-search-content__search-text">Идет поиск</span><span class="progress"><svg class="icon icon--progress"><use xlink:href="img/svg-sprite.svg#progress"></use></svg></span></span></button></div>
+								</form>
+							</div>
+						</div>
+						<div class="main__bottom-line">
+							<div class="warning-text">
+								<div class="warning-text__icon"><svg class="icon icon--warning">
+										<use xlink:href="img/svg-sprite.svg#warning"></use>
+									</svg></div>
+								<div class="warning-text__desc xsm-title">
+									<p>Проверка штрафов ГИБДД, АМПП и МАДИ выписанных за превышение скорости, неправильную парковку и другие нарушения. Проверка штрафов ГИБДД производится бесплатно, согласно Федеральному Закону № 437 от 22 декабря 2014 г. оплатить штраф ГИБДД водитель вправе со скидкой 50%.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main__col">
+						<div class="small-card">
+							<div class="small-card__row small-card__row--top">
+								<div class="small-card__small-title xsm-title">Ваш регион:</div>
+								<div class="small-card__title md-title">Москва и Московская область</div><a class="link small-card__link js-popup" href="#choose-country"><span class="link__text">Другой регион</span><span class="link__icon"><svg class="icon icon--triangle"><use xlink:href="img/svg-sprite.svg#triangle"></use></svg></span></a>
+							</div>
+							<div class="small-card__row small-card__row--center">
+								<div class="small-card__small-title xsm-title">Подразделение:</div>
+								<div class="small-card__title md-title">Управление ГИБДД ГУ МВД России по городу Москва</div><a class="link js-popup" href="#choose-department"><span class="link__text">Выбрать подразделение</span><span class="link__icon"><svg class="icon icon--triangle"><use xlink:href="img/svg-sprite.svg#triangle"></use></svg></span></a>
+							</div>
+							<div class="small-card__row small-card__row--bottom">
+								<div class="phone phone--more small-card__phone">
+									<div class="phone__icon"><svg class="icon icon--phone">
+											<use xlink:href="img/svg-sprite.svg#phone"></use>
+										</svg></div>
+									<div class="phone__links-wrap">
+										<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956237070">(495) 623-70-70</a>
+											<div class="phone__text xsm-title">(Дежурная часть)</div>
+										</div>
+										<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956237070">(495) 623-70-70</a>
+											<div class="phone__text xsm-title">(При ДДП)</div>
+										</div>
+									</div>
+								</div>
+								<div class="address">
+									<div class="address__icon"><svg class="icon icon--baloon">
+											<use xlink:href="img/svg-sprite.svg#baloon"></use>
+										</svg></div>
+									<div class="address__text sm-title">г. Москва, ул. Садовая-Самотечная, д. 1</div>
+								</div>
+							</div>
+						</div>
+						<div class="advantages-card">
+							<div class="advantages-item">
+								<div class="advantages-item__col">
+									<div class="advantages-item__icon"><svg class="icon icon--discount">
+											<use xlink:href="img/svg-sprite.svg#discount"></use>
+										</svg></div>
+								</div>
+								<div class="advantages-item__col">
+									<div class="advantages-item__title md-title">Оплата штрафов<br> со скидкой в 50%</div>
+									<div class="advantages-item__small-title xsm-title">Скидка для всех граждан</div>
+								</div>
+							</div>
+							<div class="advantages-item">
+								<div class="advantages-item__col">
+									<div class="advantages-item__icon"><svg class="icon icon--picture">
+											<use xlink:href="img/svg-sprite.svg#picture"></use>
+										</svg></div>
+								</div>
+								<div class="advantages-item__col">
+									<div class="advantages-item__title md-title">Штрафы с фотографиями</div>
+									<div class="advantages-item__small-title xsm-title">Просмотр фотографии с нарушением</div>
+								</div>
+							</div>
+							<div class="advantages-item">
+								<div class="advantages-item__col">
+									<div class="advantages-item__icon"><svg class="icon icon--reload">
+											<use xlink:href="img/svg-sprite.svg#reload"></use>
+										</svg></div>
+								</div>
+								<div class="advantages-item__col">
+									<div class="advantages-item__title md-title">Автоматическая загрузка СТС</div>
+									<div class="advantages-item__small-title xsm-title">Сервис найдет Ваш СТС в базе ГИБДД</div>
+								</div>
+							</div>
+							<div class="advantages-item">
+								<div class="advantages-item__col">
+									<div class="advantages-item__icon"><svg class="icon icon--search">
+											<use xlink:href="img/svg-sprite.svg#search"></use>
+										</svg></div>
+								</div>
+								<div class="advantages-item__col">
+									<div class="advantages-item__title md-title">Проверка по 4 оф. базам</div>
+									<div class="advantages-item__small-title xsm-title">ГИБДД, ФССП, Деп. Москвы, ГИС ГМП</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__mobile-bottom-content">
+				<div class="main__mobile-container container"></div>
+			</div>
+		</section>
+		<section class="statistics">
+			<div class="statistics__container container">
+				<div class="statistics__title-wrap">
+					<h2 class="statistics__title">Статистика нарушений (онлайн)</h2>
+					<div class="statistics__date">Актуально на - 01.04.2020</div>
+				</div>
+				<table class="statistics-table">
+					<thead>
+						<tr>
+							<th>
+								<div class="statistics-table__head-title md-title">Время</div>
+							</th>
+							<th>
+								<div class="statistics-table__head-title md-title">Описание</div>
+							</th>
+							<th>
+								<div class="statistics-table__head-title md-title">Гос номер</div>
+							</th>
+							<th>
+								<div class="statistics-table__head-title md-title">Адрес</div>
+							</th>
+							<th>
+								<div class="statistics-table__head-title md-title">Сумма штрафа</div>
+							</th>
+							<th>
+								<div class="statistics-table__head-title md-title">Фото</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="statistics-table__title">21:28</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Несоблюдение требований дорожных знаков или разметки <b>КоАП: 12.16 ч.1</b></div>
+							</td>
+							<td>
+								<div class="statistics-table__title">АЗ***С199 Mercedes E200</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Москва, Варшавское шоссе 234 км.</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">500 руб. <b>(скидка 50% до 20.04.2020)</b> 250 руб. (к оплате) <br>УИН: 11002423456117388800</div>
+							</td>
+							<td><a class="statistics-table__img" href="img/info/video.jpg" data-fancybox><img src="img/statistics/item1.png" alt=""></a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="statistics-table__title">21:27</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Превыешение установленной скорости движения ТС на величину более 60 километров <br> в час <b>КоАП: 12.16 ч.1</b></div>
+							</td>
+							<td>
+								<div class="statistics-table__title">07***АХ483 Audi<br> A6</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Москва, Ленинский проспект<br> 9 км.</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">1500 руб. <b>(скидка 50% до 20.04.2020)</b> 750 руб. (к оплате) <br>УИН: 83873019817173639324</div>
+							</td>
+							<td><a class="statistics-table__img" href="img/info/video.jpg" data-fancybox><img src="img/statistics/item2.png" alt=""></a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="statistics-table__title">21:26</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Наблюдение требований дорожных знаков или разметки <b>КоАП: 12.16 ч.1</b></div>
+							</td>
+							<td>
+								<div class="statistics-table__title">10***ВВ32 BMW <br>M3</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Москва, Тульская эстакада 21 км.</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">500 руб. <b>(скидка 50% до 20.04.2020)</b> 250 руб. (к оплате) <br>УИН: 83873019817173639324</div>
+							</td>
+							<td><a class="statistics-table__img" href="img/info/video.jpg" data-fancybox><img src="img/statistics/item3.png" alt=""></a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="statistics-table__title">21:25</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Управление ТС в состоянии опьянения <b>КоАП: 12.8.1</b></div>
+							</td>
+							<td>
+								<div class="statistics-table__title">10***ВВ32 BMW <br>M3</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Москва, Тульская эстакада 21 км.</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">30 000 руб. <b>(скидка 50% до 20.04.2020)</b> 15000 руб. (к оплате) <br>УИН: 42342557700014550000</div>
+							</td>
+							<td><a class="statistics-table__img" href="img/info/video.jpg" data-fancybox><img src="img/statistics/item4.png" alt=""></a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="statistics-table__title">21:24</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Управление ТС с заведомо подложными государственными регистрационными знаками <b>КоАП: 12.2 ч. 4</b></div>
+							</td>
+							<td>
+								<div class="statistics-table__title">10***ВВ32 BMW <br>M3</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">Москва, Тульская эстакада 21 км.</div>
+							</td>
+							<td>
+								<div class="statistics-table__title">30 000 руб. <b>(скидка 50% до 20.04.2020)</b> 15000 руб. (к оплате) <br>УИН: 42342557700014550000</div>
+							</td>
+							<td><a class="statistics-table__img" href="img/info/video.jpg" data-fancybox><img src="img/statistics/item5.png" alt=""></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="statistics-info">
+					<div class="statistics-info__item">
+						<div class="statistics-info__col">
+							<div class="statistics-info__icon"><svg class="icon icon--big-search">
+									<use xlink:href="img/svg-sprite.svg#big-search"></use>
+								</svg></div>
+						</div>
+						<div class="statistics-info__col">
+							<div class="statistics-info__title sm-title">Проверка штрафов:</div>
+							<div class="statistics-info__count">234 982</div>
+						</div>
+					</div>
+					<div class="statistics-info__item">
+						<div class="statistics-info__col">
+							<div class="statistics-info__icon"><svg class="icon icon--wallet">
+									<use xlink:href="img/svg-sprite.svg#wallet"></use>
+								</svg></div>
+						</div>
+						<div class="statistics-info__col">
+							<div class="statistics-info__title sm-title">Оплаты штрафов:</div>
+							<div class="statistics-info__count">123 002</div>
+						</div>
+					</div>
+					<div class="statistics-info__item">
+						<div class="statistics-info__col">
+							<div class="statistics-info__icon"><svg class="icon icon--ruble">
+									<use xlink:href="img/svg-sprite.svg#ruble"></use>
+								</svg></div>
+						</div>
+						<div class="statistics-info__col">
+							<div class="statistics-info__title sm-title">Сумма штрафов:</div>
+							<div class="statistics-info__count">234 982 р.</div>
+						</div>
+					</div>
+					<div class="statistics-info__item">
+						<div class="statistics-info__col">
+							<div class="statistics-info__icon"><svg class="icon icon--discount-amount">
+									<use xlink:href="img/svg-sprite.svg#discount-amount"></use>
+								</svg></div>
+						</div>
+						<div class="statistics-info__col">
+							<div class="statistics-info__title sm-title">Сумма скидки штрафов:</div>
+							<div class="statistics-info__count">73 432 р.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="info">
+			<div class="info__container container">
+				<h2 class="info__title">Как проверить штрафы ГИБДД онлайн?</h2>
+				<div class="info__row">
+					<div class="info__col"><a class="info__img-wrap" href="https://www.youtube.com/watch?v=rntTlHwDM5Q" data-fancybox><img class="info__img" src="img/info/video.jpg" alt=""><span class="info__icon-wrap"><img class="info__icon" src="img/icons/youtube.svg" alt=""></span></a></div>
+					<div class="info__col">
+						<div class="info-card">
+							<div class="info-card__title md-title">Проверить штрафы ГИБДД можно по номеру СТС (свидетельству <br>о регистрации), по постановлению <br>и водительскому удостоверению.</div>
+							<div class="info-card__desc md-desc">
+								<p>Введите гос. номер автомобиля и номер свидетельства о регистрации (СТС).</p>
+								<p>По номеру свидетельства транспортного средства мы найдем штрафы с камер, а по номеру машины - фотографии нарушений. Введите номер прав: так мы найдем все постановления, выписанные инспектором</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<form class="info__step-form">
+					<div class="info__step-row">
+						<div class="info__step-col">
+							<div class="info__step-title sm-title">Шаг - 1</div>
+							<div class="step-card">
+								<div class="input input--small step-card__input">
+									<div class="input__title-wrap">
+										<div class="input__title">Госномер</div><span class="input__answer-icon"><svg class="icon icon--answer"><use xlink:href="img/svg-sprite.svg#answer"></use></svg></span>
+										<div class="answer-popup">
+											<div class="answer-popup__left-col">
+												<div class="answer-popup__top-line">
+													<div class="answer-popup__warning-icon"><img class="answer-popup__icon" src="img/icons/warning.png" alt=""></div>
+													<div class="answer-popup__title lg-title">Госномер</div>
+												</div>
+												<div class="answer-popup__desc xsm-desc">Индивидуальный регистрационный знак (номер) автомобиля. Состоит из буквенно-цифрового сочетания и регионального кода.</div>
+												<div class="answer-popup__small-title">Например:<span>A 007 AA | 197</span></div>
+											</div>
+											<div class="answer-popup__right-col">
+												<div class="answer-popup__img-wrap"><img class="answer-popup__img" src="img/documents/license.png" alt=""></div>
+											</div>
+										</div>
+									</div>
+									<div class="input__wrap"><input type="text" name="licensePlate" placeholder="A 007 AA | 197"><span class="input__icon"></span>
+										<div class="car-checker-popup car-checker-popup--small">
+											<div class="car-checker-popup__top-line">
+												<div class="car-checker-popup__row">
+													<div class="car-checker-popup__col">
+														<div class="car-checker-popup__title">Авто:</div>
+													</div>
+													<div class="car-checker-popup__col">
+														<div class="car-checker-popup__value">BMW 375E</div>
+													</div>
+												</div>
+												<div class="car-checker-popup__row">
+													<div class="car-checker-popup__col">
+														<div class="car-checker-popup__title">Гос. номер:</div>
+													</div>
+													<div class="car-checker-popup__col">
+														<div class="car-checker-popup__value">А001АА97</div>
+													</div>
+												</div>
+												<div class="car-checker-popup__row">
+													<div class="car-checker-popup__col">
+														<div class="car-checker-popup__title">СТС:</div>
+													</div>
+													<div class="car-checker-popup__col">
+														<div class="car-checker-popup__value">33******94</div>
+													</div>
+												</div>
+											</div>
+											<div class="car-checker-popup__bottom-line">
+												<div class="car-checker-popup__small-title sm-title">Это ваша машина?</div>
+												<div class="car-checker-popup__btn-wrap"><a class="trs-btn trs-btn--bolder car-checker-popup__trs-btn" href="#">Другое авто</a><a class="btn btn--bolder car-checker-popup__btn" href="#">Да, верно</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="step-card__small-title sm-title">Введите удостоверение водителя</div>
+							</div>
+						</div>
+						<div class="info__step-col">
+							<div class="info__step-title sm-title">Шаг - 2</div>
+							<div class="step-card">
+								<div class="input input--small step-card__input">
+									<div class="input__title-wrap">
+										<div class="input__title">СТС</div><span class="input__answer-icon"><svg class="icon icon--answer"><use xlink:href="img/svg-sprite.svg#answer"></use></svg></span>
+										<div class="answer-popup">
+											<div class="answer-popup__left-col">
+												<div class="answer-popup__top-line">
+													<div class="answer-popup__warning-icon"><img class="answer-popup__icon" src="img/icons/warning.png" alt=""></div>
+													<div class="answer-popup__title lg-title">СТС</div>
+												</div>
+												<div class="answer-popup__desc xsm-desc">Свидетельство о регистрации ТС документ выдаваемый при постановке транспортного средства на учет.</div>
+												<div class="answer-popup__small-title">Например:<span>12 АА 654111</span></div>
+											</div>
+											<div class="answer-popup__right-col">
+												<div class="answer-popup__img-wrap"><img class="answer-popup__img" src="img/documents/vehicle-certificate.jpg" alt=""></div>
+											</div>
+										</div>
+									</div>
+									<div class="input__wrap"><input type="text" name="certificate" placeholder="00 АБ 000000"><span class="input__icon"></span></div>
+								</div>
+								<div class="step-card__small-title sm-title">Введите<br> свидетельство ТС</div>
+							</div>
+						</div>
+						<div class="info__step-col">
+							<div class="info__step-title sm-title">Шаг - 3</div>
+							<div class="step-card">
+								<div class="feedback-input">
+									<div class="feedback-input__top-line">
+										<nav class="feedback-input__nav">
+											<ul class="feedback-input__list">
+												<li class="feedback-input__item tab--active"><a class="feedback-input__link" href="#card-email" data-toggle="tab">E-mail</a></li>
+												<li class="feedback-input__item"><a class="feedback-input__link" href="#card-phone" data-toggle="tab">Телефон</a></li>
+											</ul>
+										</nav>
+									</div>
+									<div class="input input--small js-tab tab--active card-email" style="display: block">
+										<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+									</div>
+									<div class="input input--small js-tab card-phone">
+										<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" disabled><span class="input__icon"></span></div>
+									</div>
+								</div>
+								<div class="step-card__small-title sm-title">Введите email <br>или номер телефона</div>
+							</div>
+						</div>
+						<div class="info__step-col">
+							<div class="info__step-title sm-title">Шаг - 4</div>
+							<div class="step-card"><button class="step-card__btn btn" type="submit">Проверить штрафы</button>
+								<div class="step-card__small-title sm-title">Нажмите на кнопку <br>“<em>Проверить штрафы</em>”</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="sites">
+			<div class="sites__container container">
+				<h2 class="sites__title">Где мы ищем штрафы</h2>
+				<div class="sites__desc desc">
+					<p>Мы делаем проверку штрафов не только по базе МВД и ГИБДД, мы используем большое количество источников для получения актуальной информации по штрафам.</p>
+				</div>
+				<div class="sites__row">
+					<div class="sites__col">
+						<div class="sites-card">
+							<div class="sites-card__col">
+								<div class="sites-card__img-wrap"><img class="sites-card__img" src="img/logo/gibdd-big-logo.png" alt=""></div>
+								<h3 class="sites-card__title sites-card__title--mobile">ГИБДД</h3>
+							</div>
+							<div class="sites-card__col">
+								<h3 class="sites-card__title sites-card__title--desktop">ГИБДД</h3>
+								<div class="sites-card__content">
+									<div class="sites-card__desc desc">
+										<p>За превышение скорости, проезд на<br> красный и все другие нарушения ПДД.</p>
+									</div><a class="sites-card__link big-link" href="http://www.гибдд.рф" target="_blank">www.гибдд.рф</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sites__col">
+						<div class="sites-card">
+							<div class="sites-card__col">
+								<div class="sites-card__img-wrap"><img class="sites-card__img" src="img/logo/moscow-department-big-logo.png" alt=""></div>
+								<h3 class="sites-card__title sites-card__title--mobile">Департамент Москвы</h3>
+							</div>
+							<div class="sites-card__col">
+								<h3 class="sites-card__title sites-card__title--desktop">Департамент Москвы</h3>
+								<div class="sites-card__content">
+									<div class="sites-card__desc desc">
+										<p>Проверка штрафов за неоплаченную парковку в Москве и Московской области.</p>
+									</div><a class="sites-card__link big-link" href="http://www.mos.ru" target="_blank">www.mos.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sites__col">
+						<div class="sites-card">
+							<div class="sites-card__col">
+								<div class="sites-card__img-wrap"><img class="sites-card__img" src="img/logo/gis-big-logo.png" alt=""></div>
+								<h3 class="sites-card__title sites-card__title--mobile">ГИС ГМП</h3>
+							</div>
+							<div class="sites-card__col">
+								<h3 class="sites-card__title sites-card__title--desktop">ГИС ГМП</h3>
+								<div class="sites-card__content">
+									<div class="sites-card__desc desc">
+										<p>За стоянку под запрещающим знаком<br> или в “зеленой” зоне.</p>
+									</div><a class="sites-card__link big-link" href="http://www.madi.ru" target="_blank">www.madi.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sites__col">
+						<div class="sites-card">
+							<div class="sites-card__col">
+								<div class="sites-card__img-wrap"><img class="sites-card__img" src="img/logo/fssp-big-logo.png" alt=""></div>
+								<h3 class="sites-card__title sites-card__title--mobile">ФССП России</h3>
+							</div>
+							<div class="sites-card__col">
+								<h3 class="sites-card__title sites-card__title--desktop">ФССП России</h3>
+								<div class="sites-card__content">
+									<div class="sites-card__desc desc">
+										<p>Проверка судебной задолженности <br>штрафов ГИБДД у судебных приставов.</p>
+									</div><a class="sites-card__link big-link" href="http://www.fssprus.ru" target="_blank">www.fssprus.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="news">
+			<div class="news__container container">
+				<div class="news__title-wrap">
+					<h2 class="news__title">Новости</h2><a class="news__link big-link" href="#">Читать все новости</a>
+				</div>
+				<div class="news-row">
+					<div class="news-col">
+						<div class="news-card">
+							<div class="news-card__top-line"><a class="news-card__img-wrap" href="articles-single.html"><img class="news-card__img" src="img/news/item1.jpg" alt="" /></a></div>
+							<div class="news-card__bottom-line">
+								<div class="news-info news-info--desktop news-card__category-wrap"><a class="news-info__category" href="#">Законодательство</a>
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div><a class="news-card__title" href="articles-single.html">Как оплатить штраф ГИБДД онлайн</a>
+								<div class="news-card__desc">
+									<p>В 2018 году, как показывает статистика, большая часть водителей оплачивает штрафы онлайн.</p>
+								</div>
+								<div class="news-info news-info--mobile">
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news-col">
+						<div class="news-card">
+							<div class="news-card__top-line"><a class="news-card__img-wrap" href="articles-single.html"><img class="news-card__img" src="img/news/item2.jpg" alt="" /></a></div>
+							<div class="news-card__bottom-line">
+								<div class="news-info news-info--desktop news-card__category-wrap"><a class="news-info__category" href="#">Инструкции</a>
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div><a class="news-card__title" href="articles-single.html">Руководство по ОСАГО - как оформить, стоимость, условия страхования.</a>
+								<div class="news-card__desc">
+									<p>Если вы получили водительские права...</p>
+								</div>
+								<div class="news-info news-info--mobile">
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news-col">
+						<div class="news-card">
+							<div class="news-card__top-line"><a class="news-card__img-wrap" href="articles-single.html"><img class="news-card__img" src="img/news/item3.jpg" alt="" /></a></div>
+							<div class="news-card__bottom-line">
+								<div class="news-info news-info--desktop news-card__category-wrap"><a class="news-info__category" href="#">Норма. документы</a>
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div><a class="news-card__title" href="articles-single.html">Замена иностранных прав <br>на российские, пересдача экзаменов.</a>
+								<div class="news-card__desc">
+									<p>Управлять автомобилем на территории России по иностранным правам можно...</p>
+								</div>
+								<div class="news-info news-info--mobile">
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news-col">
+						<div class="news-card">
+							<div class="news-card__top-line"><a class="news-card__img-wrap" href="articles-single.html"><img class="news-card__img" src="img/news/item4.jpg" alt="" /></a></div>
+							<div class="news-card__bottom-line">
+								<div class="news-info news-info--desktop news-card__category-wrap"><a class="news-info__category" href="#">Законодательство</a>
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div><a class="news-card__title" href="articles-single.html">Нечитаемые номера - штраф или лишение прав</a>
+								<div class="news-card__desc">
+									<p>Грязные номера – распространенная проблема на российских дорогах.</p>
+								</div>
+								<div class="news-info news-info--mobile">
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news-col">
+						<div class="news-card">
+							<div class="news-card__top-line"><a class="news-card__img-wrap" href="articles-single.html"><img class="news-card__img" src="img/news/item5.jpg" alt="" /></a></div>
+							<div class="news-card__bottom-line">
+								<div class="news-info news-info--desktop news-card__category-wrap"><a class="news-info__category" href="#">Инструкции</a>
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div><a class="news-card__title" href="articles-single.html">Как проверить штрафы ГИБДД по ИНН организации</a>
+								<div class="news-card__desc">
+									<p>Просроченные штрафы - это не только дополнительные расходы средств...</p>
+								</div>
+								<div class="news-info news-info--mobile">
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news-col">
+						<div class="news-card">
+							<div class="news-card__top-line"><a class="news-card__img-wrap" href="articles-single.html"><img class="news-card__img" src="img/news/item6.jpg" alt="" /></a></div>
+							<div class="news-card__bottom-line">
+								<div class="news-info news-info--desktop news-card__category-wrap"><a class="news-info__category" href="#">Норма. документы</a>
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div><a class="news-card__title" href="articles-single.html">Какие документы о ДТП оформляет инспектор ДПС</a>
+								<div class="news-card__desc">
+									<p>Инспектор ДПС как правило оформляет следующие документы на месте ДТП.</p>
+								</div>
+								<div class="news-info news-info--mobile">
+									<div class="news-info__wrap">
+										<div class="news-info__date">28 марта 2020</div>
+										<div class="news-info__view">
+											<div class="news-info__view-icon"><svg class="icon icon--view">
+													<use xlink:href="img/svg-sprite.svg#view"></use>
+												</svg></div>
+											<div class="news-info__view-count">2.8К</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="addresses">
+			<div class="addresses__container container">
+				<h2 class="addresses__title">Адреса ГИБДД по региону</h2>
+				<div class="addresses__desc desc">
+					<p>Полный список регионов ГИБДД по которым мы производим проверку штрафов, при нажатии на определенный регион вы можете узнать полную информацию о отделении, контакты ГИБДД, адреса и уполномоченные лица.</p>
+				</div>
+				<div class="gray-card">
+					<div class="gray-card__row">
+						<div class="gray-card__col">
+							<div class="select">
+								<div class="select__title md-title">Выберите город:</div><select data-placeholder="77 г. Москва" name="select" data-search-not-found=" " data-search-placeholder="" data-visible-options="0" required="">
+									<option value=""></option>
+									<option value="">Москва</option>
+									<option value="">Санкт-Петербург</option>
+									<option value="">Екатеринбург, Свердловская область</option>
+									<option value="">Нижний Новгород, Нижегородская область</option>
+									<option value="">Пермь, Пермский Край</option>
+									<option value="">Новосибирск, Новосибирская область</option>
+									<option value="">Казань, Татарстан республика</option>
+									<option value="">Челябинск, Челябинская область</option>
+									<option value="">Краснодар, Краснодарский Край</option>
+									<option value="">Самара, Самарская область</option>
+								</select>
+							</div>
+						</div>
+						<div class="gray-card__col">
+							<div class="select">
+								<div class="select__title md-title">Укажите подразделения:</div><select data-placeholder="Управление ГИБДД ГУ МВД России по городу Москва" name="select" data-search-not-found=" " data-search-placeholder="" data-visible-options="0" required="">
+									<option value=""></option>
+									<option value="">Москва</option>
+									<option value="">Санкт-Петербург</option>
+									<option value="">Екатеринбург, Свердловская область</option>
+									<option value="">Нижний Новгород, Нижегородская область</option>
+									<option value="">Пермь, Пермский Край</option>
+									<option value="">Новосибирск, Новосибирская область</option>
+									<option value="">Казань, Татарстан республика</option>
+									<option value="">Челябинск, Челябинская область</option>
+									<option value="">Краснодар, Краснодарский Край</option>
+									<option value="">Самара, Самарская область</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="feedback-info">
+					<h3 class="feedback-info__title">Управление УГИБДД ГУ МВД России по городу Москве</h3>
+					<div class="feedback-info__row">
+						<div class="feedback-info__col">
+							<div class="phone phone--more phone--bigger feedback-info__phone">
+								<div class="phone__icon"><svg class="icon icon--mobile">
+										<use xlink:href="img/svg-sprite.svg#mobile"></use>
+									</svg></div>
+								<div class="phone__links-wrap">
+									<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956237070">(495) 623-70-70</a>
+										<div class="phone__text phone__text--desktop xsm-title">Телефон Дежурной части</div>
+										<div class="phone__text phone__text--mobile xsm-title">Дежурная часть</div>
+									</div>
+									<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956239319">(495) 623-93-19</a>
+										<div class="phone__text phone__text--desktop xsm-title">Телефон канцелярии</div>
+										<div class="phone__text phone__text--mobile xsm-title">Канцелярия</div>
+									</div>
+									<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956237070">(495) 623-70-70</a>
+										<div class="phone__text phone__text--desktop xsm-title">Телефон по вопросам ИАЗ</div>
+										<div class="phone__text phone__text--mobile xsm-title">По вопросам ИАЗ</div>
+									</div>
+									<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956237070">(495) 623-70-70</a>
+										<div class="phone__text phone__text--desktop xsm-title">Телефон по вопросам ДТП</div>
+										<div class="phone__text phone__text--mobile xsm-title">По вопросам ДТП</div>
+									</div>
+									<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956244581">(495) 624-45-81</a>
+										<div class="phone__text phone__text--desktop xsm-title">Телефон пресc-службы</div>
+										<div class="phone__text phone__text--mobile xsm-title">Пресc-службы</div>
+									</div>
+									<div class="phone__link-wrap"><a class="phone__link sm-title" href="tel:+74956248203">(495) 624-82-03</a>
+										<div class="phone__text phone__text--desktop xsm-title">Факс пресс-службы</div>
+										<div class="phone__text phone__text--mobile xsm-title">Пресc-службы</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback-info__col">
+							<div class="feedback-info__geo-wrap">
+								<div class="feedback-info__geo-icon"><svg class="icon icon--geo">
+										<use xlink:href="img/svg-sprite.svg#geo"></use>
+									</svg></div>
+								<div class="feedback-info__geo-title-wrap">
+									<div class="feedback-info__small-title md-desc">г. Москва, ул. Садовая-Самотечная, д. 1</div><a class="feedback-info__link link js-popup" href="#map-popup">Посмотреть на карте</a>
+								</div>
+							</div>
+							<div class="days">
+								<div class="days__icon-wrap"><svg class="icon icon--time">
+										<use xlink:href="img/svg-sprite.svg#time"></use>
+									</svg></div>
+								<div class="days__title-wrap">
+									<div class="days__title md-desc">Пн, Вт, Ср, Чт, Пт: 10:00-19:00,<br><span>(перерыв: 13:00-14:00)</span></div>
+									<div class="days__title md-desc">Сб: 10:00-13:00 <br>Вс: выходной</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback-info__col">
+							<div class="author">
+								<div class="author__img-wrap"><img class="author__img" src="img/people/boss.jpg" alt=""></div>
+								<div class="author__right-content">
+									<div class="author__title md-title">Швецов Владимир Владимирович</div>
+									<div class="author__rank xsm-title">генерал-лейтенант полиции</div>
+									<div class="author__small-title md-desc">Первый заместитель начальника ГУОБДД МВД России</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="banner">
+					<div class="banner__icon-wrap"><svg class="icon icon--warning">
+							<use xlink:href="img/svg-sprite.svg#warning"></use>
+						</svg></div>
+					<div class="banner__title-wrap">
+						<div class="banner__title">Подать жалобу в это подразделение ГИБДД</div>
+						<div class="banner__desc sm-title">
+							<p>Каждый гражданин вправе подать жалобу на нетрезвого водителя, на водителя маршрутного транспортного средства или на неправомерные действия сотрудников ГИБДД.</p>
+						</div>
+					</div><a class="banner__btn btn js-popup" href="#complaint">Подать жалобу</a>
+				</div>
+			</div>
+		</section>
+		<section class="map">
+			<div class="map__container container">
+				<h2 class="map__title">Карта камер видеофиксации ГИБДД 2020 года</h2>
+				<div class="map__desc desc">
+					<p>На этой карте вы можете увидеть где находятся места размещения технических средств автоматической видео и фотофиксации. Если у Вас есть информация о дополнительных местоположениях направьте нам письмо на адрес эл. почты <a href="#">info@gibdd.com</a></p>
+				</div>
+				<form class="search-card">
+					<!-- Добавь модификатор "input--active" и появиться попап для инпута-->
+					<div class="input input--search search-card__input">
+						<div class="input__title">Выберите город:</div>
+						<div class="input__wrap"><input type="text" name="search-city" placeholder="Новоухтомское ш., МКАД (из центра), г. Москва"><span class="input__icon"></span><button class="input__search-icon" type="submit"><svg class="icon icon--simple-search">
+									<use xlink:href="img/svg-sprite.svg#simple-search"></use>
+								</svg></button>
+							<div class="search-list-popup-wrap">
+								<div class="baron__track">
+									<div class="baron__bar"></div>
+								</div>
+								<ul class="search-list-popup">
+									<li class="search-list-popup__item search-list-popup__item--active"><a class="search-list-popup__link" href="#">Камчатский край</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Карачаево-Черкесская Республика</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Кемеровская область</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Кировская область</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Костромская область</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Краснодарский край</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Красноярский край</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Курганская область</a></li>
+									<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Курская область</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="search-card__link"> <span>Попоулярный запрос: </span><a href="#">Москва, Варшавское шоссе, 324 км</a></div>
+				</form>
+				<div id="map"></div>
+			</div>
+		</section>
+		<section class="discount">
+			<div class="discount__container container">
+				<div class="discount__wrap">
+					<h2 class="discount__title">Оплатите штрафы с<b>50% скидкой</b></h2>
+					<div class="discount__desc">
+						<p>Напоминаем что согласно Федеральному закону от 22 декабря 2014 г. N 437-ФЗ "О внесении изменений в Кодекс Российской Федерации об административных правонарушениях в части совершенствования взыскания штрафов за административные правонарушения в области дорожного движения" вы вправе оплатить штрафы со скидкой. </p>
+					</div>
+					<div class="discount__small-title md-desc">Популярные штрафы для оплаты со скидкой:</div>
+					<div class="discount__row discount__row--parent">
+						<div class="discount__col discount__col--left">
+							<div class="discount__row discount__row--small">
+								<div class="discount__col discount__col--small">
+									<div class="icon-card">
+										<div class="icon-card__icon-wrap">
+											<div class="icon-card__icon"><svg class="icon icon--phone">
+													<use xlink:href="img/svg-sprite.svg#phone"></use>
+												</svg></div>
+											<div class="icon-card__title">Телефон</div>
+										</div>
+										<div class="icon-card__desc xsm-desc">
+											<p>При пользовании смартфоном во время движения. <a href="#">КоАП РФ Статья 12.36.1.</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="discount__col discount__col--small">
+									<div class="icon-card">
+										<div class="icon-card__icon-wrap">
+											<div class="icon-card__icon"><svg class="icon icon--crossroads">
+													<use xlink:href="img/svg-sprite.svg#crossroads"></use>
+												</svg></div>
+											<div class="icon-card__title">Перекрестки</div>
+										</div>
+										<div class="icon-card__desc xsm-desc">
+											<p>При невключении поворотников на маневре или неправильном пересечении перекрестка, <a href="#">статья 12.14 ч.1 КОАП</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="discount__col discount__col--small">
+									<div class="icon-card">
+										<div class="icon-card__icon-wrap">
+											<div class="icon-card__icon"><svg class="icon icon--speed">
+													<use xlink:href="img/svg-sprite.svg#speed"></use>
+												</svg></div>
+											<div class="icon-card__title">Скорость</div>
+										</div>
+										<div class="icon-card__desc xsm-desc">
+											<p>При нарушении режима скорости (превышение на 40 километров в час) <a href="#">Статья 12.9 КоАП РФ.</a>Превышение установленной скорости движения</p>
+										</div>
+									</div>
+								</div>
+								<div class="discount__col discount__col--small">
+									<div class="icon-card">
+										<div class="icon-card__icon-wrap">
+											<div class="icon-card__icon"><svg class="icon icon--tinting">
+													<use xlink:href="img/svg-sprite.svg#tinting"></use>
+												</svg></div>
+											<div class="icon-card__title">Тонировка</div>
+										</div>
+										<div class="icon-card__desc xsm-desc">
+											<p>Если автомобиль не соответствует правилам эксплуатации, например, вследствие тонировки стекол.<br><a href="#">Статья 12.5 КоАП РФ</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount__col discount__col--right">
+							<form class="small-gray-card">
+								<div class="small-gray-card__line small-gray-card__line--top">
+									<div class="small-gray-card__col">
+										<div class="input input--small">
+											<div class="input__title">Номер автомобиля</div>
+											<div class="input__wrap"><input type="text" name="licensePlateStart" placeholder="A 007 AA"><span class="input__icon"></span></div>
+										</div>
+									</div>
+									<div class="small-gray-card__col">
+										<div class="input input--small">
+											<div class="input__title">Регион</div>
+											<div class="input__wrap"><input type="text" name="licensePlateEnd" placeholder="197"><span class="input__icon"></span></div>
+										</div>
+									</div>
+								</div>
+								<div class="small-gray-card__line small-gray-card__line--bottom"><label class="checkbox checkbox--start small-gray-card__checkbox"><input class="checkbox__input" type="checkbox" name="agreement" checked><span class="checkbox__icon"><svg class="icon icon--check"><use xlink:href="img/svg-sprite.svg#check"></use></svg></span><span class="checkbox__text">Я согласен на обработку <a href="#">персональных данных</a></span></label><button class="small-gray-card__btn btn">Проверить</button></div>
+							</form>
+						</div>
+					</div><a class="discount__link link" href="#"><span class="discount__link-text">Полный список правонарушений</span><span class="discount__link-icon"><svg class="icon icon--arrow-right"><use xlink:href="img/svg-sprite.svg#arrow-right"></use></svg></span></a>
+				</div>
+			</div>
+		</section>
+		<section class="asking">
+			<div class="asking__container container">
+				<h2 class="asking__title">Вопрос - ответ</h2>
+				<div class="asking__row">
+					<div class="asking__col asking__col--left">
+						<nav class="asking-nav">
+							<ul class="asking-nav__list">
+								<li class="asking-nav__item"><a class="asking-nav__link" href="#challenge">Как оспорить штраф гибдд</a></li>
+								<li class="asking-nav__item"><a class="asking-nav__link" href="#due-date">Срок оплаты штрафов со скидкой</a></li>
+								<li class="asking-nav__item"><a class="asking-nav__link" href="#validity">Срок действия штрафа гибдд</a></li>
+								<li class="asking-nav__item"><a class="asking-nav__link" href="#awaiting">Штраф оплачен, но на сайте гибдд висит</a></li>
+								<li class="asking-nav__item"><a class="asking-nav__link" href="#validity-discount">Срок действия скидки 50% на штраф</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="asking__col asking__col--right">
+						<div class="asking-content asking-content--main">
+							<div class="asking-content__card" data-id="challenge">
+								<div class="asking-content__title-wrap">
+									<div class="asking-content__title xl-title">Как оспорить штраф гибдд</div>
+									<div class="asking-content__title-icon"><svg class="icon icon--triangle">
+											<use xlink:href="img/svg-sprite.svg#triangle"></use>
+										</svg></div>
+								</div>
+								<div class="asking-content__desc desc">
+									<p>Любой штраф всегда можно оспорить. Прежде всего в организации которая его выписала. Это не обязательно гаи, поэтому выясните кто оштрафовал. Далее пишется заявление в организацию. Вероятно там его признают правомерным (если это не яркая ошибка). В таком случае следует обращаться в местный суд. Помните что у вас 10 дней на подачу жалобы ( с момента получения уведомления)</p>
+								</div>
+							</div>
+							<div class="asking-content__card" data-id="due-date">
+								<div class="asking-content__title-wrap">
+									<div class="asking-content__title xl-title">Срок оплаты штрафов со скидкой</div>
+									<div class="asking-content__title-icon"><svg class="icon icon--triangle">
+											<use xlink:href="img/svg-sprite.svg#triangle"></use>
+										</svg></div>
+								</div>
+								<div class="asking-content__desc desc">
+									<p>Установленный срок для скидки составляет 20 дней. Но не всегда уведомление приходит вовремя. Если квитанция (уведомление) приходит позже этого срока, отчет начинает считаться с момента получения. Необходимо подать ходатайство о восстановлении срока. После этого оплатить.</p>
+								</div>
+							</div>
+							<div class="asking-content__card" data-id="validity">
+								<div class="asking-content__title-wrap">
+									<div class="asking-content__title xl-title">Срок действия штрафа гибдд</div>
+									<div class="asking-content__title-icon"><svg class="icon icon--triangle">
+											<use xlink:href="img/svg-sprite.svg#triangle"></use>
+										</svg></div>
+								</div>
+								<div class="asking-content__desc desc">
+									<p>Срок когда к вам будут претензии составляет 2 года. Это время вами будут заниматься судебные приставы, и может быть введено ограничение. По истечении срока, следует написать заявление о прекращении дела. Однако если в указанный период вы будете найдены - срок начинает считаться заново.</p>
+								</div>
+							</div>
+							<div class="asking-content__card" data-id="awaiting">
+								<div class="asking-content__title-wrap">
+									<div class="asking-content__title xl-title">Штраф оплачен, но на сайте гибдд висит</div>
+									<div class="asking-content__title-icon"><svg class="icon icon--triangle">
+											<use xlink:href="img/svg-sprite.svg#triangle"></use>
+										</svg></div>
+								</div>
+								<div class="asking-content__desc desc">
+									<p>В такой ситуации необходимо подтвердить факт оплаты штрафа. Проверьте прошел ли платеж. Если все в порядке, нужно написать заявление в местный орган ГИБДД. В заявлении указать номер постановления и прикрепить квитанцию об оплате. Подается лично или на сайте гибдд.</p>
+								</div>
+							</div>
+							<div class="asking-content__card" data-id="validity-discount">
+								<div class="asking-content__title-wrap">
+									<div class="asking-content__title xl-title">Срок действия скидки 50% на штраф</div>
+									<div class="asking-content__title-icon"><svg class="icon icon--triangle">
+											<use xlink:href="img/svg-sprite.svg#triangle"></use>
+										</svg></div>
+								</div>
+								<div class="asking-content__desc desc">
+									<p>Оплатить штраф по льготной ставке, можно только в течении 20 дней с момента получения уведомления. Если получили письмо по почте - срок начинается с даты указанной на печати почтового отделения. То что вы не забирали,не открывали письмо не подойдет в качестве аргумента для отсрочки</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer-banner">
+			<div class="footer-banner__container container">
+				<div class="footer-banner__row">
+					<div class="footer-banner__col">
+						<div class="footer-banner__desc">Вы так же можете получить подробную консультацию по телефону</div>
+					</div>
+					<div class="footer-banner__col">
+						<div class="footer-banner__wrap"><a class="phone phone--white footer-banner__phone" href="tel:+78095054777"><span class="phone__icon"><svg class="icon icon--mobile"><use xlink:href="img/svg-sprite.svg#mobile"></use></svg></span><span class="phone__text">+7 (809) 505-4777</span></a>
+							<div class="footer-banner__seperator">или</div><a class="btn btn--left-icon footer-banner__btn js-popup" href="#ask"><span class="btn__icon"><svg class="icon icon--notification"><use xlink:href="img/svg-sprite.svg#notification"></use></svg></span><span class="btn__text">Задать вопрос</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__wrap">
+			<div class="footer__container container">
+				<div class="footer__row">
+					<div class="footer__col">
+						<div class="footer__logo-wrap"><a class="logo footer__logo" href="index.html"><span class="logo__img-wrap"><img class="logo__img" src="img/logo/new-logo.svg" alt=""></span><span class="logo__text">Штрафы ГИБДД</span></a>
+							<div class="footer__logo-title xsm-title">Онлайн сервис проверки автомобиля и штрафов</div>
+						</div>
+						<div class="footer__info-text">2020 © ООО «Штрафы ГИБДД»<br> Информация о штрафах ГИБДД формируется автоматически на основе запроса по данным пользователя в официальную базу ГИБДД РФ или ГИС ГМП.</div>
+					</div>
+					<div class="footer__col">
+						<div class="footer__title">Услуги</div>
+						<nav class="footer-nav footer-nav--left">
+							<ul class="footer-nav__list">
+								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Проверить штрафы ГИБДД</a></li>
+								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Оплатить штраф ГИБДД</a></li>
+								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Проверить автомобиль</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__col">
+						<div class="footer__title">Информация</div>
+						<nav class="footer-nav footer-nav--right">
+							<ul class="footer-nav__list">
+								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Новости</a></li>
+								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Поддержка</a></li>
+								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__col">
+						<div class="footer__title footer__title--top">Тех. поддержка</div><a class="footer__phone-link" href="tel:+78095054776">+7 (809) 505-4777</a><a class="email email--bolder footer__email" href="mailto:info@gbdd.com">info@gbdd.com</a>
+						<div class="footer__title footer__title--bottom">Мы соцсетях</div>
+						<ul class="socials footer__socials">
+							<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--vk">
+										<use xlink:href="img/svg-sprite.svg#vk"></use>
+									</svg></a></li>
+							<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--youtube">
+										<use xlink:href="img/svg-sprite.svg#youtube"></use>
+									</svg></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer-bottom__container container">
+				<div class="footer-bottom__row">
+					<div class="footer-bottom__col">
+						<div class="footer-bottom__links-wrap"><a class="footer-bottom__link xsm-title" href="#">Политика конфиденциальности</a><a class="footer-bottom__link xsm-title" href="#">Пользовательское соглашение</a></div>
+					</div>
+					<div class="footer-bottom__col">
+						<div class="footer-bottom__icon-wrap">
+							<div class="footer-bottom__icon"><svg class="icon icon--lock">
+									<use xlink:href="img/svg-sprite.svg#lock"></use>
+								</svg></div>
+							<div class="footer-bottom__text xsm-title">https / 3d secure</div>
+						</div>
+					</div>
+					<div class="footer-bottom__col">
+						<div class="footer-bottom__cards-wrap">
+							<div class="footer-bottom__title xsm-title">Принимаем к оплате</div>
+							<ul class="pay-cards">
+								<li class="pay-cards__item pay-cards__item--mastercard"><img class="pay-cards__img" src="img/logo/mastercard.svg" alt=""></li>
+								<li class="pay-cards__item pay-cards__item--maestro"><img class="pay-cards__img" src="img/logo/maestro.svg" alt=""></li>
+								<li class="pay-cards__item pay-cards__item--visa"><img class="pay-cards__img" src="img/logo/visa.svg" alt=""></li>
+								<li class="pay-cards__item pay-cards__item--mir"><img class="pay-cards__img" src="img/logo/mir.svg" alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__mobile-text">2020 © ООО «Штрафы ГИБДД» </div>
+	</footer><a class="moving-up" href="#check-main"><span class="moving-up__icon"><svg class="icon icon--arrow-up"><use xlink:href="img/svg-sprite.svg#arrow-up"></use></svg></span><span class="moving-up__text">вверх</span></a>
+
+	<!-- Choose-country-->
+	<div class="mfp mfp--choose-country-popup zoom-anim-dialog mfp-hide" id="choose-country">
+		<div class="choose-country">
+			<form class="choose-country__form">
+				<h2 class="choose-country__title">Выберите свой город</h2>
+				<div class="input input--search choose-country__input">
+					<div class="input__wrap"><input type="text" name="choose-country" placeholder="Укажите ваш город..."><span class="input__icon"></span><button class="input__search-icon" type="submit"><svg class="icon icon--simple-search">
+								<use xlink:href="img/svg-sprite.svg#simple-search"></use>
+							</svg></button>
+						<div class="search-list-popup-wrap">
+							<div class="baron__track">
+								<div class="baron__bar"></div>
+							</div>
+							<ul class="search-list-popup">
+								<li class="search-list-popup__item search-list-popup__item--active"><a class="search-list-popup__link" href="#">Камчатский край</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Карачаево-Черкесская Республика</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Кемеровская область</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Кировская область</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Костромская область</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Краснодарский край</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Красноярский край</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Курганская область</a></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">Курская область</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="list choose-country__list">
+					<li class="list__item"><a class="list__link" href="#">Москва</a></li>
+					<li class="list__item"><a class="list__link" href="#">Санкт-Петербург</a></li>
+					<li class="list__item"><a class="list__link" href="#">Екатеринбург, Свердловская область</a></li>
+					<li class="list__item"><a class="list__link" href="#">Нижний Новгород, Нижегородская область</a></li>
+					<li class="list__item"><a class="list__link" href="#">Пермь, Пермский Край</a></li>
+					<li class="list__item"><a class="list__link" href="#">Новосибирск, Новосибирская область</a></li>
+					<li class="list__item"><a class="list__link" href="#">Казань, Татарстан республика</a></li>
+					<li class="list__item"><a class="list__link" href="#">Челябинск, Челябинская область</a></li>
+					<li class="list__item"><a class="list__link" href="#">Краснодар, Краснодарский Край</a></li>
+					<li class="list__item"><a class="list__link" href="#">Самара, Самарская область</a></li>
+				</ul>
+			</form>
+		</div>
+	</div><!-- Choose-department-->
+	<div class="mfp mfp--choose-department-popup zoom-anim-dialog mfp-hide" id="choose-department">
+		<div class="choose-department">
+			<h2 class="choose-department__title">Выбрать подразделение</h2>
+			<form class="choose-department__form">
+				<div class="input input--search-popup input--active choose-department__input">
+					<div class="input__title">Напишите номер подразделения или адрес</div>
+					<div class="input__wrap"><input type="text" name="search-city" placeholder="УГИБДД ГУ МВД России по г. Москве"><span class="input__icon"></span><button class="input__search-icon" type="submit"><svg class="icon icon--simple-search">
+								<use xlink:href="img/svg-sprite.svg#simple-search"></use>
+							</svg></button>
+						<div class="search-list-popup-wrap">
+							<div class="baron__track">
+								<div class="baron__bar"></div>
+							</div>
+							<ul class="search-list-popup search-list-popup--bigger">
+								<li class="search-list-popup__item search-list-popup__item--active"><a class="search-list-popup__link" href="#">[1145000] УГИБДД ГУ МВД России по г. Москве</a><span class="search-list-popup__text">Адрес: г. Москва, ул. Садовая-Самотечная, д. 1</span></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">[1145110] 1 ОЭР МО ГИБДД ТНРЭР № 1 ГУ МВД России по г. Москве</a><span class="search-list-popup__text">Адрес: г Москва, ул Лобненская, 20</span></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">[1145101] 2 ОЭР МО ГИБДД ТНРЭР № 1 ГУ МВД России по г. Москве</a><span class="search-list-popup__text">Адрес: г Москва, ул Пяловская, 21</span></li>
+								<li class="search-list-popup__item"><a class="search-list-popup__link" href="#">[1145102] 2 ОЭР МО ГИБДД ТНРЭР № 3 ГУ МВД России по г. Москве</a><span class="search-list-popup__text">Адрес: г Москва, ул Пяловская, 21</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div><!-- Complaint Popup-->
+	<div class="mfp mfp--complaint-popup zoom-anim-dialog mfp-hide" id="complaint">
+		<div class="complaint-popup">
+			<h2 class="complaint-popup__title">Подать жалобу<sup>*</sup></h2>
+			<form class="complaint-popup__form">
+				<div class="input complaint-popup__input">
+					<div class="input__title">ФИО<sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич"><span class="input__icon"></span></div>
+				</div>
+				<div class="input complaint-popup__input">
+					<div class="input__title">Номер телефона<sup>*</sup></div>
+					<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+				</div>
+				<div class="input complaint-popup__input">
+					<div class="input__title">Адрес эл. почты<sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+				</div>
+				<div class="input complaint-popup__input">
+					<div class="input__title">Суть обращения:<sup>*</sup></div>
+					<div class="input__wrap"><textarea name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required></textarea></div>
+				</div><button class="complaint-popup__btn btn" type="submit">Отправить</button>
+				<div class="popup-warning-desc"><sup>*</sup><span>Для подачи жалобы нужно заполнить все поля</span></div>
+			</form>
+		</div>
+	</div><!-- Sign In-->
+	<div class="mfp mfp--signin popups-general-styles zoom-anim-dialog mfp-hide" id="sign-in">
+		<div class="signin-popup popup-style">
+			<h2 class="signin-popup__title popup-title">Вход в личный кабинет</h2>
+			<div class="signin-popup__sub-title popup-desc"> <span>Нет данных для входа?</span><a class="signin-popup__link link js-popup" href="#sign-up">Зарегистрируйтесь сейчас</a></div>
+			<form class="signin-popup__form">
+				<div class="feedback-input">
+					<div class="feedback-input__top-line">
+						<nav class="feedback-input__nav">
+							<ul class="feedback-input__list">
+								<li class="feedback-input__item tab--active"><a class="feedback-input__link" href="#email" data-toggle="tab">E-mail</a></li>
+								<li class="feedback-input__item"><a class="feedback-input__link" href="#phone" data-toggle="tab">Телефон</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="input js-tab tab--active email" style="display: block">
+						<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+					</div>
+					<div class="input js-tab phone">
+						<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+					</div>
+				</div>
+				<div class="input signin-popup__input">
+					<div class="input__title-wrap">
+						<div class="input__title">Пароль</div><a class="input__forget-link link js-popup" href="#forget-password">Забыли пароль?</a>
+					</div>
+					<div class="input__wrap"><input type="password" name="password" placeholder="*******" autocomplete="on"></div>
+				</div><button class="btn btn--arrow-right signin-popup__btn" type="submit"><span class="btn__text">Войти</span><span class="btn__icon"><svg class="icon icon--arrow-right"><use xlink:href="img/svg-sprite.svg#arrow-right"></use></svg></span></button>
+				<div class="signin-popup__bottom-content">
+					<div class="signin-popup__desc-wrap">
+						<div class="signin-popup__desc">
+							<p>Или войдите с помощью соцсетей:</p>
+						</div>
+					</div>
+					<ul class="socials signin-popup__socials">
+						<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--vk">
+									<use xlink:href="img/svg-sprite.svg#vk"></use>
+								</svg></a></li>
+						<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--fb">
+									<use xlink:href="img/svg-sprite.svg#fb"></use>
+								</svg></a></li>
+						<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--ok">
+									<use xlink:href="img/svg-sprite.svg#ok"></use>
+								</svg></a></li>
+						<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--twi">
+									<use xlink:href="img/svg-sprite.svg#twi"></use>
+								</svg></a></li>
+						<li class="socials__item"><a class="socials__link" href="#"><svg class="icon icon--insta">
+									<use xlink:href="img/svg-sprite.svg#insta"></use>
+								</svg></a></li>
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div><!-- Offer Popup-->
+	<div class="mfp mfp--popup zoom-anim-dialog mfp-hide" id="offer-popup">
+		<div class="popup">
+			<h2 class="popup__title">Внести предложение</h2>
+			<form class="popup__form">
+				<div class="input popup__input">
+					<div class="input__title">ФИО<sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич"><span class="input__icon"></span></div>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Номер телефона<sup>*</sup></div>
+					<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Адрес эл. почты<sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+				</div>
+				<div class="select select--big popup__select">
+					<div class="select__title md-title">Выбор отдела:<sup>*</sup></div><select data-placeholder="77 г. Москва" name="department" data-search-not-found=" " data-search-placeholder="" data-visible-options="0" required="">
+						<option></option>
+						<option>Москва</option>
+						<option>Санкт-Петербург</option>
+						<option>Екатеринбург, Свердловская область</option>
+						<option>Нижний Новгород, Нижегородская область</option>
+						<option>Пермь, Пермский Край</option>
+						<option>Новосибирск, Новосибирская область</option>
+						<option>Казань, Татарстан республика</option>
+						<option>Челябинск, Челябинская область</option>
+						<option>Краснодар, Краснодарский Край</option>
+						<option>Самара, Самарская область</option>
+					</select>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Суть обращения:<sup>*</sup></div>
+					<div class="input__wrap"><textarea name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required></textarea></div>
+				</div><button class="popup__btn btn" type="submit">Отправить</button>
+				<div class="popup-warning-desc"><sup>*</sup><span>Для подачи внести предложение нужно заполнить все поля</span></div>
+			</form>
+			<div class="success-popup success-popup--general">
+				<div class="success-popup__icon-wrap"><svg class="icon icon--success-icon">
+						<use xlink:href="img/svg-sprite.svg#success-icon"></use>
+					</svg></div>
+				<h2 class="success-popup__title popup-title">Обращение зарегистрировано!</h2>
+				<div class="success-popup__sub-title popup-desc">Ваше обращение было направлено в отдел по расспределению, средний срок обработки обращение граждан состовляет 7 рабочих дней. Максимальный срок регламинторован - 30 рабочих дней.</div>
+			</div>
+		</div>
+	</div><!-- Сorruption Popup-->
+	<div class="mfp mfp--popup zoom-anim-dialog mfp-hide" id="corruption-popup">
+		<div class="popup">
+			<h2 class="popup__title">Сообщить о корупции</h2>
+			<form class="popup__form">
+				<div class="input popup__input">
+					<div class="input__title">ФИО<sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич"><span class="input__icon"></span></div>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Номер телефона<sup>*</sup></div>
+					<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Адрес эл. почты <sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+				</div>
+				<div class="select select--big popup__select">
+					<div class="select__title md-title">Выбор отдела:<sup>*</sup></div><select data-placeholder="77 г. Москва" name="department" data-search-not-found=" " data-search-placeholder="" data-visible-options="0" required="">
+						<option></option>
+						<option>Москва</option>
+						<option>Санкт-Петербург</option>
+						<option>Екатеринбург, Свердловская область</option>
+						<option>Нижний Новгород, Нижегородская область</option>
+						<option>Пермь, Пермский Край</option>
+						<option>Новосибирск, Новосибирская область</option>
+						<option>Казань, Татарстан республика</option>
+						<option>Челябинск, Челябинская область</option>
+						<option>Краснодар, Краснодарский Край</option>
+						<option>Самара, Самарская область</option>
+					</select>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Суть обращения:<sup>*</sup></div>
+					<div class="input__wrap"><textarea name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required></textarea></div>
+				</div><button class="popup__btn btn" type="submit">Отправить</button>
+				<div class="popup-warning-desc"><sup>*</sup><span>Для подачи сообщить о корупции нужно заполнить все поля</span></div>
+			</form>
+			<div class="success-popup success-popup--general">
+				<div class="success-popup__icon-wrap"><svg class="icon icon--success-icon">
+						<use xlink:href="img/svg-sprite.svg#success-icon"></use>
+					</svg></div>
+				<h2 class="success-popup__title popup-title">Обращение зарегистрировано!</h2>
+				<div class="success-popup__sub-title popup-desc">Ваше обращение было направлено в отдел по расспределению, средний срок обработки обращение граждан состовляет 7 рабочих дней. Максимальный срок регламинторован - 30 рабочих дней.</div>
+			</div>
+		</div>
+	</div><!-- Support Popup-->
+	<div class="mfp mfp--popup zoom-anim-dialog mfp-hide" id="support-popup">
+		<div class="popup">
+			<h2 class="popup__title">Обращение в<br> техническую поддержку</h2>
+			<form class="popup__form">
+				<div class="input popup__input">
+					<div class="input__title">ФИО<sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич"><span class="input__icon"></span></div>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Номер телефона <sup>*</sup></div>
+					<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Адрес эл. почты <sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+				</div>
+				<div class="select select--big popup__select">
+					<div class="select__title md-title">Выберите город:<sup>*</sup></div>
+					<div class="select__sub-title">(проверка автомобиля, проверка штрафов, оплата штрафов, ОСАГО, трудоустройство)</div><select data-placeholder="77 г. Москва" name="city" data-search-not-found=" " data-search-placeholder="" data-visible-options="0" required>
+						<option></option>
+						<option>Москва</option>
+						<option>Санкт-Петербург</option>
+						<option>Екатеринбург, Свердловская область</option>
+						<option>Нижний Новгород, Нижегородская область</option>
+						<option>Пермь, Пермский Край</option>
+						<option>Новосибирск, Новосибирская область</option>
+						<option>Казань, Татарстан республика</option>
+						<option>Челябинск, Челябинская область</option>
+						<option>Краснодар, Краснодарский Край</option>
+						<option>Самара, Самарская область</option>
+					</select>
+				</div>
+				<div class="input popup__input">
+					<div class="input__title">Суть обращения:<sup>*</sup></div>
+					<div class="input__wrap"><textarea name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required></textarea></div>
+				</div><button class="popup__btn btn" type="submit">Отправить</button>
+				<div class="popup-warning-desc"><sup>*</sup><span>Для подачи обращение в техническую поддержку нужно заполнить все поля</span></div>
+			</form>
+			<div class="success-popup success-popup--genaral">
+				<div class="success-popup__icon-wrap"><svg class="icon icon--success-icon">
+						<use xlink:href="img/svg-sprite.svg#success-icon"></use>
+					</svg></div>
+				<h2 class="success-popup__title popup-title">Обращение зарегистрировано!</h2>
+				<div class="success-popup__sub-title popup-desc">Ваше обращение было направлено в отдел по расспределению, средний срок обработки обращение граждан состовляет 7 рабочих дней. Максимальный срок регламинторован - 30 рабочих дней.</div>
+			</div>
+		</div>
+	</div><!-- Not Found Popup-->
+	<div class="mfp mfp--not-found-popup zoom-anim-dialog mfp-hide" id="not-found">
+		<div class="popups-wrap">
+			<div class="not-found open">
+				<div class="not-found__icon-wrap"><svg class="icon icon--simple-search">
+						<use xlink:href="img/svg-sprite.svg#simple-search"></use>
+					</svg></div>
+				<h2 class="not-found__title">Ничего не найдено</h2>
+				<div class="not-found__desc desc">По вашему запросу в базе ГИБДД не найдено неоплаченых штрафов, возможно вы допустили ошибку при вводе информации или все штрафы уже оплачены. Вы можете подать повторный запрос на проверку</div><a class="not-found__btn light-blue-btn mfp-popup-close" href="#">Изменить данные</a>
+			</div>
+			<div class="database-unavailable">
+				<div class="database-unavailable__icon-wrap"><svg class="icon icon--settings">
+						<use xlink:href="img/svg-sprite.svg#settings"></use>
+					</svg></div>
+				<h2 class="database-unavailable__title">База ГИС ГМП временно недоступна</h2>
+				<div class="database-unavailable__desc desc">К сожалению по техническим причинам база ГИС ГМП выдала ошибку при проверке информации, рекомендуем сделать повторный запрос</div><a class="database-unavailable__btn light-blue-btn mfp-popup-close" href="#">Повторный запрос</a>
+				<div class="database-unavailable__small-desc md-desc">Как только база будет восстановлена на адрес электронной почты мы направим информацию по вашим штрафам.</div>
+			</div>
+		</div>
+	</div><!-- Sign Up-->
+	<div class="mfp mfp--signup popups-general-styles zoom-anim-dialog mfp-hide" id="sign-up">
+		<div class="signup-popup popup-style">
+			<form class="signup-popup__form">
+				<div class="signup-popup__head">
+					<div class="signup-popup__title-wrap">
+						<h2 class="signup-popup__title popup-title">Регистрация</h2>
+						<div class="signup-popup__sub-title popup-desc">Зарегестрированным пользователям доступны допольнительные возможности ипользования сервиса</div>
+					</div>
+					<div class="signup-popup__prev-btn-wrap" style="display: none;"><a class="signup-popup__prev-btn" href="#"><span class="signup-popup__prev-btn-icon-wrap"><svg class="icon icon--triangle"><use xlink:href="img/svg-sprite.svg#triangle"></use></svg></span><span class="signup-popup__prev-btn-text">Вернутся назад</span></a></div>
+					<div class="timeline" data-step="1">
+						<div class="timeline__item timeline__item--step-1">
+							<div class="timeline__number">1</div>
+							<div class="timeline__text">Введите персональные данные для регистрации</div>
+						</div>
+						<div class="timeline__item timeline__item--step-2">
+							<div class="timeline__number">2</div>
+							<div class="timeline__text">Введите номер телефона для потверждения учетной записи</div>
+						</div>
+						<div class="timeline__item timeline__item--step-3">
+							<div class="timeline__number">3</div>
+							<div class="timeline__text">Если вы хотите получать регулярные оповещения о штрафах бесплатно и оплачивать их со <span>скидкой 50%</span> заполните поля.</div>
+						</div>
+					</div>
+				</div>
+				<div class="signup-popup__body">
+					<div class="signup-popup__steps owl-carousel">
+						<div class="signup-popup__step signup-popup__step--first">
+							<div class="signup-popup__input-wrap">
+								<div class="input signup-popup__input">
+									<div class="input__title">Имя <sup>*</sup></div>
+									<div class="input__wrap"><input type="text" name="name" placeholder="Иван"><span class="input__icon"></span></div>
+								</div>
+								<div class="input signup-popup__input">
+									<div class="input__title-wrap">
+										<div class="input__title">Пароль <sup>*</sup></div>
+									</div>
+									<div class="input__wrap"><input type="password" name="password" placeholder="*******" autocomplete="on"><span class="input__icon"></span></div>
+								</div>
+								<div class="input signup-popup__input">
+									<div class="input__title">Адрес эл. почты <sup>*</sup></div>
+									<div class="input__wrap"><input type="email" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+								</div>
+							</div>
+						</div>
+						<div class="signup-popup__step signup-popup__step--second">
+							<div class="signup-popup__input-wrap">
+								<div class="input signup-popup__input">
+									<div class="input__title">Номер телефона <sup>*</sup></div>
+									<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+								</div>
+								<div class="signup-popup__step-desc desc">На номер +7 ********** мы отправили код потверждения. Введите его в поле ниже, что бы продолжить регистрацию.</div>
+								<div class="input signup-popup__input">
+									<div class="input__wrap"><input type="text" name="confirmNumber" placeholder="Код потверждения из СМС" disabled><span class="input__icon"></span></div>
+								</div>
+								<div class="signup-popup__bottom-row">
+									<div class="signup-popup__bottom-title md-desc">Не получили СМС?</div><a class="signup-popup__link link signup-popup__link--disabled" href="#">Отправить еще раз</a>
+									<div class="countdown disabled md-desc">Осталось <span>15</span> сек</div>
+								</div>
+							</div>
+						</div>
+						<div class="signup-popup__step signup-popup__step--third">
+							<div class="signup-popup__input-wrap">
+								<div class="input signup-popup__input">
+									<div class="input__title">Гос. номер</div>
+									<div class="input__wrap"><input type="text" name="licensePlate" placeholder="A 007 AA | 197"><span class="input__icon"></span></div>
+								</div>
+								<div class="input signup-popup__input">
+									<div class="input__title">Vin номер</div>
+									<div class="input__wrap"><input type="text" name="vinNumber" placeholder="4F2YU08102KM26251"><span class="input__icon"></span></div>
+								</div>
+								<div class="input signup-popup__input">
+									<div class="input__title">СТС</div>
+									<div class="input__wrap"><input type="text" name="certificate" placeholder="00 АБ 000000"><span class="input__icon"></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="signup-popup__footer">
+					<div class="signup-popup__nav-wrap">
+						<div class="signup-popup__next-wrap"><button class="btn btn--next signup-popup__btn"><span class="btn__text">Дальше</span><span class="btn__icon"><svg class="icon icon--triangle"><use xlink:href="img/svg-sprite.svg#triangle"></use></svg></span></button></div>
+						<div class="signup-popup__submit-wrap" style="display: none;"><button class="btn btn--submit signup-popup__btn"><span class="btn__text">Отправить</span><span class="btn__icon"><svg class="icon icon--triangle"><use xlink:href="img/svg-sprite.svg#triangle"></use></svg></span></button></div>
+						<div class="signup-popup__dots" data-step="1">
+							<div class="signup-popup__dot"></div>
+							<div class="signup-popup__dot"></div>
+							<div class="signup-popup__dot"></div>
+						</div>
+					</div>
+					<div class="agreement signup-popup__agreement" style="display: none;"><label class="checkbox checkbox--start agreement__checkbox"><input class="checkbox__input" type="checkbox" name="agreement" checked><span class="checkbox__icon"><svg class="icon icon--check"><use xlink:href="img/svg-sprite.svg#check"></use></svg></span><span class="checkbox__text">Соглашаюсь на <a href="#">персон. данных</a> и<br> <a href="#">пользовательских соглашений</a> .</span></label><button class="btn agreement__btn" type="submit"><span class="btn__text">Зарегестрироваться</span></button></div>
+					<div class="signup-popup__footer-bottom-content">
+						<div class="signup-popup__small-title md-title">Доступно бесплатно зарегистрированным пользователям</div>
+						<ul class="benefits-list">
+							<li class="benefits-list__item">Оповещения о штрафах</li>
+							<li class="benefits-list__item">Проверка автомобиля на юр. чистоту</li>
+							<li class="benefits-list__item">Оповещение о изменении собственника авто</li>
+						</ul>
+					</div>
+				</div>
+			</form>
+			<div class="success-popup success-popup--signup">
+				<div class="success-popup__icon-wrap"><svg class="icon icon--success-icon">
+						<use xlink:href="img/svg-sprite.svg#success-icon"></use>
+					</svg></div>
+				<h2 class="success-popup__title popup-title">Регистрация прошла успешно</h2>
+				<div class="success-popup__sub-title popup-desc">Теперь вы можете войти в свою учетную запись используя электронную почту или номер телефона.</div><a class="success-popup__link link js-popup" href="#sign-in">Войти в учетную запись</a>
+			</div>
+		</div>
+	</div><!-- Forget password-->
+	<div class="mfp mfp--forget-password popups-general-styles zoom-anim-dialog mfp-hide" id="forget-password">
+		<div class="forget-password-popup popup-style">
+			<div class="forget-password-popup__main">
+				<h2 class="forget-password-popup__title popup-title">Забыли пароль?</h2>
+				<div class="forget-password-popup__sub-title forget-password-popup__sub-title--main popup-desc">Пожалуйста, укажите телефона или email, который Вы использовали для входа на сайт</div>
+				<form class="forget-password-popup__form forget-password-popup__form--main">
+					<div class="feedback-input forget-password-popup__feedback-input">
+						<div class="feedback-input__top-line">
+							<nav class="feedback-input__nav">
+								<ul class="feedback-input__list">
+									<li class="feedback-input__item tab--active"><a class="feedback-input__link" href="#email" data-toggle="tab">E-mail</a></li>
+									<li class="feedback-input__item"><a class="feedback-input__link" href="#phone" data-toggle="tab">Телефон</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="input js-tab tab--active email" style="display: block">
+							<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+						</div>
+						<div class="input js-tab phone">
+							<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+						</div>
+					</div><button class="btn btn--arrow-right forget-password-popup__btn" type="submit"><span class="btn__text">Отправить</span><span class="btn__icon"><svg class="icon icon--arrow-right"><use xlink:href="img/svg-sprite.svg#arrow-right"></use></svg></span></button>
+				</form>
+			</div>
+			<div class="success-popup">
+				<div class="success-popup__icon-wrap"><svg class="icon icon--success-icon">
+						<use xlink:href="img/svg-sprite.svg#success-icon"></use>
+					</svg></div>
+				<h2 class="success-popup__title popup-title">Пароль успешно отправлен</h2>
+				<div class="success-popup__sub-title popup-desc">Мы сделали новый пароль, он был отправлен на адрес электронной почты который вы указали при регистрации</div>
+			</div>
+			<div class="forget-password-popup__error">
+				<h2 class="forget-password-popup__title popup-title">Адрес эл.почты не найден</h2>
+				<div class="forget-password-popup__sub-title popup-desc">Данный адрес электронной почты не найден, пожалуйста укажите другой адрес или укажите номер телефона</div>
+				<form class="forget-password-popup__form forget-password-popup__form--error">
+					<div class="feedback-input">
+						<div class="feedback-input__top-line">
+							<nav class="feedback-input__nav">
+								<ul class="feedback-input__list">
+									<li class="feedback-input__item tab--active"><a class="feedback-input__link" href="#email" data-toggle="tab">E-mail</a></li>
+									<li class="feedback-input__item"><a class="feedback-input__link" href="#phone" data-toggle="tab">Телефон</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="input js-tab tab--active email" style="display: block">
+							<div class="input__wrap"><input type="text" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+						</div>
+						<div class="input js-tab phone">
+							<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+						</div>
+					</div>
+					<div class="forget-password-popup__btn-wrap"><button class="btn forget-password-popup__btn" type="submit">Отправить еще раз</button></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="mfp mfp--complaint-popup mfp--ask-popup zoom-anim-dialog mfp-hide" id="ask">
+		<div class="complaint-popup complaint-popup--ask">
+			<form class="complaint-popup__form">
+				<div class="input complaint-popup__input">
+					<div class="input__title">ФИО<sup>*</sup></div>
+					<div class="input__wrap"><input type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич"><span class="input__icon"></span></div>
+				</div>
+				<div class="input complaint-popup__input">
+					<div class="input__title">Номер телефона<sup>*</sup></div>
+					<div class="input__wrap"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="input__icon"></span></div>
+				</div>
+				<div class="input complaint-popup__input">
+					<div class="input__title">Адрес эл. почты<sup>*</sup></div>
+					<div class="input__wrap"><input type="email" name="email" placeholder="ivanov@yandex.ru"><span class="input__icon"></span></div>
+				</div>
+				<div class="input complaint-popup__input">
+					<div class="input__title">Суть обращения:<sup>*</sup></div>
+					<div class="input__wrap"><textarea name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required></textarea></div>
+				</div><button class="complaint-popup__btn btn" type="submit">Отправить</button>
+				<div class="popup-warning-desc"><sup>*</sup><span>Для подачи заполните все поля выше</span></div>
+			</form>
+		</div>
+	</div>
+	<div class="mfp mfp--slider-popup zoom-anim-dialog mfp-hide" id="slider-popup">
+		<div class="slider-popup owl-carousel"></div>
+	</div>
+	<div class="mfp mfp--slider-popup mfp--preloader zoom-anim-dialog mfp-hide" id="preloader">
+		<div class="popup-preloader">
+			<div class="popup-preloader__img"><img src="img/fine-slides/item.jpg" alt=""></div>
+			<div class="popup-preloader__box">
+				<div class="popup-preloader__title">Загрузка фотографии, доступна после регистрации обсолютно бесплатно!</div>
+				<div class="popup-preloader__links"><a class="link popup-preloader__link js-popup" href="#sign-up">Зарегестрироваться</a><a class="link popup-preloader__link js-popup" href="#sign-in">Войти</a></div>
+			</div>
+		</div>
+	</div><!-- Map popup-->
+	<div class="mfp mfp--map-popup zoom-anim-dialog mfp-hide" id="map-popup">
+		<div class="map-popup">
+			<div id="popup-map"></div>
+		</div>
+	</div>
+
+	<!-- Scripts-->
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/maps.js"></script>
+</body>
+</html>
