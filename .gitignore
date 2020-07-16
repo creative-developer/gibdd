@@ -8,11 +8,11 @@ node_modules/
 .npm
 
 # Css files
-# app/css/
+app/css/
 
 # files
 # app/js/libs.min.js
 # app/js/main.min.js
 
-html
+# html
 # app/*.html
