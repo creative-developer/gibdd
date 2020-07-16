@@ -224,71 +224,71 @@ const regexObject = {
 	carBody: String.raw`[0-9a-zA-Z]{5}-[0-9]{7}`
 }
 
-function customMask(reg = regexObject.licensePlateCar, selector = inputsObj.licensePlate) {
-	Inputmask({ regex: reg}).mask(selector);
-}
+// function customMask(reg = regexObject.licensePlateCar, selector = inputsObj.licensePlate) {
+// 	Inputmask({ regex: reg}).mask(selector);
+// }
 
 
-function customInputMask(selector) {
-	const licensePlate = $('input[name="licensePlate"]');
-	const licensePlateStart = $('input[name="licensePlateStart"]');
-	let isSelected = true;
+// function customInputMask(selector) {
+// 	const licensePlate = $('input[name="licensePlate"]');
+// 	const licensePlateStart = $('input[name="licensePlateStart"]');
+// 	let isSelected = true;
 	
-	selector.on('input', function (e) {
-		let value = e.target.value
-		const car = value.match(/^[АВЕКМНОРСТУХавекмнорстух]{1}[0-9]{1}/);
-		const motorcycle = value.match(/^[0-9]{1}/);
-		const bus = value.match(/^[АВЕКМНОРСТУХавекмнорстух]{2}/);
+// 	selector.on('input', function (e) {
+// 		let value = e.target.value
+// 		const car = value.match(/^[АВЕКМНОРСТУХавекмнорстух]{1}[0-9]{1}/);
+// 		const motorcycle = value.match(/^[0-9]{1}/);
+// 		const bus = value.match(/^[АВЕКМНОРСТУХавекмнорстух]{2}/);
 
-		if ($(this).attr('name') === 'licensePlate') {
+// 		if ($(this).attr('name') === 'licensePlate') {
 
-			if (car && isSelected) {
-				licensePlate.inputmask('remove');
-				customMask();
-				isSelected = false;
-			}
-			if(motorcycle  && isSelected){
-				licensePlate.inputmask('remove');
-				customMask(regexObject.licensePlateMotorcycle)
-				isSelected = false;
-			}
-			if(bus  && isSelected){
-				licensePlate.inputmask('remove');
-				customMask(regexObject.licensePlateBus)
-				isSelected = false;
-			}
-			if(value === '' && !isSelected){
-				licensePlate.inputmask('remove');
-				customMask(regexObject.licensePlateDefault)
-				isSelected = true;
-			}
-		}
+// 			if (car && isSelected) {
+// 				licensePlate.inputmask('remove');
+// 				customMask();
+// 				isSelected = false;
+// 			}
+// 			if(motorcycle  && isSelected){
+// 				licensePlate.inputmask('remove');
+// 				customMask(regexObject.licensePlateMotorcycle)
+// 				isSelected = false;
+// 			}
+// 			if(bus  && isSelected){
+// 				licensePlate.inputmask('remove');
+// 				customMask(regexObject.licensePlateBus)
+// 				isSelected = false;
+// 			}
+// 			if(value === '' && !isSelected){
+// 				licensePlate.inputmask('remove');
+// 				customMask(regexObject.licensePlateDefault)
+// 				isSelected = true;
+// 			}
+// 		}
 		
-		if ($(this).attr('name') === 'licensePlateStart') {
-			if (car  && isSelected) {
-				licensePlateStart.inputmask('remove');
-				customMask(regexObject.licensePlateStartCar, inputsObj.licensePlateStart);
-				isSelected = false;
-			}
-			if(motorcycle  && isSelected){
-				licensePlateStart.inputmask('remove');
-				customMask(regexObject.licensePlateStartMotorcycle, inputsObj.licensePlateStart);
-				isSelected = false;
-			}
-			if(bus  && isSelected){
-				licensePlateStart.inputmask('remove');
-				customMask(regexObject.licensePlateStartBus, inputsObj.licensePlateStart);
-				isSelected = false;
-			}
-			if(value === '' && isSelected){
-				licensePlateStart.inputmask('remove');
-				customMask(regexObject.licensePlateStartDefault, inputsObj.licensePlateStart);
-				isSelected = true;
-			}
-		}
+// 		if ($(this).attr('name') === 'licensePlateStart') {
+// 			if (car  && isSelected) {
+// 				licensePlateStart.inputmask('remove');
+// 				customMask(regexObject.licensePlateStartCar, inputsObj.licensePlateStart);
+// 				isSelected = false;
+// 			}
+// 			if(motorcycle  && isSelected){
+// 				licensePlateStart.inputmask('remove');
+// 				customMask(regexObject.licensePlateStartMotorcycle, inputsObj.licensePlateStart);
+// 				isSelected = false;
+// 			}
+// 			if(bus  && isSelected){
+// 				licensePlateStart.inputmask('remove');
+// 				customMask(regexObject.licensePlateStartBus, inputsObj.licensePlateStart);
+// 				isSelected = false;
+// 			}
+// 			if(value === '' && isSelected){
+// 				licensePlateStart.inputmask('remove');
+// 				customMask(regexObject.licensePlateStartDefault, inputsObj.licensePlateStart);
+// 				isSelected = true;
+// 			}
+// 		}
 
-	})
-}
+// 	})
+// }
 
 // add method only licensePlate
 addMethodValidator('licensePlate', /^[0-9]{4} [АВЕКМНОРСТУХавекмнорстух]{2} [0-9]{2,3}|[АВЕКМНОРСТУХавекмнорстух]{1} [0-9]{3} [АВЕКМНОРСТУХавекмнорстух]{2} [0-9]{2,3}|[АВЕКМНОРСТУХавекмнорстух]{2} [0-9]{3} [0-9]{2,3}\s?$/)
@@ -330,20 +330,20 @@ addMethodValidator('carBody', /^[0-9a-zA-Z]{5}-[0-9]{7}\s?$/)
 // upperCase all strings
 
 // default license plate
-Inputmask({ regex: regexObject.licensePlateDefault }).mask(inputsObj.licensePlate);
-Inputmask({ regex: regexObject.licensePlateStartDefault }).mask(inputsObj.licensePlateStart);
-Inputmask({ regex: regexObject.licensePlateEnd }).mask(inputsObj.licensePlateEnd);
-Inputmask({ regex: regexObject.driverLicense }).mask(inputsObj.driverLicense);
-Inputmask({ regex: regexObject.driverLicense }).mask(inputsObj.certificate);
-Inputmask({ regex: regexObject.receiptNumber }).mask(inputsObj.receiptNumber);
-Inputmask({ regex: regexObject.vinNumber }).mask(inputsObj.vinNumber);
-Inputmask({ regex: regexObject.carBody }).mask(inputsObj.carBody);
+// Inputmask({ regex: regexObject.licensePlateDefault }).mask(inputsObj.licensePlate);
+// Inputmask({ regex: regexObject.licensePlateStartDefault }).mask(inputsObj.licensePlateStart);
+// Inputmask({ regex: regexObject.licensePlateEnd }).mask(inputsObj.licensePlateEnd);
+// Inputmask({ regex: regexObject.driverLicense }).mask(inputsObj.driverLicense);
+// Inputmask({ regex: regexObject.driverLicense }).mask(inputsObj.certificate);
+// Inputmask({ regex: regexObject.receiptNumber }).mask(inputsObj.receiptNumber);
+// Inputmask({ regex: regexObject.vinNumber }).mask(inputsObj.vinNumber);
+// Inputmask({ regex: regexObject.carBody }).mask(inputsObj.carBody);
 
 
-customInputMask($(inputsObj.licensePlateStart));
-customInputMask($(inputsObj.licensePlate));
-customInputMask($(inputsObj.driverLicense));
-customInputMask($(inputsObj.certificate));
+// customInputMask($(inputsObj.licensePlateStart));
+// customInputMask($(inputsObj.licensePlate));
+// customInputMask($(inputsObj.driverLicense));
+// customInputMask($(inputsObj.certificate));
 
 // Popup opener
 $('.js-popup').click(function (event) {
