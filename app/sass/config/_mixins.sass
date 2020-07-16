@@ -1,0 +1,192 @@
+// Font face
+=font_face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+	@font-face
+		font-family: $font-family
+		font-weight: $weight
+		font-style: $style
+
+		@if $asset-pipeline == true 
+			src: font-url('#{$file-path}.eot')
+			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+		@else
+			src: url('#{$file-path}.eot')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
+
+
+// Horizontal gradient - from left to right
+=gradient_x($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%)
+	background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent)
+	background-repeat: repeat-x
+
+// Vertical gradient - from top to bottom
+=gradient_y($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%)
+	background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent)
+	background-repeat: repeat-x
+
+=tableCol($colWidth: 60%)
+	.fine-table-list__col
+		&:first-child
+			flex-basis: $colWidth
+			max-width: $colWidth
+		&:last-child
+			flex-basis: 100% - $colWidth
+			max-width: 100% - $colWidth
+
+=tableMoreCol1($colWidth1: 5%, $colWidth2: 15%, $colWidth3: 15%, $colWidth4: 30%, $colWidth5: 35%)
+	.fine-table-list__col,
+	.fine-table-list-header__col
+		&:nth-child(1)
+			flex-basis: $colWidth1
+			max-width: $colWidth1
+			margin-right: 0
+		&:nth-child(2)
+			flex-basis: $colWidth2
+			max-width: $colWidth2
+		&:nth-child(3)
+			flex-basis: $colWidth3
+			max-width: $colWidth3
+		&:nth-child(4)
+			flex-basis: $colWidth4
+			max-width: $colWidth4
+		&:nth-child(5)
+			flex-basis: $colWidth5
+			max-width: $colWidth5
+
+=tableMoreCol2($colWidth1: 5%, $colWidth2: 35%, $colWidth3: 30%, $colWidth4: 30%)
+	.fine-table-list__col,
+	.fine-table-list-header__col
+		&:nth-child(1)
+			flex-basis: $colWidth1
+			max-width: $colWidth1
+			margin-right: 0
+		&:nth-child(2)
+			flex-basis: $colWidth2
+			max-width: $colWidth2
+		&:nth-child(3)
+			flex-basis: $colWidth3
+			max-width: $colWidth3
+		&:nth-child(4)
+			flex-basis: $colWidth4
+			max-width: $colWidth4
+
+=tableMoreCol3($colWidth1: 5%, $colWidth2: 20%, $colWidth3: 30%, $colWidth4: 20%, $colWidth5: 10%, $colWidth6: 7.5%, $colWidth7: 7.5%)
+	.fine-table-list__col,
+	.fine-table-list-header__col
+		&:nth-child(1)
+			flex-basis: $colWidth1
+			max-width: $colWidth1
+			margin-right: 0
+		&:nth-child(2)
+			flex-basis: $colWidth2
+			max-width: $colWidth2
+		&:nth-child(3)
+			flex-basis: $colWidth3
+			max-width: $colWidth3
+		&:nth-child(4)
+			flex-basis: $colWidth4
+			max-width: $colWidth4
+		&:nth-child(5)
+			flex-basis: $colWidth5
+			max-width: $colWidth5
+		&:nth-child(6)
+			flex-basis: $colWidth6
+			max-width: $colWidth6
+		&:nth-child(7)
+			flex-basis: $colWidth7
+			max-width: $colWidth7
+
+=tableMoreCol4($colWidth1: 5%, $colWidth2: 20%, $colWidth3: 30%, $colWidth4: 20%, $colWidth5: 10%, $colWidth6: 7.5%)
+	.fine-table-list__col,
+	.fine-table-list-header__col
+		&:nth-child(1)
+			flex-basis: $colWidth1
+			max-width: $colWidth1
+			margin-right: 0
+		&:nth-child(2)
+			flex-basis: $colWidth2
+			max-width: $colWidth2
+		&:nth-child(3)
+			flex-basis: $colWidth3
+			max-width: $colWidth3
+		&:nth-child(4)
+			flex-basis: $colWidth4
+			max-width: $colWidth4
+		&:nth-child(5)
+			flex-basis: $colWidth5
+			max-width: $colWidth5
+		&:nth-child(6)
+			flex-basis: $colWidth6
+			max-width: $colWidth6
+
+// Media queries
+// max-width
+=xxxl
+	@media only screen and (max-width: $xxxl - 1)
+		@content
+		
+=xxl
+	@media only screen and (max-width: $xxl - 1)
+		@content
+
+=xl
+	@media only screen and (max-width: $xl - 1)
+		@content
+
+=lg
+	@media only screen and (max-width: $lg - 1)
+		@content
+
+=md
+	@media only screen and (max-width: $md - 1)
+		@content
+
+=sm
+	@media only screen and (max-width: $sm - 1)
+		@content
+
+=xsm
+	@media only screen and (max-width: $xsm - 1)
+		@content
+
+
+// min-width
+=min_xxxl
+	@media only screen and (min-width: $xxxl)
+		@content
+
+=min_xxl
+	@media only screen and (min-width: $xxl)
+		@content
+
+=min_xl
+	@media only screen and (min-width: $xl)
+		@content
+
+=min_lg
+	@media only screen and (min-width: $lg)
+		@content
+
+=min_md
+	@media only screen and (min-width: $md)
+		@content
+
+=min_sm
+	@media only screen and (min-width: $sm)
+		@content
+
+
+
+// Media queries
+// max-height
+=h600
+	@media only screen and (min-height: $h600)
+		@content
+
+=h700
+	@media only screen and (min-height: $h700)
+		@content
+
+=h800
+	@media only screen and (min-height: $h700)
+		@content

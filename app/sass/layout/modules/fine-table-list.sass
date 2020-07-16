@@ -1,0 +1,243 @@
+.fine-table-list
+	&--reverse
+		.fine-table-list
+			&__row
+				+lg
+					&:nth-child(even)
+						background: rgba($c4, 0.57) !important
+					&:nth-child(odd)
+						background: #fff !important
+
+	&--col-style-1
+		+min_lg
+			+tableCol(60%)
+		// +lg
+		// 	+min_sm
+		// 		+tableCol(60%)
+		// +sm
+		// 	+tableCol(66.5%)
+
+	&--col-style-2
+		+min_lg
+			+tableCol(60%)
+		// +lg
+		// 	+min_sm
+		// 		+tableCol(60%)
+		// +sm
+		// 	+tableCol(66.5%)
+
+
+
+	&--col-style-3
+		+min_lg
+			+tableCol(65%)
+
+	&--col-style-4
+		+min_lg
+			+tableCol(50%)
+
+	&--col-style-5
+		+min_lg
+			+tableCol(45.1%)
+			.fine-table-list__row
+				padding: 11px 0px 9px 15px
+
+	&--col-style-6
+		+min_lg
+			+tableCol(52%)
+			.fine-table-list__row
+				padding: 11px 6px 9px 15px
+
+	&--col-style-7
+		+min_lg
+			+tableCol(55.3%)
+
+	&--col-style-8
+		+min_lg
+			+tableCol(55%)
+			.fine-table-list__row
+				padding: 11px 6px 9px 15px
+
+	&--col-style-9
+		+min_lg
+			+tableCol(45%)
+
+	&--col-style-10
+		+min_lg
+			+tableCol(50%)
+			.fine-table-list
+				&__row
+					padding: 11px 0px 9px 15px
+				&__col
+					&:first-child
+						margin-right: 5px
+
+	&--col-style-11
+		+min_lg
+			+tableCol(48%)
+			.fine-table-list
+				&__row
+					padding: 11px 0px 9px 15px
+				&__col
+					&:first-child
+						margin-right: 5px
+
+	&--col-style-12
+		+min_lg
+			+tableCol(40.7%)
+
+	&--space-between
+		.fine-table-list
+			&__row
+				justify-content: space-between
+			&__col
+				flex-basis: auto
+				max-width: none
+
+	&--col-style-13
+		+min_lg
+			+tableCol(35%)
+
+	&--col-style-14
+		+min_lg
+			+tableCol(69%)
+
+	&--col-style-15
+		+min_lg
+			+tableCol(43%)
+
+	&--col-style-16
+		+min_lg
+			+tableCol(71.6%)
+	
+	&--col-style-17
+		+min_lg
+			+tableCol(38%)
+
+	&--mobile-col-70
+		+lg
+			+tableCol(70%)
+
+	&--mobile-col-60
+		+lg
+			+tableCol(60%)
+	// &--mobile-col-50
+	// 	+lg
+	// 		+tableCol(50%)
+	&--mobile-col-40
+		+lg
+			+tableCol(40%)
+	&--mobile-col-38
+		+lg
+			+tableCol(38%)
+
+	&--mobile-col-full
+		.fine-table-list__col
+			flex-basis: 100%
+			max-width: 100%
+	&--not-data
+		.fine-table-list
+			&__row
+				background: #fff !important
+				padding-right: 0
+				padding-left: 0
+
+	&--more-col-style1
+		+tableMoreCol1(10.8%, 20%, 31%, 25%, 10%)
+
+	&--more-col-style2
+		margin-bottom: 20px
+		+tableMoreCol2(5.5%, 36.9%, 24%, 33.6%)
+		.fine-table-list__row
+			padding: 20px 10px 18px 12px
+
+	&--more-col-style4
+		+tableMoreCol4(6%, 16%, 21.5%, 34.6%, 11%, 10.9%)
+
+	&--d-lg-none
+		+lg
+			display: none
+
+	&--d-lg-block
+		+min_lg
+			display: none
+
+	&--mobile-more-item
+		+min_lg
+			display: none
+		.fine-table-list
+			&__row
+				display: block
+			&__col
+				// flex-direction: column
+			// &__title
+			// 	&:not(:last-child)
+			// 		margin-bottom: 10px
+	&--mb-30
+		+lg
+			margin-bottom: 30px
+
+	&__row
+		display: flex
+		padding: 11px 15px 9px
+		+sm
+			padding: 11px 10px 9px
+		&:nth-child(odd)
+			background: rgba($c4, 0.57)
+
+	&__small-row
+		+lg
+			display: flex
+			align-items: flex-start
+			width: 100%
+		&:not(:last-child)
+			margin-bottom: 10px
+	&__col
+		display: flex
+		+lg
+			flex-basis: 50%
+			max-width: 50%
+		+xsm
+			flex-basis: 60%
+			max-width: 60%
+		&:first-child
+			margin-right: 15px
+			+sm
+				margin-right: 10px
+
+	&__hidden-icon-wrap
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		.icon
+			width: 15px
+			height: 15px
+			fill: #B7BBC4
+
+	&__title
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		overflow: hidden
+		text-overflow: ellipsis
+		br
+			+lg
+				display: none
+		&--bolder
+			font-weight: 500
+		&--red
+			color: $c1
+		&--green
+			color: #009335
+		&--ma-200
+			max-width: 200px
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		&-wrap
+			display: flex
+			align-items: center
+			width: 153px
+			height: 111px

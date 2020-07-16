@@ -1,0 +1,191 @@
+.report-item
+	display: block
+	position: relative
+	cursor: pointer
+	user-select: none
+	margin-bottom: 0
+	&:hover
+		+min_lg
+			.report-item
+				&__wrap
+					background: #F8FAFF
+					border: 1px solid $accent
+
+	&--checkbox
+		.report-item
+			&__icon-wrap
+				border-radius: 0
+				transform: scale(1)
+				opacity: 1
+				.icon
+					fill: $accent
+					width: 70%
+					height: 70%
+					transition: all 0.3s ease
+					transform: scale(0)
+				&:after
+					border-radius: 0
+
+	&--more-items
+		.report-item
+			&__title
+				margin-bottom: 15px
+			&__wrap
+				padding-top: 32px
+				padding-bottom: 24px
+	&:not(:last-child)
+		margin-bottom: 6px
+
+	&__input-wrap
+		display: flex
+		align-items: center
+
+	&__wrap
+		display: block
+		background: #fff
+		border: 1px solid $c3
+		border-radius: 3px
+		padding: 24px 28px 17px 20px
+		transition: all 0.3s ease
+		+md
+			padding: 20px 15px
+
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		+min_md
+			justify-content: space-between
+
+	&__container
+		display: flex
+		+md
+			flex-direction: column
+			align-items: flex-start
+
+	&__select
+		position: relative
+		z-index: 100
+		margin-top: -8px
+		+min_md
+			margin-right: 20px
+		+md
+			margin-bottom: 20px
+
+	&__col
+		display: block
+		flex-basis: 78.9%
+		max-width: 78.9%
+		+xl
+			flex-basis: 75.9%
+			max-width: 75.9%
+		+md
+			flex-basis: 90%
+			max-width: 90%
+		&:first-child
+			flex-basis: 6.1%
+			max-width: 6.1%
+			+md
+				flex-basis: 10%
+				max-width: 10%
+		&:last-child
+			flex-basis: 15%
+			max-width: 15%
+			+min_md
+				margin-left: auto
+			+xl
+				flex-basis: 18%
+				max-width: 18%
+			+md
+				flex-basis: 75.9%
+				max-width: 75.9%
+				margin-left: 10%
+				margin-top: 15px
+
+
+	&__input
+		position: absolute
+		visibility: hidden
+		opacity: 0
+		&:checked ~ .report-item
+			&__wrap
+				background: #F8FAFF
+				border: 1px solid $accent
+				.report-item
+					&__icon
+						opacity: 1
+						transform: scale(1)
+						&-wrap
+							border-color: $accent
+							.icon
+								opacity: 1
+								transform: scale(1)
+
+	&__title
+		display: block
+		font-weight: 500
+		font-size: 16px
+		line-height: 17px
+		color: $c0
+		margin-bottom: 10px
+
+	&__desc
+		display: inline-block
+		font-size: 14px
+		line-height: 20px
+		color: $c3
+
+	&__price
+		display: inline-block
+		font-weight: 500
+		font-size: 16px
+		line-height: 17px
+		color: $c0
+		margin-bottom: 10px
+		+min_md
+			text-align: right
+		&-discount
+			display: inline-block
+			font-size: 14px
+			line-height: 17px
+			color: $c1
+			+min_md
+				text-align: right
+		&-wrap
+			display: flex
+			flex-direction: column
+			+min_md
+				align-items: flex-end
+
+
+	&__icon
+		width: 10px
+		height: 10px
+		background: $accent
+		border-radius: 50%
+		transition: all 0.3s ease
+		opacity: 0
+		transform: scale(0)
+		&-wrap
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 16px
+			height: 16px
+			border-radius: 50%
+			border: 1px solid $c3
+			background: #fff
+			transition: all 0.3s ease
+		// &:after
+		// 	content: ''
+		// 	position: absolute
+		// 	top: 50%
+		// 	left: 50%
+		// 	transform: translate(-50%, -50%)
+		// 	width: 10px
+		// 	height: 10px
+		// 	background: $accent
+		// 	border-radius: 50%
+		// 	opacity: 0
+		// 	transition: all 0.3s ease

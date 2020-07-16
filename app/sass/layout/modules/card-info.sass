@@ -1,0 +1,48 @@
+.card-info
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	&__col
+		&:last-child
+			+md
+				flex-basis: 100%
+				max-width: 100%
+				padding-top: 20px
+				margin-top: 20px
+				border-top: 1px solid $c4
+		&:not(:first-child)
+			.card-info
+				&__item
+					&:after
+						content: ''
+						position: absolute
+						top: 50%
+						left: -65px
+						transform: translateY(-50%)
+						width: 1px
+						height: 40px
+						background: $c4
+						+md
+							display: none
+
+	&__item
+		position: relative
+
+	&__title
+		font-size: 14px
+		line-height: 16px
+		color: $c3
+		&:first-child
+			margin-bottom: 5px
+		&--bolder
+			font-size: 16px
+			font-weight: 500
+		&--dark
+			color: $c0
+		&--green
+			color: #009335
+		&--red
+			color: $c1

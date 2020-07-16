@@ -1,0 +1,656 @@
+footer.b-footer
+	if havBanner == true
+		.b-footer-banner
+			._container.container
+				._row
+					._col
+						._desc Вы так же можете получить подробную консультацию по телефону
+					._col
+						._wrap
+							a.b-phone.-white._phone(href="tel:+78095054777")
+								span._icon
+									+icon('mobile')
+								span._text +7 (809) 505-4777
+							._seperator или
+							a.b-btn.-left-icon._btn.js-popup(href="#ask")
+								span._icon
+									+icon('notification')
+								span._text Задать вопрос
+	._wrap
+		._container.container
+			._row
+				._col
+					._logo-wrap
+						a.b-logo._logo(href="index.html")
+							span._img-wrap
+								img._img(src="img/logo/new-logo.svg" alt="")
+							span._text Штрафы ГИБДД
+						._logo-title.xsm-title Онлайн сервис проверки автомобиля и штрафов
+					._info-text 2020 © ООО «Штрафы ГИБДД»<br> Информация о штрафах ГИБДД формируется автоматически на основе запроса по данным пользователя в официальную базу ГИБДД РФ или ГИС ГМП.
+				._col
+					._title Услуги
+					nav.b-footer-nav.-left
+						ul._list
+							li._item
+								a._link(href="#") Проверить штрафы ГИБДД
+							li._item
+								a._link(href="#") Оплатить штраф ГИБДД
+							li._item
+								a._link(href="#") Проверить автомобиль
+				._col
+					._title Информация
+					nav.b-footer-nav.-right
+						ul._list
+							li._item
+								a._link(href="#") Новости
+							li._item
+								a._link(href="#") Поддержка
+							li._item
+								a._link(href="#") Контакты
+				._col
+					._title.-top Тех. поддержка
+					a._phone-link(href="tel:+78095054776") +7 (809) 505-4777
+					a.b-email.-bolder._email(href="mailto:info@gbdd.com") info@gbdd.com
+					._title.-bottom Мы соцсетях
+					ul.b-socials._socials
+						li._item
+							a._link(href="#")
+								+icon('vk')
+						li._item
+							a._link(href="#")
+								+icon('youtube')
+	.b-footer-bottom
+		._container.container
+			._row
+				._col
+					._links-wrap
+						a._link.xsm-title(href="#") Политика конфиденциальности
+						a._link.xsm-title(href="#") Пользовательское соглашение
+				._col
+					._icon-wrap
+						._icon
+							+icon('lock')
+						._text.xsm-title https / 3d secure
+				._col
+					._cards-wrap
+						._title.xsm-title Принимаем к оплате
+						ul.b-pay-cards
+							li._item.-mastercard
+								img._img(src="img/logo/mastercard.svg" alt="")
+							li._item.-maestro
+								img._img(src="img/logo/maestro.svg" alt="")
+							li._item.-visa
+								img._img(src="img/logo/visa.svg" alt="")
+							li._item.-mir
+								img._img(src="img/logo/mir.svg" alt="")
+	._mobile-text 2020 © ООО «Штрафы ГИБДД» 
+
+//- movin up button
+include ./modules/moving-up-button
+
+|
+|
+|
+
+
+// Choose-country
+.b-mfp.-choose-country-popup.zoom-anim-dialog.mfp-hide#choose-country
+	.b-choose-country
+		form._form
+			h2._title Выберите свой город
+			.b-input.-search._input
+				._wrap
+					input(type="text" name="choose-country" placeholder="Укажите ваш город...")
+					span._icon
+					button._search-icon(type="submit")
+						+icon('simple-search')
+					.search-list-popup-wrap
+						.baron__track
+							.baron__bar
+						ul.b-search-list-popup
+							li._item.-active
+								a._link(href="#") Камчатский край
+							li._item
+								a._link(href="#") Карачаево-Черкесская Республика
+							li._item
+								a._link(href="#") Кемеровская область
+							li._item
+								a._link(href="#") Кировская область
+							li._item
+								a._link(href="#") Костромская область
+							li._item
+								a._link(href="#") Краснодарский край
+							li._item
+								a._link(href="#") Красноярский край
+							li._item
+								a._link(href="#") Курганская область
+							li._item
+								a._link(href="#") Курская область
+			ul.b-list._list
+				li._item
+					a._link(href="#") Москва
+				li._item
+					a._link(href="#") Санкт-Петербург
+				li._item
+					a._link(href="#") Екатеринбург, Свердловская область
+				li._item
+					a._link(href="#") Нижний Новгород, Нижегородская область
+				li._item
+					a._link(href="#") Пермь, Пермский Край
+				li._item
+					a._link(href="#") Новосибирск, Новосибирская область
+				li._item
+					a._link(href="#") Казань, Татарстан республика
+				li._item
+					a._link(href="#") Челябинск, Челябинская область
+				li._item
+					a._link(href="#") Краснодар, Краснодарский Край
+				li._item
+					a._link(href="#") Самара, Самарская область
+
+// Choose-department
+.b-mfp.-choose-department-popup.zoom-anim-dialog.mfp-hide#choose-department
+	.b-choose-department
+		h2._title Выбрать подразделение
+		form._form
+			//- Добавь модификатор "input--active" и появиться попап для инпута
+			.b-input.-search-popup.-active._input
+				._title Напишите номер подразделения или адрес
+				._wrap
+					input(type="text" name="search-city" placeholder="УГИБДД ГУ МВД России по г. Москве")
+					span._icon
+					button._search-icon(type="submit")
+						+icon('simple-search')
+					.search-list-popup-wrap
+						.baron__track
+							.baron__bar
+						ul.b-search-list-popup.-bigger
+							li._item.-active
+								a._link(href="#") [1145000] УГИБДД ГУ МВД России по г. Москве
+								span._text Адрес: г. Москва, ул. Садовая-Самотечная, д. 1
+							li._item
+								a._link(href="#") [1145110] 1 ОЭР МО ГИБДД ТНРЭР № 1 ГУ МВД России по г. Москве
+								span._text Адрес: г Москва, ул Лобненская, 20
+							li._item
+								a._link(href="#") [1145101] 2 ОЭР МО ГИБДД ТНРЭР № 1 ГУ МВД России по г. Москве
+								span._text Адрес: г Москва, ул Пяловская, 21
+							li._item
+								a._link(href="#") [1145102] 2 ОЭР МО ГИБДД ТНРЭР № 3 ГУ МВД России по г. Москве
+								span._text Адрес: г Москва, ул Пяловская, 21
+
+// Complaint Popup
+.b-mfp.-complaint-popup.zoom-anim-dialog.mfp-hide#complaint
+	.b-complaint-popup
+		h2._title Подать жалобу<sup>*</sup>
+		form._form
+			.b-input._input
+				._title ФИО<sup>*</sup>
+				._wrap
+					input(type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич")
+					span._icon
+			.b-input._input
+				._title Номер телефона<sup>*</sup>
+				._wrap
+					input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+					span._icon
+			.b-input._input
+				._title Адрес эл. почты<sup>*</sup>
+				._wrap
+					input(type="text" name="email" placeholder="ivanov@yandex.ru")
+					span._icon
+			.b-input._input
+				._title Суть обращения:<sup>*</sup>
+				._wrap
+					textarea(name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required)
+			button._btn.btn(type="submit") Отправить
+			.b-popup-warning-desc
+				sup *
+				span Для подачи жалобы нужно заполнить все поля
+
+// Sign In
+.b-mfp.-signin.popups-general-styles.zoom-anim-dialog.mfp-hide#sign-in
+	.b-signin-popup.popup-style
+		h2._title.popup-title Вход в личный кабинет
+		._sub-title.popup-desc 
+			span Нет данных для входа?
+			a._link.link.js-popup(href="#sign-up") Зарегистрируйтесь сейчас
+		form._form
+			.b-feedback-input
+				._top-line
+					nav._nav
+						ul._list
+							li._item.tab--active
+								a._link(href="#email" data-toggle="tab") E-mail
+							li._item
+								a._link(href="#phone" data-toggle="tab") Телефон
+				.b-input.js-tab.tab--active.email(style="display: block")
+					._wrap
+						input(type="text" name="email" placeholder="ivanov@yandex.ru")
+						span._icon
+				.b-input.js-tab.phone
+					._wrap
+						input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+						span._icon
+			.b-input._input
+				._title-wrap
+					._title Пароль
+					a._forget-link.link.js-popup(href="#forget-password") Забыли пароль?
+				._wrap
+					input(type="password" name="password" placeholder="*******" autocomplete='on')
+			button.b-btn.-arrow-right._btn(type="submit")
+				span._text Войти
+				span._icon
+					+icon('arrow-right')
+			._bottom-content
+				._desc-wrap
+					._desc
+						p Или войдите с помощью соцсетей:
+				ul.b-socials._socials
+					li._item
+						a._link(href="#")
+							+icon('vk')
+					li._item
+						a._link(href="#")
+							+icon('fb')
+					li._item
+						a._link(href="#")
+							+icon('ok')
+					li._item
+						a._link(href="#")
+							+icon('twi')
+					li._item
+						a._link(href="#")
+							+icon('insta')
+
+
+// Offer Popup
+.b-mfp.-popup.zoom-anim-dialog.mfp-hide#offer-popup
+	.b-popup
+		h2._title Внести предложение
+		form._form
+			.b-input._input
+				._title ФИО<sup>*</sup>
+				._wrap
+					input(type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич")
+					span._icon
+			.b-input._input
+				._title Номер телефона<sup>*</sup>
+				._wrap
+					input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+					span._icon
+			.b-input._input
+				._title Адрес эл. почты<sup>*</sup>
+				._wrap
+					input(type="text" name="email" placeholder="ivanov@yandex.ru")
+					span._icon
+			.b-select.-big._select
+				._title.md-title Выбор отдела:<sup>*</sup>
+				select(data-placeholder='77 г. Москва' name='department' data-search-not-found=' ' data-search-placeholder='' data-visible-options='0' required='')
+					option
+					option Москва
+					option Санкт-Петербург
+					option Екатеринбург, Свердловская область
+					option Нижний Новгород, Нижегородская область
+					option Пермь, Пермский Край
+					option Новосибирск, Новосибирская область
+					option Казань, Татарстан республика
+					option Челябинск, Челябинская область
+					option Краснодар, Краснодарский Край
+					option Самара, Самарская область
+			.b-input._input
+				._title Суть обращения:<sup>*</sup>
+				._wrap
+					textarea(name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required)
+			button._btn.btn(type="submit") Отправить
+			.b-popup-warning-desc
+				sup *
+				span Для подачи внести предложение нужно заполнить все поля
+		//- добавь модификатор success-popup--open для открытия попапа
+		.b-success-popup.-general
+			._icon-wrap
+				+icon('success-icon')
+			h2._title.popup-title Обращение зарегистрировано!
+			._sub-title.popup-desc Ваше обращение было направлено в отдел по расспределению, средний срок обработки обращение граждан состовляет 7 рабочих дней. Максимальный срок регламинторован - 30 рабочих дней.
+
+// Сorruption Popup
+.b-mfp.-popup.zoom-anim-dialog.mfp-hide#corruption-popup
+	.b-popup
+		h2._title Сообщить о корупции
+		form._form
+			.b-input._input
+				._title ФИО<sup>*</sup>
+				._wrap
+					input(type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич")
+					span._icon
+			.b-input._input
+				._title Номер телефона<sup>*</sup>
+				._wrap
+					input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+					span._icon
+			.b-input._input
+				._title Адрес эл. почты <sup>*</sup>
+				._wrap
+					input(type="text" name="email" placeholder="ivanov@yandex.ru")
+					span._icon
+			.b-select.-big._select
+				._title.md-title Выбор отдела:<sup>*</sup>
+				select(data-placeholder='77 г. Москва' name='department' data-search-not-found=' ' data-search-placeholder='' data-visible-options='0' required='')
+					option
+					option Москва
+					option Санкт-Петербург
+					option Екатеринбург, Свердловская область
+					option Нижний Новгород, Нижегородская область
+					option Пермь, Пермский Край
+					option Новосибирск, Новосибирская область
+					option Казань, Татарстан республика
+					option Челябинск, Челябинская область
+					option Краснодар, Краснодарский Край
+					option Самара, Самарская область
+			.b-input._input
+				._title Суть обращения:<sup>*</sup>
+				._wrap
+					textarea(name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required)
+			button._btn.btn(type="submit") Отправить
+			.b-popup-warning-desc
+				sup *
+				span Для подачи сообщить о корупции нужно заполнить все поля
+		//- добавь модификатор success-popup--open для открытия попапа
+		.b-success-popup.-general
+			._icon-wrap
+				+icon('success-icon')
+			h2._title.popup-title Обращение зарегистрировано!
+			._sub-title.popup-desc Ваше обращение было направлено в отдел по расспределению, средний срок обработки обращение граждан состовляет 7 рабочих дней. Максимальный срок регламинторован - 30 рабочих дней.
+
+// Support Popup
+.b-mfp.-popup.zoom-anim-dialog.mfp-hide#support-popup
+	.b-popup
+		h2._title Обращение в<br> техническую поддержку
+		form._form
+			.b-input._input
+				._title ФИО<sup>*</sup>
+				._wrap
+					input(type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич")
+					span._icon
+			.b-input._input
+				._title Номер телефона <sup>*</sup>
+				._wrap
+					input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+					span._icon
+			.b-input._input
+				._title Адрес эл. почты <sup>*</sup>
+				._wrap
+					input(type="text" name="email" placeholder="ivanov@yandex.ru")
+					span._icon
+			.b-select.-big._select
+				._title.md-title Выберите город:<sup>*</sup>
+				._sub-title (проверка автомобиля, проверка штрафов, оплата штрафов, ОСАГО, трудоустройство)
+				select(data-placeholder='77 г. Москва' name='city' data-search-not-found=' ' data-search-placeholder='' data-visible-options='0' required)
+					option
+					option Москва
+					option Санкт-Петербург
+					option Екатеринбург, Свердловская область
+					option Нижний Новгород, Нижегородская область
+					option Пермь, Пермский Край
+					option Новосибирск, Новосибирская область
+					option Казань, Татарстан республика
+					option Челябинск, Челябинская область
+					option Краснодар, Краснодарский Край
+					option Самара, Самарская область
+			.b-input._input
+				._title Суть обращения:<sup>*</sup>
+				._wrap
+					textarea(name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required)
+			button._btn.btn(type="submit") Отправить
+			.b-popup-warning-desc
+				sup *
+				span Для подачи обращение в техническую поддержку нужно заполнить все поля
+		//- добавь модификатор success-popup--open для открытия попапа
+		.b-success-popup.-genaral
+			._icon-wrap
+				+icon('success-icon')
+			h2._title.popup-title Обращение зарегистрировано!
+			._sub-title.popup-desc Ваше обращение было направлено в отдел по расспределению, средний срок обработки обращение граждан состовляет 7 рабочих дней. Максимальный срок регламинторован - 30 рабочих дней.
+
+// Not Found Popup
+.b-mfp.-not-found-popup.zoom-anim-dialog.mfp-hide#not-found
+	.popups-wrap
+		.b-not-found.open
+			._icon-wrap
+				+icon('simple-search')
+			h2._title Ничего не найдено
+			._desc.desc По вашему запросу в базе ГИБДД не найдено неоплаченых штрафов, возможно вы допустили ошибку при вводе информации или все штрафы уже оплачены. Вы можете подать повторный запрос на проверку
+			a._btn.light-blue-btn.mfp-popup-close(href="#") Изменить данные
+		.b-database-unavailable
+			._icon-wrap
+				+icon('settings')
+			h2._title База ГИС ГМП временно недоступна
+			._desc.desc К сожалению по техническим причинам база ГИС ГМП выдала ошибку при проверке информации, рекомендуем сделать повторный запрос
+			a._btn.light-blue-btn.mfp-popup-close(href="#") Повторный запрос
+			._small-desc.md-desc Как только база будет восстановлена на адрес электронной почты мы направим информацию по вашим штрафам.
+
+
+// Sign Up
+.b-mfp.-signup.popups-general-styles.zoom-anim-dialog.mfp-hide#sign-up
+	.b-signup-popup.popup-style
+		form._form
+			._head
+				._title-wrap
+					h2._title.popup-title Регистрация
+					._sub-title.popup-desc Зарегестрированным пользователям доступны допольнительные возможности ипользования сервиса
+				._prev-btn-wrap(style="display: none;")
+					a._prev-btn(href="#")
+						span._prev-btn-icon-wrap
+							+icon('triangle')
+						span._prev-btn-text Вернутся назад
+				.b-timeline(data-step='1')
+					._item.-step-1
+						._number 1
+						._text Введите персональные данные для регистрации
+					._item.-step-2
+						._number 2
+						._text Введите номер телефона для потверждения учетной записи
+					._item.-step-3
+						._number 3
+						._text Если вы хотите получать регулярные оповещения о штрафах бесплатно и оплачивать их со <span>скидкой 50%</span> заполните поля.
+			._body
+				._steps.owl-carousel
+					._step.-first
+						._input-wrap
+							.b-input._input
+								._title Имя <sup>*</sup>
+								._wrap
+									input(type="text" name="name" placeholder="Иван")
+									span._icon
+							.b-input._input
+								._title-wrap
+									._title Пароль <sup>*</sup>
+								._wrap
+									input(type="password" name="password" placeholder="*******" autocomplete='on')
+									span._icon
+							.b-input._input
+								._title Адрес эл. почты <sup>*</sup>
+								._wrap
+									input(type="email" name="email" placeholder="ivanov@yandex.ru")
+									span._icon
+					._step.-second
+						._input-wrap
+							.b-input._input
+								._title Номер телефона <sup>*</sup>
+								._wrap
+									input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+									span._icon
+							._step-desc.desc На номер +7 ********** мы отправили код потверждения. Введите его в поле ниже, что бы продолжить регистрацию.
+							.b-input._input
+								._wrap
+									input(type="text" name="confirmNumber" placeholder="Код потверждения из СМС" disabled)
+									span._icon
+							._bottom-row
+								._bottom-title.md-desc Не получили СМС?
+								a._link.link.-disabled(href="#") Отправить еще раз
+								.b-countdown.disabled.md-desc Осталось <span>15</span> сек
+					._step.-third
+						._input-wrap
+							.b-input._input
+								._title Гос. номер
+								._wrap
+									input(type="text" name="licensePlate" placeholder="A 007 AA | 197")
+									span._icon
+							.b-input._input
+								._title Vin номер
+								._wrap
+									input(type="text" name="vinNumber" placeholder="4F2YU08102KM26251")
+									span._icon
+							.b-input._input
+								._title СТС
+								._wrap
+									input(type="text" name="certificate" placeholder="00 АБ 000000")
+									span._icon
+			._footer
+				._nav-wrap
+					._next-wrap
+						button.b-btn.-next._btn
+							span._text Дальше
+							span._icon
+								+icon('triangle')
+					._submit-wrap(style="display: none;")
+						button.b-btn.-submit._btn
+							span._text Отправить
+							span._icon
+								+icon('triangle')
+					._dots(data-step="1")
+						._dot
+						._dot
+						._dot
+				.b-agreement._agreement(style="display: none;")
+					label.b-checkbox.-start._checkbox
+						input._input(type="checkbox" name="agreement" checked)
+						span._icon
+							+icon('check')
+						span._text Соглашаюсь на <a href="#">персон. данных</a> и<br> <a href="#">пользовательских соглашений</a> .
+					button.b-btn._btn(type="submit")
+						span._text Зарегестрироваться
+				._footer-bottom-content
+					._small-title.md-title Доступно бесплатно зарегистрированным пользователям
+					ul.b-benefits-list
+						li._item Оповещения о штрафах
+						li._item Проверка автомобиля на юр. чистоту
+						li._item Оповещение о изменении собственника авто
+		//- добавь модификатор success-popup--open для открытия попапа
+		.b-success-popup.-signup
+			._icon-wrap
+				+icon('success-icon')
+			h2._title.popup-title Регистрация прошла успешно
+			._sub-title.popup-desc Теперь вы можете войти в свою учетную запись используя электронную почту или номер телефона.
+			a._link.link.js-popup(href="#sign-in") Войти в учетную запись
+
+// Forget password
+.b-mfp.-forget-password.popups-general-styles.zoom-anim-dialog.mfp-hide#forget-password
+	.b-forget-password-popup.popup-style
+		._main
+			h2._title.popup-title Забыли пароль?
+			._sub-title.-main.popup-desc Пожалуйста, укажите телефона или email, который Вы использовали для входа на сайт
+			form._form.-main
+				.b-feedback-input._feedback-input
+					._top-line
+						nav._nav
+							ul._list
+								li._item.tab--active
+									a._link(href="#email" data-toggle="tab") E-mail
+								li._item
+									a._link(href="#phone" data-toggle="tab") Телефон
+					.b-input.js-tab.tab--active.email(style="display: block")
+						._wrap
+							input(type="text" name="email" placeholder="ivanov@yandex.ru")
+							span._icon
+					.b-input.js-tab.phone
+						._wrap
+							input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+							span._icon
+				button.b-btn.-arrow-right._btn(type="submit")
+					span._text Отправить
+					span._icon
+						+icon('arrow-right')
+		//- добавь модификатор success-popup--open для открытия попапа
+		.b-success-popup
+			._icon-wrap
+				+icon('success-icon')
+			h2._title.popup-title Пароль успешно отправлен
+			._sub-title.popup-desc Мы сделали новый пароль, он был отправлен на адрес электронной почты который вы указали при регистрации
+		//- добавь модификатор forget-password-popup__error--open для открытия попапа
+		._error
+			h2._title.popup-title Адрес эл.почты не найден
+			._sub-title.popup-desc Данный адрес электронной почты не найден, пожалуйста укажите другой адрес или укажите номер телефона
+			form._form.-error
+				.b-feedback-input
+					._top-line
+						nav._nav
+							ul._list
+								li._item.tab--active
+									a._link(href="#email" data-toggle="tab") E-mail
+								li._item
+									a._link(href="#phone" data-toggle="tab") Телефон
+					.b-input.js-tab.tab--active.email(style="display: block")
+						._wrap
+							input(type="text" name="email" placeholder="ivanov@yandex.ru")
+							span._icon
+					.b-input.js-tab.phone
+						._wrap
+							input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+							span._icon
+				._btn-wrap
+					button.b-btn._btn(type="submit") Отправить еще раз
+
+
+.b-mfp.-complaint-popup.-ask-popup.zoom-anim-dialog.mfp-hide#ask
+	.b-complaint-popup.-ask
+		form._form
+			.b-input._input
+				._title ФИО<sup>*</sup>
+				._wrap
+					input(type="text" name="fullName" placeholder="Ягодкин Виталий Сергеевич")
+					span._icon
+			.b-input._input
+				._title Номер телефона<sup>*</sup>
+				._wrap
+					input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+					span._icon
+			.b-input._input
+				._title Адрес эл. почты<sup>*</sup>
+				._wrap
+					input(type="email" name="email" placeholder="ivanov@yandex.ru")
+					span._icon
+			.b-input._input
+				._title Суть обращения:<sup>*</sup>
+				._wrap
+					textarea(name="treatment" cols="30" rows="5" placeholder="Опишите подробнее суть Вашего обращения" required)
+			button._btn.btn(type="submit") Отправить
+			.b-popup-warning-desc
+				sup *
+				span Для подачи заполните все поля выше
+
+.b-mfp.-slider-popup.zoom-anim-dialog.mfp-hide#slider-popup
+	.b-slider-popup.owl-carousel
+
+.b-mfp.-slider-popup.-preloader.zoom-anim-dialog.mfp-hide#preloader
+	.b-popup-preloader
+		._img
+			img(src="img/fine-slides/item.jpg", alt="")
+		._box
+			._title Загрузка фотографии, доступна после регистрации обсолютно бесплатно!
+			._links
+				a.link._link.js-popup(href="#sign-up") Зарегестрироваться
+				a.link._link.js-popup(href="#sign-in") Войти
+
+// Map popup
+.b-mfp.-map-popup.zoom-anim-dialog.mfp-hide#map-popup
+	.b-map-popup
+		#popup-map
+
+|
+|
+|
+// Scripts
+script(src="js/libs.min.js")
+//- script(src="https://unpkg.com/imask")
+script(src="js/main.min.js")
+script(src="js/maps.js")

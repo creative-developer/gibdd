@@ -1,0 +1,176 @@
+section.b-main.-car-checker(data-id="check-main")
+	._container.container
+		nav.b-bread-crumbs.-responsive
+			ul._list
+				li._item
+					a._link(href="/") Главная
+					+icon('bread-crumbs-arrow')
+				li._item
+					a._link(href="#") Проверка автомобиль
+	.container
+		.row
+			.col-12
+				._top-line
+					.b-tab-card.-car-checker
+						._title-wrap
+							h1._title Проверка авто по вин в ГИБДД
+							._desc.desc Проверка авто по гос. номеру и вин в официальных базах ФССП, МВД, ФНП, лизинг, такси, залоги и аресты, скрутка пробега автомобиля.
+						._nav-wrap
+							nav.b-tab-nav.-car-checker
+								ul._list
+									li._item.tab--active
+										a._link(href="#certificate" data-toggle="tab") Госномер
+									li._item
+										a._link(href="#vin" data-toggle="tab") VIN
+									li._item
+										a._link(href="#car-body" data-toggle="tab") Кузов (для японских)
+							a._link.link(href="#") Пример отчёта
+					.b-tab-content.-car-checker
+						form._form
+							._container
+								._wrap
+									._certificate.js-tab.tab--active.certificate(style="display: flex")
+										.b-input
+											._wrap
+												input(type="text" name="licensePlate" placeholder="Укажите гос. номер автомобиля")
+												span._icon
+												span._answer-icon
+													+icon('answer')
+												.b-car-checker-popup
+													._top-line
+														._row
+															._col
+																._title Авто:
+															._col
+																._value BMW 375E
+														._row
+															._col
+																._title Гос. номер:
+															._col
+																._value А001АА97
+														._row
+															._col
+																._title СТС:
+															._col
+																._value 33******94
+													._bottom-line
+														._small-title.sm-title Это ваша машина?
+														._btn-wrap
+															a.b-trs-btn.-bolder._trs-btn(href="#") Другое авто
+															a.b-btn.-bolder._btn(href="#") Да, верно
+												.b-answer-popup
+													._left-col
+														._top-line
+															._warning-icon
+																img._icon(src="img/icons/warning.png" alt="")
+															._title.lg-title Госномер
+														._desc.xsm-desc Индивидуальный регистрационный знак (номер) автомобиля. Состоит из буквенно-цифрового сочетания и регионального кода.
+														._small-title
+															| Например:
+															span A 007 AA | 197
+													._right-col
+														._img-wrap
+															img._img(src="img/documents/license.jpg" alt="")
+									._uin.js-tab.vin
+										.b-input
+											._wrap
+												input(type="text" name="vinNumber" placeholder="4F2YU08102KM26251" disabled)
+												span._icon
+												span._answer-icon
+													+icon('answer')
+												.b-answer-popup
+													._left-col
+														._top-line
+															._warning-icon
+																img._icon(src="img/icons/warning.png" alt="")
+															._title.lg-title Номер квитанции
+														._desc.xsm-desc Уникальный идентификатор начисления (или сокращенно УИН) предназначен для быстрой и точной идентификации платежа и плательщика.
+														._small-title
+															| Например:
+															span 12 АА 654111
+													._right-col
+														._img-wrap
+															img._img(src="img/documents/license-number.jpg" alt="")
+									._driver-license.js-tab.car-body
+										.b-input
+											._wrap
+												input(type="text" name="carBody" placeholder="XYZ12-3456789" disabled)
+												span._icon
+												span._answer-icon
+													+icon('answer')
+												.b-answer-popup
+													._left-col
+														._top-line
+															._warning-icon
+																img._icon(src="img/icons/warning.png" alt="")
+															._title.lg-title Водительское удостоверение
+														._desc.xsm-desc водительское удостоверение — документ, подтверждающий право на управление транспортным средством. 
+														._small-title
+															| Например:
+															span 77 01 397000
+													._right-col
+														._img-wrap
+															img._img(src="img/documents/driver-license.jpg" alt="")
+								._btn-wrap
+									button.b-btn._btn(type="submit")
+										span._text Проверить авто
+										span._icon
+											+icon('arrow-right')
+								a._link.-mobile.link(href="#") Пример отчёта
+							.b-sources.-car-checker._sources
+								._icons-wrap
+									.b-source-icon.-gibdd.-car-checker
+										._img
+											img(src="img/logo/gibdd.png" alt="")
+										._title.xsm-title ГИБДД
+									.b-source-icon.-rsa.-car-checker
+										._img
+											img(src="img/logo/small-logo/rsa.svg" alt="")
+										._title.xsm-title РСА
+									.b-source-icon.-nbki.-car-checker
+										._img
+											img(src="img/logo/small-logo/nbki.png" alt="")
+										._title.xsm-title НБКИ
+									.b-source-icon.-fssp.-car-checker
+										._img
+											img(src="img/logo/small-logo/fssp.svg" alt="")
+										._title.xsm-title ФССП
+									.b-source-icon.-court.-car-checker
+										._img
+											img(src="img/logo/small-logo/court.png" alt="")
+										._title.xsm-title Суды РФ
+									.b-source-icon.-notaries.-more-text.-car-checker
+										._img
+											img(src="img/logo/small-logo/notaries.png" alt="")
+										._title.-more-text.xsm-title Нотариальная<br> палата
+				._bottom-content
+					.b-merits.-row._merits
+						ul._list
+							li._item
+								._header
+									._icon
+										+icon('data')
+									._title Официальные данные
+								._body
+									p - вся информация подгружается только из официальных источников РФ.
+							li._item
+								._header
+									._icon
+										+icon('fast-time')
+									._title Быстрое формирование
+								._body
+									p при стабильной работе всех баз РФ, мы можем сформировать отчет в течении 5 минут. 
+							li._item
+								._header
+									._icon
+										+icon('like')
+									._title Рекомендации
+								._body
+									p - в отчете мы собрали полный список рекомендаций перед покупкой автомобиля. 
+							li._item
+								._header
+									._icon
+										+icon('respect')
+									._title Репутация
+								._body
+									p - мы сформировали уже более 236 875 отчетов за последний год, и  гордимся своей репутацией и отзывами о нашей работе.

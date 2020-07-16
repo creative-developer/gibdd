@@ -1,0 +1,50 @@
+.news
+	padding: 4.5rem 0 3.5rem
+	background: $c4
+	+lg
+		padding: 4rem 0 3rem
+	+sm
+		padding: 30px 0 25px
+	&__title
+		+lg
+			margin-bottom: 0
+		&-wrap
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: 2.25rem
+			+sm
+				margin-bottom: 23px
+
+	&__link
+		line-height: 30px
+		+sm
+			text-align: center
+			background: #fff
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 5px 10px
+
+.news
+	&-row
+		margin: 0 -10px
+		display: flex
+		flex-wrap: wrap
+		&--bottom
+			+min_sm
+				margin-bottom: 11px
+	&-col
+		flex-basis: 33.333%
+		max-width: 33.333%
+		padding: 0 10px
+		margin-bottom: 20px
+		+xl
+			flex-basis: 50%
+			max-width: 50%
+		+sm
+			flex-basis: 100%
+			max-width: 100%
+		&--full
+			flex-basis: 100%
+			max-width: 100%

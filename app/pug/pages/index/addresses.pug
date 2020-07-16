@@ -1,0 +1,93 @@
+section.b-addresses
+	._container.container
+		h2._title Адреса ГИБДД по региону
+		._desc.desc
+			p Полный список регионов ГИБДД по которым мы производим проверку штрафов, при нажатии на определенный регион вы можете узнать полную информацию о отделении, контакты ГИБДД, адреса и уполномоченные лица.
+		.b-gray-card
+			._row
+				._col
+					.b-select
+						._title.md-title Выберите город:
+						select(data-placeholder='77 г. Москва' name='select' data-search-not-found=' ' data-search-placeholder='' data-visible-options='0' required='')
+							option(value="")
+							option(value="") Москва
+							option(value="") Санкт-Петербург
+							option(value="") Екатеринбург, Свердловская область
+							option(value="") Нижний Новгород, Нижегородская область
+							option(value="") Пермь, Пермский Край
+							option(value="") Новосибирск, Новосибирская область
+							option(value="") Казань, Татарстан республика
+							option(value="") Челябинск, Челябинская область
+							option(value="") Краснодар, Краснодарский Край
+							option(value="") Самара, Самарская область
+				._col
+					.b-select
+						._title.md-title Укажите подразделения:
+						select(data-placeholder='Управление ГИБДД ГУ МВД России по городу Москва' name='select' data-search-not-found=' ' data-search-placeholder='' data-visible-options='0' required='')
+							option(value="")
+							option(value="") Москва
+							option(value="") Санкт-Петербург
+							option(value="") Екатеринбург, Свердловская область
+							option(value="") Нижний Новгород, Нижегородская область
+							option(value="") Пермь, Пермский Край
+							option(value="") Новосибирск, Новосибирская область
+							option(value="") Казань, Татарстан республика
+							option(value="") Челябинск, Челябинская область
+							option(value="") Краснодар, Краснодарский Край
+							option(value="") Самара, Самарская область
+		.b-feedback-info
+			h3._title Управление УГИБДД ГУ МВД России по городу Москве
+			._row
+				._col
+					.b-phone.-more.-bigger._phone
+						._icon
+							+icon('mobile')
+						._links-wrap
+							._link-wrap
+								a._link.sm-title(href="tel:+74956237070") (495) 623-70-70
+								._text.-desktop.xsm-title Телефон Дежурной части
+								._text.-mobile.xsm-title Дежурная часть
+							._link-wrap
+								a._link.sm-title(href="tel:+74956239319") (495) 623-93-19
+								._text.-desktop.xsm-title Телефон канцелярии
+								._text.-mobile.xsm-title Канцелярия
+							._link-wrap
+								a._link.sm-title(href="tel:+74956237070") (495) 623-70-70
+								._text.-desktop.xsm-title Телефон по вопросам ИАЗ
+								._text.-mobile.xsm-title По вопросам ИАЗ
+							._link-wrap
+								a._link.sm-title(href="tel:+74956237070") (495) 623-70-70
+								._text.-desktop.xsm-title Телефон по вопросам ДТП
+								._text.-mobile.xsm-title По вопросам ДТП
+							._link-wrap
+								a._link.sm-title(href="tel:+74956244581") (495) 624-45-81
+								._text.-desktop.xsm-title Телефон пресc-службы
+								._text.-mobile.xsm-title Пресc-службы
+							._link-wrap
+								a._link.sm-title(href="tel:+74956248203") (495) 624-82-03
+								._text.-desktop.xsm-title Факс пресс-службы
+								._text.-mobile.xsm-title Пресc-службы
+				._col
+					._geo-wrap
+						._geo-icon
+							+icon('geo')
+						._geo-title-wrap
+							._small-title.md-desc г. Москва, ул. Садовая-Самотечная, д. 1
+							a._link.link.js-popup(href="#map-popup") Посмотреть на карте
+					.b-days
+						._icon-wrap
+							+icon('time')
+						._title-wrap
+							._title.md-desc Пн, Вт, Ср, Чт, Пт: 10:00-19:00,<br>
+								span (перерыв: 13:00-14:00)
+							._title.md-desc Сб: 10:00-13:00 <br>Вс: выходной
+				._col
+					.b-author
+						._img-wrap
+							img._img(src="img/people/boss.jpg" alt="")
+						._right-content
+							._title.md-title Швецов Владимир Владимирович
+							._rank.xsm-title генерал-лейтенант полиции
+							._small-title.md-desc Первый заместитель начальника ГУОБДД МВД России
+
+		include ../../layout/banner

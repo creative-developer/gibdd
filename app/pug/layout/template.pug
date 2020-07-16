@@ -1,0 +1,21 @@
+include _mixins
+
+doctype html
+html(lang="ru")
+	block head
+		- var title = 'Главная | ГИБДД'
+	include _head
+	body
+		|
+		|
+		// Header
+		include _header
+
+		// content
+		block content
+
+		|
+		|
+		block footer
+			-var havBanner = true;
+		include _footer

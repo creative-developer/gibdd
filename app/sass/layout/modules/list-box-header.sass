@@ -1,0 +1,20 @@
+.list-box-header
+	&__row
+		display: flex
+
+	&__col
+		&:first-child
+			flex-basis: 55%
+			max-width: 55%
+		&:last-child
+			padding-left: 13px
+			flex-basis: 45%
+			max-width: 45%
+
+	&__title
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		font-weight: 500
+		+lg
+			margin-bottom: 10px

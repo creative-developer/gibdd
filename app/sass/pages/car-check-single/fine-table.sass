@@ -1,0 +1,331 @@
+.fine-table
+	background: #fff
+	position: relative
+	&--blur
+		.fine-table
+			&__content
+				position: relative
+				filter: blur(5px)
+				opacity: 0.75
+				pointer-events: none
+				user-select: none
+			&__target-btn
+				display: block
+
+	&__target-btn
+		position: absolute
+		top: calc( 50% + 71px)
+		left: 50%
+		transform: translate(-50%, calc( -50% - 35.5px))
+		display: none
+		padding: 14.5px 20px
+		// font-size: 12px
+		// line-height: 14px
+		width: calc( 100% - 30px)
+	&__title
+		font-weight: 500
+		font-size: 16px
+		line-height: 33px
+		color: $c0
+		margin-bottom: 19px
+		&--base-data
+			+lg
+				line-height: 26px
+			span
+				+min_lg
+					display: none
+				+lg
+					color: $accent
+					margin-left: 5px
+
+	&__big-title
+		line-height: 20px
+		margin-bottom: 40px
+
+	&__price-title
+		font-weight: bold
+		font-size: 16px
+		line-height: 33px
+		color: $c0
+		&:first-child
+			flex-basis: 71.6%
+			max-width: 71.6%
+			margin-right: 15px
+			+lg
+				flex-basis: 67.5%
+				max-width: 67.5%
+
+		&:last-child
+			flex-basis: 32.5%
+			max-width: 32.5%
+			+lg
+				flex-basis: 30%
+				max-width: 30%
+
+		&-wrap
+			margin-top: 20px
+			display: flex
+			align-items: center
+			padding: 0 15px
+			+lg
+				padding: 0
+
+	&__content
+		position: relative
+		padding: 30px
+		+xl
+			padding: 30px 15px 15px
+
+	&__row
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -11.5px
+		&:not(:last-child)
+			margin-bottom: 2.5rem
+		&--fine
+			margin: 0 -17px
+		&--bordered
+			padding-bottom: 2.5rem
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				width: calc( 100% - 23px)
+				height: 1px
+				background: #E1E4EB
+
+		&--md-margin
+			&:not(:last-child)
+				margin-bottom: 30px
+		&--md-padding
+			padding-bottom: 30px
+		&--sm-padding
+			padding-bottom: 20px
+
+	&__fine-table-list-header
+		margin-bottom: 9px
+
+	&__col
+		padding: 0 11.5px
+		flex-basis: 50%
+		max-width: 50%
+		+lg
+			flex-basis: 100% !important
+			max-width: 100% !important
+
+		&--full
+			flex-basis: 100%
+			max-width: 100%
+		&--mb-30
+			+lg
+				margin-bottom: 30px
+		&--mb-20
+			+lg
+				margin-bottom: 20px
+		&--d-lg-none
+			+lg
+				display: none
+
+		&--left-style-1
+			flex-basis: 56.3%
+			max-width: 56.3%
+		&--right-style-1
+			flex-basis: 43.7%
+			max-width: 43.7%
+
+		&--left-style-2
+			flex-basis: 53.1%
+			max-width: 53.1%
+		&--right-style-2
+			flex-basis: 46.9%
+			max-width: 46.9%
+
+		&--left-style-3
+			flex-basis: 48.5%
+			max-width: 48.5%
+		&--right-style-3
+			flex-basis: 51.5%
+			max-width: 51.5%
+
+		&--left-style-4
+			flex-basis: 76.9%
+			max-width: 76.9%
+		&--right-style-4
+			flex-basis: 23.1%
+			max-width: 23.1%
+
+		&--left-style-5
+			flex-basis: 60.5%
+			max-width: 60.5%
+			padding: 0 17px
+		&--right-style-5
+			flex-basis: 39.5%
+			max-width: 39.5%
+			padding: 0 17px
+
+
+	&__small-banner
+		margin-bottom: 30px
+
+	&__text
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		&--bolder
+			font-weight: bold
+		p
+			margin-bottom: 0
+		span
+			font-weight: normal
+			margin-left: 5px
+
+	&__desc
+		font-size: 14px
+		line-height: 22px
+		color: $c0
+		max-width: 665px
+		&--mb-30
+			margin-bottom: 30px
+		p
+			margin-bottom: 0
+
+	&__small-title
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		margin-bottom: 10px
+		&--mb-20
+			margin-bottom: 20px
+
+	&__center-title
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 12px
+		line-height: 12px
+		text-align: center
+		color: #959BAA
+		background: #fff
+		padding: 14px
+		top: -60px
+		white-space: nowrap
+		+lg
+			top: -50px
+
+	&__img-wrap
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		height: 100%
+
+	&__frame
+		position: relative
+		border-radius: 3px
+		padding: 43px 36px 30px 30px
+		+xl
+			padding: 43px 15px 30px 15px
+		+lg
+			padding: 30px 15px 20px 15px
+
+		&--style-1
+			padding: 43px 30px 30px 30px
+			+xl
+				padding: 43px 15px 30px 15px
+			+md
+				padding: 30px 15px 20px 15px
+
+		&--style-2
+			padding: 30px 50px 30px 35px
+			+xl
+				padding: 30px 20px 30px 20px
+			+md
+				padding: 30px 15px 20px 15px
+
+		&--style-3
+			padding: 30px 50px 30px 30px
+			+xl
+				padding: 30px 20px 30px 20px
+			+md
+				padding: 30px 15px 20px 15px
+
+		&--red
+			border: 1px solid $c1
+			.fine-table
+				&__frame-title
+					color: $c1
+		&--blue
+			border: 1px solid $accent
+			.fine-table
+				&__frame-title
+					color: $accent
+
+		&--green
+			border: 1px solid #009335
+			.fine-table
+				&__frame-title
+					color: #009335
+
+	&__frame-title
+		position: absolute
+		top: 0px
+		left: 19px
+		transform: translateY(-50%)
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		padding: 16px
+		background: #fff
+		+lg
+			padding: 0 16px
+
+
+	&__public-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		&-wrap
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 140px
+			height: 140px
+			margin-bottom: 13px
+
+	&__item-link
+		line-height: 22px
+
+	&__links-wrap
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+
+	&__link
+		text-align: center
+		+xl
+			font-size: 12px
+		&:not(:last-child)
+			margin-bottom: 5px
+
+	&__car-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		&-wrap
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 210px
+			+lg
+				height: 300px
+			+md
+				height: 250px
+			+sm
+				height: 220px
+			+xsm
+				height: 175px

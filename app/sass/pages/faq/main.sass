@@ -1,0 +1,42 @@
+.faq
+	padding-bottom: 11.5625rem
+	+lg
+		padding-bottom: 8rem
+		background: $c4
+	+md
+		padding-bottom: 6rem
+	+sm
+		padding-bottom: 4.16rem
+	&__row
+		display: flex
+		margin: 0 -10px
+		flex-wrap: wrap
+
+	&__col
+		padding: 0 10px
+		&--left
+			flex-basis: 41.37%
+			max-width: 41.37%
+			position: relative
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+		&--right
+			flex-basis: 58.63%
+			max-width: 58.63%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+	&__title
+		margin-bottom: 2.25rem
+		+sm
+			margin-bottom: 20px
+	
+	&__asking-content
+		&-wrap
+			background: #fff
+			padding: 28px 30px 32px 32px
+			margin-bottom: 20px
+		&-title
+			margin-bottom: 12px
+			line-height: 28px

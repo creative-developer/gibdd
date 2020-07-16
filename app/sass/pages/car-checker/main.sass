@@ -1,0 +1,37 @@
+.main
+	&--car-checker
+		padding-top: 0
+		padding-bottom: 3.75rem
+		+lg
+			padding-bottom: 0
+		+md
+			+min_sm
+				padding-top: 30px
+		+sm
+			background: #fff
+		.main
+			&__top-line
+				position: relative
+				padding: 50px 66px 26px 64px
+				border-bottom: 1px solid #E4E5E8
+				+lg
+					padding: 40px 40px 30px
+				+md
+					padding: 40px 25px 30px
+				+sm
+					padding: 30px 0
+					border-bottom: 0
+				&:after
+					content: ''
+					position: absolute
+					bottom: -8px
+					right: 0
+					width: 171px
+					height: 343px
+					background: url('../img/icons/big-eagle.png') no-repeat center center
+					background-size: 100% 100%
+					+sm
+						display: none
+			&__container
+				+sm
+					padding: 0 0 0 15px

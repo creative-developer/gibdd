@@ -1,0 +1,40 @@
+.warning-box
+	border: 1px solid #DA9A9A
+	box-sizing: border-box
+	border-radius: 3px
+	width: 100%
+	padding: 25px 20px
+	position: relative
+	&__header
+		position: absolute
+		top: -10px
+		left: 20px
+		font-weight: bold
+		background: #ffff
+		font-size: 12px
+		line-height: 21px
+		text-transform: uppercase
+		color: $c1
+		padding: 0 15px
+	&__title
+		max-width: 336px
+		line-height: 24px
+		font-size: 16px
+	&__group
+		margin-top: 20px
+		display: flex
+		flex-direction: column
+		+xl 
+			margin-top: 15px
+	&__name
+		font-size: 12px
+		line-height: 17px
+		color: $c3
+	&__value
+		display: flex
+		line-height: 21px
+		margin-top: 5px
+		font-size: 16px
+	&__logo
+		flex-shrink: 0
+		margin-right: 15px

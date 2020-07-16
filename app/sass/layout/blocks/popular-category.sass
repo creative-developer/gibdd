@@ -1,0 +1,40 @@
+.popular-category
+	+sm
+		display: none
+	&__title
+		line-height: 30px
+		margin-bottom: 15px
+
+	&__item
+		display: flex
+		align-items: flex-start
+		&:not(:last-child)
+			margin-bottom: 25px
+		
+
+	&__img-wrap
+		width: 93px
+		height: 61px
+		min-width: 93px
+		min-height: 61px
+		margin-right: 14px
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__desc
+		line-height: 20px
+		margin-top: -4px
+		p
+			margin-bottom: 0
+
+	&__link
+		font-size: 12px
+		line-height: 12px
+		text-decoration: underline
+		color: $accent
+		&:hover
+			color: #2969EC
+			text-decoration: none

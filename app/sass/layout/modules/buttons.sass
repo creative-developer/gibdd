@@ -1,0 +1,502 @@
+////////// Default btn
+.btn
+	position: relative
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	font-weight: 500
+	font-size: 17px
+	line-height: 17px
+	color: #fff
+	text-align: center
+	text-decoration: none
+	padding: 16.5px 43.2px
+	background-color: $accent
+	border-radius: 3px
+	border: none
+	outline: none
+	transition: all .3s ease
+	+xl
+		padding: 16.5px 33px
+	&--back
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		padding: 16px
+		text-align: center
+		width: 100%
+		border-radius: 0
+		background: $c3
+		color: #FFFFFF
+		.btn__icon
+			margin-right: 6px
+			svg
+				width: 16px
+				height: 12px
+				fill: #fff
+		&:hover
+			background-color: darken($c3, 7%) !important
+
+	&:focus:not(.disabled),
+	&:hover:not(.disabled)
+		outline: none
+		cursor: pointer
+		color: #fff
+		text-decoration: none
+		background-color: #1F54C1
+		.btn__icon
+			transform: translateX(1px)
+	&:active:not(.disabled)
+		background-color: darken(#1F54C1, 7%)
+		.btn__icon
+			transform: translateX(3px)
+	&.disabled
+		opacity: .4
+		user-select: none
+
+	&__text
+		margin-right: 15px
+
+	&__icon
+		display: flex
+		transition: all 0.3s ease
+		svg
+			fill: #fff
+			width: 21px
+			height: 8px
+			transition: all 0.3s ease
+
+	&--bolder
+		font-size: 16px
+		line-height: 16px
+		color: #fff
+
+	&--left-icon
+		font-weight: 500
+		font-size: 16px
+		line-height: 16px
+		color: #FFF1F1
+		padding: 15px 26px
+		+xl
+			padding: 13px 20px
+		.btn
+			&__icon
+				display: flex
+				justify-content: center
+				align-items: center
+				svg
+					width: 16px
+					height: 14px
+			&__text
+				margin-right: 0
+				margin-left: 12px
+		&:focus:not(.disabled),
+		&:hover:not(.disabled)
+			.btn__icon
+				transform: translateX(0)
+		&:active:not(.disabled)
+			background-color: darken(#1F54C1, 7%)
+			.btn__icon
+				transform: translateX(0)
+	&--arrow-right
+		.btn__icon
+			position: absolute
+			top: 50%
+			right: 20px
+			transform: translate(0, -50%)
+		&:focus:not(.disabled),
+		&:hover:not(.disabled)
+			.btn__icon
+				transform: translate(1px, -50%)
+		&:active:not(.disabled)
+			.btn__icon
+				transform: translate(3px, -50%)
+	&--search
+		pointer-events: none
+		.progress
+			transform: translateX(0)
+		.btn-search-content
+			opacity: 1
+			&__search-text
+				transform: translateX(0)
+
+.btn-search-content
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	background: $accent
+	transition: all 0.3s ease
+	opacity: 0
+	overflow: hidden
+
+	&__search-text
+		position: relative
+		margin-right: 10px
+		transform: translateX(5px)
+		transition: all 0.5s ease
+		z-index: 1
+
+	&__overlay
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: #154AB8
+		z-index: 0
+		transition: all 0.5s linear
+		transform: translateX(-100%)
+
+
+
+
+.trs-btn
+	position: relative
+	display: inline-block
+	font-weight: 500
+	font-size: 14px
+	line-height: 17px
+	color: $c0
+	text-align: center
+	text-decoration: none
+	border-radius: 3px
+	padding: 13.5px 31px
+	background-color: transparent
+	border: 1px solid $c3
+	outline: none
+	transition: all 0.3s ease
+	svg
+		transition: all 0.3s ease
+	&:focus:not(.disabled),
+	&:hover:not(.disabled)
+		outline: none
+		cursor: pointer
+		color: $accent
+		text-decoration: none
+		background-color: transparent
+		border-color: $accent
+		svg
+			fill: $accent
+	&:active:not(.disabled)
+		color: darken($accent, 5%)
+		border-color: darken($accent, 5%)
+		svg
+			fill: darken($accent, 5%)
+	&.disabled
+		opacity: .4
+		user-select: none
+	&--bolder
+		font-size: 16px
+		line-height: 16px
+		border: 1px solid #265DCE
+		border-radius: 3px
+		&:focus:not(.disabled),
+		&:hover:not(.disabled)
+			border-color: #F2F6FC
+			color: #265DCE
+			background-color: #F2F6FC
+
+.btn-add
+	font-weight: 500
+	font-size: 16px
+	line-height: 17px
+	padding: 10px 24px
+	background: none
+	border: 1px solid $accent
+	border-radius: 3px
+	text-align: center
+	color: $c0
+	display: inline-flex
+	transition: all 0.3s ease
+	outline: none
+	justify-content: center
+	align-items: center
+	&__icon
+		width: 24px
+		height: 24px
+		background: #1D54C5
+		position: relative
+		border-radius: 50%
+		margin-right: 8px
+		&::after
+			content: ''
+			width: 2px
+			height: 10px
+			border-radius: 0px
+			background: #ffffff
+			position: absolute
+			top: 50%
+			transform: translateY(-50%) translateX(-50%)
+			left: 50%
+			transition: all 0.3s ease
+		&::before
+			content: ''
+			width: 10px
+			height: 2px
+			border-radius: 0px
+			background: #ffffff
+			position: absolute
+			top: 50%
+			transform: translateY(-50%) translateX(-50%)
+			left: 50%
+			transition: all 0.3s ease
+	&:hover
+		color: $c0
+		background: none
+		outline: none
+		cursor: pointer
+	&.added
+		background: rgba($accent, 0.06)
+		border: 1px solid rgba($accent, 0.06)
+		color: $accent
+		.btn-add__icon
+			&::after
+				transform: translateY(-50%) rotate(45deg)
+				left: 54%
+			&::before
+				width: 6px
+				top: 57%
+				transform: translateY(-50%) rotate(45deg)
+				left: 24%
+	&.successful
+		border: 1px solid #EDF7F1
+		background: #EDF7F1
+		color: #009335
+		cursor: auto
+		.btn-add__icon
+			background: none
+			margin-right: 10px
+			width: 14px
+			&::after
+				transform: translateY(-50%) rotate(45deg)
+				left: 62%
+				height: 14px
+				background:#009335
+			&::before
+				width: 6px
+				background: #009335
+				top: 59%
+				transform: translateY(-50%) rotate(45deg)
+				left: 0%
+
+
+.light-btn
+	position: relative
+	display: inline-block
+	font-weight: 500
+	font-size: 16px
+	line-height: 17px
+	color: $c0
+	text-align: center
+	text-decoration: none
+	border-radius: 3px
+	padding: 15.5px 20px
+	background-color: transparent
+	border: 1px solid $accent
+	outline: none
+	transition: all 0.3s ease
+	&:focus:not(.disabled),
+	&:hover:not(.disabled)
+		outline: none
+		cursor: pointer
+		color: $accent
+		text-decoration: none
+		background-color: #F2F6FC
+		border-color: #F2F6FC
+	&:active:not(.disabled)
+		color: darken($accent, 5%)
+		background-color: darken(#F2F6FC, 5%)
+	&.disabled
+		opacity: .4
+		user-select: none
+
+.white-btn
+	position: relative
+	display: inline-block
+	font-weight: 500
+	font-size: 14px
+	line-height: 14px
+	text-align: center
+	text-decoration: underline
+	color: $accent
+	padding: 13px 20px
+	background: #fff
+	outline: none
+	transition: all 0.3s ease
+	width: 100%
+	&:focus
+		outline: none
+
+.light-blue-btn
+	position: relative
+	display: inline-block
+	font-weight: 500
+	font-size: 16px
+	line-height: 20px
+	text-align: center
+	color: $accent
+	padding: 12px 20px
+	background: rgba($accent, 0.06)
+	border-radius: 3px
+	border: 1px solid transparent
+	&:focus:not(.disabled),
+	&:hover:not(.disabled)
+		outline: none
+		cursor: pointer
+		color: $accent
+		text-decoration: none
+		background: #fff
+		border-color: $accent
+	&:active:not(.disabled)
+		color: $accent
+		background: rgba($accent, 0.06)
+		
+	&.disabled
+		opacity: .4
+		user-select: none
+	&--normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 20px
+		text-decoration: underline
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 9px 20px
+		.light-blue-btn
+			&__text
+				margin-right: 2px
+			&__icon-wrap
+				margin-left: 10px
+				.icon
+					fill: $c3
+					width: 10px
+					height: 8px
+					transform: rotate(0)
+					transition: all 0.3s ease
+	&--tdn-normal
+		text-decoration: none
+	&.show
+		.light-blue-btn
+			&__icon-wrap
+				.icon
+					transform: rotate(-180deg)
+
+.white-light-btn
+	font-weight: 500
+	font-size: 16px
+	line-height: 17px
+	text-align: center
+	color: $accent
+	border-radius: 5px
+	background: #FFFFFF
+	border: 1px solid $accent
+	border-radius: 5px
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1)
+	padding: 14.5px 33.2px
+	&:focus:not(.disabled),
+	&:hover:not(.disabled)
+		outline: none
+		cursor: pointer
+		color: $accent
+		text-decoration: none
+		background: darken(#fff, 1%)
+	// &:active:not(.disabled)
+	// 	color: $accent
+	// 	border-color: rgba($accent, 0.09)
+	// 	background: rgba($accent, 0.09)
+
+
+
+
+
+
+.download-link
+	font-size: 16px
+	line-height: 17px
+	color: $accent
+	display: flex
+	align-items: center
+	&:hover
+		color: #2969EC
+		text-decoration: underline
+	&__text
+		margin-right: 14px
+	&__icon
+		&-wrap
+			width: 21px
+			height: 21px
+			min-width: 21px
+			min-height: 21px
+			display: flex
+			align-items: center
+			justify-content: center
+
+.request-link
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	font-weight: 500
+	font-size: 16px
+	line-height: 17px
+	color: $accent
+	padding: 13.5px 21px
+	background: #FFFFFF
+	border: 1px dashed $accent
+	border-radius: 3px
+	&:hover
+		color: #2969EC
+		border-color: #2969EC
+		.request-link
+			&__icon-wrap
+				transform: translateY(-3px)
+				svg
+					fill: #2969EC
+	&__text
+		margin-right: 9px
+
+	&__icon-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: all 0.3s ease
+		.icon
+			width: 12px
+			height: 14px
+			fill: $accent
+
+
+// .blue-btn-opacity
+// 	position: relative
+// 	display: inline-block
+// 	font-size: 14px
+// 	line-height: 20px
+// 	text-decoration: underline
+// 	text-align: center
+// 	color: $accent
+// 	padding: 12px 20px
+// 	background: rgba($accent, 0.06)
+// 	border-radius: 3px
+// 	border: 1px solid transparent
+// 	&:focus:not(.disabled),
+// 	&:hover:not(.disabled)
+// 		outline: none
+// 		cursor: pointer
+// 		color: $accent
+// 		text-decoration: none
+// 		background: #fff
+// 		border-color: $accent
+// 	&:active:not(.disabled)
+// 		color: $accent
+// 		background: rgba($accent, 0.06)
+		
+// 	&.disabled
+// 		opacity: .4
+// 		user-select: none

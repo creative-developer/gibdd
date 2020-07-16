@@ -1,0 +1,71 @@
+mixin tableRow(time, desc, license, adress, price, img)
+	tr
+		td
+			.statistics-table__title #{time}
+		td
+			.statistics-table__title !{desc}
+		td
+			.statistics-table__title !{license}
+		td
+			.statistics-table__title !{adress}
+		td
+			.statistics-table__title !{price}
+		td
+			a.statistics-table__img(href="img/info/video.jpg" data-fancybox)
+				img(src=img, alt="")
+
+section.b-statistics
+	._container.container
+		._title-wrap
+			h2._title Статистика нарушений (онлайн)
+			._date Актуально на - 01.04.2020
+		table.b-statistics-table
+			thead
+				tr
+					th
+						._head-title.md-title Время
+					th
+						._head-title.md-title Описание
+					th
+						._head-title.md-title Гос номер
+					th
+						._head-title.md-title Адрес
+					th
+						._head-title.md-title Сумма штрафа
+					th
+						._head-title.md-title Фото
+			tbody
+				+tableRow('21:28', 'Несоблюдение требований дорожных знаков или разметки <b>КоАП: 12.16 ч.1</b>', 'АЗ***С199 Mercedes E200', 'Москва, Варшавское шоссе 234 км.', '500 руб. <b>(скидка 50% до 20.04.2020)</b> 250 руб. (к оплате) <br>УИН: 11002423456117388800', 'img/statistics/item1.png')
+				+tableRow('21:27', 'Превыешение установленной скорости движения ТС на величину более 60 километров <br> в час <b>КоАП: 12.16 ч.1</b>', '07***АХ483 Audi<br> A6', 'Москва, Ленинский проспект<br> 9 км.', '1500 руб. <b>(скидка 50% до 20.04.2020)</b> 750 руб. (к оплате) <br>УИН: 83873019817173639324', 'img/statistics/item2.png')
+				+tableRow('21:26', 'Наблюдение требований дорожных знаков или разметки <b>КоАП: 12.16 ч.1</b>', '10***ВВ32 BMW <br>M3', 'Москва, Тульская эстакада 21 км.', '500 руб. <b>(скидка 50% до 20.04.2020)</b> 250 руб. (к оплате) <br>УИН: 83873019817173639324', 'img/statistics/item3.png')
+				+tableRow('21:25', 'Управление ТС в состоянии опьянения <b>КоАП: 12.8.1</b>', '10***ВВ32 BMW <br>M3', 'Москва, Тульская эстакада 21 км.', '30 000 руб. <b>(скидка 50% до 20.04.2020)</b> 15000 руб. (к оплате) <br>УИН: 42342557700014550000', 'img/statistics/item4.png')
+				+tableRow('21:24', 'Управление ТС с заведомо подложными государственными регистрационными знаками <b>КоАП: 12.2 ч. 4</b>', '10***ВВ32 BMW <br>M3', 'Москва, Тульская эстакада 21 км.', '30 000 руб. <b>(скидка 50% до 20.04.2020)</b> 15000 руб. (к оплате) <br>УИН: 42342557700014550000', 'img/statistics/item5.png')
+		.b-statistics-info
+			._item
+				._col
+					._icon
+						+icon('big-search')
+				._col
+					._title.sm-title Проверка штрафов:
+					._count 234 982
+			._item
+				._col
+					._icon
+						+icon('wallet')
+				._col
+					._title.sm-title Оплаты штрафов:
+					._count 123 002
+			._item
+				._col
+					._icon
+						+icon('ruble')
+				._col
+					._title.sm-title Сумма штрафов:
+					._count 234 982 р.
+			._item
+				._col
+					._icon
+						+icon('discount-amount')
+				._col
+					._title.sm-title Сумма скидки штрафов:
+					._count 73 432 р.

@@ -1,0 +1,62 @@
+.alert
+	position: relative
+	background: #ffffff
+	padding: 26px 30px 29px 29px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	z-index: 3
+	+xl 
+		flex-direction: column
+		text-align: center
+		padding: 20px
+	+lg 
+		text-align: left
+		padding: 25px
+		align-items: flex-start
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		top: -20px
+		height: 20px
+		width: 100%
+		background: $c4
+	&--scroll
+		box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1)
+		position: fixed
+		top: 20px
+		max-width: 740px
+		+xl
+			max-width: 600px
+	&__col
+		display: flex
+		flex-direction: column
+		&--text
+			+sm
+				max-width: 215px
+	&__title
+		font-size: 22px
+		line-height: 26px
+		color: $c0
+		margin-bottom: 4px
+		+lg
+			font-size: 20px
+			margin-bottom: 15px
+	&__description
+		font-size: 16px
+		line-height: 25px
+		color: $c3
+		.line-through
+			text-decoration: line-through
+		+lg
+			font-size: 14px
+			line-height: 17px
+	&__btn
+		margin-top: 10px
+		padding: 16.5px 20.5px
+		font-size: 16px
+		+lg 
+			margin-top: 34px
+

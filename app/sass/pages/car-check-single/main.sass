@@ -1,0 +1,57 @@
+.car-check-single
+	background: $c4
+	+md
+		padding-top: 30px
+	+sm
+		background: #fff
+	&__container
+		+sm
+			padding: 0
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+
+	&__col
+		position: relative
+		padding: 0 10px
+		&--left
+			flex-basis: 30.6%
+			max-width: 30.6%
+			width: 100%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+		&--right
+			flex-basis: 69.4%
+			max-width: 69.4%
+			+lg
+				display: none
+
+	&__scrolling
+		+min_lg
+			max-height: calc( 100vh - 20px)
+			overflow-y: auto
+			overflow-x: hidden
+		&-wrap
+			position: relative
+			max-width: 316.59px
+			+xl
+				max-width: 270.69px
+			+lg
+				max-width: 100%
+			+min_lg
+				overflow: hidden
+				width: 100%
+				max-height: calc( 100vh - 20px)
+			&--scrolled
+				+min_lg
+					position: fixed
+					top: 20px
+
+	&__info-banner
+		+min_lg
+			margin-bottom: 20px
+		+lg
+			padding-bottom: 30px

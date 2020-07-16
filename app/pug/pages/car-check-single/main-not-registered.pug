@@ -1,0 +1,1719 @@
+mixin fineNavItem(modify, href, icon, title)
+	li.fine-nav__item(class=modify)
+		a.fine-nav__link(href=href)
+			span.fine-nav__col
+				span.fine-nav__icon-wrap
+					+icon(icon)
+				span.fine-nav__link-text !{title}
+			span.fine-nav__col
+				span.fine-nav__arrow
+					+icon('triangle')
+		.fine-nav__toggle-block
+
+mixin finesListTableItem(titleModify, color, title1, title2)
+	li.fine-table-list__row
+		.fine-table-list__col
+			.fine-table-list__title(class=titleModify) !{title1}
+		.fine-table-list__col
+			.fine-table-list__title(class=color) !{title2}
+
+mixin finesListTableItemStyle2(col1, col2, col3, col4, col5)
+	li.fine-table-list__row
+		.fine-table-list__col
+			.fine-table-list__title !{col1}
+		.fine-table-list__col
+			.fine-table-list__title !{col2}
+		.fine-table-list__col
+			.fine-table-list__title !{col3}
+		.fine-table-list__col
+			.fine-table-list__title !{col4}
+		.fine-table-list__col
+			.fine-table-list__title !{col5}
+
+mixin finesListTableItemStyle3(col1, col2, col3, col4)
+	li.fine-table-list__row
+		.fine-table-list__col
+			.fine-table-list__title !{col1}
+		.fine-table-list__col
+			.fine-table-list__title !{col2}
+		.fine-table-list__col
+			.fine-table-list__title !{col3}
+		.fine-table-list__col
+			.fine-table-list__title !{col4}
+
+section.b-car-check-single
+	._container.container
+		nav.b-bread-crumbs.-responsive
+			ul._list
+				li._item
+					a._link(href="/") Главная
+					+icon('bread-crumbs-arrow')
+				li._item
+					a._link(href="#") Проверить штрафы
+	.container
+		.row
+			.col-12
+				.b-info-banner._info-banner
+					._row
+						._col.-left
+							._content.-left
+								._date Дата проверки: 15.04.2020 18:11 (мск)
+								.b-img-grid.-blur._img-grid
+									._content
+										a._content-item._nav-item(href="img/statistics/item1.png", data-fancybox="car-brand-images")
+											img._img(src="img/statistics/item1.png", alt="")
+									._nav
+										a._nav-item(href="img/statistics/item2.png", data-fancybox="car-brand-images")
+											img._img(src="img/statistics/item2.png", alt="")
+										a._nav-item(href="img/statistics/item3.png", data-fancybox="car-brand-images")
+											img._img(src="img/statistics/item3.png", alt="")
+									.d-none
+										a(href="img/statistics/item3.png", data-fancybox="car-brand-images")
+										a(href="img/statistics/item3.png", data-fancybox="car-brand-images")
+										a(href="img/statistics/item3.png", data-fancybox="car-brand-images")
+										a(href="img/statistics/item3.png", data-fancybox="car-brand-images")
+										a(href="img/statistics/item3.png", data-fancybox="car-brand-images")
+
+								._car-title-wrap
+									._car-emblem-wrap
+										img._car-emblem(src="img/car-check-single/emblems/toyota-logo.png", alt="")
+									h1._title.section-title Toyota Corolla, 2006 г.
+								._car-info-item-wrap
+									.b-car-info-item
+										._title VIN:
+										._value WF0U*********9191
+									.b-car-info-item
+										._title Госномер:
+										._value А82****77 (актуальный)
+						._col.-right
+							._content.-right
+								.b-page-loader
+									._percent
+										span 0
+										| %
+									._progress-wrap
+										._progress
+									._title Получаем данные из баз
+									ul._databases.animate
+										li._databases-item
+											img._databases-img(src="img/car-check-single/icons/item1.png", alt="")
+										li._databases-item
+											img._databases-img(src="img/car-check-single/icons/item2.png", alt="")
+										li._databases-item
+											img._databases-img(src="img/car-check-single/icons/item3.png", alt="")
+										li._databases-item
+											img._databases-img(src="img/car-check-single/icons/item4.png", alt="")
+										li._databases-item
+											img._databases-img(src="img/car-check-single/icons/item5.png", alt="")
+										li._databases-item.-small
+											img._databases-img(src="img/car-check-single/icons/item6.png", alt="")
+	.container._container
+		._row
+			._col.-left
+				._scrolling-wrap
+					._scrolling
+						nav.b-fine-nav
+							ul._list
+								- var moreText = 'fine-nav__item--more-text';
+								li._item.-active
+									a._link(href='#item1')
+										span._col
+											span._icon-wrap
+												+icon('data')
+											span._link-text Сводные данные
+										span._col
+											span._arrow
+												+icon('triangle')
+									._toggle-block(style="display: block;")
+								//- +fineNavItem('', '#item1', 'data', 'Сводные данные')
+								+fineNavItem('', '#item2', 'list', 'ДТП по данным ГИБДД')
+								+fineNavItem('', '#item3', 'wanted', 'Розыск')
+								+fineNavItem('', '#item4', 'limit', 'Ограничения ГИБДД')
+								+fineNavItem('', '#item5', 'discount', 'История залогов')
+								+fineNavItem('', '#item6', 'runs', 'Пробеги')
+								+fineNavItem('', '#item7', 'search-discount', 'Поиск по публичным торгам')
+								+fineNavItem('', '#item8', 'judge', 'Поиск по судебным делам:')
+								+fineNavItem('', '#item9', 'fines', 'Штрафы')
+								+fineNavItem(moreText, '#item10', 'calc', 'Расчёт ремонтов в страховых компаниях')
+								+fineNavItem('', '#item11', 'mark', 'История объявлений')
+								+fineNavItem('', '#item12', 'geo', 'География эксплуатации')
+								+fineNavItem('', '#item13', 'calendar', 'Периоды владения')
+								+fineNavItem('', '#item14', 'history', 'История такси')
+								+fineNavItem('', '#item15', 'key', 'История лизинга')
+								+fineNavItem(moreText, '#item16', 'long-search', 'Проверка контрольного символа VIN')
+								+fineNavItem('', '#item17', 'trash', 'Утилизация')
+								+fineNavItem('', '#item18', 'calc', 'Рыночная стоимость ТС')
+								+fineNavItem('', '#item19', 'camera', 'Полис ОСАГО')
+								+fineNavItem('', '#item20', 'inspection', 'Техосмотр')
+								+fineNavItem('', '#item21', 'camera', 'Стоимость ОСАГО и налога')
+								+fineNavItem('', '#item22', 'customs', 'Таможня')
+								+fineNavItem('', '#item23', 'hexagon', 'Изменение конструкции ТС')
+								+fineNavItem(moreText, '#item24', 'user', 'История обслуживания <br>у дилера и СТОNEW')
+								+fineNavItem(moreText, '#item25', 'carfax', 'Проверка истории эксплуатации в США по базе Carfax:')
+			._col.-right
+				.b-tables
+					.b-fine-table._item(data-id="item1")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('data')
+								h3._title Сводные данные
+									span (Найдено 19 записей)
+						- var titleBolder = 'fine-table-list__title--bolder';
+						- var colorRed = 'fine-table-list__title--red';
+						- var colorGreen = 'fine-table-list__title--green';
+						._content
+							._row.-bordered.-md-margin
+								._col.-full
+									._frame.-blue
+										._frame-title Данные будут доступны после регистрации
+										._row.-md-margin
+											._col.-left
+												ul.b-fine-table-list.-col-style-16.-mobile-left-col
+													+finesListTableItem(titleBolder, '', 'Номер стс:', '240******0')
+													+finesListTableItem(titleBolder, '', 'Госномер:', 'А*****00')
+													+finesListTableItem(titleBolder, '', 'Номер ПТС:', 'А*****777')
+													+finesListTableItem(titleBolder, '', 'Кол-во ДТП:', '***')
+													+finesListTableItem(titleBolder, '', 'Кол-во штрафов: ', '**')
+													+finesListTableItem(titleBolder, '', 'Фотографии авто:', '+4')
+													+finesListTableItem(titleBolder, colorRed, 'Публичные торги: ', 'найдено')
+													+finesListTableItem(titleBolder, '', 'Год рождения владельца: ', '19**')
+											._col.-right
+												ul.b-fine-table-list.-col-style-16
+													+finesListTableItem(titleBolder, '', 'Название авто: ', '*')
+													+finesListTableItem(titleBolder, '', 'Год производства: ', '20**')
+													+finesListTableItem(titleBolder, '', 'Категория ТС: ', '* * * вой')
+													+finesListTableItem(titleBolder, '', 'Расположение руля: ', '***** руль')
+													+finesListTableItem(titleBolder, '', 'Тип двигателя:', '**')
+													+finesListTableItem(titleBolder, '', 'Мощность двигателя:', '**6 л.с')
+													+finesListTableItem(titleBolder, '', 'Объем двигателя:', '1.* куб')
+													+finesListTableItem(titleBolder, '', 'Цвет авто:', '*** ый')
+										._row
+											._col.-full
+												.b-auth-banner
+													._desc Эта информация будет доступна абсолютно бесплатно после регистрации
+													._links
+														a._link.link.js-popup(href="#sign-up") Зарегестрироваться
+														a._link.link.js-popup(href="#sign-in") Войти
+							._row
+								._col.-full
+									._frame.-red
+										._frame-title + 20 записей доступно при покупке отчета
+										._row
+											._col.-left
+												ul.b-fine-table-list.-not-data.-space-between
+													li._row
+														._col
+															._title Количество владельцев
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Общий срок эксплуатации
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Срок последнего периода владения
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Последний пробег
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title ДТП
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Среднерыночная стоимость
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Залог
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Розыск
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Расчёт ремонтных работ
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title История объявлений о продаже автомобиля
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Ограничения на регистрацию ГИБДД
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+											._col.-right
+												ul.b-fine-table-list.-not-data.-space-between
+													li._row
+														._col
+															._title Такси
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Лизинг
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Утилизация
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Штрафы
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Выдача дубликата ПТС
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Изменение конструкции ТС
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Проверка контрольного символа VIN
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title История сервисного обслуживания NEW
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+													li._row
+														._col
+															._title Регистрационные знаки ТС**
+														._col
+															._hidden-icon-wrap
+																+icon('hidden-icon')
+							._row
+								._col.-full
+									.b-get-report-banner
+										._icon-wrap
+											+icon('oval-warning')
+										._desc Что бы получить полную иформацию <br>об автомобиле, оплатите отчет
+										a._btn.btn.js-smooth-scroll(href="#payment-form") Получить полный отчет
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item2")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('limit')
+								h3._title ДТП по данным ГИБДД
+						._content
+							._row.-bordered.-md-margin.-md-padding
+								._col.-full
+									.b-damage-instructions
+										._item.-gray
+											._icon-wrap
+												._icon
+											._text нет повреждений
+										._item.-red
+											._icon-wrap
+												._icon
+											._text сильные повреждения
+										._item.-blue
+											._icon-wrap
+												._icon
+											._text слабые повреждения
+										._item.-yellow
+											._icon-wrap
+												._icon
+											._text степень повреждения не известна
+							._row.-bordered
+								._col.-full
+									.b-title-number.-sm-margin
+										._position 1
+								._col.-left-style-1.-mb-30
+									ul.b-fine-table-list.-col-style-5
+										+finesListTableItem(titleBolder, '', 'Дата', '03.06.2016')
+										+finesListTableItem(titleBolder, '', 'Номер', '730011674')
+										+finesListTableItem(titleBolder, '', 'Тип', 'Столкновение')
+										+finesListTableItem(titleBolder, '', 'Организация', 'ГИБДД')
+										+finesListTableItem(titleBolder, '', 'Регион', 'Москва')
+								._col.-right-style-1.-mb-30
+									._img-wrap
+										img._img(src="img/car-check-single/damage-cars/item1.svg", alt="")
+							._row
+								._col.-full
+									._center-title Данные актуальны на 14.06.2019
+									.b-title-number.-sm-margin
+										._position 2
+								._col.-left-style-1.-mb-30
+									ul.b-fine-table-list.-col-style-5
+										+finesListTableItem(titleBolder, '', 'Дата', '03.06.2016')
+										+finesListTableItem(titleBolder, '', 'Тип', 'Дорожно-транспортное происшествие')
+										+finesListTableItem(titleBolder, '', 'Повреждения', '&lt;10% от страховой суммы')
+										+finesListTableItem(titleBolder, '', 'Организация', 'Страховая компания')
+										+finesListTableItem(titleBolder, '', 'Тип страховки', 'КАСКО')
+										+finesListTableItem(titleBolder, colorRed, 'Другие повреждения', 'Смещение двигателя <br>Смещение переднего моста')
+								._col.-right-style-1
+									._img-wrap
+										img._img(src="img/car-check-single/damage-cars/item2.svg", alt="")
+							._row
+								._col.-full
+									.b-info-text.-md-padding
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация о ДТП предоставляется по данным учета ГИБДД. Если ДТП было оформлено по Европротоколу или участники ДТП пришли к обоюдному соглашению о разрешении спора, то данные о дорожно-транспортном происшествии не будут числиться в системе учета ГИБДД.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item3")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('wanted')
+								h3._title Розыск
+						._content
+							._row
+								._col.-full
+									.b-result-text
+										._title.-mr-20 Результат проверки:
+										._title.-green Автомобиль не числится в розыске
+							._row
+								._col.-full
+									.b-info-text
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p В разделе указаны сведения о федеральном розыске транспортного средства правоохранительными органами. Информация представлена по данным ГИБДД и актуальна только на момент запроса.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item4")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('limit')
+								h3._title Ограничения ГИБДД
+						._content
+							._row
+								._col.-full
+									._wrap
+										.b-fine-table-list-header.-style4.-center.-d-lg-none
+											._row
+												._col
+													._title №
+												._col
+													._title Начало ограничения
+												._col
+													._title Вид <br>ограничения
+												._col
+													._title Основание
+												._col
+													._title Регион
+												._col
+													._title Инициатор
+										ul.b-fine-table-list.-more-col-style4.-d-lg-none
+											li._row
+												._col
+													._title 1
+												._col
+													._title 07.04.2019
+												._col
+													._title Запрет на регистрационные действия
+												._col
+													._title.-ma-200 Документ: 0001234567/1234 от 01.04.2019, Иванов Иван Иванович, СПИ: 0001234567, ИП: 012345/00/0123-ИП от 01.01.2019
+												._col
+													._title город Москва
+												._col
+													._title Судебный пристав
+										ul.b-fine-table-list.-mobile-col-40.-d-lg-block
+											li._row
+												._col
+													._title.-bolder Начало ограничения
+												._col
+													._title 07.04.2019
+											li._row
+												._col
+													._title.-bolder Вид <br>ограничения
+												._col
+													._title Запрет на регистрационные действия
+											li._row
+												._col
+													._title.-bolder Основание
+												._col
+													._title.-ma-200 Документ: 0001234567/1234 от 01.04.2019, Иванов Иван Иванович, СПИ: 0001234567, ИП: 012345/00/0123-ИП от 01.01.2019
+											li._row
+												._col
+													._title.-bolder Регион
+												._col
+													._title город Москва
+											li._row
+												._col
+													._title.-bolder Инициатор
+												._col
+													._title Судебный пристав
+							._row
+								._col.-full
+									.b-info-text.-list
+										._icon-wrap
+											+icon('pencil')
+										._desc-wrap
+											._desc.-mb-30
+												p Чаще всего налагается запрет на регистрационные действия. Эта мера направлена на то, чтобы имущество должника не было продано и могло быть использовано как мера принуждения и гарантии по исполнению обязательств.
+												p Важно! Данные о наложении ограничения публикуются ГИБДД с задержкой в несколько дней с момента наложения ограничения.
+												p Органы, которые могут налагать ограничения:
+											ul.b-dots-list
+												li._item Суды — при наличии имущественных споров, неоплаченных в срок штрафов, задолженностей по коммунальным услугам, кредитам, налогам;
+												li._item аможенные службы — если были обнаружены неточности в документации или выявлен подлог информации;
+												li._item ГИБДД — в случае, если ТС находится в розыске или выявлено несоответствие внешнего вида авто, например, вследствие ДТП. Запрет на эксплуатацию ТС по причине: не соответствие стандарту Евро-5, поддельные документы, распил, потеря ПТС, проблемы с растаможиванием, утилизация, изменение конструкции ТС;
+												li._item Следственные органы — в случае, если ТС находится в розыске;
+												li._item Органы социальной защиты в пользу несовершеннолетних.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item5")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('discount')
+								h3._title История залогов
+						._content
+							._row
+								._col
+									ul.b-fine-table-list.-col-style-4.-mobile-left-col
+										+finesListTableItem(titleBolder, '', 'Результат проверки', 'Автомобиль в залоге')
+								._col
+									ul.b-fine-table-list.-col-style-7
+										+finesListTableItem(titleBolder, '', 'Дата проверки', '14.06.2019')
+							._row
+								._col.-full
+									._frame.-blue.-style-1
+										._frame-title По данным НБКИ
+										._row
+											._col.-full
+												.b-title-number
+													._position 1
+													._text Количество залогов: 1
+												._small-title Залог: 1
+											._col.-left-style-3
+												ul.b-fine-table-list.-col-style-9.-mobile-left-col
+													+finesListTableItem(titleBolder, '', 'Статус', 'В залоге')
+											._col.-right-style-3
+												ul.b-fine-table-list.-col-style-4
+													+finesListTableItem(titleBolder, '', 'Дата исключения', '15.12.2021')
+							._row
+								._col.-full
+									._frame.-blue.-style-1
+										._frame-title По данным ФНП
+										._row.-bordered.-md-margin.-md-padding
+											._col.-full
+												.b-title-number
+													._position 2
+													._text Количество залогов: 3
+												._small-title Залог: 1
+											._col.-left-style-3
+												ul.b-fine-table-list.-col-style-11.-mobile-left-col
+													+finesListTableItem(titleBolder, '', 'Номер залога', '2018-002-622805-966')
+													+finesListTableItem(titleBolder, '', 'Статус', 'В залоге')
+													+finesListTableItem(titleBolder, '', 'Тип залогодателя', 'Физическое лицо')
+													+finesListTableItem(titleBolder, '', 'ФИО', 'Иван Иванович И.')
+											._col.-right-style-3
+												ul.b-fine-table-list.-col-style-10
+													+finesListTableItem(titleBolder, '', 'Дата возникновения', '13.09.2018')
+													+finesListTableItem(titleBolder, '', 'Дата исключения', 'По настоящее время')
+													+finesListTableItem(titleBolder, '', 'Тип залогодержателя', 'Юридическое лицо')
+													+finesListTableItem(titleBolder, '', 'Наименование', 'Акционерное общество «Тинькофф Банк»')
+										._row
+											._col.-full
+												._small-title Залог: 2
+											._col.-left-style-3
+												ul.b-fine-table-list.-col-style-11.-mobile-left-col
+													+finesListTableItem(titleBolder, '', 'Номер залога', '2018-002-622805-966')
+													+finesListTableItem(titleBolder, '', 'Статус', 'Исключён из залога')
+													+finesListTableItem(titleBolder, '', 'Тип залогодателя', 'Физическое лицо')
+													+finesListTableItem(titleBolder, '', 'ФИО', 'Иван Иванович И.')
+											._col.-right-style-3
+												ul.b-fine-table-list.-col-style-10
+													+finesListTableItem(titleBolder, '', 'Дата возникновения', '13.09.2018')
+													+finesListTableItem(titleBolder, '', 'Дата исключения', '18.11.2016')
+													+finesListTableItem(titleBolder, '', 'Тип залогодержателя', 'Юридическое лицо')
+													+finesListTableItem(titleBolder, '', 'Наименование', 'Публичное акционерное общество «Банк ВТБ24»')
+							._row
+								._col.-full
+									.b-info-text
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Проверка выполняется по реестру залогов в Федеральной нотариальной палате. Отсутствие данных в реестре не означает, что автомобиль не заложен владельцем. Возможна ситуация, когда банк не подал данные в реестр залогов или они не успели в нем появиться.
+											p Рекомендуем заказать у нотариуса заверенную выписку из реестра залогов. В случае, если после покупки выяснится, что автомобиль числится в залоге, суд будет на вашей стороне. Нотариально заверенный документ докажет, что вы добросовестный покупатель.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item6")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('runs')
+								h3._title Пробеги
+						._content
+							._row
+								._col.-left.-mb-30
+									.b-title-number
+										._position 1
+										._text Дата фиксации
+									ul.b-fine-table-list.-mobile-col-full
+										li._row
+											._col
+												._title 23.09.2014
+										li._row
+											._col 
+												._title Из истории расчетов ремонтных работ
+										li._row
+											._col
+												._title 114 100 км
+								._col.-right
+									.b-title-number
+										._position 2
+										._text Дата фиксации
+									ul.b-fine-table-list.-mobile-col-full
+										li._row
+											._col
+												._title 23.09.2014
+										li._row
+											._col
+												._title Из диагностической карты
+										li._row
+											._col
+												._title 124 000 км
+							._row
+								._col.-full
+									.b-info-text
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация о пробегах представлена по данным, которые были указаны в диагностических картах при прохождении очередного технического осмотра. Технический осмотр осуществляется после 3-х и 5-ти лет с момента приобретения нового автомобиля. Начиная с 5-го года, производится каждый год.
+											p Важно! Если диагностическая карта оформляется у страхового агента, в интернете или любым другим способом, при котором не требуется посещать СТО, то владелец сам указывает пробег, который заносится в систему ЕАИСТО.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item7")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('search-discount')
+								h3._title Поиск по публичным торгам
+						._content
+							._row
+								._col.-left-style-4
+									ul.b-fine-table-list.-col-style-15
+										+finesListTableItem(titleBolder, '', 'Статус', 'Прием заявок ')
+										+finesListTableItem(titleBolder, '', 'Регион', 'Москва')
+										+finesListTableItem(titleBolder, '', 'Тип торгов', 'Аукцион')
+										+finesListTableItem(titleBolder, '', 'Приём заявок', 'с 24.03.2020 11:00 - до 29.04.2020 11:00')
+										+finesListTableItem(titleBolder, '', 'Проведение торгов', 'с 05.05.2020 11:00 - по 05.05.2020 11:00')
+										+finesListTableItem(titleBolder, '', 'Источник', '<a class="link fine-table-list__item-link js-popup" href="#sign-up">Доступно после регистрации</a>')
+										+finesListTableItem(titleBolder, '', 'Арбитражный управляющий', '<a class="link fine-table-list__item-link js-popup" href="#sign-up">Доступно после регистрации</a>')
+										+finesListTableItem(titleBolder, '', 'Организатор торгов', '<a class="link fine-table-list__item-link js-popup" href="#sign-up">Доступно после регистрации</a>')
+								._col.-right-style-4.-d-lg-none
+									a._public-img-wrap(href="img/car-check-single/cars/item5.jpg", data-fancybox)
+										img._public-img(src="img/car-check-single/cars/item5.jpg", alt="")
+									._links-wrap
+										a._link.link(href="#") Ссылка на Источник
+										a._link.link(href="#") Ссылка на лот
+							._row.-md-margin
+								._col.-full
+									._frame.-blue.-style-2
+										._frame-title Начальная цена
+										.b-card-info
+											._row
+												._col
+													._item
+														._title Стоимость:
+														._title.-bolder.-dark 2 115 000, 00 руб.
+												._col
+													._item
+														._title Шаг аукциона:
+														._title.-bolder.-green 5%
+												._col
+													._item
+														._title Задаток:
+														._title.-bolder.-red 423 000, 00 руб.
+							._row
+								._col.-full
+									._small-title.-mb-20 Предмет торгов
+									._desc
+										p АВТОБУС NEOPLAN EUROLAINER 316 SHD, год выпуска 2001, VIN: WAG2031661BD32323, ПТС 30ТА892973;(залог в пользу АО "БайкалИнвестБанк")по согласованию с финансовым управляющим тел. 89272895323
+							._row
+								._col.-full
+									._small-title.-mb-20 Фото объекта
+									.b-cars-gallery
+										._row.owl-nav-style
+											._col
+												a._item(href="img/car-check-single/cars/gallery/item1.jpg", data-fancybox="cars-gallery")
+													img._img(src="img/car-check-single/cars/gallery/item1.jpg", alt="")
+											._col
+												a._item(href="img/car-check-single/cars/gallery/item2.jpg", data-fancybox="cars-gallery")
+													img._img(src="img/car-check-single/cars/gallery/item2.jpg", alt="")
+											._col
+												a._item(href="img/car-check-single/cars/gallery/item3.jpg", data-fancybox="cars-gallery")
+													img._img(src="img/car-check-single/cars/gallery/item3.jpg", alt="")
+											._col
+												a._item(href="img/car-check-single/cars/gallery/item4.jpg", data-fancybox="cars-gallery")
+													img._img(src="img/car-check-single/cars/gallery/item4.jpg", alt="")
+											._col
+												a._item(href="img/car-check-single/cars/gallery/item5.jpg", data-fancybox="cars-gallery")
+													img._img(src="img/car-check-single/cars/gallery/item5.jpg", alt="")
+										._hide-block
+											a._item(href="img/car-check-single/cars/gallery/item5.jpg", data-fancybox="cars-gallery")
+											a._item(href="img/car-check-single/cars/gallery/item5.jpg", data-fancybox="cars-gallery")
+											a._item(href="img/car-check-single/cars/gallery/item5.jpg", data-fancybox="cars-gallery")
+											a._item(href="img/car-check-single/cars/gallery/item5.jpg", data-fancybox="cars-gallery")
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Штрафы на автомобиль представлены по данным ГИС ГМП.
+						a._target-btn.white-light-btn.js-popup(href="#sign-up") Доступно после регистрации
+					.b-fine-table.-blur._item(data-id="item8")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('judge')
+								h3._title Поиск по судебным делам:
+						._content
+							._row.-bordered.-md-margin.-md-padding
+								._col
+									ul.b-fine-table-list.-col-style-13.-mobile-col-40.-mobile-left-col
+										+finesListTableItem(titleBolder, '', 'Дата', '24.04.2020')
+										+finesListTableItem(titleBolder, '', 'Город', 'Москва')
+										+finesListTableItem(titleBolder, '', 'Суд', 'Верховный Суд РФ')
+								._col
+									ul.b-fine-table-list.-col-style-13.-mobile-col-40
+										+finesListTableItem(titleBolder, '', 'Истцы', 'ООО "ДВ-Автобизнес"')
+										+finesListTableItem(titleBolder, '', 'Ответчики', 'Управление Министерства внутренних дел Российской Федерации по Приморскому краю')
+										+finesListTableItem(titleBolder, '', 'Судебное дело', 'ВЕРХОВНЫЙ СУД РОССИЙСКОЙ ФЕДЕРАЦИИ № 303-ЭС19-17277')
+							._row
+								._col.-full
+									._big-title.xl-title Определение
+									.toggle-block(style='display: none;')
+										._small-title г. Москва, 11 октября 2019 года
+										._desc.-mb-30
+											p Судья Верховного Суда Российской Федерации Пронина М.В., изучив кассационную жалобу общества с ограниченной ответственностью «ДВ-Автобизнес» на решение Арбитражного суда Приморского края от 27.12.2018 по делу № А51-20089/2018, постановление Пятого арбитражного апелляционного суда от 11.03.2019 и постановление Арбитражного суда Дальневосточного округа от 14.06.2019 по тому же делу
+											p по заявлению общества с ограниченной ответственностью «ДВ-Автобизнес» (далее – общество) к Управлению Министерства внутренних дел Российской Федерации по Приморскому краю (далее – управление) о признании незаконными действий, выразившихся в аннулировании регистрационного учета транспортного средства HYNDAI AEROCITY, VIN NKMJTС18ВРВС002209, г.н. ВО89825/25RUS (далее – транспортное средство), об обязании совершить регистрационные действия по восстановлению регистрационного учета транспортного средства.
+										._small-title Установила:
+										._desc.-mb-30
+											p решением Арбитражного суда Приморского края от 27.12.2018, оставленным без изменения постановлением Пятого арбитражного апелляционного суда от 11.03.2019 и постановлением Арбитражного суда Дальневосточного округа от 14.06.2019, в удовлетворении заявленных требований отказано.
+											p В кассационной жалобе, поданной в Верховный Суд Российской Федерации, общество просит отменить принятые судебные акты, полагая их вынесенными при неполном выяснении обстоятельств, имеющих значение для дела, а так же указывает на нарушение судами норм материального и процессуального права.
+									._btn-wrap
+										a.b-light-blue-btn.-normal.-tdn-normal._btn.js-toggle(href="#", data-hide-text="Скрыть", data-show-text="Показать больше")
+											span._text Показать больше
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Штрафы на автомобиль представлены по данным ГИС ГМП.
+						a._target-btn.white-light-btn.js-popup(href="#sign-up") Доступно после регистрации
+					.b-fine-table.-blur._item(data-id="item9")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('fines')
+								h3._title Штрафы
+						._content
+							._row.-bordered.-md-padding.-md-margin.-fine
+								._col.-left-style-5.-mb-30
+									ul.b-fine-table-list.-col-style-16.-mobile-col-70
+										+finesListTableItem(titleBolder, colorRed, 'Количество неоплаченных штрафов:', '1')
+										+finesListTableItem(titleBolder, '', 'Количество оплаченных штрафов:', '1')
+										+finesListTableItem(titleBolder, colorRed, 'Сумма неоплаченных штрафов: ', '500 руб.')
+										+finesListTableItem(titleBolder, '', 'Сумма оплаченных штрафов:', '500 руб.')
+										+finesListTableItem(titleBolder, '', 'Общее количество штрафов: ', '2')
+									._price-title-wrap
+										._price-title Общая сумма штрафов:
+										._price-title 1000 руб.
+								._col.-right-style-5
+									a._car-img-wrap(href="img/car-check-single/cars/item6.jpg" data-fancybox)
+										img._car-img(src="img/car-check-single/cars/item6.jpg", alt="")
+							._row.-bordered.-md-padding.-md-margin
+								._col.-full
+									.b-title-number.-sm-margin
+										._position 1
+										._text Штраф
+								._col
+									ul.b-fine-table-list.-col-style-17.-mobile-left-col.-mobile-col-38
+										+finesListTableItem(titleBolder, '', 'Дата', '05.05.2019')
+										+finesListTableItem(titleBolder, '', 'Сумма', '500 руб.')
+										+finesListTableItem(titleBolder, colorRed, 'Статус оплаты', 'Не оплачен ')
+										li._row
+											._col
+												._title.-bolder Фото
+											._col
+												._img-wrap
+													img._img(src="img/car-check-single/cars/item6.jpg", alt="")
+								._col
+									ul.b-fine-table-list.-col-style-13.-mobile-col-38
+										+finesListTableItem(titleBolder, '', 'Инициатор', 'ЦАФАП ОДД ГИБДД ГУ МВД России по г. Москве ')
+										+finesListTableItem(titleBolder, '', 'Описание', 'ШТРАФ ПО АДМИНИСТРАТИВНОМУ ПРАВОНАРУШЕНИЮ ПОСТАНОВЛЕНИЕ №000123456123456')
+										+finesListTableItem(titleBolder, '', 'Статья', '12.9 Ч.2 - Превышение установленной скорости движения транспортного средства на величину более 20, но не более 40 километров в час')
+							._row.-md-margin
+								._col.-full
+									.b-title-number.-sm-margin
+										._position 2
+										._text Штраф
+								._col
+									ul.b-fine-table-list.-col-style-17.-mobile-left-col.-mobile-col-38
+										+finesListTableItem(titleBolder, '', 'Дата', '05.05.2019')
+										+finesListTableItem(titleBolder, '', 'Сумма', '500 руб.')
+										+finesListTableItem(titleBolder, colorGreen, 'Статус оплаты', 'Оплачен')
+										+finesListTableItem(titleBolder, '', 'Статья', '12.9 Ч.2 - Превышение установленной скорости движения транспортного средства на величину более 20, но не более 40 километров в час')
+								._col
+									ul.b-fine-table-list.-col-style-13.-mobile-col-38
+										+finesListTableItem(titleBolder, '', 'Инициатор', 'ЦАФАП ОДД ГИБДД ГУ МВД России по г. Москве ')
+										+finesListTableItem(titleBolder, '', 'Описание', 'ШТРАФ ПО АДМИНИСТРАТИВНОМУ ПРАВОНАРУШЕНИЮ ПОСТАНОВЛЕНИЕ №000123456123456')
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Штрафы на автомобиль представлены по данным ГИС ГМП.
+						a._target-btn.white-light-btn.js-popup(href="#sign-up") Доступно после регистрации
+					.b-fine-table.-blur._item(data-id="item10")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('calendar')
+								h3._title Расчёт ремонтов в страховых компаниях
+							a._link.link(href="#") Количество расчётов: 1
+						._content
+								._row.-md-margin
+									._col.-full
+										.b-title-number
+											._position 1
+											._text Расчёт
+									._col.-left-style-2.-mb-20
+										ul.b-fine-table-list.-col-style-6
+											+finesListTableItem(titleBolder, '', 'Дата калькуляции', '24.12.2013')
+											+finesListTableItem(titleBolder, '', 'Номер документа', '1177-2232-19-НЭ')
+											+finesListTableItem(titleBolder, '', 'Пробег', '1 063 км')
+											+finesListTableItem(titleBolder, '', 'Исполнитель расчёта', 'МАКС ЗАО Москва')
+											+finesListTableItem(titleBolder, '', 'Категория исполнителя', 'Станция технического обслуживания')
+									._col.-right-style-2
+										.b-price-table
+											._header
+												._row
+													._title Общая стоимость
+													._title.-bold 12 650 руб.
+											._body
+												._row
+													._title Стоимость работ
+													._title.-normal 1 950 руб.
+												._row
+													._title Стоимость окраски
+													._title.-normal 10 700 руб.
+								._row
+									._col.-full
+										.b-list-box
+											._row
+												._col.-full.-mb-16
+													.b-list-box-header
+														._row
+															._col
+																._title.-bolder.-mb-20 Наименование
+															._col
+																._title.-bolder.-mb-20.-pl-12 Вид ремонта
+												._col.-full
+													ul.b-simple-list.toggle-container._simple-list(data-showItemsQnty='6')
+														li._row
+															._col
+																._title Дверь з прремонтная краска s3
+															._col
+																._title Окраска ремонтная (площадь повреждения детали &lt;20-50%)
+														li._row
+															._col
+																._title Облицовка бампера зремонтная краска s3
+															._col
+																._title Окраска ремонтная (площадь повреждения детали &lt;20-50%)
+														li._row
+															._col
+																._title Боковина прремонтная краска s3
+															._col
+																._title Окраска ремонтная (площадь повреждения детали &lt;20-50%)
+														li._row
+															._col
+																._title Колесо (колеса) з - с/у
+															._col
+																._title Вспомогательные работы <br>(демонтаж/монтаж, чистка, устранение перекосов и пр.)
+														li._row
+															._col
+																._title Дверь з пр - с/у
+															._col
+																._title Вспомогательные работы <br>(демонтаж/монтаж, чистка, устранение перекосов и пр.)
+														li._row
+															._col
+																._title Дверь з прремонтная краска s3
+															._col
+																._title Окраска ремонтная (площадь повреждения детали &lt;20-50%)
+														li._row
+															._col
+																._title Облицовка бампера зремонтная краска s3
+															._col
+																._title Окраска ремонтная (площадь повреждения детали &lt;20-50%)
+														li._row
+															._col
+																._title Боковина прремонтная краска s3
+															._col
+																._title Окраска ремонтная (площадь повреждения детали &lt;20-50%)
+														li._row
+															._col
+																._title Колесо (колеса) з - с/у
+															._col
+																._title Вспомогательные работы <br>(демонтаж/монтаж, чистка, устранение перекосов и пр.)
+														li._row
+															._col
+																._title Дверь з пр - с/у
+															._col
+																._title Вспомогательные работы <br>(демонтаж/монтаж, чистка, устранение перекосов и пр.)
+													a.b-light-blue-btn.-normal._btn.js-toggle-items(href="#") 
+														span._text Показать остальные позиции
+														span._qnty (9)
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item11")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('mark')
+								h3._title История объявлений
+							a._link.link(href="#") Количество объявлений: 1
+						._content
+							._row.-md-margin
+								._col.-full
+									.b-fine-table-list-header.-style3.-d-lg-none._fine-table-list-header
+										._row
+											._col
+												._title №
+											._col
+												._title Дата
+											._col
+												._title Город
+											._col
+												._title Цена
+											._col
+												._title Пробег
+											._col
+												._title Состояние
+											._col
+												._title Владельцы
+								._col.-full
+									.b-announcement.toggle-parent
+										._item
+											.b-fine-table-list-header.-style3.-gray.-d-lg-none
+												._row
+													._col
+														._title 1
+													._col
+														._title 27.09.2011
+													._col
+														._title Екатеренбург
+													._col
+														._title 1 250 000 руб.
+													._col
+														._title 119 800 км
+													._col
+														._title Не битый
+													._col
+														._title 1
+											._toggle-block.toggle-block(style='display: block')
+												._mobile-list
+													ul.b-fine-table-list.-col-style-15
+														+finesListTableItem(titleBolder, '', '№', '1.')
+														+finesListTableItem(titleBolder, '', 'Дата', '19.12.2015')
+														+finesListTableItem(titleBolder, '', 'Город', 'Москва')
+														+finesListTableItem(titleBolder, '', 'Цена', '1 250 000 руб.')
+														+finesListTableItem(titleBolder, '', 'Пробег', '119 800 км')
+														+finesListTableItem(titleBolder, '', 'Состояние', 'Не битый')
+														+finesListTableItem(titleBolder, '', 'Владельцы', '3')
+												._images.owl-nav-style
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item1.jpg", data-fancybox="history-gallery1")
+															img._img(src="img/car-check-single/cars/item1.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item2.jpg", data-fancybox="history-gallery1")
+															img._img(src="img/car-check-single/cars/item2.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item3.jpg", data-fancybox="history-gallery1")
+															img._img(src="img/car-check-single/cars/item3.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery1")
+															img._img(src="img/car-check-single/cars/item4.jpg", alt="")
+												.d-none
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery1")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery1")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery1")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery1")
+
+												._title Комментарий продавца:
+												._desc
+													p В идеальном техническом и внешнем ( кузов обработан керамикой) состоянии!!! Оригинальный пробег подтвержден сервис центром!!!Надежный дизельный двс, Классический автомат, полный привод!!!Комплектация: HSE, курсовая устойчивость, 2х Зонный Климат Контроль, Круиз Контроль, Эл. Зеркала, Подогрев всех сидений, зеркал, стекол, Память сидений, Кожанный салон, Штатная Акустика Harman/Kardon USB/AUX/CD Навигация, Star/Stop, Датчики давления шин, Автоматическое управление дальним светом, Мульти Руль, Громкая связь, Синхронизация с телефоном и другие опции.
+											._btn-wrap
+												a.b-light-blue-btn.-normal.-tdn-normal._btn.js-toggle.show(href="#", data-hide-text="Скрыть объявление", data-show-text="Показать объявление")
+													span._text Скрыть объявление
+													span._icon-wrap
+														+icon('triangle')
+										._item
+											.b-fine-table-list-header.-style3.-gray.-d-lg-none
+												._row
+													._col
+														._title 2
+													._col
+														._title 27.09.2011
+													._col
+														._title Екатеренбург
+													._col
+														._title 1 250 000 руб.
+													._col
+														._title 119 800 км
+													._col
+														._title Не битый
+													._col
+														._title 1
+											._toggle-block.toggle-block
+												._mobile-list
+													ul.b-fine-table-list.-col-style-15
+														+finesListTableItem(titleBolder, '', '№', '1.')
+														+finesListTableItem(titleBolder, '', 'Дата', '19.12.2015')
+														+finesListTableItem(titleBolder, '', 'Город', 'Москва')
+														+finesListTableItem(titleBolder, '', 'Цена', '1 250 000 руб.')
+														+finesListTableItem(titleBolder, '', 'Пробег', '119 800 км')
+														+finesListTableItem(titleBolder, '', 'Состояние', 'Не битый')
+														+finesListTableItem(titleBolder, '', 'Владельцы', '3')
+												._images.owl-nav-style
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item1.jpg", data-fancybox="history-gallery2")
+															img._img(src="img/car-check-single/cars/item1.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item2.jpg", data-fancybox="history-gallery2")
+															img._img(src="img/car-check-single/cars/item2.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item3.jpg", data-fancybox="history-gallery2")
+															img._img(src="img/car-check-single/cars/item3.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery2")
+															img._img(src="img/car-check-single/cars/item4.jpg", alt="")
+												.d-none
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery2")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery2")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery2")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery2")
+												._title Комментарий продавца:
+												._desc
+													p В идеальном техническом и внешнем ( кузов обработан керамикой) состоянии!!! Оригинальный пробег подтвержден сервис центром!!!Надежный дизельный двс, Классический автомат, полный привод!!!Комплектация: HSE, курсовая устойчивость, 2х Зонный Климат Контроль, Круиз Контроль, Эл. Зеркала, Подогрев всех сидений, зеркал, стекол, Память сидений, Кожанный салон, Штатная Акустика Harman/Kardon USB/AUX/CD Навигация, Star/Stop, Датчики давления шин, Автоматическое управление дальним светом, Мульти Руль, Громкая связь, Синхронизация с телефоном и другие опции.
+											._btn-wrap
+												a.b-light-blue-btn.-normal.-tdn-normal._btn.js-toggle(href="#", data-hide-text="Скрыть объявление", data-show-text="Показать объявление")
+													span._text Показать объявление
+													span._icon-wrap
+														+icon('triangle')
+										._item
+											.b-fine-table-list-header.-style3.-gray.-d-lg-none
+												._row
+													._col
+														._title 3
+													._col
+														._title 27.09.2011
+													._col
+														._title Екатеренбург
+													._col
+														._title 1 250 000 руб.
+													._col
+														._title 119 800 км
+													._col
+														._title Не битый
+													._col
+														._title 1
+											._toggle-block.toggle-block
+												._mobile-list
+													ul.b-fine-table-list.-col-style-15
+														+finesListTableItem(titleBolder, '', '№', '1.')
+														+finesListTableItem(titleBolder, '', 'Дата', '19.12.2015')
+														+finesListTableItem(titleBolder, '', 'Город', 'Москва')
+														+finesListTableItem(titleBolder, '', 'Цена', '1 250 000 руб.')
+														+finesListTableItem(titleBolder, '', 'Пробег', '119 800 км')
+														+finesListTableItem(titleBolder, '', 'Состояние', 'Не битый')
+														+finesListTableItem(titleBolder, '', 'Владельцы', '3')
+												._images.owl-nav-style
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item1.jpg", data-fancybox="history-gallery3")
+															img._img(src="img/car-check-single/cars/item1.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item2.jpg", data-fancybox="history-gallery3")
+															img._img(src="img/car-check-single/cars/item2.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item3.jpg", data-fancybox="history-gallery3")
+															img._img(src="img/car-check-single/cars/item3.jpg", alt="")
+													._img-col
+														a._img-wrap(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery3")
+															img._img(src="img/car-check-single/cars/item4.jpg", alt="")
+												.d-none
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery3")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery3")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery3")
+													a(href="img/car-check-single/cars/item4.jpg", data-fancybox="history-gallery3")
+												._title Комментарий продавца:
+												._desc
+													p В идеальном техническом и внешнем ( кузов обработан керамикой) состоянии!!! Оригинальный пробег подтвержден сервис центром!!!Надежный дизельный двс, Классический автомат, полный привод!!!Комплектация: HSE, курсовая устойчивость, 2х Зонный Климат Контроль, Круиз Контроль, Эл. Зеркала, Подогрев всех сидений, зеркал, стекол, Память сидений, Кожанный салон, Штатная Акустика Harman/Kardon USB/AUX/CD Навигация, Star/Stop, Датчики давления шин, Автоматическое управление дальним светом, Мульти Руль, Громкая связь, Синхронизация с телефоном и другие опции.
+											._btn-wrap
+												a.b-light-blue-btn.-normal.-tdn-normal._btn.js-toggle(href="#", data-hide-text="Скрыть объявление", data-show-text="Показать объявление")
+													span._text Показать объявление
+													span._icon-wrap
+														+icon('triangle')
+							._row
+								._col.-full
+									.b-info-text.-center.-max-width
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p В отчете представлена информация, которую указывали владельцы автомобиля в объявлениях о продаже.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item12")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('geo')
+								h3._title География эксплуатации
+						._content
+							._row
+								._col.-full
+									._wrap
+										.b-fine-table-list-header.-style1.-d-lg-none
+											._row
+												._col
+													._title №
+												._col
+													._title Дата
+												._col
+													._title Тип владельца
+												._col
+													._title Регион
+												._col
+													._title Город
+										ul.b-fine-table-list.-more-col-style1.-d-lg-none
+											+finesListTableItemStyle2('1', '27.09.2011', 'Физическое лицо', 'Камчатский Край', '')
+											+finesListTableItemStyle2('2', '10.08.2012', 'Физическое лицо', 'Кемеровская Область', '')
+											+finesListTableItemStyle2('3', '28.04.2015', 'Юридическое лицо', 'Москва', '')
+											+finesListTableItemStyle2('4', '12.01.2016', 'Физическое лицо', 'Санкт-Петербург', '')
+											+finesListTableItemStyle2('5', '08.06.2016', 'Физическое лицо', 'Москва', '')
+										ul.b-fine-table-list.-mobile-more-item
+											li._row
+												._small-row
+													._col
+														._title.-bolder Дата
+													._col
+														._title 27.09.2011
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Физическое лицо
+												._small-row
+													._col
+														._title.-bolder Регион
+													._col
+														._title Камчатский Край
+												._small-row
+													._col
+														._title.-bolder Город
+													._col
+														._title 
+											li._row
+												._small-row
+													._col
+														._title.-bolder Дата
+													._col
+														._title 28.04.2015
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Физическое лицо
+												._small-row
+													._col
+														._title.-bolder Регион
+													._col
+														._title Москва
+												._small-row
+													._col
+														._title.-bolder Город
+													._col
+														._title 
+											li._row
+												._small-row
+													._col
+														._title.-bolder Дата
+													._col
+														._title 27.09.2011
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Физическое лицо
+												._small-row
+													._col
+														._title.-bolder Регион
+													._col
+														._title Камчатский Край
+												._small-row
+													._col
+														._title.-bolder Город
+													._col
+														._title 
+							
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p В блоке представлена информация о местах и периодах использования ТС
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item13")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('calendar')
+								h3._title Периоды владения
+						._content
+							._row
+								._col.-full
+									._wrap
+										.b-fine-table-list-header.-style2.-d-lg-none
+											._row
+												._col
+													._title №
+												._col
+													._title Период и срок владения
+												._col
+													._title Тип владельца
+												._col
+													._title Последнее действие от ГИБДД
+										ul.b-fine-table-list.-more-col-style2.-d-lg-none
+											+finesListTableItemStyle3('1', '08.06.2016 — по настоящее время <br>(3 года 10 месяцев 8 дней)', 'Физическое лицо', 'изменение собственника (владельца) в результате совершения сделки, вступления в наследство, слияние и разделение капитала у юридического лица, переход права по договору лизинга, судебные решения и др.')
+											+finesListTableItemStyle3('2', '12.01.2016 — 08.06.2016 <br>(4 месяца 28 дней)', 'Физическое лицо', 'в связи с изменением места регистрации')
+											+finesListTableItemStyle3('3', '28.04.2015 — 12.01.2016 <br>(8 месяцев 16 дней)', 'Юридическое лицо', 'в связи с прекращением права собственности (отчуждение, конфискация ТС)')
+											+finesListTableItemStyle3('4', '10.08.2012 — 28.04.2015 <br>(2 года 8 месяцев 19 дней)', 'Физическое лицо', 'в связи с прекращением права собственности (отчуждение, конфискация ТС)')
+											+finesListTableItemStyle3('5', '28.04.2015 — 12.01.2016 <br>(8 месяцев 16 дней)', 'Юридическое лицо', 'в связи с прекращением права собственности (отчуждение, конфискация ТС)')
+										ul.b-fine-table-list.-mobile-more-item.-mobile-col-38.-mb-30
+											li._row
+												._small-row
+													._col
+														._title.-bolder Период и срок владения
+													._col
+														._title 08.06.2016 — по настоящее время (3 года 11 месяцев 10 дней)
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Физическое лицо
+												._small-row
+													._col
+														._title.-bolder Последнее действие от ГИБДД
+													._col
+														._title изменение собственника (владельца) в результате совершения сделки, вступления в наследство, слияние и разделение капитала у юридического лица, переход права по договору лизинга, судебные решения и др.
+											li._row
+												._small-row
+													._col
+														._title.-bolder Период и срок владения
+													._col
+														._title 12.01.2016 — 08.06.2016
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Физическое лицо
+												._small-row
+													._col
+														._title.-bolder Последнее действие от ГИБДД
+													._col
+														._title в связи с изменением места регистрации
+											li._row
+												._small-row
+													._col
+														._title.-bolder Период и срок владения
+													._col
+														._title 28.04.2015 — 12.01.2016 (8 месяцев 16 дней)
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Юридическое лицо
+												._small-row
+													._col
+														._title.-bolder Последнее действие от ГИБДД
+													._col
+														._title в связи с прекращением права собственности (отчуждение, конфискация ТС)
+											li._row
+												._small-row
+													._col
+														._title.-bolder Период и срок владения
+													._col
+														._title 10.08.2012 — 28.04.2015 (2 года 8 месяцев 19 дней)
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Физическое лицо
+												._small-row
+													._col
+														._title.-bolder Последнее действие от ГИБДД
+													._col
+														._title в связи с прекращением права собственности (отчуждение, конфискация ТС)
+											li._row
+												._small-row
+													._col
+														._title.-bolder Период и срок владения
+													._col
+														._title 28.04.2015 — 12.01.2016 (8 месяцев 16 дней)
+												._small-row
+													._col
+														._title.-bolder Тип владельца
+													._col
+														._title Юридическое лицо
+												._small-row
+													._col
+														._title.-bolder Последнее действие от ГИБДД
+													._col
+														._title в связи с прекращением права собственности (отчуждение, конфискация ТС)
+										._text.-bolder Общий срок эксплуатации:
+											span 8 лет 6 месяцев
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация сформирована на основе данных о регистрационных действиях, совершаемых с автомобилем.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item14")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('history')
+								h3._title История такси
+							a.link._link.-mb-50(href="#") Количество лицензий: 2
+						._content
+							._row
+								._col.-full
+									._frame.-red
+										._frame-title Есть данные о регистрации в качестве такси
+										._row.-bordered.-md-margin.-md-padding
+											._col.-full
+												.b-title-number
+													._position 1
+													._text Дата фиксации
+											._col
+												ul.b-fine-table-list.-col-style-7.-mobile-left-col
+													+finesListTableItem(titleBolder, '', 'Статус лицензии', 'Действительна')
+													+finesListTableItem(titleBolder, '', 'Номер лицензии', '0035606')
+													+finesListTableItem(titleBolder, '', 'Дата получения', '15.12.2017')
+													+finesListTableItem(titleBolder, '', 'Дата окончания', '15.12.2022')
+													+finesListTableItem(titleBolder, '', 'Регион выдачи', '77')
+													+finesListTableItem(titleBolder, '', 'Город выдачи', 'Москва')
+											._col
+												ul.b-fine-table-list.-col-style-8
+													+finesListTableItem(titleBolder, '', 'Юр. лицо получателя', 'ИП Иванов')
+													+finesListTableItem(titleBolder, '', 'Госномер', 'А111АА00')
+													+finesListTableItem(titleBolder, '', 'Марка автомобиля', 'Land Rover')
+													+finesListTableItem(titleBolder, '', 'Модель автомобиля', 'Range Rover Sport')
+										._row
+											._col.-full
+												.b-title-number
+													._position 2
+													._text Дата фиксации
+											._col
+												ul.b-fine-table-list.-col-style-7.-mobile-left-col
+													+finesListTableItem(titleBolder, '', 'Статус лицензии', 'Аннулирована')
+													+finesListTableItem(titleBolder, '', 'Номер лицензии', '0035606')
+													+finesListTableItem(titleBolder, '', 'Дата получения', '15.12.2017')
+													+finesListTableItem(titleBolder, '', 'Дата окончания', '15.12.2022')
+													+finesListTableItem(titleBolder, '', 'Регион выдачи', '77')
+													+finesListTableItem(titleBolder, '', 'Город выдачи', 'Москва')
+											._col
+												ul.b-fine-table-list.-col-style-8
+													+finesListTableItem(titleBolder, '', 'Юр. лицо получателя', 'ИП Иванов')
+													+finesListTableItem(titleBolder, '', 'Госномер', 'А111АА00')
+													+finesListTableItem(titleBolder, '', 'Марка автомобиля', 'Land Rover')
+													+finesListTableItem(titleBolder, '', 'Модель автомобиля', 'Range Rover Sport')
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация собирается из 90 региональных баз регистрации транспортных средств в качестве такси.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item15")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('key')
+								h3._title История лизинга
+							a._link.link(href="#") Количество договоров: 1
+						._content
+							._row
+								._col.-full
+									.b-title-number
+										._position 1
+										._text Договор лизинга
+								._col.-left
+									ul.b-fine-table-list.-col-style-7.-mobile-left-col
+										+finesListTableItem(titleBolder, '', 'Лизингодатель', 'АО ВТБ ЛИЗИНГ')
+										+finesListTableItem(titleBolder, '', 'Дата получения', '28.04.2015')
+								._col.-right
+									ul.b-fine-table-list.-col-style-3
+										+finesListTableItem(titleBolder, '', 'Лизингополучатель', 'ООО Градиент')
+										+finesListTableItem(titleBolder, '', 'ИНН лизингополучателя', '6297557802')
+							._row
+								._col.-full
+									.b-info-text
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p В разделе предоставлена информация о вероятном приобретении ТС в лизинг в прошлом. В настоящее время договор лизинга может быть прекращен. Перед покупкой автомобиля попросите у продавца документы, подтверждающие, что все лизинговые платежи были выплачены в полном объеме. Без этих документов сотрудники ГИБДД могут отказать в постановке автомобиля на учет.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item16")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('long-search')
+								h3._title Проверка контрольного символа VIN
+						._content
+							._row
+								._col.-full
+									.b-result-text
+										._title.-mr-20 Результат проверки:
+										._success-wrap
+											._icon-wrap
+												+icon('check')
+											._title.-green Проверка пройдена
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Данный символ кодируется производителем автомобиля и является минимальным средством защиты при махинациях, связанных с изменением цифр в VIN-номере.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item17")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('user')
+								h3._title Утилизация
+						._content
+							._row
+								._col.-full
+									._text.-bolder Результат проверки:
+										span Автомобиль не был утилизирован
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация предоставляется по данным ГИБДД. Если автомобиль числится в реестре утилизированных, то его нельзя поставить на учет.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item18")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('calc')
+								h3._title Рыночная стоимость ТС
+						._content
+							._row.-bordered.-md-padding.-md-margin
+								._col.-full
+									.b-title-number.-sm-margin
+										._position 1
+										._text Расчёт стоимости из объявлений о продаже ТС
+									ul.b-fine-table-list.-space-between.-mobile-col-70
+										+finesListTableItem(titleBolder, '', 'Средняя рыночная стоимость ТС:', '1 860 000 ₽')
+										+finesListTableItem(titleBolder, '', 'Минимальная рыночная стоимость ТС:', '1 675 300 ₽')
+										+finesListTableItem(titleBolder, '', 'Максимальная рыночная стоимость ТС:', '1 987 000 ₽')
+							._row.-md-margin
+								._col.-full
+									.b-title-number.-sm-margin
+										._position 2
+										._text Расчёт стоимости по данным сервиса Carprice
+									ul.b-fine-table-list.-space-between.-mobile-col-70
+										+finesListTableItem(titleBolder, '', 'Средняя рыночная стоимость ТС:', '1 860 000 ₽')
+							._row
+								._col.-full
+									.b-info-text
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Блок содержит информацию о рыночной стоимости ТС рассчитанной на основе объявлений о продаже автомобилей той же модели, года выпуска и пробега и аналогичных характеристиках двигателя. Так же в блоке предоставлена информация о средней стоимости ТС по оценкам сервиса CarPrice.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item19")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('car-policy')
+								h3._title Полис ОСАГО
+						._content
+							._row
+								._col.-full
+									ul.b-fine-table-list.-col-style-12
+										+finesListTableItem(titleBolder, '', 'Полис был действителен на дату', '14.06.2019')
+										+finesListTableItem(titleBolder, '', 'Страховая компания', 'ПОВОЛЖСКИЙ СТРАХОВОЙ АЛЬЯНС')
+										+finesListTableItem(titleBolder, '', 'Номер договора', '0729214649')
+										+finesListTableItem(titleBolder, '', 'Серия полиса', 'ЕЕЕ')
+										+finesListTableItem(titleBolder, '', 'Номер полиса', '281306586')
+										+finesListTableItem(titleBolder, '', 'Ограничения', 'С ограничениями')
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация представлена по данным РСА России.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item20")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('inspection')
+								h3._title Техосмотр
+						._content
+							._row
+								._col.-right
+									ul.b-fine-table-list.-col-style-12.-mobile-left-col.-mobile-col-40
+										+finesListTableItem(titleBolder, '', 'Тип документа', 'Диагностическая карта')
+										+finesListTableItem(titleBolder, '', 'Номер', '201609242049160210689')
+										+finesListTableItem(titleBolder, '', 'Рег. номер', 'А111АА00')
+								._col.-left
+									ul.b-fine-table-list.-space-between.-mobile-col-40
+										+finesListTableItem(titleBolder, '', 'Дата начала действия', '24.09.2016')
+										+finesListTableItem(titleBolder, '', 'Дата окончания действия', '24.09.2018')
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация указывается по данным диагностических карт транспортных средств.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item21")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('camera')
+								h3._title Стоимость ОСАГО и налога
+						._content
+							._row
+								._col.-full
+									ul.b-fine-table-list.-space-between.-mobile-col-70
+										+finesListTableItem(titleBolder, '', 'Сумма налога за 12 месяцев (для Москвы)', '18 375 ₽')
+										+finesListTableItem(titleBolder, '', 'Сумма налога за 12 месяцев (для регионов)', '11 500 ₽')
+										+finesListTableItem(titleBolder, '', 'Сумма налога за 12 месяцев (для Москвы)', '21 100 ₽')
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Информация представлена по данным РСА России.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item22")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('customs')
+								h3._title Таможня
+						._content
+							._row
+								._col.-left
+									ul.b-fine-table-list.-col-style-3.-mobile-left-col.-mobile-col-60
+										+finesListTableItem(titleBolder, '', 'Дата декларации', '01.09.2011')
+										+finesListTableItem(titleBolder, '', 'Задекларированная цена', '547 748 руб.')
+								._col.-right
+									ul.b-fine-table-list.-col-style-12.-mobile-col-60
+										+finesListTableItem(titleBolder, '', 'Страна вывоза', 'ГЕРМАНИЯ')
+										+finesListTableItem(titleBolder, '', 'Пробег', '4 км')
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Эти данные указаны в таможенной декларации. Их заполняла компания, которая осуществляла ввоз транспортного средства на территорию РФ.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item23")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('hexagon')
+								h3._title Изменение конструкции ТС
+						._content
+							._row
+								._col.-full
+									.b-result-text.-red
+										._title.-mr-10 Результат проверки:
+										._success-wrap
+											._icon-wrap
+												+icon('lightning')
+											._title.-red Внесены изменения в конструкцию ТС
+							._row
+								._col.-full
+									.b-info-text
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Любые изменения, внесенные в конструкцию автомобиля, должны быть оформлены в ГИБДД и отражаться в ПТС. Под изменением конструкции ТС подразумевается исключение предусмотренных или установка не предусмотренных конструкцией конкретного ТС составных частей и предметов оборудования. Например, изменение подвески, замена фар, установка лебедки и др.
+											p Если автомобиль имеет изменения конструкции, но они не оформлены в ГИБДД, то это является основанием для отказа в совершении регистрационных действий с ТС. Использование такого ТС влечет наложение штрафа и лишение прав.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item24")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('user')
+								h3._title История обслуживания у дилера и СТО
+							a._link.link(href="#") Количество записей: 1
+						._content
+							._row.-md-margin
+								._col.-full
+									.b-title-number.-sm-margin
+										._position 1
+										._text Сервисные работы
+									.b-small-banner._small-banner
+										._img-wrap
+											img._img(src="img/car-check-single/autodoc.svg", alt="")
+										._title-wrap
+											._title Автозапчасти
+											._title Автодок
+										._link-wrap
+											._icon-wrap
+												+icon('target')
+											a._link.link(href="www.autodoc.ru") www.autodoc.ru
+								._col
+									ul.b-fine-table-list.-col-style-4.-mobile-left-col
+										+finesListTableItem(titleBolder, '', 'Дата:', '07.01.2014')
+										+finesListTableItem(titleBolder, '', 'Пробег:', '110 340 км')
+										+finesListTableItem(titleBolder, '', 'Стоимость:', '12 500 руб.')
+								._col
+									ul.b-fine-table-list.-col-style-4
+										+finesListTableItem(titleBolder, '', 'Регион / Город', 'Москва / Москва')
+										+finesListTableItem(titleBolder, '', 'Организация:', 'CTO на Бродской')
+										+finesListTableItem(titleBolder, '', 'Плановый:', 'Нет')
+							._row
+								._col.-full
+									.toggle-block(style="display: none;")
+										._small-title Описание работ:
+										._desc.-mb-30
+											p Проверка работы омывателя ветрового стекла, Визуальный контроль приводных ремней, Проверка щеток стеклоочистителя, Проверка уровня и плотности тормозной жидкости, Проверка уровня и плотности антифриза, Проверка состояния шин давления шин и глубины протектора, Проверка работы звукового сигнала, Проверка ламп наружного освещения, Диагностика ходовой АКЦИЯ бесплатный осмотр при ремонте на подъемнике, Проверка состояния кузова автомобиля, Проверка уровня масла в двигателе, Проверка состояния номерного знака, Проверка момента затяжки колесных болтов, Тяга рулевая правая в сборе - Замена, Тяга рулевая левая в сборе - Замена, Регулировка углов установки колес передняя ось, Мойка кузова Технический облив, Сальник коленвала передний - Замена 16, К-кт ремня ГРМ - Замена 1.3/1.6
+										._small-title Запасные части:
+										._desc.-mb-30
+											p Тяга рулевая, Тяга рулевая, Сальник коленвала передний
+										._small-title Рекомендации:
+										._desc.-mb-30
+											p Регулятор холостого хода - Замена, С/блок заднего продольного рычага - Замена со снятием рычага, К-кт рычагов задней подвески - Замена, Регулировка углов установки колес передняя и задняя оси, Датчик кислородный/Lambdasonde - Замена 16, Заслонка дроссельная механическая - Снятие и установка 16 (голая учитывая перестановку навесного и адаптацию), Заслонка дроссельная механическая - Ремонт чистка, Диагностика двигателя (сканирование и проверка компонентов)
+									._btn-wrap
+										a.b-light-blue-btn.-normal.-tdn-normal._btn.js-toggle(href="#", data-hide-text="Скрыть", data-show-text="Показать больше")
+											span._text Показать больше
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p В отчете содержится информация о проведении сервисных и ремонтных работ, по данным от сервисных и дилерских центров.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете
+					.b-fine-table.-blur._item(data-id="item25")
+						.b-table-header
+							._title-wrap
+								._icon-wrap
+									+icon('carfax')
+								h3._title Проверка истории эксплуатации в США по базе Carfax:
+						._content
+							._row
+								._col.-full
+									ul.b-fine-table-list.-col-style-14.-mobile-left-col.-mobile-col-60
+										+finesListTableItem(titleBolder, '', 'Авто:', 'Toyota Sequoia Platinum')
+										+finesListTableItem(titleBolder, '', 'Год машины:', '2010')
+										+finesListTableItem(titleBolder, '', 'Двигатель:', '5.7L V8 EFI')
+										+finesListTableItem(titleBolder, '', 'Тип кузова:', 'SUV 4D')
+										+finesListTableItem(titleBolder, '', 'Страна производитель:', 'United States')
+							._row
+								._col.-full
+									ul.b-fine-table-list.-col-style-14.-mobile-col-60
+										+finesListTableItem(titleBolder, '', 'Количество владельцев в США:', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'Пробег (показание счетчика):', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'Попадание в ДТП:', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'Повреждение кузова:', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'История ремонта и диагностики:', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'Проверка на скрученный пробег:', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'История эксплуатации (регистрации):', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'Утопленное ТС:', 'доступно в отчёте Carfax')
+										+finesListTableItem(titleBolder, '', 'Другие данные:', 'доступно в отчёте Carfax')
+							._row
+								._col.-full
+									.b-info-text.-center
+										._icon-wrap
+											+icon('pencil')
+										._desc
+											p Если данные на автомобиль не будут найдены в базе Carfax, мы сделаем возврат денежных средств по данной услуге.
+						a._target-btn.white-light-btn.js-swithc-checkbox(href="#") Доступно в полном отчете
+					.b-fine-table.-others._item
+						.b-table-header.-darken
+								._title-wrap
+									h3._title Важно! Наши рекомендации по покупке автомобиля:
+						._content
+							._row
+								._col.-full
+									.b-info-text.-list
+										._icon-wrap
+											+icon('exclamation-point')
+										ul.b-number-simple-list
+											li._item
+												._number 1.
+												._title Закажите у нотариуса заверенную выписку из реестра залогов. Если впоследствии автомобиль окажется залоговым, документ докажет, что вы добросовестный покупатель и являетесь законным владельцем ТС.
+											li._item
+												._number 2.
+												._title Проверьте владельца автомобиля на наличие долгов. Из-за неоплаченных штрафов, алиментов и других задолженностей в отношении продавца может быть открыто исполнительное производство, из-за которого на автомобиль могут быть наложены регистрационные ограничения. Получить сведения о долгах владельца можно на сайте checkperson.ru
+											li._item
+												._number 3.
+												._title Сравните данные в паспорте продавца, в ПТС и в договоре купли-продажи. Они должны совпадать. Если продавец не является собственником автомобиля, то он не будет нести ответственности за машину и за сделку по ее продаже.
+											li._item
+												._number 4.
+												._title Повторно проверьте историю автомобиля перед покупкой. Данные в отчёте актуальны только на момент запроса.
+											li._item
+												._number 5.
+												._title Заполните договор купли-продажи автомобиля в трех экземплярах: для продавца, для покупателя, для ГИБДД. Скачать бланк договора.
+											li._item
+												._number 6.
+												._title В течение 10 дней после покупки поставьте автомобиль на учет в ГИБДД. Лучше посетите отделение ГИБДД вместе с продавцом в день сделки.
+						a._target-btn.white-light-btn(href="#") Доступно в полном отчете

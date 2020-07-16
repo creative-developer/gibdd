@@ -1,0 +1,141 @@
+.news-info
+	display: flex
+	align-items: center
+	margin-bottom: 24px
+	+lg
+		margin-bottom: 20px
+	+md
+		margin-bottom: 15px
+
+	&--light
+		.news-info
+			&__date
+				padding-left: 0
+				font-size: 12px
+				line-height: 15px
+				color: #fff
+				&:after
+					display: none
+
+			&__view
+				&-icon
+					svg
+						fill: #fff
+
+				&-count
+					color: #fff
+
+	&--desktop
+		+md
+			display: none
+
+	&--mobile
+		display: none
+		+md
+			display: flex
+
+	&--unbordered
+		.news-info
+			&__date
+				padding-left: 0
+				&:after
+					display: none
+
+	&__wrap
+		display: flex
+		align-items: center
+
+	&__category
+		font-size: 12px
+		line-height: 15px
+		color: $accent
+		margin-right: 15px
+		&:hover
+			text-decoration: underline
+			color: #2969EC
+		&--btn
+			font-size: 11px
+			line-height: 15px
+			border-radius: 3px
+			padding: 4px 9px
+			color: $c0
+
+		&--green
+			background: #CBE9C3
+			&:hover
+				color: $c0
+				background: darken(#CBE9C3, 10%)
+				text-decoration: none
+
+		&--red
+			background: rgba(#FFDADA, 0.5)
+			&:hover
+				color: $c0
+				background: darken(rgba(#FFDADA, 0.5), 10%)
+				text-decoration: none
+
+		&--gray
+			background: rgba(#CCDCEC, 0.5)
+			&:hover
+				color: $c0
+				background: darken(rgba(#CCDCEC, 0.5), 10%)
+				text-decoration: none
+
+		&--big-btn
+			font-size: 14px
+			line-height: 15px
+			padding: 7.5px 15.2px
+
+		&--blue-text
+			color: #2967E8 !important
+			&:hover
+				color: #2967E8
+
+	&__date
+		position: relative
+		font-size: 12px
+		line-height: 15px
+		color: $c3
+		padding: 0 10px
+		margin-right: 10px
+		+md
+			padding-left: 0
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			width: 1px
+			height: 24px
+			background: $c4
+			transform: translateY(-50%)
+			+md
+				display: none
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			right: 0
+			width: 1px
+			height: 24px
+			background: $c4
+			transform: translateY(-50%)
+
+	&__view
+		display: flex
+		align-items: center
+		&-icon
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 5px
+			margin-bottom: 2px
+
+			svg
+				fill: $c3
+				width: 18px
+				height: 12px
+		&-count
+			font-size: 12px
+			line-height: 15px
+			color: $c3

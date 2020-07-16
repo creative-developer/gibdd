@@ -1,0 +1,114 @@
+.nav
+	&__list
+		display: flex
+		align-items: center
+		+lg
+			flex-direction: column
+			align-items: flex-start
+			padding-bottom: 7.35vh
+			margin-bottom: 5vh
+			border-bottom: 1px solid $c4
+		+sm
+			margin-bottom: 3.5vh
+			// margin-bottom: 4.65vh
+			+h600
+				margin-bottom: 6vh
+			+h700
+				margin-bottom: 8vh
+			+h800
+				margin-bottom: 10vh
+
+
+	&__item
+		+min_lg
+			padding: 1px 33px
+			border-right: 1px solid #DCDEE0
+			+xl
+				padding: 1px 25px
+		&:first-child
+			+min_lg
+				padding: 1px 33px 1px 7px
+				+xl
+					padding: 1px 25px 1px 7px
+
+		&:last-child
+			border-right: 0
+		&:not(:last-child)
+			+lg
+				// margin-bottom: 30px
+				margin-bottom: 4.29vh
+
+	&__link
+		position: relative
+		font-weight: 500
+		font-size: 16px
+		line-height: 17px
+		color: $c0
+		text-align: center
+		+min_lg
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				bottom: -16px
+				width: 110%
+				height: 2px
+				background: $accent
+				opacity: 0
+				transition: all 0.3s ease
+				pointer-events: none
+		&:hover
+			color: $accent
+			+min_lg
+				&:after
+					bottom: -16px
+					opacity: 1
+
+		&--active
+			color: $accent
+			+min_lg
+				&:after
+					bottom: -16px
+					opacity: 1
+
+.footer-nav
+	+md
+		width: 100%
+	&--left
+		+md
+			margin-bottom: 12px
+	&--right
+		+md
+			margin-bottom: 25px
+			padding-bottom: 25px
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 50%
+				width: 76%
+				height: 1px
+				background: #E8EAEF
+				transform: translateX(-50%)
+	&__item
+		+md
+			display: flex
+			justify-content: center
+			align-items: center
+		&:not(:last-child)
+			+md
+				margin-bottom: 12px
+
+	&__link
+		font-weight: 500
+		font-size: 16px
+		line-height: 16px
+		text-decoration: underline
+		color: $accent
+		+md
+			text-align: center
+		&:hover
+			color: $accent
+			text-decoration: none

@@ -1,0 +1,41 @@
+.small-card
+	position: relative
+	background: #fff
+	margin-bottom: 20px
+	+lg
+		margin-right: 15px
+		flex-basis: 50%
+		max-width: 50%
+		margin-bottom: 0
+	+md
+		display: none
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 86px
+		height: 172px
+		background: url('../img/icons/eagle.png') no-repeat center center
+		background-size: 100% 100%
+		z-index: 0
+	&__row
+		padding: 20px 50px 20px 24px
+		&:not(:last-child)
+			border-bottom: 1px solid $c4
+		&--center
+			.small-card
+				&__title
+					margin-bottom: 5px
+				&__small-title
+					margin-bottom: 6px
+		&--bottom
+			padding-top: 23px
+			padding-bottom: 17px
+
+	&__title
+		line-height: 21px
+		margin-bottom: 6px
+
+	&__small-title
+		margin-bottom: 3px

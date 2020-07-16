@@ -1,0 +1,53 @@
+.advantages-item
+	display: flex
+	&:not(:last-child)
+		margin-bottom: 15px
+		+sm
+			margin-bottom: 10px
+	+sm
+		border-radius: 3px
+		background: #FFFFFF
+		border: 1px solid $c3
+		width: 100%
+		padding: 12px 14px 12px 14px
+		min-height: 90px
+		align-items: center
+
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		min-width: 18px
+		margin-right: 13px
+		padding-top: 5px
+
+		.icon
+			fill: $c3
+			&--discount
+				width: 16px
+				height: 14px
+
+			&--picture
+				width: 18px
+				height: 16px
+				
+			&--reload
+				width: 16px
+				height: 16px
+				
+			&--search
+				width: 16px
+				height: 16px
+				
+	&__title
+		line-height: 21px
+		margin-bottom: 5px
+		br
+			+sm
+				display: none
+			+xsm
+				display: block
+	&__col
+		&:first-child
+			align-self: flex-start
+			padding-top: 10px

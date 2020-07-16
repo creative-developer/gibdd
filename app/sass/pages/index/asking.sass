@@ -1,0 +1,281 @@
+.asking
+	padding: 2.1875rem 0 5rem
+	+sm
+		padding: 15px 0 30px
+
+	&__title
+		margin-bottom: 3.4375rem
+		+sm
+			margin-bottom: 15px
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 0 -17.5px
+
+	&__col
+		padding: 0 17.5px
+		&--left
+			flex-basis: 40.7%
+			max-width: 40.7%
+			position: relative
+			+lg
+				display: none
+		&--right
+			flex-basis: 59.3%
+			max-width: 59.3%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+
+.asking-nav
+	position: static
+
+	&--scrolled
+		position: fixed
+		top: 20px
+	&--collapse
+		.asking-nav
+			&__list
+				padding: 35px 0 38px 9px
+			&__item
+				&:not(:last-child)
+					margin-bottom: 19px
+				&:after
+					display: none
+
+			&__link
+				line-height: 20px
+
+
+	&__list
+		padding-left: 21px
+		padding-top: 3px
+
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		&:after
+			content: ''
+			position: absolute
+			top: 8px
+			left: -21px
+			width: 4px
+			height: 4px
+			background: $c3
+			border-radius: 100%
+			transform: translateY(-50%)
+		&:not(:last-child)
+			margin-bottom: 29px
+		&--active
+			&:after
+				background: $c0
+			.asking-nav
+				&__link
+					color: $c0
+					text-decoration: none
+
+
+	&__link
+		font-size: 16px
+		line-height: 16px
+		text-decoration: underline
+		color: $accent
+		&:hover
+			color: $c0
+
+
+
+
+.asking-content
+	&--card
+		.asking-content
+			&__card
+				padding: 20px 0 10px
+				border: 0
+				&:not(:last-child)
+					margin-bottom: 0 !important
+					border-bottom: 1px solid #DADFEA
+				&:last-child
+					padding-bottom: 0
+				
+			&__title
+				font-weight: normal
+				font-size: 16px
+				line-height: 21px
+				color: $c0
+				cursor: pointer
+				margin-bottom: 10px
+				margin-right: 8px
+				+min_xl
+					max-width: 240px
+				+min_lg
+					+xl
+						font-size: 14px
+				&-icon
+					display: flex
+					margin-top: 7px
+
+			&__desc
+				font-size: 14px
+				line-height: 21px
+				color: $c3
+				width: 100% !important
+				display: none
+				margin-top: 0 !important
+				margin-bottom: 47px
+
+			
+	&--collapse
+		width: 100%
+		+min_lg
+			max-width: 435.06px
+			+xl
+				max-width: 373px
+		.asking-content
+			&__title
+				margin-bottom: 0
+				cursor: pointer
+				font-weight: 500
+				font-size: 16px
+				line-height: 30px
+				color: #343D52
+				&-icon
+					display: flex
+					margin-top: 11px
+				&-wrap
+					padding-bottom: 20px
+					border-bottom: 1px solid transparent
+					width: 100%
+					transition: all 0.3s ease
+					+lg
+						padding-bottom: 18.5px
+			&__card
+				padding: 20px 30px 0
+				+sm
+					padding: 18.5px 20px 0
+				&:not(:last-child)
+					margin-bottom: -1px
+				&.show
+					.asking-content
+						&__title-wrap
+							border-color: $c4
+							transition: all 0.3s ease
+			&__toggle-block
+				display: none
+				width: 100% !important
+				&--desktop
+					+lg
+						display: none !important
+				&--mobile
+					+min_lg
+						display: none !important
+	&--mobile
+		+min_lg
+			display: none !important
+		+lg
+			padding: 25px 0 30px
+		.asking-content
+			&__card
+				+lg
+					border: 0
+					padding: 0
+				&.show
+					.asking-content
+						&__title
+							color: $c0
+							text-decoration: none
+							&-icon
+								svg
+									+lg
+										transform: rotate(-180deg) !important
+			&__title
+				+lg
+					font-weight: normal
+					font-size: 16px
+					line-height: 24px
+					text-decoration: underline
+					color: $accent
+				&-icon
+					svg
+						+lg
+							transform: rotate(0) !important
+							transition: all 0.3s ease
+				&-wrap
+					border: 0
+					padding-bottom: 15px
+			&__desc
+				+lg
+					line-height: 21px
+					color: $c3
+					margin-top: 6px
+					margin-bottom: 30px
+
+	&__card
+		background: #fff
+		border: 1px solid #C8CBD3
+		border-radius: 3px
+		padding: 35px 35px 33px
+		+xl
+			padding: 28px 28px 31px
+		+lg
+			padding: 20px 24px 20px 20px
+		&:not(:last-child)
+			margin-bottom: 10px
+			+lg
+				margin-bottom: -1px
+		&.show
+			.asking-content__title-icon
+				svg
+					transform: rotate(-180deg)
+
+	&__title
+		margin-bottom: 18px
+		user-select: none
+		+lg
+			margin-bottom: 0
+			cursor: pointer
+		+sm
+			font-weight: 500
+			font-size: 16px
+			line-height: 21px
+
+		&-wrap
+			display: flex
+			justify-content: space-between
+
+		&-icon
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			cursor: pointer
+			margin-top: 13px
+			display: none
+			+lg
+				display: flex
+			+sm
+				margin-top: 8px
+			svg
+				width: 10px
+				height: 6px
+				fill: $c3
+				transition: all 0.3s ease
+
+	&__desc
+		line-height: 26px
+		+lg
+			line-height: 23px
+			width: 100% !important
+			display: none
+			margin-top: 18px
+		+md
+			line-height: 22px
+		+sm
+			font-weight: normal
+			font-size: 14px
+			line-height: 21px
+		p
+			margin-bottom: 0

@@ -1,0 +1,38 @@
+.auth-banner
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 17px 24px 17px 26px
+	background: #FFFFFF
+	border: 1px solid $accent
+	border-radius: 3px
+	+md
+		flex-wrap: wrap
+
+	&__desc
+		font-size: 14px
+		line-height: 18px
+		color: $c3
+		max-width: 340px
+		+md
+			flex-basis: 100%
+			max-width: 100%
+			margin-bottom: 15px
+
+	&__links
+		display: flex
+		align-items: center
+
+	&__link
+		font-weight: 500
+		&:first-child
+			margin-right: 20px
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				right: -10px
+				width: 1px
+				height: 25px
+				background: $c4
+				transform: translateY(-50%)

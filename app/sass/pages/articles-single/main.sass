@@ -1,0 +1,205 @@
+.articles-single
+	background: $c4
+	+min_sm
+		padding-bottom: 5rem
+
+	&__main
+		position: relative
+		background: #fff
+		padding: 43px 40px 26px
+		margin-bottom: 2.8125rem
+		+lg
+			padding: 33px 25px 26px
+		+md
+			padding: 33px 15px 26px
+		+sm
+			padding: 33px 15px 50px
+			margin-bottom: 30px
+
+		&:after
+			content: ''
+			position: absolute
+			bottom: 86px
+			left: 50%
+			transform: translateX(-50%)
+			width: calc( 100% - 80px)
+			height: 1px
+			background: $c4
+			+lg
+				display: none
+	&__container
+		+sm
+			padding: 0
+	&__content-wrap
+		margin-bottom: 8.375rem
+		+sm
+			margin-bottom: 40px
+
+
+
+	&__top-line
+		display: flex
+		align-items: center
+		margin-bottom: 32px
+		+sm
+			justify-content: space-between
+		+xsm
+			flex-direction: column
+			align-items: flex-start
+
+	&__title
+		+min_sm
+			line-height: 40px
+			margin-bottom: 30px
+		+sm
+			margin-bottom: 20px
+			br
+				display: none
+		&--other-title
+			margin-bottom: 25px
+
+	&__sub-title
+		line-height: 30px
+		max-width: 590px
+		margin-bottom: 30px
+
+
+	&__category-wrap
+		margin-bottom: 0
+		+min_sm
+			margin-right: 2.6875rem
+		+xsm
+			margin-bottom: 15px
+		// +sm
+		// 	margin-right: 25px
+		.news-info
+			&__category
+				margin-right: 1.0625rem
+				+sm
+					display: none
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 0 -16px
+
+	&__news-row
+		+min_sm
+			margin-bottom: 22px
+
+	&__col
+		padding: 0 16px
+		&--left
+			flex-basis: 69.2%
+			max-width: 69.2%
+			+xl
+				flex-basis: 65%
+				max-width: 65%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+		&--right
+			padding-top: 12px
+			flex-basis: 30.8%
+			max-width: 30.8%
+			+xl
+				flex-basis: 35%
+				max-width: 35%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+	&__img-wrap
+		width: 100%
+		height: 25rem
+		margin-bottom: 30px
+		+sm
+			margin-left: -15px
+			width: calc( 100% +  30px)
+		+xsm
+			height: 188px
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__small-title
+		+min_md
+			max-width: 550px
+		+min_sm
+			margin-bottom: 1.875rem
+		+sm
+			margin-bottom: 20px
+
+	&__desc
+		font-size: 16px
+		line-height: 27px
+		margin-bottom: 50px
+		+lg
+			line-height: 26px
+		+md
+			line-height: 25px
+		+sm
+			line-height: 24px
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 28px
+				+sm
+					margin-bottom: 24px
+
+	&__desc-nav
+		margin-bottom: 3.125rem
+
+	&__small-gray-card
+		margin-bottom: 25px
+
+	&__bottom-line
+		display: flex
+		align-items: center
+		position: relative
+		+lg
+			&:after
+				content: ''
+				position: absolute
+				top: -28px
+				left: 50%
+				transform: translateX(-50%)
+				width: 100%
+				height: 1px
+				background: $c4
+		+md
+			justify-content: space-between
+		+xsm
+			flex-wrap: wrap
+
+	&__tags
+		+min_sm
+			margin-right: 30px
+		+xsm
+			margin-bottom: 20px
+			margin-right: 20px
+
+	&__socials
+		&-wrap
+			display: flex
+			align-items: center
+			+md
+				display: none
+		&-title
+			font-size: 14px
+			line-height: 14px
+			color: $c3
+			margin-right: 25px
+
+	&__editor
+		+min_sm
+			margin-left: auto
+		+sm
+			margin-bottom: 20px
+
+	&__comments-content
+		background: #fff
+		padding: 30px 0

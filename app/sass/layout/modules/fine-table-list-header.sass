@@ -1,0 +1,37 @@
+.fine-table-list-header
+	margin-bottom: 1px
+	&--style1
+		+tableMoreCol1(10.8%, 20%, 31%, 25.3%, 12.9%)
+	&--style2
+		+tableMoreCol2(5.5%, 36.9%, 24%, 33.6%)
+	&--style3
+		+tableMoreCol3(5.5%, 15.3%, 17.3%, 18.6%, 15.3%, 16.7%, 11.3%)
+	&--style4
+		+tableMoreCol4(6%, 16%, 21.5%, 34.6%, 11%, 10.9%)
+	&--d-lg-none
+		+lg
+			display: none
+	&--gray
+		margin-bottom: 0
+		.fine-table-list-header
+			&__row
+				background: #F6F7F8
+			&__title
+				font-weight: normal
+				color: $c0
+	&--center
+		.fine-table-list-header
+			&__row
+				align-items: center
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		padding: 11px 15px 9px
+		background: $c3
+
+	&__title
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		color: #fff

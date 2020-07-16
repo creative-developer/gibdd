@@ -1,0 +1,16 @@
+section.b-request-result-page.-error
+	._container.container
+		nav.b-bread-crumbs
+			ul._list
+				li._item
+					a._link(href="/") Главная
+					+icon('bread-crumbs-arrow')
+				li._item
+					a._link(href="#") Проверка автомобиль
+		._wrap
+			._icon-wrap
+				+icon('oval-warning')
+			h2._title Заявка не оплачена!
+			._sub-title
+				p Возможно вы ошиблись при вводе данных для оплаты или платежный шлюз перегружен, попробуйте повторно произвети оплату. 
+			a._btn.btn(href="#") Оплатить

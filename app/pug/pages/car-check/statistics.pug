@@ -1,0 +1,60 @@
+mixin tableRow(time, car, mileage, accident, deposit, arrest, owner, taxi, fines, img)
+	tr
+		td
+			.statistics-table__title #{time}
+		td
+			.statistics-table__title !{car}
+		td
+			.statistics-table__title !{mileage}
+		td
+			.statistics-table__title !{accident}
+		td
+			.statistics-table__title !{deposit}
+		td
+			.statistics-table__title !{arrest}
+		td
+			.statistics-table__title !{owner}
+		td
+			.statistics-table__title !{taxi}
+		td
+			.statistics-table__title !{fines}
+		td
+			a.statistics-table__img(href="img/info/video.jpg" data-fancybox)
+				img(src=img, alt="")
+
+section.b-statistics.-requests
+	._container.container
+		._title-wrap
+			h2._title Статистика обращений в Gibdd.com
+			._date Актуально на - 10.04.2020
+		._desc.desc
+			p Онлайн статистика запросов на проверку автомобиля перед покупкой на штрафы, залоги, аресты, скручивание пробега и другие махинации мошенников перед продажей автомобиля. 
+		table.b-statistics-table.-requests
+			thead
+				tr
+					th
+						._head-title.md-title Время
+					th
+						._head-title.md-title Автомобиль
+					th
+						._head-title.md-title Пробег
+					th
+						._head-title.md-title ДТП
+					th
+						._head-title.md-title Залог
+					th
+						._head-title.md-title Арест
+					th
+						._head-title.md-title Собственники
+					th
+						._head-title.md-title Такси
+					th
+						._head-title.md-title Штрафы
+					th
+						._head-title.md-title Фото
+			tbody
+				+tableRow('15:05', 'МIТSUВISНI АSХ 1.6 Е262МР18 VIN JMBX*********8201', '<span>Скручен</span>', '<span>12</span>', '<span>Да</span>', '<span>Да</span>', '2', 'Нет', '3','img/statistics/item6.png')
+				+tableRow('15:05', 'ЛАДА 217130 РRIОRА Р228ХУ22 XTA2*********5267', 'Нет', '<span>4</span>', 'Нет', 'Нет', '1', 'Нет', '1','img/statistics/item7.png')
+				+tableRow('15:05', 'ХЕНДЭ ЭЛАНТРА 1.6 GLS KMHDN41BP5U080273 Е90***777', 'Нет', '<span>1</span>', 'Нет', 'Нет', '1', 'Нет', '1','img/statistics/item8.png')
+				+tableRow('15:05', 'ТАТРА 815 С1<br> Т377ТО18<br> TNT2*********9308', '<span>Скручен</span>', '<span>2</span>', 'Нет', '<span>Да</span>', '5', 'Нет', '3','img/statistics/item9.png')
+				+tableRow('15:05', 'КИА ЕD (СЕЕ D) Р054КР152 XWEH*********5801', 'Нет', '<span>1</span>', 'Нет', 'Нет', '3', 'Нет', '12','img/statistics/item10.png')

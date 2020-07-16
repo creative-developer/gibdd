@@ -1,0 +1,271 @@
+.footer
+	background: rgba($c4, 0.5)
+	&__wrap
+		padding: 50px 0 83px
+		+lg
+			padding: 40px 0 63px
+		+md
+			padding: 35px 0 20px
+		+sm
+			padding: 30px 0 20px
+
+
+	&__logo
+		padding-right: 15px
+		border-right: 1px solid $c4
+		+xl
+			padding-right: 10px
+		+sm
+			border-right: 0
+			padding-right: 0
+
+		&-wrap
+			display: flex
+			align-items: center
+			margin-bottom: 48px
+
+	&__title
+		font-size: 14px
+		line-height: 17px
+		color: $c3
+		margin-bottom: 20px
+		&--top
+			margin-bottom: 28px
+		&--bottom
+			margin-bottom: 14px
+
+	&__logo-title
+		padding-left: 15px
+		+xl
+			padding-left: 10px
+		+sm
+			display: none
+
+	&__info-text
+		font-size: 12px
+		line-height: 21px
+		color: $c0
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	&__col
+		&:nth-child(1)
+			flex-basis: 32.8%
+			max-width: 32.8%
+			+xl
+				flex-basis: 33%
+				max-width: 33%
+			+lg
+				display: none
+
+		&:nth-child(2)
+			flex-basis: 20%
+			max-width: 20%
+			+xl
+				flex-basis: 23%
+				max-width: 23%
+			+lg
+				flex-basis: 33.333%
+				max-width: 33.333%
+			+md
+				display: none
+
+		&:nth-child(3)
+			flex-basis: 8.15%
+			max-width: 8.15%
+			+lg
+				flex-basis: 33.333%
+				max-width: 33.333%
+				display: flex
+				align-items: center
+				flex-direction: column
+			+md
+				display: none
+
+		&:nth-child(4)
+			flex-basis: 18.9%
+			max-width: 18.9%
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			+lg
+				flex-basis: 33.333%
+				max-width: 33.333%
+			+md
+				flex-basis: 100%
+				max-width: 100%
+				align-items: center
+
+	&__phone-link
+		font-weight: bold
+		font-size: 20px
+		line-height: 17px
+		text-align: right
+		color: $c0
+		margin-bottom: 12px
+		&:hover
+			color: lighten($c0, 10%)
+
+	&__email
+		margin-bottom: 31px
+
+	&__mobile-text
+		font-size: 12px
+		line-height: 21px
+		color: $c0
+		text-align: center
+		background: $c4
+		display: none
+		+md
+			display: block
+			padding: 9.5px 0
+			margin: 0 auto
+
+	&__socials
+		+md
+			width: 100%
+			justify-content: center
+			position: relative
+			padding-bottom: 20px
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 50%
+				width: 76%
+				height: 1px
+				background: #E8EAEF
+				transform: translateX(-50%)
+
+.footer-bottom
+	background: $c4
+	padding: 13px 0 12px
+	+md
+		background: transparent
+		padding: 0 0 8px
+
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+
+	&__col
+		+md
+			display: flex
+			justify-content: center !important
+			align-items: center
+			margin-bottom: 20px
+		&:nth-child(1)
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+				margin-bottom: 20px
+			+md
+				flex-basis: 100%
+				max-width: 100%
+		&:nth-child(2)
+			margin-left: 3px
+			+lg
+				flex-basis: 28%
+				max-width: 28%
+				margin-left: 0
+			+md
+				flex-basis: 100%
+				max-width: 100%
+		&:nth-child(3)
+			+lg
+				flex-basis: 72%
+				max-width: 72%
+				display: flex
+				justify-content: flex-end
+			+md
+				flex-basis: 100%
+				max-width: 100%
+
+
+
+	&__icon
+		margin-right: 12px
+		svg
+			fill: $c3
+			width: 14px
+			height: 19px
+		&-wrap
+			display: flex
+			justify-content: center
+			align-items: center
+			+lg
+				justify-content: flex-start
+
+	&__text
+		text-transform: uppercase
+
+	&__links-wrap
+		display: flex
+		align-items: center
+		+md
+			flex-direction: column
+
+	&__link
+		position: relative
+		text-decoration: underline
+		color: $accent
+		+md
+			text-align: center
+		&:not(:last-child)
+			margin-right: 26px
+			+md
+				margin-right: 0
+		&:first-child
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				right: -13px
+				width: 1px
+				height: 100%
+				background: $c3
+				transform: translate(-50%,-50%)
+				+md
+					display: none
+
+	&__cards-wrap
+		display: flex
+		align-items: center
+		+md
+			flex-direction: column
+
+	&__title
+		margin-right: 21px
+		+md
+			margin-right: 0
+			margin-bottom: 15px
+
+.pay-cards
+	display: flex
+	align-items: center
+	&__item
+		height: 15px
+		display: flex
+		justify-content: center
+		align-items: center
+		&:not(:last-child)
+			margin-right: 18px
+		&--mastercard
+			width: 24px
+			min-width: 24px
+		&--maestro
+			width: 24px
+			min-width: 24px
+		&--visa
+			width: 51px
+			min-width: 51px
+		&--mir
+			width: 52px
+			min-width: 52px
+

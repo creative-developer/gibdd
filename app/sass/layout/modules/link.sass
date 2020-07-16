@@ -1,0 +1,30 @@
+.link
+	display: flex
+	align-items: center
+	font-size: 14px
+	line-height: 17px
+	text-decoration: underline
+	color: $accent
+	position: relative
+	&--dashed
+		text-decoration: none
+		.link__text
+			border-bottom: 1px dashed $accent
+			color: $accent
+	&:hover
+		color: #2969EC
+	&.clicked
+		.link__icon
+			svg
+				transform: rotate(180deg)
+	&__text
+		margin-right: 10px
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		svg
+			fill: $c3
+			width: 10px
+			height: 6px
+			transition: all 0.5s ease

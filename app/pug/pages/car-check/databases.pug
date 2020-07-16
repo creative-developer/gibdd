@@ -1,0 +1,38 @@
+mixin sitesItem(img, title, desc, link)
+	.b-sites-card.-vertical
+			._top-line
+				._img-wrap
+					img._img(src=img alt="")
+				h3._title !{title}
+			._content
+				._desc.desc
+					p !{desc}
+				a._link.big-link(href='http://' + link target="_blank") #{link}
+
+section.b-databases
+	.container
+		h2._title Проверка авто по 13 базам
+		._desc.desc Поэтапно мы направляем запросы в базы, не оставляя ни единой возможности обмануть вас мошенниками.После мы формируем отчет и направляем его вам.
+		._row
+			._col
+				+sitesItem('img/logo/sites-logo/item1.png', 'ГИБДД', 'За превышение скорости, проезд на<br> красный и все другие нарушения ПДД.', 'www.гибдд.рф')
+			._col
+				+sitesItem('img/logo/sites-logo/item2.svg', 'РСА', 'Российский союз автостраховщиков — некоммерческая организация.', 'www.autoins.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item3.png', 'БКИ', 'Бюро кредитных историй — юридическое лицо, зарегистрированное в РФ.', 'www.madi.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item4.png', 'ФССП', 'Проверка судебной задолжности штрафов ГИБДД у судебных приставов.', 'www.fssprus.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item5.png', 'Суды РФ', 'Система специализированных органов государственной власти.', 'www.sudrf.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item6.png', 'ФНП', 'Федеральная нотариальная палата — нотариальная палата РФ.', 'www.notariat.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item7.png', 'Банки РФ', 'Единый залоговый реестр Федеральной нотариальной палаты.', 'www.cbr.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item8.png', 'Страховые компании', 'Единый залоговый реестр Федеральной нотариальной палаты.', 'www.rgs.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item9.png', 'ФТС', 'Федеральная таможенная служба — исполнительной власти России', 'www.autoins.ru')
+			._col
+				+sitesItem('img/logo/sites-logo/item10.png', 'Доски<br> объявлений', 'Это касается продажи квартир, поиска наемных сотрудников и массы других...', 'www.avito.ru')
+			//- ._col
+				+sitesItem('img/logo/sites-logo/item6.png', 'Реестр залогов', 'Единый залоговый реестр Федеральной нотариальной палаты.', 'www.reestr-zalogov.ru')

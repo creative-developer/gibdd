@@ -1,0 +1,53 @@
+.request-result-page
+	background: $c4
+	padding-bottom: 5.625rem
+	+sm
+		padding-bottom: 0
+	&__container
+		+sm
+			padding: 0
+	&__wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		background: #fff
+		margin-top: 1.9375rem
+
+	&__icon-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 72px
+		height: 72px
+		min-width: 72px
+		min-height: 72px
+		border-radius: 50%
+		margin-bottom: 35px
+		+sm
+			margin-bottom: 30px
+		.icon
+			width: 34px
+			height: 34px
+			fill: #fff
+
+	&__title
+		text-align: center
+		margin-bottom: 16px
+		+sm
+			line-height: 26px
+
+	&__sub-title
+		font-size: 16px
+		line-height: 24px
+		text-align: center
+		color: $c3
+		+md
+			font-size: 15px
+			line-height: 22px
+		+sm
+			font-size: 14px
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 1.4375rem

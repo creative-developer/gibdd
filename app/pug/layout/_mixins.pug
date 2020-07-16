@@ -1,0 +1,41 @@
+//- SVG icon
+mixin icon(name)
+	svg(class="icon icon--" + name)
+		use(xlink:href="img/svg-sprite.svg#" + name)
+
+
+//- input
+mixin input(type, name, dataName, placeholder, required)
+	.input-wrap
+		input(type=type, name=name, data-name=dataName, placeholder=placeholder, required=required)
+
+
+//- textarea
+mixin textarea(name, dataName, placeholder, required)
+	.input-wrap
+		textarea(name=name, data-name=dataName, cols="30", rows="5" placeholder=placeholder, required=required)
+
+mixin newsItem(img, category, title, desc, modify, btnModify, newsInfoModify)
+	.b-news-card(class=modify)
+		._top-line
+			a._img-wrap(href="articles-single.html")
+				img._img(src="img/news/"+ img +".jpg" alt="")
+		._bottom-line
+			.b-news-info(class=newsInfoModify).-desktop._category-wrap
+				a._category(href="#" class=btnModify) #{category}
+				._wrap
+					._date 28 марта 2020
+					._view
+						._view-icon
+							+icon('view')
+						._view-count 2.8К
+			a._title(href="articles-single.html") !{title}
+			._desc
+				p !{desc}
+			.b-news-info.-mobile
+				._wrap
+					._date 28 марта 2020
+					._view
+						._view-icon
+							+icon('view')
+						._view-count 2.8К

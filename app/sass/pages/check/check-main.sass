@@ -1,0 +1,108 @@
+.check-main
+	background: $c4
+	padding-bottom: 80px
+	+lg  
+		padding-bottom: 40px
+	+md 
+		padding-bottom: 20px
+	+sm 
+		padding-bottom: 0px
+	&__container
+		position: relative
+		+sm 
+			padding: 0
+	&__row
+		display: flex
+		margin: 0 -10px
+		+md 
+			justify-content: center
+		+sm 
+			margin: 0
+	&__col
+		padding: 0 10px
+		+sm 
+			padding: 0
+		&--big
+			max-width: 760px
+			width: 100%
+			+xl
+				max-width: 620px
+			+lg
+				max-width: 380px
+			+md 
+				display: none
+		&--small
+			max-width: 340px
+			width: 100%
+			position: relative
+			+xl
+				max-width: 330px
+			+md
+				max-width: none
+	&__fines-found
+		margin-bottom: 20px
+		+md 
+			margin-top: 15px
+			margin-bottom: 15px
+		+sm 
+			margin-right: 15px
+			margin-left: 15px
+	&__fines-cards
+		margin-bottom: 20px
+		+sm 
+			margin-bottom: 15px
+	&__alert
+		+md 
+			margin-bottom: 15px
+			&::after
+				content: ''
+				display: none
+		+sm 
+			margin-right: 15px
+			width: auto
+			margin-left: 15px
+	
+	&__alert-wrap
+		min-height: 110px
+		margin-bottom: 20px
+		position: relative
+		+xl 
+			min-height: 150px
+	&__merits
+		padding-bottom: 20px
+		+sm 
+			margin-bottom: 15px
+	&__fine
+		&:not(:last-child)
+			margin-bottom: 20px
+		+md 
+			display: none
+	&__show-more
+		+md 
+			display: none
+	&__scrolling-wrap
+		position: relative
+		overflow: hidden
+		max-width: 319px
+		width: 100%
+		max-height: 95vh
+		+xl
+			max-width: 310px
+		+md 
+			max-height: none
+			overflow: auto
+			max-width: none
+		&--scroll
+			position: fixed
+			top: 20px
+	&__scrolling
+		max-height: 95vh
+		overflow-y: auto
+		overflow-x: hidden
+		+md 
+			max-height: none
+			overflow: auto
+			width: 100% !important
+			max-width: none !important
+.red
+	color: $c1

@@ -1,0 +1,18 @@
+extend ../layout/template
+
+block head
+	- var title = 'Проверка авто по вин в ГИБДД | ГИБДД'
+	|
+	|
+	|
+block content
+	main.car-check-page.page
+		// Sections
+		include ./car-check/main
+		include ./car-check/statistics
+		include ./car-check/advantages
+		include ./car-check/video-instructions
+		include ./car-check/databases
+		include ./car-check/info
+		include ./index/news
+		include ./index/asking

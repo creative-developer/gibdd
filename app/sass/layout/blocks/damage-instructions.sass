@@ -1,0 +1,69 @@
+.damage-instructions
+	display: flex
+	justify-content: space-between
+	+lg
+		flex-wrap: wrap
+	&__item
+		display: flex
+		align-items: center
+		+lg
+			flex-basis: 47%
+			max-width: 47%
+			margin-bottom: 20px
+		&--gray
+			.damage-instructions__icon
+				background: #fff
+				border: 1px solid $c3
+				&-wrap
+					background: #fff
+					border: 1px solid $c0
+		&--red
+			+lg
+				flex-basis: 53%
+				max-width: 53%
+			.damage-instructions__icon
+				background: $c1
+				border: 1px solid $c1
+				&-wrap
+					background: #fff
+					border: 1px solid $c1
+		&--blue
+			.damage-instructions__icon
+				background: $accent
+				border: 1px solid $accent
+				&-wrap
+					background: #fff
+					border: 1px solid $accent
+		&--yellow
+			+lg
+				flex-basis: 53%
+				max-width: 53%
+			.damage-instructions
+				&__icon
+					background: #FFC328
+					border: 1px solid #FFC328
+					&-wrap
+						background: #fff
+						border: 1px solid #FFC328
+				&__text
+					max-width: 136px
+					margin-bottom: -14px
+	&__icon
+		width: 16px
+		height: 16px
+		min-width: 16px
+		min-height: 16px
+		&-wrap
+			width: 20px
+			height: 20px
+			min-width: 20px
+			min-height: 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 11px
+
+	&__text
+		font-size: 12px
+		line-height: 12px
+		color: $c3

@@ -1,0 +1,14 @@
+extend ../layout/template
+
+block head
+	- var title = 'Главная | ГИБДД'
+	|
+	|
+	|
+block content
+	main.page-404.page
+		// Sections
+		include ./404/main
+
+block footer
+	-var havBanner = false;

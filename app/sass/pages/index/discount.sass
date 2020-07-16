@@ -1,0 +1,100 @@
+.discount
+	padding: 5rem 0 2.5rem
+	+lg
+		padding: 4rem 0 2rem
+	+md
+		padding: 4rem 0 1.5rem
+	+sm
+		padding: 30px 0 15px
+
+
+	&__wrap
+		background: #FFFFFF
+		border: 1px solid $c3
+		border-radius: 3px
+		padding: 33px 40px 47px 38px
+		+xl
+			padding: 30px 30px 35px 30px
+		+lg
+			border: 0
+			padding: 0
+		
+
+	&__title
+		margin-bottom: 15px
+		font-weight: 500
+
+	&__desc
+		font-size: 15px
+		line-height: 21px
+		color: $c0
+		margin-bottom: 38px
+		+sm
+			font-size: 12px
+			line-height: 18px
+
+		p
+			margin-bottom: 0
+
+	&__small-title
+		margin-bottom: 19px
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&--parent
+			margin-bottom: 17px
+		&--small
+			padding-top: 6px
+			margin: 0 -7.5px
+
+	&__col
+		&--small
+			flex-basis: 50%
+			max-width: 50%
+			padding: 0 7.5px
+			margin-bottom: 13px
+			+lg
+				margin-bottom: 15px
+			+sm
+				flex-basis: 100%
+				max-width: 100%
+
+		&--left
+			flex-basis: 53.1%
+			max-width: 53.1%
+			+xl
+				flex-basis: 56.5%
+				max-width: 56.5%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+		&--right
+			flex-basis: 41.9%
+			max-width: 41.9%
+			+xl
+				flex-basis: 41%
+				max-width: 41%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+	&__link
+		display: inline-flex
+		align-items: center
+		+lg
+			margin-bottom: 30px
+		&:hover
+			.discount__link
+				&-icon
+					transform: translateX(3px)
+		&-text
+			margin-right: 15px
+		&-icon
+			transition: all 0.3s ease
+			svg
+				width: 21px
+				height: 8px
+				fill: $c3
+				transition: all 0.3s ease

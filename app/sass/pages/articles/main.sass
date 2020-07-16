@@ -1,0 +1,41 @@
+.articles
+	background: $c4
+	padding-bottom: 5.5625rem
+	+sm
+		padding-bottom: 30px
+	&__container
+		+sm
+			padding: 0
+		&-full
+			+sm
+				padding: 0
+	&__title
+		margin-bottom: 21px
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+
+	&__col
+		padding: 0 10px 
+		flex-basis: 33.333%
+		max-width: 33.333%
+		margin-bottom: 20px
+		+xl
+			flex-basis: 50%
+			max-width: 50%
+		+sm
+			flex-basis: 100%
+			max-width: 100%
+		&--full
+			flex-basis: 100%
+			max-width: 100%
+
+	&__banner
+		margin-bottom: 20px
+
+	&__btn
+		display: none
+		+sm
+			display: inline-block

@@ -1,0 +1,19 @@
+extend ../layout/template
+
+block head
+	- var title = 'Главная | ГИБДД'
+	|
+	|
+	|
+block content
+	main.main-page.page
+		// Sections
+		include ./index/main
+		include ./index/statistics
+		include ./index/info
+		include ./index/sites
+		include ./index/news
+		include ./index/addresses
+		include ./index/map
+		include ./index/discount
+		include ./index/asking

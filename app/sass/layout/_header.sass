@@ -1,0 +1,161 @@
+.header
+	background: #fff
+
+	&__top-line
+		border-bottom: 1px solid $c4
+		padding: 27px 0 23px
+		+lg
+			padding: 23px 0 20px
+		+md
+			padding: 18px 0 14px
+		+sm
+			padding: 8px 0 5px
+
+	&__bottom-line
+		padding: 12px 0 10px
+		border-bottom: 1px solid $c4
+		+lg
+			display: none
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		+lg
+			align-items: center
+
+	&__col
+		+lg
+			display: none
+		&:nth-child(1)
+			flex-basis: 32.78%
+			max-width: 32.78%
+			+lg
+				display: block
+				flex-basis: 50%
+				max-width: 50%
+			+md
+				flex-basis: 60%
+				max-width: 60%
+			+sm
+				flex-basis: 50%
+				max-width: 50%
+		&:nth-child(2)
+			flex-basis: 24.9%
+			max-width: 24.9%
+			+xl
+			flex-basis: 16.4%
+			max-width: 16.4%
+		&:nth-child(3)
+			flex-basis: 16%
+			max-width: 16%
+		&:nth-child(4)
+			flex-basis: 18.55%
+			max-width: 18.55%
+			padding-top: 6px
+			+xl
+				flex-basis: 22%
+				max-width: 22%
+		&--mobile
+			display: none
+			+lg
+				display: flex
+				flex-basis: 10%
+				max-width: 10%
+				justify-content: flex-end
+
+	&__logo
+		padding-right: 0.9375rem
+		border-right: 1px solid $c4
+		+sm
+			border-right: 0
+			padding-right: 0
+		&-wrap
+			display: flex
+			align-items: center
+
+	&__logo-title
+		padding-left: 0.9375rem
+		+sm
+			display: none
+
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 7px
+		svg
+			fill: $c3
+			width: 15px
+			height: 15px
+
+	&__geo-link
+		display: flex
+		align-items: center
+		&:hover
+			color: $accent
+			svg
+				fill: $accent
+		&-wrap
+			display: flex
+			align-items: flex-start
+			justify-content: center
+			padding: 12px 10px 0 0
+			position: relative
+
+		&-title
+			margin-bottom: 5px
+
+		&-text
+			position: relative
+			margin-right: 10px
+			max-width: 101px
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+			&:after
+				content: ''
+				position: absolute
+				bottom: -3px
+				left: 0
+				width: 89.5%
+				height: 3px
+				background: url('../img/icons/dots.svg')
+				background-repeat: repeat-x
+				opacity: 0.22
+
+		&-icon
+			display: flex
+			justify-content: center
+			align-items: center
+			svg
+				fill: $c3
+				width: 10px
+				height: 6px
+				transition: all 0.3s ease
+
+
+	&__support-title
+		margin-bottom: 3px
+
+	&__phone
+		margin-bottom: 8px
+
+	&__user-panel-btn
+		display: flex
+		align-items: center
+		justify-content: center
+		&-icon
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 11px
+			svg
+				fill: $c3
+				width: 15px
+				height: 15px
+
+.input__bar
+	background: red
+	width: 20px
+	height: 40px

@@ -1,0 +1,101 @@
+.mobile-menu
+	display: none
+	position: absolute
+	top: 0
+	left: 50%
+	width: 100%
+	height: 100vh
+	background: #fff
+	transform: translate(-50%, -110vh)
+	transition: all 0.6s cubic-bezier(0.57, 0.04, 0.46, 0.98)
+	z-index: 8
+	flex-direction: column
+	justify-content: space-between
+	&:after
+		content: ''
+		position: absolute
+		top: 50px
+		left: 0
+		width: 100%
+		height: 1px
+		background: $c4
+		z-index: 5
+	+lg
+		display: flex
+	&.opened
+		transform: translate(-50%, 0)
+
+	&__container
+
+	&__row
+		&--top
+			padding: 16.5px 0
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+		&--center
+			// padding: 40px 0 15px  2.65vh
+			padding: 7.05vh 0 2.65vh
+			// height: calc( 100vh - 19.85vh - 8.7vh)
+
+		&--bottom
+			display: flex
+			justify-content: space-between
+
+	&__social
+		&-wrap
+		&-title
+			margin-bottom: 9px
+
+	&__bottom-content
+		background: #F9F9FB
+		padding: 4.4vh 0
+
+	&__city-popup
+		display: none
+		position: absolute
+		top: 50px
+		width: 100% !important
+		height: calc( 100vh - 50px)
+		padding-top: 20px
+		background: #F9F9FB
+		z-index: 2
+
+.geo
+	display: flex
+	align-items: center
+	&__icon
+		width: 15px
+		height: 15px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 13px
+		svg
+			width: 100%
+			height: 100%
+			fill: $c3
+	&__link
+		display: flex
+		align-items: center
+		font-size: 14px
+		line-height: 17px
+		color: $c0
+		&-text
+			margin-right: 10px
+			max-width: 101px
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+			
+		&-icon
+			width: 10px
+			height: 6px
+			display: flex
+			justify-content: center
+			align-items: center
+			svg
+				width: 100%
+				height: 100%
+				fill: $c3

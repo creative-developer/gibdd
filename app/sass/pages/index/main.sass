@@ -1,0 +1,64 @@
+.main
+	background: $c4
+	padding: 2.5rem 0 3.0625rem
+	// display: none
+	+sm
+		padding-bottom: 0
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+
+	&__col
+		padding: 0 10px
+		flex-basis: 69.1%
+		max-width: 69.1%
+		&:first-child
+			+lg
+				margin-bottom: 15px
+		+xl
+			flex-basis: 64.5%
+			max-width: 64.5%
+		+lg
+			flex-basis: 100% !important
+			max-width: 100% !important
+
+		&:last-child
+			flex-basis: 30.9%
+			max-width: 30.9%
+			+xl
+				flex-basis: 35.5%
+				max-width: 35.5%
+			+lg
+				display: flex
+				justify-content: space-between
+
+	&__mobile-bottom-content
+		+sm
+			background: #fff
+			padding: 30px 0
+			border-bottom: 1px solid $c4
+
+	&__top-line
+		background: #fff
+		padding: 40px 85px 48px 82px
+		+xl
+			padding: 36px 40px 37px 40px
+		+md
+			padding: 25px 30px 26px 30px
+		+sm
+			padding: 0
+			background: transparent
+
+
+	&__bottom-line
+		background: #FAFAFB
+		padding: 22px 48px 19px 16px
+		+xxl
+			padding: 28px 48px 24px 16px
+		+xl
+			// padding: 22px 16px 19px 16px
+			padding: 30.9px 16px 29px 16px
+		+sm
+			display: none

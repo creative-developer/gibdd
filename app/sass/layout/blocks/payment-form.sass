@@ -1,0 +1,143 @@
+.payment-form
+	padding: 30px 30px 22px 30px
+	background: rgba($c4, 0.55)
+	border: 1px solid $c3
+	border-radius: 3px
+	+md
+		padding: 20px
+	+sm
+		border: none
+		border-radius: 0
+		padding:  17px 15px  22px 15px
+	&--bordered
+		border: 1px solid $c3
+		border-radius: 3px
+		.payment-form
+			&__btn
+				+md
+					max-width: 100%
+					justify-content: center
+			&__security
+				+xsm
+					margin-bottom: 15px
+			&__footer
+				// flex-direction: column
+
+	&__header
+		border-bottom: 1px solid #C5C8D0
+		padding-bottom: 30px
+		+md 
+			padding-bottom: 20px
+	&__title
+		line-height: 17px
+		margin-bottom: 10px
+		font-weight: bold
+		+md
+			font-size: 24px
+			margin-bottom: 13px
+			line-height: 26px
+	&__desc
+		font-size: 14px
+		line-height: 17px
+	&__body
+		margin-top: 35px
+		margin-bottom: 35px
+		+md 
+			margin-top: 25px
+			margin-bottom: 25px
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-top: 10px
+		+md
+			flex-direction: column
+			align-items: flex-start
+			margin-top: 0px
+		&--mb-20
+			margin-bottom: 20px
+
+	&__result-form
+		margin-top: 7px
+		+md 
+			margin-top: 11px
+
+	&__feedback-input
+		margin-bottom: 0
+
+	&__select
+		.select__title
+			margin-bottom: 4px
+			+md 
+				font-size: 16px
+
+	&__col
+		width: calc(50%  -  10px)
+		+md 
+			width: 100%
+			margin-top: 20px
+
+	&__footer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 22px
+		border-top: 1px solid #C5C8D0
+		flex-wrap: wrap
+		+md 
+			border-top: none
+			padding-top: 0
+
+	input
+		padding: 12px 16px
+
+	&__record-wrap
+		margin-top: 19px
+
+	&__agreement
+		margin-top: 29px
+		justify-content: flex-end
+		align-items: flex-end
+		+md 
+			margin-top: 25px
+
+	&__checkbox-footer
+		+md 
+			width: 100%
+			padding-top: 20px
+			border-top: 1px solid #C5C8D0
+			margin-top: 20px
+
+	&__checkbox
+		margin-right: 18px
+		+md 
+			align-self: flex-start
+
+	&__checkbox a
+		font-size: 12px !important
+
+	&__icon
+		margin-top: 0 !important
+		margin-right: 9px !important
+
+	&__btn
+		padding: 16.5px 18.2px 16.5px 76.2px
+		text-align: right
+		justify-content: flex-end
+		font-size: 16px
+		+md 
+			padding: 16.5px 18.2px 16.5px 16.5px
+			max-width: 290px
+
+	&__btn-text
+		margin-right: 35px
+		+md 
+			margin-right: 27px
+	.pay-cards__item:not(:last-child)
+		margin-right: 13.5px
+		+sm 
+			margin-right: 9px
+	.feedback-input__link,
+	.input__title
+		+md 
+			font-size: 16px

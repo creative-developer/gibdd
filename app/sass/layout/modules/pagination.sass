@@ -1,0 +1,82 @@
+.pagination
+	display: flex
+	align-items: center
+	justify-content: center
+	+sm
+		display: none
+	&__list
+		display: flex
+		align-items: center
+		padding: 0 30px
+
+	&__item
+		&:not(:last-child)
+			margin-right: 3px
+		&--active
+			.pagination
+				&__link
+					color: $accent
+					background: #fff
+
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 14px
+		line-height: 16px
+		color: $c0
+		width: 40px
+		height: 40px
+		min-width: 40px
+		min-height: 40px
+		border-radius: 50%
+		&:hover
+			background: #fff
+			color: $accent
+		&-text
+			display: inline-block
+
+	&__btn
+		display: flex
+		align-items: center
+		font-size: 14px
+		line-height: 16px
+		color: $c3
+		transition: all 1s ease
+		&:hover
+			color: $c0
+			.icon
+				fill: $c0
+		.icon
+			width: 28px
+			height: 10px
+			fill: $c3
+			transition: all 0.3s ease
+		&--prev
+			&:hover
+				.pagination
+					&__icon-wrap
+						transform: translateX(-2px)
+			.pagination
+				&__link-text
+					margin-left: 10px
+			.icon
+				transform: rotate(180deg)
+		&--next
+			&:hover
+				.pagination
+					&__icon-wrap
+						transform: translateX(2px)
+
+			.pagination
+				&__link-text
+					margin-right: 10px
+
+	&__icon-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: all 0.3s ease
+
+	&__empty
+		margin: 0 23px 0 15px

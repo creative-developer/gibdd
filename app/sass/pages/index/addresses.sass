@@ -1,0 +1,232 @@
+.addresses
+	padding: 4.625rem 0 5rem
+	+sm
+		padding: 30px 0
+
+	&__title
+		margin-bottom: 10px
+		+sm
+			margin-bottom: 15px
+
+	&__desc
+		max-width: 920px
+		line-height: 24px
+		margin-bottom: 2.4375rem
+		p
+			+sm
+				margin-bottom: 0
+		+lg
+			line-height: 22px
+		+md
+			line-height: 20px
+		+sm
+			margin-bottom: 20px
+			line-height: 18px
+
+.gray-card
+	background: linear-gradient(180deg, $c4 0%, #E5E7EB 100%), $c4
+	border-radius: 3px
+	padding: 30px
+	+lg
+		padding: 25px
+	+md
+		padding: 20px
+	+sm
+		padding: 15px
+
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -7.5px
+
+	&__col
+		padding: 0 7.5px
+		&:first-child
+			flex-basis: 30.73%
+			max-width: 30.73%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+				margin-bottom: 15px
+		&:last-child
+			flex-basis: 69.27%
+			max-width: 69.27%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+.feedback-info
+	background: #f7f7f8
+	padding: 1.875rem 1.5625rem 2.8125rem 1.8125rem
+	margin-bottom: 10px
+	+lg
+		margin-bottom: 20px
+	+md
+		padding: 20px
+
+	&__title
+		font-weight: 500
+		font-size: 20px
+		line-height: 30px
+		color: #343D52
+		margin-bottom: 37px
+		+sm
+			font-weight: 500
+			font-size: 16px
+			line-height: 21px
+			color: $c0
+
+	&__row
+		display: flex
+		justify-content: space-between
+		+lg
+			flex-wrap: wrap
+
+	&__col
+		&:not(:last-child)
+			+lg
+				border-bottom: 1px solid #DCDDE0
+				margin-bottom: 20px
+		&:first-child
+			flex-basis: 33%
+			max-width: 33%
+			+xl
+				flex-basis: 40%
+				max-width: 40%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+		&:nth-child(2)
+			flex-basis: 27.8%
+			max-width: 27.8%
+			+xl
+				flex-basis: 25%
+				max-width: 25%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+		&:nth-child(3)
+			flex-basis: 30.41%
+			max-width: 30.41%
+			+xl
+				flex-basis: 32%
+				max-width: 32%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+	&__geo-wrap
+		display: flex
+		margin-bottom: 24px
+		+lg
+			margin-bottom: 20px
+			padding-bottom: 20px
+			border-bottom: 1px solid #DCDDE0
+
+
+	&__geo-icon
+		display: flex
+		justify-content: center
+		margin-right: 9px
+		margin-top: 5px
+		svg
+			width: 14px
+			height: 14px
+			fill: $c3
+
+	&__geo-title-wrap
+
+	&__small-title
+		line-height: 21px
+		margin-bottom: 5px
+
+	&__link
+
+
+.days
+	display: flex
+	+lg
+		margin-bottom: 20px
+	&__icon-wrap
+		display: flex
+		justify-content: center
+		margin-right: 8px
+		margin-top: 2px
+		svg
+			width: 16px
+			height: 16px
+			fill: $c3
+
+	&__title-wrap
+
+	&__title
+		line-height: 21px
+		&:not(:last-child)
+			margin-bottom: 2px
+		span
+			color: $c3
+
+	&__desc
+
+	&__title
+
+
+.author
+	display: flex
+	+lg
+		margin-bottom: 20px
+	+sm
+		flex-wrap: wrap
+		margin-bottom: 0
+
+	&__img-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 7.25rem
+		height: 9.9375rem
+		min-width: 7.25rem
+		min-height: 9.9375rem
+		margin-right: 20px
+		+lg
+			margin-right: 18px
+		+md
+			margin-right: 16px
+		+sm
+			width: 64px
+			height: 88px
+			min-width: 64px
+			min-height: 88px
+			margin-right: 15px
+			margin-right: 0
+	&__right-content
+		+sm
+			flex-basis: 78.6%
+			max-width: 78.6%
+			padding-left: 15px
+		+xsm
+			flex-basis: 70%
+			max-width: 70%
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__title
+		line-height: 21px
+		margin-bottom: 6px
+		+sm
+			font-size: 14px
+			margin-bottom: 0
+
+	&__rank
+		margin-bottom: 16px
+
+	&__small-title
+		line-height: 18px
+		flex-basis: 100%
+		max-width: 100%
+		margin-top: 15px
+

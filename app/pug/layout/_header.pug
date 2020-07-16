@@ -1,0 +1,146 @@
+header.b-header
+	._top-line
+		._container.container
+			._row
+				._col
+					._logo-wrap
+						a.b-logo._logo(href="index.html")
+							span._img-wrap
+								img._img(src="img/logo/new-logo.svg" alt="")
+							span._text Штрафы ГИБДД
+						._logo-title.xsm-title Онлайн сервис проверки автомобиля и штрафов
+				._col
+					._geo-link-wrap
+						._icon
+							+icon('geo')
+						._geo-link-title-wrap
+							._geo-link-title.xsm-title Ваш регион:
+							a._geo-link.md-title.js-popup(href="#choose-country")
+								span._geo-link-text Москва и МО
+								span._geo-link-icon
+									+icon('triangle')
+						.b-region-checker.-disabled
+							._content
+								._title-wrap
+									span Ваш регион –
+									b Москва
+								a._btn.btn.js-popup-close(href="#") Да, спасибо
+								a._link.js-popup(href="#choose-country") Нет, другой
+				._col
+					._support-wrap
+						._support-title.xsm-title Техническая поддержка
+						a.b-phone._phone.sm-title(href="tel:+78095054777")
+							span._icon
+								+icon('phone')
+							span._text +7 (809) 505-4777
+						a.b-email._email.sm-title(href="mailto:info@gbdd.com")
+							span._icon
+								+icon('email')
+							span._text info@gbdd.com
+				._col
+					a._user-panel-btn.trs-btn.js-popup(href="#sign-in")
+						span._user-panel-btn-icon
+							+icon('user')
+						span._user-panel-btn-text Личный кабинет
+				._col.-mobile
+					button.hamburger.hamburger--slider.js-menu(type='button')
+						span.hamburger-box
+							span.hamburger-inner
+
+	._bottom-line
+		._container.container
+			nav.b-nav._nav
+				ul._list
+					li._item
+						a._link.-active(href="check.html") Проверить штрафы
+					li._item
+						a._link(href="#") Проверить автомобиль
+					li._item
+						a._link(href="#") Подбор ОСАГО
+					li._item
+						a._link(href="articles.html") Новости
+					li._item
+						a._link(href="faq.html") FAQ
+					li._item
+						a._link(href="/contacts.html") Контакты
+
+	.b-mobile-menu
+		._container.container
+			._row.-top
+				.b-geo
+					._icon
+						+icon('geo')
+					a._link.md-title(href="#")
+						span._link-text Москва и МО
+						span._link-icon
+							+icon('triangle')
+				button.hamburger.hamburger--slider.js-menu(type='button')
+					span.hamburger-box
+						span.hamburger-inner
+			._row.-center
+		._bottom-content
+			._container.container
+				._row.-bottom
+					._social-wrap
+						._social-title.xsm-title Мы соцсетях
+						ul.b-socials._social
+							li._item
+								a._link(href="#")
+									+icon('vk')
+							li._item
+								a._link(href="#")
+									+icon('youtube')
+		._city-popup
+			.container
+				.b-choose-country.-mobile
+					form._form
+						.b-input.-search.-active._input
+							._title Выберите свой город
+							._wrap
+								input(type="text" name="choose-country" placeholder="Укажите ваш город...")
+								span._icon
+								button._search-icon(type="submit")
+									+icon('simple-search')
+								.search-list-popup-wrap
+									.baron__track
+										.baron__bar
+									ul.b-search-list-popup
+										li._item.-active
+											a._link(href="#") Камчатский край
+										li._item
+											a._link(href="#") Карачаево-Черкесская Республика
+										li._item
+											a._link(href="#") Кемеровская область
+										li._item
+											a._link(href="#") Кировская область
+										li._item
+											a._link(href="#") Костромская область
+										li._item
+											a._link(href="#") Краснодарский край
+										li._item
+											a._link(href="#") Красноярский край
+										li._item
+											a._link(href="#") Курганская область
+										li._item
+											a._link(href="#") Курская область
+						ul.b-list._list
+							li._item
+								a._link(href="#") Москва
+							li._item
+								a._link(href="#") Санкт-Петербург
+							li._item
+								a._link(href="#") Екатеринбург, Свердловская область
+							li._item
+								a._link(href="#") Нижний Новгород, Нижегородская область
+							li._item
+								a._link(href="#") Пермь, Пермский Край
+							li._item
+								a._link(href="#") Новосибирск, Новосибирская область
+							li._item
+								a._link(href="#") Казань, Татарстан республика
+							li._item
+								a._link(href="#") Челябинск, Челябинская область
+							li._item
+								a._link(href="#") Краснодар, Краснодарский Край
+							li._item
+								a._link(href="#") Самара, Самарская область

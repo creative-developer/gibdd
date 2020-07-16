@@ -1,0 +1,1553 @@
+////////// Popup
+.mfp
+	position: relative
+	max-width: 40.625rem
+	min-height: 26.25rem
+	text-align: left
+	margin: 2.5rem auto
+	border-radius: 3px
+	background: #fff
+	padding: 50px 50px 48px 50px
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
+
+	.mfp-close
+		top: 20px
+		right: 20px
+		opacity: 1
+		transition: all .2s ease
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+		width: 16px
+		height: 16px
+		svg
+			pointer-events: none
+			width: 100%
+			height: 100%
+			fill: $c3
+		&:focus
+			outline: none
+		&:active
+			transform: translateY(1px)
+
+.form-result
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	background: #fff
+	opacity: 0
+	padding: 50px
+	visibility: hidden
+	transition: all .3s ease
+	z-index: 1
+	.mess
+		&__title
+			font-size: 42px
+			line-height: 47px
+			font-weight: 600
+			margin-bottom: 10px
+			opacity: 0
+			transform: translateY(50px)
+			transition: all .6s ease
+			+sm
+				font-size: 30px
+			+xsm
+				font-size: 25px
+				margin-bottom: 5px
+
+		&__desc
+			font-size: 22px
+			line-height: 27px
+			opacity: 0
+			transform: translateY(50px)
+			transition: all .6s ease
+			+xsm
+				font-size: 16px
+
+	// &--success
+	&--success
+		opacity: 1
+		visibility: visible
+		.mess__title,
+		.mess__desc
+			opacity: 1
+			transform: translateY(0)
+			transition-delay: .1s
+		.mess__title
+			transition-delay: .2s
+		.mess__desc
+			transition-delay: .3s
+
+.answer-popup
+	position: absolute
+	top: 10px
+	right: -10px
+	width: 376px
+	background: #fff
+	border-left: 3px solid #F8C608
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)
+	display: flex
+	justify-content: space-between
+	transform: translateX(100%)
+	transition: all 0.3s ease
+	visibility: hidden
+	opacity: 0
+	z-index: 1
+	pointer-events: none
+	+lg
+		width: 225px
+		transform: translateX(0)
+		border-left: 0
+		background: $c0
+		border-radius: 3px
+		right: -2px
+		top: 46px
+	&:after
+		content: ''
+		position: absolute
+		top: 11px
+		left: -9px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 4.5px 6px 4.5px 0
+		border-color: transparent #f8c808 transparent transparent
+		+lg
+			border-color: transparent transparent $c0 transparent
+			border-width: 0 8px 8px 8px
+			top: -7px
+			left: auto
+			right: 16px
+	&--small
+		border-radius: 3px
+		box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1)
+		width: 318px
+		border-left: none
+		padding: 20px
+		flex-direction: column
+		top: -24px
+		right: -30px
+		color: $c3
+		&.bottom
+			right: 97px !important
+			width: 295px !important
+			top: 29px
+			&::after
+				left: 100px !important
+				transform: rotate(90deg) !important
+				top: -20px !important
+			+lg
+				right: -200px !important
+		.answer-popup__desc
+			margin-bottom: 0
+		.answer-popup__title
+			padding-top: 0
+			margin-bottom: 15px
+			font-size: 16px
+			font-weight: bold
+			color: $c0
+			line-height: 19px
+		.answer-popup__desc
+			font-size: 12px
+			line-height: 18px
+			+lg 
+				color: $c3
+				text-align: left
+		&:after
+			left: -12px
+			top: 15px
+			border-width: 14.5px 12px 14.5px 0
+			border-color: transparent #fff transparent transparent
+		+lg 
+			background: #fff
+			top: 30px
+			right: -40px
+			&:after
+				left: 265px !important
+				top: -20px
+				transform: rotate(90deg)
+		+md 
+			right: -177px
+			&::after
+				
+
+	&__left-col
+		flex-basis: 230px
+		max-width: 230px
+		padding-right: 26px
+		padding-left: 18px
+		padding: 0 23px 0 18px
+		+lg
+			flex-basis: 100%
+			max-width: 100%
+			padding: 11px 8px
+
+	&__right-col
+		flex-basis: 143px
+		max-width: 143px
+		min-width: 143px
+		+lg
+			display: none
+
+	&__top-line
+		display: flex
+		align-items: center
+		padding-top: 17px
+		margin-bottom: 12px
+		+lg
+			display: none
+
+	&__warning-icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 24px
+		height: 24px
+		min-width: 24px
+		min-height: 24px
+		margin-right: 12px
+
+
+	&__desc
+		margin-bottom: 28px
+		+lg
+			font-size: 12px
+			line-height: 17px
+			text-align: center
+			color: #FFFFFF
+			margin-bottom: 0
+			br
+				display: none
+
+	&__small-title
+		display: flex
+		align-items: center
+		font-size: 12px
+		font-style: italic
+		line-height: 19px
+		color: $c0
+		+lg
+			display: none
+
+		span
+			font-size: 15px
+			line-height: 17px
+			color: $c3
+			margin-left: 4px
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		&-wrap
+			left: 143px
+			height: 188px
+			display: flex
+			justify-content: center
+			align-items: center
+			+lg
+				display: none
+
+.car-checker-popup
+	position: absolute
+	bottom: 0
+	transform: translateY(calc( 100% - 1px))
+	z-index: 3
+	background: #FFFFFF
+	border: 1px solid $c3
+	border-radius: 3px
+	padding: 23px 14px 18px
+	max-width: 281px
+	width: 100%
+	display: none
+	+lg
+		max-width: 100%
+	&--small
+		.car-checker-popup
+			&__btn-wrap
+				flex-direction: column
+			&__trs-btn
+				margin-bottom: 10px
+			&__btn
+				padding: 12px 23.4px
+
+	&__top-line
+		padding-bottom: 15px
+		border-bottom: 1px solid $c4
+
+	&__bottom-line
+		padding-top: 14px
+
+	&__row
+		display: flex
+		align-items: center
+
+	&__title
+		font-size: 12px
+		line-height: 30px
+		color: $c3
+
+	&__value
+		font-weight: 500
+		font-size: 15px
+		line-height: 30px
+		color: $c0
+
+	&__col
+		&:first-child
+			flex-basis: 78px
+			max-width: 78px
+
+	&__small-title
+		line-height: 21px
+		margin-bottom: 10px
+
+	&__btn-wrap
+		display: flex
+		justify-content: space-between
+		+md
+			justify-content: flex-start
+
+	&__trs-btn
+		padding: 11px 13.3px
+		+xl
+			+min_lg
+				padding: 11px 5.3px
+		+md
+			margin-right: 25px
+		+xsm
+			margin-right: 15px
+
+	&__btn
+		padding: 10.5px 23.4px
+		+xl
+			+min_lg
+				padding: 10.5px 15.4px
+
+.popups-general-styles
+	max-width: 43.75rem
+	min-height: 25.25rem
+	padding: 3.125rem 6.25rem 3.75rem
+	+lg
+		padding: 3rem 5rem 3.75rem
+	+sm
+		padding: 50px 15px 24px
+.mfp
+	&--choose-country-popup
+		max-width: 600px
+		min-height: 623px
+		
+	&--choose-department-popup
+		max-width: 600px
+		// min-height: 580px
+		min-height: 623px
+		padding: 39px 50px 48px
+
+	&--complaint-popup
+		max-width: 43.75rem
+		min-height: 44.6875rem
+		padding: 4.125rem 6.375rem 6.25rem 6.125rem
+		+lg
+			padding: 3rem 5rem 5.2rem 5rem
+		+sm
+			padding: 30px 15px 30px
+
+	&--popup
+		max-width: 43.75rem
+		min-height: 50rem
+		padding: 62px 100px 70px
+		+lg
+			padding: 3rem 5rem 4.0625rem 5rem
+		+sm
+			padding: 40px 14px 36px
+
+	&--ask-popup
+		max-width: 40rem
+		min-height: 39rem
+		padding: 4.125rem 6rem 5rem 6rem
+		+lg
+			padding: 3rem 5rem 5.2rem 5rem
+		+sm
+			padding: 30px 15px 30px
+
+	&--map-popup
+		max-width: 1080px
+		min-height: 620px
+		box-shadow: none
+		padding: 20px
+		background: rgba(#000, .65)
+		+lg
+			min-height: 550px
+			padding: 9px
+		.mfp-close
+			top: -20px
+			right: 0
+		// +lg
+		// 	padding: 3rem 5rem 5.2rem 5rem
+		// +sm
+		// 	padding: 30px 15px 30px
+	&--signup
+		min-height: 45rem
+		padding: 42px 5.625rem 2.75rem
+		+sm
+			padding: 42px 15px
+
+	&--forget-password
+		+lg
+			min-height: 450px
+		+sm
+			min-height: 568px
+
+	&--not-found-popup
+		padding: 0
+		max-width: 46.875rem
+		min-height: 542px
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
+		+xl
+			min-height: 580px
+
+.choose-country
+	&__title
+		margin-bottom: 30px
+
+	&__input
+		margin-bottom: 36px
+
+	.input__search-icon
+		visibility: hidden
+		opacity: 0
+		pointer-events: none
+
+.choose-department
+	&__title
+		margin-bottom: 30px
+		
+
+
+
+.complaint-popup
+	overflow: hidden
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 23px
+		right: 0
+		width: 21.875rem
+		height: 43.75rem
+		background: url('../img/icons/big-eagle.png') no-repeat center center
+		background-size: 100% 100%
+		z-index: -1
+
+	&__title
+		margin-bottom: 2.5rem
+		text-align: center
+		font-weight: normal
+		color: #000
+		+sm
+			margin-bottom: 20px
+
+	&__input
+		&:not(:last-child)
+			margin-bottom: 15px
+
+	&__btn
+		width: 100%
+		font-size: 16px
+		line-height: 16px
+		padding: 17px 43.2px
+		+lg
+			padding: 15px 43.2px
+
+.popup
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 23px
+		right: 0
+		width: 21.875rem
+		height: 43.75rem
+		background: url('../img/icons/big-eagle.png') no-repeat center center
+		background-size: 100% 100%
+		z-index: -1
+
+	&__title
+		margin-bottom: 2.5rem
+		text-align: center
+		font-weight: normal
+		color: #000
+		+sm
+			font-weight: 500
+			line-height: 28px
+			margin-bottom: 30px
+			br
+				display: none
+
+	&__input
+		&:not(:last-child)
+			margin-bottom: 15px
+
+	&__btn
+		width: 100%
+		font-size: 16px
+		line-height: 16px
+		padding: 17px 43.2px
+		+lg
+			padding: 15px 43.2px
+
+	&__select
+		margin-bottom: 15px
+		.jq-selectbox__dropdown ul
+			max-height: 265px !important
+
+
+
+.map-popup
+	#popup-map
+		height: 580px !important
+		width: 100% !important
+		min-height: 580px
+
+.region-checker
+	position: absolute
+	top: 63px
+	left: 23%
+	width: 280px
+	background: #FFFFFF
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
+	border-radius: 3px
+	transition: all 0.3s ease
+	z-index: 1
+	pointer-events: auto
+	+xl
+		left: 3%
+
+	&--disabled
+		opacity: 0
+		pointer-events: none
+		visibility: hidden
+	&__content
+		position: relative
+		padding: 20px 27px 20px 20px
+		&:after
+			content: ''
+			position: absolute
+			top: -6px
+			left: 22px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 8px 6px 8px
+			border-color: transparent transparent #fff transparent
+
+	&__title-wrap
+		margin-bottom: 14px
+		span
+			font-size: 14px
+			line-height: 14px
+			color: $c3
+			margin-right: 3px
+		b
+			font-weight: bold
+			font-size: 16px
+			line-height: 21px
+			color: $c0
+
+	&__btn
+		font-size: 16px
+		line-height: 16px
+		padding: 12px 20px
+		margin-right: 15px
+
+	&__link
+		position: relative
+		font-size: 14px
+		line-height: 21px
+		color: $c0
+		&:hover
+			color: $c0
+			&:after
+				visibility: hidden
+				opacity: 0
+
+		&:after
+			content: ''
+			position: absolute
+			bottom: -3px
+			left: 0
+			width: 100%
+			height: 3px
+			background: url('../img/icons/dots.svg')
+			background-repeat: repeat-x
+			opacity: 0.5
+			transition: all 0.3s ease
+
+
+.mfp--slider-popup
+
+	max-width: 960px
+	border-radius: 0
+	padding: 0
+	margin: 0 auto
+	width: 100%
+	min-height: auto
+	.mfp-close
+		+sm 
+			width: 14px
+			height: 14px
+			top: 10px
+			right: 10px
+		svg
+			fill: #fff
+.slider-popup
+	max-height: 100vh
+	&__item
+		max-height: 100vh
+		display: flex
+		align-items: center
+		justify-content: center
+	.owl-nav
+		height: 0
+	
+// .arrow-slider
+// 	width: 42px
+// 	height: 42px
+// 	background: #ffffff
+// 	border-radius: 50%
+// 	display: flex
+// 	align-items: center
+// 	justify-content: center
+// 	transition: all 0.5s ease
+// 	position: absolute
+// 	top: 50%
+// 	transform: translateY(-50%)
+// 	&.next
+// 		right: 30px
+// 	&.prev
+// 		left: 30px
+// 		svg
+// 			transition: all 0.5s ease
+// 			transform: rotate(180deg)
+// 	svg
+// 		width: 10px
+// 		height: 12px
+// 		fill: $c0
+// 	&:hover,
+// 	&:focus,
+// 		background: $accent
+// 		svg
+// 			fill: #fff
+// 	+sm 
+// 		width: 30px
+// 		height: 30px
+// 		&.next
+// 			right: 20px
+// 		&.prev
+// 			left: 20px
+// 		svg
+// 			width: 8px
+// 			height: 10px
+// 			fill: $c0
+
+.owl-prev,
+.owl-next
+	width: 42px
+	height: 42px
+	background: #ffffff !important
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: all 0.5s ease
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	svg
+		width: 10px
+		height: 12px
+		fill: $c0
+		transition: all 0.5s ease
+		+sm
+			width: 8px
+			height: 10px
+	&:hover,
+	&:focus
+		background: $accent !important
+		outline: none
+		svg
+			fill: #fff
+
+
+.owl-prev
+	left: 30px
+	+sm
+		left: 20px
+	svg
+		transform: rotate(180deg)
+
+.owl-next
+	right: 30px
+	+sm
+		right: 20px
+
+
+.popup-preloader
+	position: relative
+	&__box
+		background: #FFFFFF
+		opacity: 0.99
+		border-radius: 3px
+		max-width: 300px
+		width: 100%
+		padding: 30px 35px 26px
+		display: flex
+		flex-direction: column
+		position: absolute
+		top: 50%
+		transform: translateY(-50%) translateX(-50%)
+		left: 50%
+		+sm 
+			max-width: 280px
+			padding: 20px
+	&__title
+		font-weight: 500
+		font-size: 16px
+		line-height: 22px
+		text-align: center
+		color: $c0
+		margin-bottom: 25px
+		+sm 
+			font-size: 14px
+			line-height: 18px
+			margin-bottom: 15px
+	&__links
+		display: flex
+		align-items: center
+		justify-content: center
+	&__link
+		font-weight: 500
+		font-size: 14px
+		line-height: 17px
+		&:first-child
+			margin-right: 20px
+		+sm
+			font-size: 12px
+			&:first-child
+				margin-right: 15px
+	&__img
+		max-height: 100vh
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		overflow: hidden
+		img
+			user-select: none
+		&::after
+			content: ''
+			background: rgba($c4, 0.85)
+			width: 100%
+			height: 100%
+			position: absolute
+
+.popup-style
+	overflow: hidden
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 23px
+		right: 0
+		width: 21.875rem
+		height: 43.75rem
+		background: url('../img/icons/big-eagle.png') no-repeat center center
+		background-size: 100% 100%
+		z-index: -1
+		+md
+			display: none
+	.popup
+		&-title
+			font-weight: 500
+			font-size: 32px
+			line-height: 37px
+			text-align: center
+			color: #000000
+			margin-bottom: 20px
+			+lg
+				font-size: 30px
+				line-height: 34px
+			+md
+				font-size: 28px
+				line-height: 32px
+				margin-bottom: 15px
+			+sm
+				font-size: 26px
+				line-height: 30px
+
+		&-desc
+			font-weight: normal
+			font-size: 14px
+			line-height: 20px
+			text-align: center
+			color: $c0
+			&--small
+				line-height: 20px
+				text-align: left
+				margin-top: 20px
+				sup
+					top: 0
+					color: $c1
+					margin-right: 2px
+
+	.input__title
+		font-size: 16px
+		line-height: 17px
+
+	.feedback-input__link
+		font-size: 16px
+		line-height: 17px
+
+.popup-warning-desc
+	position: relative
+	font-weight: normal
+	font-size: 14px
+	line-height: 20px
+	text-align: left
+	color: $c0
+	margin-top: 20px
+	padding-left: 9px
+	sup
+		position: absolute
+		top: 8px
+		left: 0
+		color: $c1
+		margin-right: 2px
+		font-size: 100%
+		width: 6px
+		height: 17px
+.signin-popup
+
+	&__sub-title
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 3.125rem
+		span
+			+md
+				display: inline-block
+				margin-bottom: 3px
+		+md
+			flex-direction: column
+			margin-bottom: 34px
+
+	&__btn
+		margin: 0 auto 3.125rem
+		display: flex
+		padding: 16px 52.1px
+		font-size: 16px
+		line-height: 16px
+
+	.input
+		&__title-wrap
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+	&__input
+		margin-bottom: 1.875rem
+		+sm
+			margin-bottom: 15px
+
+	&__link
+		margin-left: 4px
+	
+	&__socials
+		justify-content: center
+
+	&__desc
+		display: inline-block
+		font-size: 14px
+		line-height: 20px
+		color: $c3
+		text-align: center
+		// margin-bottom: 19px
+		background: #fff
+		padding: 0 35px
+		+md
+			background: transparent
+			padding: 0
+		&-wrap
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			z-index: 1
+			margin-bottom: 18px
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 100%
+				height: 1px
+				background: #c4c4c4
+				transform: translate(-50%, -50%)
+				z-index: -1
+				+md
+					display: none
+		p
+			margin-bottom: 0
+
+.forget-password-popup
+
+	&__sub-title
+		margin: 0 auto 40px
+		&--main
+			max-width: 345px
+
+	&__btn
+		margin: 0 auto
+		display: flex
+		padding: 16px 52.1px
+		font-size: 16px
+		line-height: 16px
+	
+	&__feedback-input
+		margin-bottom: 30px !important
+
+	&__icon-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 30px
+		transition: all 0.5s ease
+		transform: translateY(30px)
+		opacity: 0
+		.icon
+			width: 110px
+			height: 100px
+			fill: #009335
+
+	&__error
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		background: #fff
+		padding: 50px 99px 60px 103px
+		opacity: 0
+		transition: all 0.5s ease
+		pointer-events: none
+		+lg
+			padding: 50px 6.1875rem 60px 6.4375rem
+		+md
+			padding: 50px 6rem 60px 6rem
+		+sm
+			padding: 50px 15px 60px 15px
+
+		&:after
+			content: ''
+			position: absolute
+			top: 23px
+			right: 0
+			width: 21.875rem
+			height: 43.75rem
+			background: url('../img/icons/big-eagle.png') no-repeat center center
+			background-size: 100% 100%
+			z-index: -1
+			+md
+				display: none
+		.feedback-input
+			margin-bottom: 30px
+			opacity: 0
+			transform: translateY(30px)
+			transition: all 0.5s ease
+		.forget-password-popup
+			&__btn
+				padding: 16px 43.3px
+			&__title
+				opacity: 0
+				transform: translateY(30px)
+				transition: all 0.5s ease
+			&__sub-title
+				max-width: 480px
+				opacity: 0
+				transform: translateY(30px)
+				transition: all 0.5s ease
+				+sm
+					max-width: 230px
+			&__btn-wrap
+				opacity: 0
+				transform: translateY(30px)
+				transition: all 0.5s ease
+		&--open
+			opacity: 1
+			pointer-events: auto
+			.feedback-input
+				opacity: 1
+				transform: translateY(0)
+				transition-delay: 0.5s
+			.forget-password-popup
+				&__title
+					opacity: 1
+					transform: translateY(0)
+					transition-delay: 0.3s
+				&__sub-title
+					opacity: 1
+					transform: translateY(0)
+					transition-delay: 0.4s
+				&__btn-wrap
+					opacity: 1
+					transform: translateY(0)
+					transition-delay: 0.6s
+
+
+.success-popup
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 20
+	background: #fff
+	padding: 90px 6.1875rem 86px 7.4375rem
+	opacity: 0
+	transition: all 0.5s ease
+	pointer-events: none
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	+sm
+		padding: 108px 32px 60px
+	&:after
+		content: ''
+		position: absolute
+		top: 23px
+		right: 0
+		width: 21.875rem
+		height: 43.75rem
+		background: url('../img/icons/big-eagle.png') no-repeat center center
+		background-size: 100% 100%
+		z-index: -1
+		+md
+			display: none
+	&--signup
+		+sm
+			padding: 60px 15px 60px
+
+	&--general
+		.success-popup
+
+			&__title
+				line-height: 37px
+				font-weight: 500
+				margin-bottom: 30px
+
+			&__sub-title
+				font-size: 14px
+				line-height: 20px
+				text-align: center
+				color: $c0
+				margin-bottom: 0
+
+
+
+	&__icon-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 30px
+		transition: all 0.5s ease
+		transform: translateY(30px)
+		opacity: 0
+		.icon
+			width: 110px
+			height: 100px
+			fill: #009335
+
+	&__title
+		transform: translateY(30px)
+		opacity: 0
+		transition: all 0.5s ease
+
+	&__sub-title
+		transform: translateY(30px)
+		opacity: 0
+		transition: all 0.5s ease
+		margin-bottom: 15px
+
+	&__link
+		transform: translateY(30px)
+		opacity: 0
+		transition: all 0.5s ease
+
+	&--open
+		opacity: 1
+		pointer-events: auto
+		.success-popup
+			&__icon-wrap
+				transform: translateY(0)
+				opacity: 1
+				transition-delay: 0.3s
+			&__title
+				transform: translateY(0)
+				opacity: 1
+				transition-delay: 0.4s
+			&__sub-title
+				transform: translateY(0)
+				opacity: 1
+				transition-delay: 0.5s
+			&__link
+				transform: translateY(0)
+				opacity: 1
+				transition-delay: 0.5s
+
+.signup-popup
+	.signup-popup__sub-title
+		display: flex
+		margin: 0 auto
+		margin-bottom: 40px
+		color: $c3
+		max-width: 420px
+	
+	&__title-wrap
+		width: 100% !important
+		// margin-top: 8px !important
+		// max-height: 97px
+
+	&__prev-btn
+		display: flex
+		align-items: center
+		font-size: 16px
+		line-height: 17px
+		color: $c3
+
+		&:hover
+			color: $c3
+			.signup-popup
+				&__prev-btn-icon-wrap
+					transform: translateX(-3px)
+
+		&-wrap
+			width: 100% !important
+			min-height: 9.4375rem
+			position: relative
+			+lg
+				min-height: 8rem
+			+md
+				min-height: 6rem
+			+sm
+				min-height: 5rem
+			&:after
+				content: ''
+				position: absolute
+				bottom: 60%
+				left: 0
+				width: 100%
+				height: 1px
+				background: $c4
+				+md
+					bottom: 30px
+
+		&-icon-wrap
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 5px
+			transition: all 0.3s ease
+			svg
+				width: 21px
+				height: 8px
+				transform: rotate(90deg)
+				fill: $c3
+
+	&__body
+		margin-bottom: 30px
+		+sm
+			margin-bottom: 20px
+
+	&__input
+		&:not(:last-child)
+			margin-bottom: 15px
+
+	&__bottom-row
+		display: flex
+		align-items: center
+		+md
+			flex-wrap: wrap
+
+	&__link
+		+md
+			order: 1
+			width: 100%
+			margin-top: 4px
+
+	&__bottom-title
+		color: $c3
+		margin-right: 5px
+
+	&__footer-bottom-content
+		width: 100% !important
+
+	&__small-title
+		margin-bottom: 15px
+		+sm
+			text-align: center
+
+	&__step-desc
+		margin-bottom: 15px
+
+	.countdown
+		margin-left: auto
+
+	.disabled
+		opacity: 0
+		height: 0
+
+	&__nav-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 45px !important
+		width: 100% !important
+		+sm
+			margin-bottom: 30px !important
+			
+
+	&__link
+		&--disabled
+			pointer-events: none
+			opacity: 0.5
+
+	&__btn
+		margin-bottom: 25px
+		.icon
+			transform: rotate(-90deg)
+
+	&__next-wrap
+		width: 100% !important
+		display: flex
+		justify-content: center
+
+	&__submit-wrap
+		width: 100% !important
+		display: flex
+		justify-content: center
+
+	&__agreement
+		width: 100% !important
+		+xxl
+			flex-direction: column
+			align-items: flex-start !important
+		.agreement
+			&__btn
+				+xxl
+					order: -1
+					margin-bottom: 15px
+					width: 100%
+		.checkbox__text
+				br
+					+xxl
+						display: none
+
+
+	.input--disabled
+		color: #CFCFCF !important
+	.owl
+		&-nav
+			display: none
+		&-dots
+			display: none
+		&-item
+			visibility: hidden
+			&.active
+				visibility: visible
+
+
+	&__dots
+		display: flex
+		justify-content: center
+		&[data-step="1"]
+			.signup-popup
+				&__dot
+					&:nth-child(1)
+						background: #9C9C9B
+		&[data-step="2"]
+			.signup-popup
+				&__dot
+					&:nth-child(2)
+						background: #9C9C9B
+		&[data-step="3"]
+			.signup-popup
+				&__dot
+					&:nth-child(3)
+						background: #9C9C9B
+						
+
+	&__dot
+		width: 10px
+		height: 10px
+		min-width: 10px
+		min-height: 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #DBDBDB
+		border-radius: 50%
+		padding: 0
+		border: 0
+		transition: all 0.5s ease
+		pointer-events: none
+		&:focus
+			outline: none
+		&:not(:last-child)
+			margin-right: 11px
+
+.timeline
+	position: relative
+	margin-bottom: 38px
+	+md
+		margin-bottom: 30px
+	&[data-step="1"]
+		.timeline
+			&__item--step-1
+				opacity: 1
+				display: flex
+	&[data-step="2"]
+		.timeline
+			&__item--step-2
+				opacity: 1
+				display: flex
+	&[data-step="3"]
+		.timeline
+			&__item--step-3
+				opacity: 1
+				display: flex
+
+	&__item
+		display: flex
+		align-items: center
+		opacity: 0
+		transition: all 0.3s ease
+		display: none
+		&--step-3
+			+xxl
+				align-items: flex-start
+				.timeline
+					&__number
+						margin-top: 10px
+
+
+	&__number
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 28px
+		height: 28px
+		min-width: 28px
+		min-height: 28px
+		margin-right: 15px
+		font-weight: bold
+		font-size: 16px
+		line-height: 21px
+		color: #fff
+		background: #009335
+		border-radius: 50%
+
+	&__text
+		font-weight: 500
+		font-size: 16px
+		line-height: 21px
+		color: $c0
+		span
+			color: $c1
+
+.benefits-list
+	padding-left: 17px
+	&__item
+		font-size: 14px
+		line-height: 17px
+		color: #009335
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: -17px
+			width: 8px
+			height: 17px
+			background: url('../img/icons/plus.svg') no-repeat center center
+			background-size: 100% 100%
+		&:not(:last-child)
+			margin-bottom: 6px
+.popups-wrap
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100%
+	width: 100%
+
+// .not-found
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	padding: 0 90px
+// 	height: 100%
+// 	width: 100%
+// 	display: flex
+// 	align-items: center
+// 	flex-direction: column
+// 	justify-content: center
+// 	background: #fff
+// 	transition: all 0.5s ease
+// 	pointer-events: none
+// 	&--open
+// 		opacity: 1
+// 		pointer-events: auto
+// 	&__icon-wrap
+// 		display: flex
+// 		align-items: center
+// 		justify-content: center
+// 		width: 72px
+// 		height: 72px
+// 		min-width: 72px
+// 		min-height: 72px
+// 		border-radius: 50%
+// 		background: $accent
+// 		margin-bottom: 30px
+// 		.icon
+// 			fill: #fff
+// 			width: 30px
+// 			height: 30px
+// 			min-width: 30px
+// 			min-height: 30px
+// 	&__title
+// 		margin-bottom: 20px
+
+// 	&__desc
+// 		color: $c3
+// 		text-align: center
+// 		margin-bottom: 30px
+
+.not-found
+	position: absolute
+	top: 0
+	left: 0
+	padding: 0 5.625rem
+	height: 100%
+	width: 100%
+	display: flex
+	align-items: center
+	flex-direction: column
+	justify-content: center
+	background: #fff
+	transition: all 0.5s ease
+	opacity: 0
+	z-index: 1
+	pointer-events: none
+	+sm
+		padding: 0 15px
+	&.open
+		opacity: 1
+		pointer-events: auto
+
+	&__icon-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 72px
+		height: 72px
+		min-width: 72px
+		min-height: 72px
+		border-radius: 50%
+		background: $accent
+		margin-bottom: 30px
+		.icon
+			fill: #fff
+			width: 30px
+			height: 30px
+			min-width: 30px
+			min-height: 30px
+
+	&__title
+		margin-bottom: 20px
+
+	&__desc
+		color: $c3
+		text-align: center
+		margin-bottom: 30px
+
+.database-unavailable
+	position: absolute
+	top: 0
+	left: 0
+	padding: 0 5.9375rem
+	height: 100%
+	width: 100%
+	display: flex
+	align-items: center
+	flex-direction: column
+	justify-content: center
+	background: #fff
+	transition: all 0.5s ease
+	z-index: 1
+	opacity: 0
+	pointer-events: none
+	+sm
+		padding: 0 25px
+	&.open
+		opacity: 1
+		pointer-events: auto
+
+	&__icon-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 72px
+		height: 72px
+		min-width: 72px
+		min-height: 72px
+		border-radius: 50%
+		background: $c1
+		margin-bottom: 30px
+		.icon
+			fill: #fff
+			width: 38px
+			height: 38px
+			min-width: 38px
+			min-height: 38px
+
+	&__title
+		margin-bottom: 30px
+		text-align: center
+
+	&__desc
+		color: $c0
+		text-align: center
+		margin-bottom: 30px
+
+	&__btn
+		+min_sm
+			margin-bottom: 30px
+
+	&__small-desc
+		padding: 0.9375rem 3.5625rem
+		line-height: 22px
+		text-align: center
+		color: $c3
+		background: #FFFFFF
+		border: 1px solid $c4
+		border-radius: 3px
+		+sm
+			display: none

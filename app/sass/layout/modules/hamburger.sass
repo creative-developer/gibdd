@@ -1,0 +1,34 @@
+.hamburger
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0
+	+sm
+		width: 20px
+	&:focus
+		outline: none
+	&-box
+		+sm
+			width: 20px
+	&-inner
+		+sm
+			width: 20px
+		&:before
+			+sm
+				width: 20px
+		&:after
+			+sm
+				width: 20px
+	&:not(.is-active)
+		.hamburger
+			&-box
+			&-inner
+				+min_sm
+					top: 1px !important
+				&:before
+					+min_sm
+						top: 7px !important
+				&:after
+					width: 60%
+					+min_sm
+						top: 14px !important

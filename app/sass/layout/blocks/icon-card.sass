@@ -1,0 +1,53 @@
+.icon-card
+	+lg
+		background: #FFFFFF
+		border: 1px solid $c3
+		box-sizing: border-box
+		border-radius: 3px
+		padding: 15px 14px
+
+	&__icon
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin-right: 10px
+		min-width: 28px
+		min-height: 24px
+		.icon
+			fill: $c3
+			&--phone
+				width: 17px
+				height: 23px
+			&--crossroads
+				width: 24px
+				height: 24px
+			&--speed
+				width: 24px
+				height: 20px
+			&--tinting
+				width: 28px
+				height: 19px
+		&-wrap
+			display: flex
+			align-items: center
+			margin-bottom: 15px
+
+	&__title
+		font-weight: 500
+		font-size: 15px
+		line-height: 21px
+		color: $c0
+
+	&__desc
+		line-height: 18px
+		min-height: 72px
+		p
+			+lg
+				margin-bottom: 0
+		a
+			text-decoration: underline
+			color: $accent
+			margin-right: 3px
+			&:hover
+				color: $accent
+				text-decoration: none

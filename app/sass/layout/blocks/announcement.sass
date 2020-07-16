@@ -1,0 +1,81 @@
+.announcement
+	background: #FFFFFF
+	+min_lg
+		border-radius: 3px
+		overflow: hidden
+
+	&__item
+		+min_lg
+			border-radius: 3px
+			border: 1px solid #C8CBD3
+		&:not(:last-child)
+			margin-bottom: 15px
+
+	&__toggle-block
+		width: 100% !important
+		display: none
+		+min_lg
+			padding: 20px 15px 0
+
+	&__content
+
+	&__images
+		+min_lg
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -4.5px 20px
+		+lg
+			max-width: calc( 100% - 60px)
+			margin: 0 auto
+			margin-bottom: 37px
+			// display: block
+	
+	&__img-col
+		+min_lg
+			flex-basis: 25%
+			max-width: 25%
+			padding: 0 4.5px
+
+	&__img-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 116px
+		+lg
+			height: 220px
+		+sm
+			height: 175px
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__title
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		margin-bottom: 10px
+
+	&__desc
+		font-size: 12px
+		line-height: 20px
+		color: $c0
+		margin-bottom: 15px
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 15px
+	&__btn-wrap
+		+min_lg
+			padding: 15px 15px 15px
+
+	&__mobile-list
+		margin-bottom: 30px
+		+min_lg
+			display: none
+
+.toggle-block
+	width: 100% !important

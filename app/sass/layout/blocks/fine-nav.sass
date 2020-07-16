@@ -1,0 +1,90 @@
+.fine-nav
+	height: inherit
+	+xl
+		max-width: 270.69px
+	+lg
+		max-width: 100%
+
+	&__list
+		padding-bottom: 20px
+
+	&__toggle-block
+		display: none
+		width: 100% !important
+
+	&__item
+		border-bottom: 1px solid $c4
+		&--active
+			.fine-nav
+				&__link
+					background: $accent
+					color: #fff
+					+lg
+						color: #fff !important
+					svg
+						fill: #fff
+						opacity: 1
+				&__arrow
+					svg
+						+lg
+							transform: rotate(-180deg)
+		&--more-text
+			.fine-nav
+				&__link
+					+min_lg
+						padding: 12px 20px 12px 17px
+
+	&__col
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+
+	&__link
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-weight: 500
+		font-size: 14px
+		line-height: 18px
+		color: $c0
+		padding: 16px 20px 16px 17px
+		background: #fff
+		border-radius: 3px
+		transition: all 0.3s ease
+		+lg
+			br
+				display: none
+		&:hover
+			+min_lg
+				background: $accent
+				color: #fff
+				svg
+					fill: #fff
+					opacity: 1
+			+lg
+				color: $c0
+
+	&__icon-wrap
+		width: 16px
+		height: 16px
+		min-width: 16px
+		min-height: 16px
+		display: flex
+		align-items: center
+		margin-right: 15px
+		svg
+			width: 100%
+			height: 100%
+			fill: $accent
+			transition: all 0.3s ease
+	&__arrow
+		svg
+			width: 9px
+			height: 12px
+			transition: all 0.3s ease
+			+min_lg
+				transform: rotate(-90deg)
+				opacity: 0
+			+lg
+				fill: $c3

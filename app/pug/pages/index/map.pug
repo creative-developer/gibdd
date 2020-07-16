@@ -1,0 +1,40 @@
+section.b-map
+	._container.container
+		h2._title Карта камер видеофиксации ГИБДД 2020 года
+		._desc.desc
+			p На этой карте вы можете увидеть где находятся места размещения технических средств автоматической видео и фотофиксации. Если у Вас есть информация о дополнительных местоположениях направьте нам письмо на адрес эл. почты <a href="#">info@gibdd.com</a>
+		form.b-search-card
+			// Добавь модификатор "input--active" и появиться попап для инпута
+			.b-input.-search._input
+				._title Выберите город:
+				._wrap
+					input(type="text" name="search-city" placeholder="Новоухтомское ш., МКАД (из центра), г. Москва")
+					span._icon
+					button._search-icon(type="submit")
+						+icon('simple-search')
+					.search-list-popup-wrap
+						.baron__track
+							.baron__bar
+						ul.b-search-list-popup
+							li._item.-active
+								a._link(href="#") Камчатский край
+							li._item
+								a._link(href="#") Карачаево-Черкесская Республика
+							li._item
+								a._link(href="#") Кемеровская область
+							li._item
+								a._link(href="#") Кировская область
+							li._item
+								a._link(href="#") Костромская область
+							li._item
+								a._link(href="#") Краснодарский край
+							li._item
+								a._link(href="#") Красноярский край
+							li._item
+								a._link(href="#") Курганская область
+							li._item
+								a._link(href="#") Курская область
+			._link 
+				span Попоулярный запрос: 
+				a(href="#") Москва, Варшавское шоссе, 324 км
+		#map

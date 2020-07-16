@@ -1,0 +1,63 @@
+.info-card
+	background: #fff
+	padding: 30px 54px 40px 26px
+	height: 100%
+	+xl
+		padding: 30px 20px 40px 20px
+	+lg
+		padding: 30px 20px 30px 20px
+	+sm
+		padding: 20px 0 0 0
+	&--white
+		background: rgba($c4, 0.5)
+		padding: 2.1875rem 1.875rem 2.5rem 2.125rem
+		+sm
+			padding: 20px 15px 25px
+
+		.info-card
+			&__title
+				line-height: 24px
+			&__desc
+				font-style: normal
+				+lg
+					br
+						display: none
+			
+
+
+
+	&__title
+		line-height: 25px
+		margin-bottom: 1.875rem
+		+xl
+			font-size: 15px
+			line-height: 23px
+		+lg
+			max-width: 600px
+			margin-bottom: 1.5rem
+			br
+				display: none
+
+	&__desc
+		font-style: italic
+		+xl
+			font-size: 13px
+			line-height: 22px
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 23px
+				+xl
+					margin-bottom: 18px
+				+lg
+					margin-bottom: 0
+		a
+			font-weight: 500
+			font-size: 14px
+			line-height: 21px
+			text-decoration-line: underline
+			color: $accent
+			margin-left: 3px
+			&:hover
+				color: #2969EC
+				text-decoration: none

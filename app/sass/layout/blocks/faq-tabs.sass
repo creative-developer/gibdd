@@ -1,0 +1,13 @@
+.faq-tabs
+	position: relative
+	&__item
+		width: 100% !important
+		display: none
+	&--desktop
+		+lg
+			display: none !important
+	&--mobile
+		+min_lg
+			display: none
+		.faq-tabs
+			&__item

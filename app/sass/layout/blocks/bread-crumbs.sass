@@ -1,0 +1,42 @@
+.bread-crumbs
+	padding-top: 20px
+	padding-bottom: 20px
+	+sm
+		overflow: hidden
+		overflow-x: scroll
+		-webkit-overflow-scrolling: touch
+		overflow-scrolling: touch
+		padding-left: 15px
+	&--responsive
+		+md 
+			display: none
+	&__list
+		display: flex
+		align-items: center
+		flex-wrap: nowrap
+	&__item
+		display: flex
+		align-items: center
+		&:last-child
+			padding-right: 15px
+			.bread-crumbs__link 
+				opacity: 1
+				cursor: default
+				pointer-events: none
+				color: $c3
+		svg	
+			width: 6px
+			height: 9px
+			margin-left: 15px
+			margin-right: 8px
+			fill: $c3
+
+
+
+	&__link
+		white-space: nowrap
+		font-size: 12px
+		line-height: 17px
+		color: $c0
+		&:hover
+			color: 

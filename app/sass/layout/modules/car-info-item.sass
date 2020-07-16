@@ -1,0 +1,25 @@
+.car-info-item
+	position: relative
+	display: flex
+	align-items: center
+	font-size: 14px
+	line-height: 21px
+	color: $c0
+	+lg
+		align-items: start
+	&:not(:last-child)
+		+min_lg
+			margin-right: 24px
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: -12px
+				width: 1px
+				height: 25px
+				background: $c4
+
+	&__title
+		font-weight: bold
+		margin-right: 5px

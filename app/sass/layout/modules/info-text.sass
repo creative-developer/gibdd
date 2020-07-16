@@ -1,0 +1,63 @@
+.info-text
+	display: flex
+	padding: 13px 20px
+	background: #FFFFFF
+	border: 1px solid #C8CBD3
+	border-radius: 3px
+	&--max-width
+		.info-text__desc
+			max-width: 460px
+
+	&--center
+		align-items: center
+
+	&--md-padding
+		padding: 18.5px 20px
+	&--list
+		padding: 20px
+		+md
+			padding: 20px 15px
+		+sm
+			flex-direction: column
+		.info-text
+			&__icon-wrap
+				background: #fff
+				border: 1px solid #C8CBD3
+				+sm
+					display: none
+				.icon
+					fill: #C8CBD3
+					width: 18px
+					height: 18px
+	&--left
+		.info-text
+			&__icon-wrap
+				margin-left: 0
+
+	&__icon-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 42px
+		height: 42px
+		min-width: 42px
+		min-height: 42px
+		border-radius: 50%
+		background: $c4
+		margin-right: 20px
+		.icon
+			width: 16px
+			height: 16px
+			fill: $c3
+
+	&__desc
+		font-size: 14px
+		line-height: 20px
+		color: $c3
+		&--mb-30
+			margin-bottom: 30px
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 15px
+

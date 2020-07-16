@@ -1,0 +1,94 @@
+.banner
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	border: 1px solid #DA9A9A
+	border-radius: 3px
+	// padding: 36px 50px 36px 43px
+	padding: 34px 48px 31px 41px
+	+xl
+		padding: 34px 30px 31px 30px
+		justify-content: space-between
+		align-items: center
+	+sm
+		padding: 20px
+
+
+	&__icon-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 34px
+		margin-top: 12px
+		+xl
+			margin-top: 0
+		+lg
+			flex-basis: 7.6%
+			max-width: 7.6%
+		+md
+			margin-right: 20px
+		svg
+			fill: #DA9B9B
+			width: 48px
+			height: 45px
+			min-width: 48px
+			min-height: 45px
+			+md
+				width: 40px
+				height: 37px
+				min-width: 40px
+				min-height: 37px
+
+	&__title
+		font-weight: 500
+		font-size: 20px
+		line-height: 30px
+		color: $c0
+		margin-bottom: 7px
+		+lg
+			font-size: 18px
+			line-height: 27px
+		+md
+			font-size: 17px
+			line-height: 26px
+		+sm
+			font-size: 16px
+			line-height: 21px
+		&-wrap
+			margin-right: 75px
+			+xl
+				max-width: 550px
+				margin-right: 20px
+			+lg
+				margin-right: 0
+				flex-basis: calc( 92.4% - 34px)
+				max-width: calc( 92.4% - 34px)
+			+md
+				margin-right: 0
+				flex-basis: calc( 92.4% - 20px)
+				max-width: calc( 92.4% - 20px)
+				margin-top: 5px
+
+	&__desc
+		line-height: 18px
+		color: $c3
+		max-width: 630px
+		+md
+			margin-top: 20px
+			font-weight: normal
+		p
+			margin-bottom: 0
+
+	&__btn
+		font-weight: bold
+		font-size: 16px
+		color: #fff
+		padding: 14.5px 41.5px
+		margin-top: 11px
+		+xl
+			margin-top: 0
+			padding: 14.5px 35px
+		+lg
+			flex-basis: 100%
+			max-width: 100%
+			margin-top: 30px

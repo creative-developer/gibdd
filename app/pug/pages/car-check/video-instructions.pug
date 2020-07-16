@@ -1,0 +1,31 @@
+mixin videoInstructionsItem(img, desc)
+	.b-video-instructions-item
+		a._img-wrap(href="https://www.youtube.com/watch?v=m72wp-1Oka4" data-fancybox="video-instructions")
+			img._img(src='img/video/'+ img +'.jpg', alt="")
+			span._icon-wrap
+				img._icon(src="img/icons/yt-video.svg", alt="")
+		._desc
+			p !{desc}
+section.b-video-instructions
+	.container
+		h2._title Зачем нужна проверка автомобиля
+		._desc.desc Ежедневно в России проходит более 35986 сделок по купле/ продаже автомобилей, этот рынок очень востребован и многие мошенники не против наживаться на доверие граждан. Мы собрали подборку историй людей которые покупали автомобили полностью доверяя продавцу.
+		._row
+			._col
+				+videoInstructionsItem('item1', 'День ГИБДД. Доброе утро. <br>Фрагмент выпуска от 03.02.2020')
+			._col
+				+videoInstructionsItem('item2', 'Транспортное средство не на гарантии (старше 5 лет)')
+			._col
+				+videoInstructionsItem('item3', 'Мошенники в Сибири обманули тысячу человек репортаж 1 канала')
+			._col
+				+videoInstructionsItem('item4', 'Как правильно общаться с инспектором ГИБДД. Доброе утро. Фрагмент выпуска')
+			._col
+				+videoInstructionsItem('item5', 'Зачем нужна проверка <br>автомобиля')
+			._col
+				+videoInstructionsItem('item6', 'Зачем нужна проверка автомобиля')
+			._col
+				+videoInstructionsItem('item7', 'Авито ру авто с пробегом: как выбрать, проверить и не нарваться. “1 канал”')
+			._col
+				+videoInstructionsItem('item8', 'Зачем нужна проверка <br>автомобиля')
+			._col
+				+videoInstructionsItem('item9', 'Зачем нужна проверка автомобиля')

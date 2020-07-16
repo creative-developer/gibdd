@@ -1,0 +1,74 @@
+.small-banner
+	display: flex
+	align-items: center
+	border: 1px solid #C8CBD3
+	border-radius: 3px
+	padding: 21px 30px 21px 31px
+	+md
+		flex-direction: column
+		padding: 25px 15px
+	&__img
+		&-wrap
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 140px
+			height: 46px
+			min-width: 140px
+			min-height: 46px
+			+min_md
+				margin-right: 60px
+			+md
+				width: 100%
+				margin-bottom: 50px
+			&:after
+				content: ''
+				position: absolute
+				width: 1px
+				height: 55px
+				background: #C8CBD3
+				+min_md
+					top: 50%
+					right: -30px
+					transform: translateY(-50%)
+				+md
+					left: 50%
+					bottom: -25px
+					width: 100%
+					height: 1px
+					transform: translateX(-50%)
+
+
+
+	&__title
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		&:not(:last-child)
+			margin-right: 5px
+		&-wrap
+			display: flex
+			align-items: flex-start
+			+min_md
+				flex-direction: column
+			+md
+				margin-bottom: 10px
+
+	&__link
+		line-height: 20px
+		&-wrap
+			display: flex
+			align-items: center
+			+min_md
+				margin-left: auto
+
+	&__icon-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 13px
+		.icon
+			width: 16px
+			height: 16px
+			fill: $c3

@@ -1,0 +1,12 @@
+extend ../layout/template
+
+block head
+	- var title = 'Проверка штрафов | ГИБДД'
+	|
+	|
+	|
+block content
+	main.find-check-page.page
+		// Sections
+		include ./check/check-main
+		include ./index/asking

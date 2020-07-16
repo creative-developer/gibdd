@@ -1,0 +1,21 @@
+.list
+	transition: all 0.3s ease
+	&__item
+		max-width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		&:not(:last-child)
+			margin-bottom: 9px
+		&--active
+			.list__link
+				color: $accent
+
+	&__link
+		font-weight: normal
+		font-size: 16px
+		line-height: 16px
+		color: $c0
+		text-decoration: none
+		&:hover
+			color: $accent

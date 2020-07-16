@@ -1,0 +1,27 @@
+mixin sitesItem(img, title, desc, link)
+	.b-sites-card
+		._col
+			._img-wrap
+				img._img(src=img alt="")
+			h3._title.-mobile #{title}
+		._col
+			h3._title.-desktop #{title}
+			._content
+				._desc.desc
+					p !{desc}
+				a._link.big-link(href='http://' + link target="_blank") #{link}
+
+section.b-sites
+	._container.container
+		h2._title Где мы ищем штрафы
+		._desc.desc
+			p Мы делаем проверку штрафов не только по базе МВД и ГИБДД, мы используем большое количество источников для получения актуальной информации по штрафам.
+		._row
+			._col
+				+sitesItem('img/logo/gibdd-big-logo.png', 'ГИБДД', 'За превышение скорости, проезд на<br> красный и все другие нарушения ПДД.', 'www.гибдд.рф')
+			._col
+				+sitesItem('img/logo/moscow-department-big-logo.png', 'Департамент Москвы', 'Проверка штрафов за неоплаченную парковку в Москве и Московской области.', 'www.mos.ru')
+			._col
+				+sitesItem('img/logo/gis-big-logo.png', 'ГИС ГМП', 'За стоянку под запрещающим знаком<br> или в “зеленой” зоне.', 'www.madi.ru')
+			._col
+				+sitesItem('img/logo/fssp-big-logo.png', 'ФССП России', 'Проверка судебной задолженности <br>штрафов ГИБДД у судебных приставов.', 'www.fssprus.ru')

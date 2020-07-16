@@ -1,0 +1,41 @@
+mixin advantagesListItem(icon, title, desc)
+	li.advantages-list__item
+		.advantages-list__icon-wrap
+			img.advantages-list__icon(src=icon, alt="")
+		.advantages-list__title-wrap
+			.advantages-list__title.md-title !{title}
+			.advantages-list__desc !{desc}
+section.b-advantages
+	.container
+		h2._title Официальный запрос на проверку автомобиля
+		._row
+			._col.-left
+				._report-wrap
+					._img-wrap
+						img._img(src="img/car-check/default-data-img.jpg", alt="")
+					._bottom-content
+						._btn-wrap
+							a.b-download-link._download-link(href="img/documents/license.jpg" download)
+								span._text Смотреть пример
+								span._icon-wrap
+									img._icon(src="img/icons/pdf.svg", alt="")
+							a.b-request-link._request-link.js-smooth-scroll(href="#check-main")
+								span._text Сделать запрос
+								span._icon-wrap
+									+icon('arrow-up')
+			._col.-right
+				ul.b-advantages-list._list
+					+advantagesListItem('img/logo/advantages-logo/item1.svg', '+ Запрос к базе ГИБДД', 'Смена собственников по годам, количество ДТП с подробностями аварий, ограничения на регистрационные действия наложенные на автомобиль.')
+					+advantagesListItem('img/logo/advantages-logo/item2.svg', '+ База ФССП', 'Полная информация из базы ФССП - наличие исполнительных производств на собственника автомобиля и на сам автомобиль, штрафы который перешли к судебным приставам.')
+					+advantagesListItem('img/logo/advantages-logo/item3.png', '+ Суды РФ', 'Судебные дела в которых фигурирует собственник авто, либо автомобиль. Поиск осуществляется по vin номеру транспортного средства.')
+					+advantagesListItem('img/logo/advantages-logo/item4.svg', '+ База РСА', 'База РСА - Информация о пробегах автомобился позволит проверить ТС на скрутку. Согласно статистике 84% автомобилей в РФ со скрученым пробегом.')
+					+advantagesListItem('img/logo/advantages-logo/item5.svg', '+ Ремонтные работы', 'Если водитель попадает в ДТП, в базе АУДАТЭКС появляется информация о рассчетных работах по автомобилю, даже если собственник говорил что авария не значительная - мы гарантированно покажем что именно менял водитель.')
+					+advantagesListItem('img/logo/advantages-logo/item6.svg', '+ Таксопарки', 'При экспулатации автомобиля в такси очень частно к нему относятся не должным образом, расходники меняются не вовремя, такой автомобиль не рекомендуется к покупке.')
+					+advantagesListItem('img/logo/advantages-logo/item7.svg', '+ Публичные торги', 'Если собственник стал банкротом, его собственность переходит на публичные торги, информация из баз переходит с задержкой, по этому <br>в базе ГИБДД этой информации может не быть.')
+					+advantagesListItem('img/logo/advantages-logo/item8.svg', '+ Утилизация', 'Если владелец продал автомобиль перекупу, он может утилизировать его, по причине того что автомобиль долго не встает на учет. Такой автомобиль покупать не имеет смысла, его не поставить на учет.')
+					+advantagesListItem('img/logo/advantages-logo/item9.svg', '+ 26 проверок', 'Рыночная стоимость, история объявлений, лизинг, проверка VIN номера, история сервисного обслуживания, дубликаты ПТС, количество штрафов, характеристики авто, номера ПТС.')
+				.b-warning-text.-blue
+					._icon
+						+icon('oval-warning')
+					._desc
+						p Официальная сводная информация сформированная согласно законодательству РФ, посредством получения информации из баз государственных структур.

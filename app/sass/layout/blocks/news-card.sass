@@ -1,0 +1,138 @@
+.news-card
+	height: 100%
+	display: flex
+	flex-direction: column
+	&--full
+		+min_md
+			display: flex
+			flex-direction: row
+		.news-card
+			&__top-line
+				flex-basis: 66%
+				max-width: 66%
+				width: 100%
+				+lg
+					flex-basis: 57%
+					max-width: 57%
+				+md
+					flex-basis: 100%
+					max-width: 100%
+					
+			&__bottom-line
+				flex-basis: 34%
+				max-width: 34%
+				padding: 27px 26px 28px 25px
+				+lg
+					flex-basis: 43%
+					max-width: 43%
+					padding: 22px 20px
+				+md
+					padding: 20px 15px 23px 20px
+					flex-basis: 100%
+					max-width: 100%
+				+sm
+					padding: 20px 15px 23px 15px
+
+			&__img-wrap
+				width: 100%
+				height: 100%
+			
+			&__title
+				font-size: 22px
+				line-height: 30px
+				margin-bottom: 14px
+				+lg
+					font-size: 21px
+				+md
+					max-width: 90%
+					br
+						display: none
+				+sm
+					max-width: 100%
+
+			&__desc
+				font-size: 16px
+				line-height: 24px
+
+			&__category-wrap
+				margin-bottom: 36px
+		.news-info
+			&--desktop
+				+md
+					display: flex
+			&--mobile
+				display: none
+	&--small
+		.news-card
+			&__bottom-line
+				padding: 20px 23px 28px 25px
+	&--responsive
+		+min_xl
+			display: none
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		&-wrap
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 12.5rem
+			z-index: 1
+			&:hover
+				&:after
+					opacity: 1
+					visibility: visible
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 100%
+				height: 100%
+				transition: all 0.3s ease
+				transform: translate(-50%, -50%)
+				background: rgba(#000, .3)
+				z-index: 0
+				opacity: 0
+				visibility: hidden
+			+lg
+				height: 180px
+			+md
+				height: 170px
+			+sm
+				height: 200px
+			+xsm
+				height: 165px
+
+	&__bottom-line
+		background: #fff
+		padding: 25px 23px 28px 25px
+		height: 100%
+		+md
+			padding: 20px 15px 23px 20px
+
+
+	&__title
+		font-weight: 500
+		font-size: 16px
+		line-height: 22px
+		color: $c0
+		margin-bottom: 15px
+		display: inline-block
+		max-width: 290px
+		&:hover
+			color: $accent
+
+
+	&__desc
+		font-size: 14px
+		line-height: 21px
+		color: $c3
+		+md
+			margin-bottom: 19px
+		p
+			+md
+				margin-bottom: 0

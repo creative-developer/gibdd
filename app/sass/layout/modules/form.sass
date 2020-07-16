@@ -1,0 +1,526 @@
+// Inputs
+.input-wrap
+	margin-bottom: 30px
+
+input,
+textarea
+	position: relative
+	background: #FFFFFF
+	border: 1px solid $c3
+	border-radius: 3px
+	font-size: 17px
+	line-height: 17px
+	color: $c0
+	padding: 14px 16px
+	width: 100%
+	transition: all .3s ease
+	&:focus
+		outline: none
+		color: $c0
+		border-color: $accent
+	&:hover
+		color: $c0
+		border-color: $accent
+	&:disabled
+		background: #FBFBFC
+		border: 1px solid #E7EAEF
+
+::placeholder
+	color: #999
+
+textarea
+	+sm
+		font-size: 14px
+	&.error
+		background: #FFFAFA
+		border: 1px solid $c1
+	&.valid
+		background: #F8FDFB !important
+		border: 1px solid #36AB80
+
+.input
+	width: 100%
+	&--small
+		.answer-popup
+			top: -15px
+			right: -15px
+		input
+			padding: 13.5px 16px !important
+			font-size: 16px !important
+		.input
+			&__title
+				margin-bottom: 0
+				margin-right: 2px
+				color: $c3
+				&-wrap
+					display: inline-flex
+					align-items: center
+					position: relative
+					margin-bottom: 8px
+			&__answer-icon
+				position: static
+				top: auto
+				right: auto
+				transform: translateY(-50%)
+	&--search
+		input
+			padding: 13.5px 45px 13.5px 14px !important
+			font-size: 16px !important
+		.input
+			&__title
+				margin-bottom: 8px
+	&--search-popup
+		.input__wrap
+			::placeholder
+				color: $c3
+		input
+			font-size: 16px !important
+			padding: 15.5px 45px 15.5px 17px !important
+
+	&--active
+		.input__wrap
+			input
+				border-bottom-left-radius: 0
+				border-bottom-right-radius: 0
+				border-bottom-color: transparent
+				&:focus,
+				&:hover
+					border-color: $c3
+					border-bottom-color: transparent
+		& ~ .list
+			visibility: hidden
+			opacity: 0
+		.input__search-icon
+			visibility: visible !important
+			opacity: 1 !important
+			pointer-events: auto !important
+		.search-list-popup-wrap
+			visibility: visible
+			opacity: 1
+
+	&--active-popup
+		.input__wrap
+			input
+				&:focus,
+				&:hover
+					border-color: $c3
+		.search-list-popup
+			visibility: visible
+			opacity: 1
+	&--md
+		max-width: 276px
+		.input
+			&__wrap
+				input
+					font-size: 14px
+					line-height: 17px
+					padding: 14.5px 16px
+				
+	&__wrap
+		position: relative
+		width: 100%
+
+	&__title
+		font-size: 16px
+		line-height: 17px
+		color: $c0
+		margin-bottom: 6px
+		sup
+			color: $c1
+			font-size: 16px
+			top: 0
+			margin-left: 2px
+		+sm
+			font-size: 14px
+			line-height: 18px
+		&--desktop
+			+sm
+				display: none
+		&--mobile
+			display: none
+			+sm
+				display: block
+
+	::placeholder
+		color: #CFCFCF
+
+	input
+		position: relative
+		background: #FFFFFF
+		border: 1px solid $c3
+		border-radius: 3px
+		font-size: 17px
+		line-height: 17px
+		color: $c0
+		padding: 14px 16px
+		+lg
+			padding: 12px 16px
+
+		&:focus
+			color: $c0
+			border-color: $accent
+		&:hover
+			color: $c0
+			border-color: $accent
+		&:disabled
+			background: #FBFBFC
+			border: 1px solid #E7EAEF
+		&.valid
+			background: #F8FDFB
+			border-color: #36AB80
+			& ~ .input__icon
+				&:after
+					transform: translateY(-50%) scale(1)
+					opacity: 1
+			& ~ .input__answer-icon
+				transform: translateY(-50%) scale(0)
+				opacity: 0
+		&.error
+			background: #FFFAFA
+			border-color: $c1
+			& ~ .input__icon
+				&:before
+					transform: translateY(-50%) scale(1)
+					opacity: 1
+			& ~ .input__answer-icon
+				transform: translateY(-50%) scale(0)
+				opacity: 0
+
+	// input[name="certificate"],
+	// input[name="licensePlate"],
+	// input[name="vinNumber"]
+	// 	text-transform: uppercase
+
+	&__icon
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 13px
+			width: 16px
+			height: 16px
+			transition: all 0.3s ease
+			background-size: 100% 100%
+			transform: translateY(-50%) scale(0)
+			background: url('../img/icons/checked.svg') no-repeat center center
+			opacity: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			right: 13px
+			width: 16px
+			height: 16px
+			transition: all 0.3s ease
+			background-size: 100% 100%
+			transform: translateY(-50%) scale(0)
+			background: url('../img/icons/warning.svg') no-repeat center center
+			opacity: 0
+
+	&__answer-icon
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 50%
+		right: 13px
+		transform: translateY(-50%)
+		cursor: pointer
+		transition: all 0.3s ease
+		&:hover
+			svg
+				fill: #BCC1CE
+			& ~ .answer-popup
+				visibility: visible
+				opacity: 1
+				pointer-events: auto
+		svg
+			fill: $c3
+			width: 18px
+			height: 18px
+			transition: all 0.3s ease
+
+	&__search-icon
+		position: absolute
+		top: 50%
+		right: 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: transparent
+		transform: translateY(-50%)
+		border: 0
+		cursor: pointer
+		transition: all 0.3s ease
+			
+		&:focus
+			outline: none
+		&:hover
+			svg
+				fill: lighten($c3, 10%)
+		svg
+			width: 21px
+			height: 21px
+			fill: $c3
+			transition: all 0.3s ease
+
+.checkbox
+	display: inline-flex
+	align-items: center
+	cursor: pointer
+	user-select: none
+	transition: all 0.3s ease
+	margin-bottom: 0
+	&:hover
+		.checkbox__icon
+			svg
+				transform: scale(1)
+	&--start
+		align-items: flex-start
+		.checkbox
+			&__icon
+				margin-top: 2px
+				margin-right: 13px
+			&__text
+				font-size: 12px
+
+	&__input
+		width: 0
+		height: 0
+		position: absolute
+		visibility: hidden
+		&:checked ~ .checkbox__icon
+			background: $accent
+			border-color: $accent
+			svg
+				fill: #fff
+				transform: scale(1)
+		&.error ~ .checkbox__icon
+			background: #FFFAFA
+			border-color: $c1
+			svg
+				fill: $c1
+
+	&__text
+		font-size: 13px
+		line-height: 17px
+		color: $c3
+		a
+			font-size: 13px
+			line-height: 17px
+			color: $c3
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+	&__icon
+		width: 16px
+		height: 16px
+		min-width: 16px
+		min-height: 16px
+		background: #FFFFFF
+		border: 1px solid $c3
+		border-radius: 3px
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: all 0.3s ease
+		margin-right: 11px
+		svg
+			fill: $c3
+			width: 10px
+			height: 8px
+			min-width: 10px
+			min-height: 8px
+			transition: all 0.3s ease
+			transform: scale(0)
+
+.jq-selectbox
+	width: 100%
+	max-width: 100%
+	&.opened
+		.jq-selectbox__select
+			border-bottom-left-radius: 0
+			border-bottom-right-radius: 0
+			border-bottom-color: transparent
+			color: $c0
+			border-color: $c3 !important
+			background: #fff !important
+			&:hover
+				border-color: $c3
+			&:after
+				transform: translateY(-50%) rotate(-180deg)
+
+	&.changed
+		.jq-selectbox__select
+			color: $c0
+			background: #FFFFFF
+			border: 1px solid $c3
+
+	&__select
+		font-size: 16px
+		line-height: 16px
+		color: $c3
+		background: #fff
+		border: 1px solid $c3
+		border-radius: 3px
+		padding: 14px 24px 14px 16px
+		cursor: pointer
+		transition: all 0.3s ease
+		&:hover
+			border-color: $accent
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 14px
+			width: 10px
+			height: 6px
+			transform: translateY(-50%)
+			background: url('../img/svg-sprite/triangle.svg') no-repeat center center
+			background-size: 100% 100%
+			transition: all 0.3s ease
+			z-index: 2
+	
+	&__search
+		// margin-top: -46px
+		// input
+		// 	font-size: 16px
+		// 	line-height: 16px
+		// 	color: $c3
+		// 	background: #fff
+		// 	border: 1px solid $c3
+		// 	border-radius: 3px
+		// 	padding: 14px 16px
+		// 	transition: all 0.3s ease
+		// 	border-bottom: 0
+		// 	border-bottom-left-radius: 0
+		// 	border-bottom-right-radius: 0
+		// 	&:focus
+		// 		color: $c0
+		// 		border-color: $accent
+		// 	&:hover
+		// 		color: $c0
+		// 		border-color: $accent
+	// &__not-found
+	// 	position: relative
+	// 	font-size: 16px
+	// 	line-height: 16px
+	// 	color: $c0
+	// 	background: #fff
+	// 	margin-bottom: -6px
+	// 	margin-top: 20px
+	// 	z-index: 1
+
+	&__dropdown
+		width: 100%
+		background: #fff
+		top: 45px !important
+		border-radius: 3px
+		transition: all 0.3s ease
+		border: 1px solid $c3
+		border-top: 0
+		border-top-color: transparent
+		border-top-left-radius: 0
+		border-top-right-radius: 0
+		overflow: hidden
+		max-width: 100%
+		ul
+			background: #fff
+			padding: 0
+			max-height: 307px
+			// margin-right: -17px
+			// width: 318px
+			width: calc( 100% + 17px)
+		li
+			padding: 14.5px 16px
+			font-size: 16px
+			line-height: 16px
+			color: $c0
+			cursor: pointer
+			transition: all 0.3s ease
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+			max-width: 100%
+			&:hover
+				background: rgba($accent, .1)
+				color: $accent
+.baron
+	&__scroll-bar
+		.baron
+			&__bar
+				display: block
+			&__track
+				display: block
+
+	&__bar
+		background: $c3
+		border-radius: 2px
+		width: 4px
+		right: 3px
+		cursor: pointer
+		&:hover
+			background: lighten($c3, 10%)
+
+select
+	&.error
+		+ .jq-selectbox
+			&__select
+				border-color: $c1 !important
+				background: #FFFAFA !important
+	&.valid
+		+ .jq-selectbox
+			&__select
+				background: #F8FDFB !important
+				border-color: #36AB80 !important
+
+
+.select
+	position: relative
+	&--big
+		.jq-selectbox
+			&__select
+				padding: 16px 24px 16px 16px
+				+lg
+					padding: 14px 24px 14px 16px
+	&--number
+		select
+			&.error
+				+ .jq-selectbox
+						&__select
+							border-color: $c3 !important
+							background: #FFFFFF !important
+			&.valid
+				+ .jq-selectbox
+						&__select
+							background: #FFFFFF !important
+							border-color: $c3 !important
+		.jq-selectbox
+			&__select
+				padding: 8px 35px 8px 9px
+			&__dropdown
+				top: 33px !important
+				li
+					padding: 14.5px 16px 14.5px 9px
+
+	&__title
+		font-weight: normal
+		margin-bottom: 8px
+		sup
+			top: 0
+			color: $c1
+			margin-left: 2px
+			font-size: 100%
+
+	&__sub-title
+		font-size: 12px
+		line-height: 17px
+		color: $c3
+		margin-bottom: 10px
+
+.search-list-popup
+	&-wrap
+		overflow: hidden
+		height: 100%
+		width: 100%

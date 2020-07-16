@@ -1,0 +1,216 @@
+.agreement-page
+	background: $c4
+	padding-bottom: 5.625rem
+	+sm
+		padding-bottom: 20px
+	&__container
+		+sm
+			padding: 0 0 0 15px
+
+	&__wrap
+		background: #fff
+		padding: 3rem 4.375rem 4.6875rem 3.125rem
+		+sm
+			padding: 20px 15px
+
+	&__main-title
+		margin-bottom: 3.125rem
+		+sm
+			margin-bottom: 30px
+
+	&__title
+		margin-bottom: 20px
+		&--biggest-margin
+			margin-bottom: 30px
+
+	&__desc
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		margin-bottom: 2.0625rem
+		b
+			font-weight: bold
+			margin-right: 4px
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 19px
+				+sm
+					margin-bottom: 15px
+		&--padding
+			padding-left: 2.6875rem
+			+md
+				padding-left: 15px
+			+sm
+				padding-left: 10px
+	&__item
+		&:not(:last-child)
+			margin-bottom: 3rem
+
+	&__table
+		margin-bottom: 3.125rem
+
+	&__info-list
+		margin-bottom: 3rem
+		+sm
+			margin-bottom: 30px
+
+.unlist
+	&--small
+		padding-left: 2.6875rem
+		+md
+			padding-left: 15px
+		+sm
+			padding-left: 10px
+		.unlist
+			&__container
+				padding-left: 0
+			&__title
+				margin-bottom: 15px
+
+	&__title
+		font-weight: 500
+		font-size: 14px
+		line-height: 30px
+		color: $c0
+		margin-bottom: 20px
+		+sm
+			line-height: 20px
+
+
+	&__container
+		padding-left: 2.6875rem
+		+sm
+			padding-left: 10px
+
+	&__item
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		list-style-type: disc
+		&:not(:last-child)
+			margin-bottom: 1.25rem
+
+.number-list
+	padding-left: 2.6875rem
+	+md
+		padding-left: 15px
+	+sm
+		padding-left: 10px
+	&--small
+		padding-top: 5px
+		margin-bottom: 2.1875rem
+		.number-list
+			&__item
+				&--margin
+					margin-bottom: 2.1875rem !important
+					+sm
+						margin-bottom: 15px
+				&:not(:last-child)
+					margin-bottom: 8px
+
+	&__item
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+		&:not(:last-child)
+			margin-bottom: 20px
+		a
+			color: $accent
+			text-decoration: underline
+			+min_sm
+				white-space: nowrap
+			&:hover
+				color: #2969EC
+				text-decoration: none
+
+.table
+	&__head
+		border-top: 1px solid $c0
+		padding: 15px 0
+
+	&__body
+		border-top: 1px solid $c3
+		border-bottom: 1px solid $c3
+
+	&__th
+		font-weight: 500
+		font-size: 14px
+		line-height: 1.875rem
+		color: $c0
+		+sm
+			font-size: 13px
+			line-height: 16px
+		+xsm
+			font-size: 11px
+			line-height: 14px
+		&:first-child
+			flex-basis: 178px
+			max-width: 178px
+		&:last-child
+			flex-basis: 350px
+			max-width: 350px
+			+sm
+				flex-basis: 200px
+				max-width: 200px
+			+xsm
+				flex-basis: 140px
+				max-width: 140px
+
+	&__tr
+		display: flex
+		align-items: center
+		padding-left: 2.6875rem
+		transition: all 0.3s ease
+		+sm
+			padding-left: 15px
+		+xsm
+			padding-left: 5px
+		&:hover
+			background-color: rgba($accent, 0.09)
+		&:not(:first-child)
+			border-top: 1px solid $c4
+
+	&__td
+		font-size: 14px
+		line-height: 14px
+		color: $c0
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		padding: 17.5px 0
+		+sm
+			padding: 15px 0
+			font-size: 12px
+			line-height: 12px
+
+		&:first-child
+			padding-right: 2.625rem
+			flex-basis: 178px
+			max-width: 178px
+			+sm
+				padding-right: 15px
+			+xsm
+				padding-right: 5px
+		&:last-child
+			flex-basis: 350px
+			max-width: 350px
+			+sm
+				flex-basis: 200px
+				max-width: 200px
+			+xsm
+				flex-basis: 140px
+				max-width: 140px
+
+.info-list
+	padding-left: 2.625rem
+	+md
+		padding-left: 15px
+	+sm
+		padding-left: 10px
+	&__item
+		font-size: 14px
+		line-height: 14px
+		color: $c0
+		&:not(:last-child)
+			margin-bottom: 15px

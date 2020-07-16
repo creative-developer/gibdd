@@ -1,0 +1,165 @@
+.contacts
+	background: $c4
+	padding-bottom: 8.1875rem
+	+lg
+		padding-bottom: 7.5rem
+	+md
+		padding-bottom: 6.5rem
+	+sm
+		padding-bottom: 30px
+
+	&__wrap
+		background: #fff
+		padding: 27px 30px 30px 28px
+		margin-bottom: 18px
+		+xl
+			padding: 27px 20px 30px 20px
+		+lg
+			margin-bottom: 30px
+			padding: 27px 20px 20px 20px
+
+
+	&__sidebar-wrap
+		+lg
+			display: flex
+			flex-direction: column
+
+	&__row
+		display: flex
+		margin: 0 -10px
+		flex-wrap: wrap
+	
+	&__col
+		padding: 0 10px
+
+		&--left
+			flex-basis: 69%
+			max-width: 69%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+		&--right
+			flex-basis: 31%
+			max-width: 31%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+
+	&__small
+		&-row
+			display: flex
+
+		&-col
+			&--left
+				flex-basis: 59%
+				max-width: 59%
+				+xl
+					flex-basis: 64%
+					max-width: 64%
+				+md
+					flex-basis: 100%
+					max-width: 100%
+
+			&--right
+				flex-basis: 41%
+				max-width: 41%
+				padding: 71px 0 0 50px
+				+xl
+					flex-basis: 36%
+					max-width: 36%
+					padding: 71px 0 0 20px
+				+md
+					display: none
+
+
+	&__contacts-list
+		margin-bottom: 3.625rem
+		+sm
+			margin-bottom: 30px
+
+	&__title
+		margin-bottom: 30px
+
+	&__desc
+		font-size: 16px
+		line-height: 28px
+		+lg
+			line-height: 24px
+		p
+			margin-bottom: 29px
+
+	&__buttons-wrap
+		display: flex
+		align-items: center
+		margin-bottom: 3.25rem
+		+lg
+			margin-bottom: 3.5rem
+		+md
+			flex-direction: column
+		+sm
+			margin-bottom: 40px
+
+	&__mobile-feedback-board
+		display: none
+		+md
+			display: block
+			margin-bottom: 20px
+	&__btn
+		+xl
+			padding: 15.5px 10px
+			font-size: 15.5px
+		+md
+			width: 100%
+			margin-bottom: 10px
+		+min_md
+			&:not(:last-child)
+				margin-right: 20px
+
+
+	&__section
+		&-title
+			margin-bottom: 30px
+		&-sub-title
+			margin-bottom: 20px
+			font-size: 16px
+			+lg
+				line-height: 22px
+			+sm
+				margin-bottom: 30px
+
+	&__map
+		#address-map
+			width: 100%
+			height: 400px
+	&__cards
+		+lg
+			margin-bottom: 30px
+
+	&__merits
+		margin-bottom: 20px
+		+lg
+			order: 0
+		+md
+			margin-bottom: 10px
+
+	&__asking-content
+		&-wrap
+			background: #fff
+			padding: 28px 30px 32px 32px
+			margin-bottom: 20px
+			+xl
+				padding: 25px 20px 28px 20px
+			+lg
+				order: 2
+			+sm
+				padding: 30px 15px 28px 15px
+				margin-bottom: 0
+
+		&-title
+			margin-bottom: 12px
+			line-height: 28px
+	&__politics-card
+		+lg
+			margin-bottom: 30px

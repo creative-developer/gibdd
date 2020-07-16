@@ -1,0 +1,170 @@
+section.b-contacts
+	.container
+		nav.b-bread-crumbs
+			ul._list
+				li._item
+					a._link(href="/") Главная
+					+icon('bread-crumbs-arrow')
+				li._item
+					a._link(href="#") Контакты
+		._row
+			._col.-left
+				._wrap
+					._small-row
+						._small-col.-left
+							h1.b-section-title._title Техническая поддержка
+							._desc.desc
+								p Для получения консультации по работе необходимо обращаться по указанным номерам телефонов.
+								p Если у вас возникли вопросы или сложности с работой портала “Штрафы ГИБДД”, например, вы не смогли зайти в личный кабинет, не загружается страница — отправьте обращение в техническую поддержку, а так же все вопросы, связанные с проверкой и оплатой штрафов.
+						._small-col.-right
+							.b-feedback-board
+								._icon-wrap
+									+icon('phone')
+								._title Техническая поддержка
+								a._phone-link.big-phone.xl-title(href="tel:+78095054777") +7 (809) 505-4777
+								a.b-email.-small._email-link(href="mailto:info@gbdd.com") info@gbdd.com
+								._title.-bottom Время работы
+								._work-time 9:00 – 21:00 (МСК)
+					._desc.desc
+						p Источником информации о неоплаченных штрафах ГИБДД, исполнительных производствах службы судебных приставов (ФССП), задолженности по налогам и сборам является Государственная информационная система о государственных и муниципальных платежах (ГИС ГМП). Ведение ГИС ГМП осуществляет Федеральное казначейство России.
+					._mobile-feedback-board
+					._buttons-wrap
+						a.light-btn._btn.js-popup(href="#support-popup") Обращение к сервису
+						a.light-btn._btn.js-popup(href="#corruption-popup") Сообщить о корупции
+						a.light-btn._btn.js-popup(href="#offer-popup") Внести предложение
+					.b-contacts-list._contacts-list
+						._item
+							h2._title Партнерам
+							._sub-title.desc По вопросам сотрудничества и подключения партнеров
+							._small-title Директор
+							ul.b-personal-info
+								li._item
+									._icon-wrap
+										+icon('user')
+									._title.lg-title Алексей Панкратов
+								li._item
+									._icon-wrap
+										+icon('phone')
+									a.big-phone.-small._phone-link.lg-title(href="tel:+78095054777") +7 (809) 505-4777
+								li._item
+									._icon-wrap
+										+icon('email')
+									a.b-email.-bolder._email-link(href="mailto:info@gbdd.com") info@gbdd.com
+						._item
+							h2._title Трудостройтва
+							._sub-title.desc Резюме отправлять по электронной почте
+							._small-title HR - Специалист
+							ul.b-personal-info
+								li._item
+									._icon-wrap
+										+icon('user')
+									._title.lg-title Алексей Панкратов
+								li._item
+									._icon-wrap
+										+icon('email')
+									a.b-email.-bolder._email-link(href="mailto:info@gbdd.com") info@gbdd.com
+					h2._section-title Наш адрес
+					._section-sub-title.desc Москва, Нижняя Красносельская ул., 39 строение 1, офис 777
+					._map
+						#address-map
+				.b-cards._cards
+					._row
+						._col
+							._item
+								._img-wrap
+									img._img(src="img/logo/government.svg", alt="")
+								._title.md-title Правительство России
+								a._link.link(href="//www.government.ru") www.government.ru
+						._col
+							._item
+								._img-wrap
+									img._img(src="img/logo/gosuslugi.svg", alt="")
+								._title.md-title Портал госуслуги 
+								a._link.link(href="//gosuslugi.ru") gosuslugi.ru
+						._col.-small
+							._item
+								._img-wrap
+									img._img(src="img/logo/mvd.png", alt="")
+								._title.md-title МВД России
+								a._link.link(href="//мвд.рф") мвд.рф
+						._col.-big
+							._item
+								._img-wrap
+									img._img(src="img/logo/bezopasnye-dorogi.png", alt="")
+								._title.md-title Безопасные Дороги
+								a._link.link(href="//безопасныедороги.рф") безопасныедороги.рф
+			._col.-right
+				._sidebar-wrap
+					._asking-content-wrap
+						h3._asking-content-title.xl-title Вопрос - ответ
+						.b-asking-content.-card._asking-content
+							._card
+								._title-wrap
+									._title.xl-title Как оспорить штраф?
+									._title-icon
+										+icon('triangle')
+								._desc.desc
+									p Любой штраф всегда можно оспорить. Прежде всего в организации которая его выписала. Это не обязательно гаи, поэтому выясните кто оштрафовал. Далее пишется заявление в организацию. Вероятно там его признают правомерным (если это не яркая ошибка). В таком случае следует обращаться в местный суд. Помните что у вас 10 дней на подачу жалобы ( с момента получения уведомления)
+							._card
+								._title-wrap
+									._title.xl-title Почему важно оплачивать штрафы вовремя?
+									._title-icon
+										+icon('triangle')
+								._desc.desc
+									p Установленный срок для скидки составляет 20 дней. Но не всегда уведомление приходит вовремя. Если квитанция (уведомление) приходит позже этого срока, отчет начинает считаться с момента получения. Необходимо подать ходатайство о восстановлении срока. После этого оплатить.
+							._card
+								._title-wrap
+									._title.xl-title Нет фотографии нарушения
+									._title-icon
+										+icon('triangle')
+								._desc.desc
+									p Срок когда к вам будут претензии составляет 2 года. Это время вами будут заниматься судебные приставы, и может быть введено ограничение. По истечении срока, следует написать заявление о прекращении дела. Однако если в указанный период вы будете найдены - срок начинает считаться заново.
+							._card
+								._title-wrap
+									._title.xl-title Это не мой автомобиль или водительское удостоверение
+									._title-icon
+										+icon('triangle')
+								._desc.desc
+									p В такой ситуации необходимо подтвердить факт оплаты штрафа. Проверьте прошел ли платеж. Если все в порядке, нужно написать заявление в местный орган ГИБДД. В заявлении указать номер постановления и прикрепить квитанцию об оплате. Подается лично или на сайте гибдд.
+							._card
+								._title-wrap
+									._title.xl-title Штраф в обработке больше двух дней
+									._title-icon
+										+icon('triangle')
+								._desc.desc
+									p Оплатить штраф по льготной ставке, можно только в течении 20 дней с момента получения уведомления. Если получили письмо по почте - срок начинается с даты указанной на печати почтового отделения. То что вы не забирали,не открывали письмо не подойдет в качестве аргумента для отсрочки
+							._card
+								._title-wrap
+									._title.xl-title Это не мой штраф (я не был в этом месте)
+									._title-icon
+										+icon('triangle')
+								._desc.desc
+									p Оплатить штраф по льготной ставке, можно только в течении 20 дней с момента получения уведомления. Если получили письмо по почте - срок начинается с даты указанной на печати почтового отделения. То что вы не забирали,не открывали письмо не подойдет в качестве аргумента для отсрочки
+							._card
+								._title-wrap
+									._title.xl-title Это не мой штраф (я не выезжал в эту дату на машине)
+									._title-icon
+										+icon('triangle')
+								._desc.desc
+									p Оплатить штраф по льготной ставке, можно только в течении 20 дней с момента получения уведомления. Если получили письмо по почте - срок начинается с даты указанной на печати почтового отделения. То что вы не забирали,не открывали письмо не подойдет в качестве аргумента для отсрочки
+					.b-merits.-card._merits
+						ul._list
+							li._item
+								._header
+									._icon
+										+icon('security')
+									._title Контроль качества
+								._body
+									p Мы стремимся постоянно улучшать наши сервисы, делая их удобнее для вас, и для этого нам необходимо знать ваше мнение о достоинствах и недостатках портала.
+							li._item
+								._header
+									._icon
+										+icon('support')
+									._title Оперативная поддержка
+								._body
+									p Мы стремимся постоянно улучшать наши сервисы, делая их удобнее для вас, и для этого нам необходимо знать ваше мнение о достоинствах и недостатках портала.
+					.b-politics-card._politics-card
+						._item
+							a._link(href="#") Политика обработки персональных данных
+						._item
+							a._link(href="#") Договор оферта

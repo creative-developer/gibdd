@@ -1,0 +1,53 @@
+.news-banner
+	position: relative
+	+sm
+		display: none
+	.news-info--desktop
+		+md
+			display: flex
+	&__img-wrap
+		height: 400px
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 3px
+		overflow: hidden
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(#000, 0.4)
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__content
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding: 40px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+	&__title
+		font-weight: 500
+		line-height: 35px
+		color: #FFFFFF
+		margin-bottom: 15px
+		&-wrap
+			max-width: 510px
+
+	&__desc
+		line-height: 27px
+		color: #FFFFFF
+		p
+			margin-bottom: 0

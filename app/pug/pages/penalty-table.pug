@@ -1,0 +1,14 @@
+extend ../layout/template
+
+block head
+	- var title = 'Таблица штрафов для водителей легковых автомобилей 2020 года | ГИБДД'
+	|
+	|
+	|
+block content
+	main.penalty-page.page
+		// Sections
+		include ./penalty-table/main
+
+block footer
+	-var havBanner = false;

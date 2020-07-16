@@ -1,0 +1,43 @@
+.video-instructions-item
+	width: 100%
+	height: 100%
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		&-wrap
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 196px
+			margin-bottom: 10px
+			cursor: pointer
+			+sm
+				height: 220px
+			+xsm
+				height: 163px
+
+	&__icon
+		transition: all 0.3s ease
+		will-change: opacity
+		&:hover
+			opacity: 0.85
+		&-wrap
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 45px
+			height: 35px
+			display: flex
+			justify-content: center
+			align-items: center
+	
+	&__desc
+		font-size: 16px
+		line-height: 21px
+		color: #343D52
+		p
+			margin-bottom: 0

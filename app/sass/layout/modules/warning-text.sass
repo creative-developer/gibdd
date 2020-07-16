@@ -1,0 +1,59 @@
+.warning-text
+	display: flex
+	align-items: center
+	&--blue
+		background: #FBFCFB
+		border: 1px solid $accent
+		border-radius: 3px
+		padding: 20px 30px 20px 20px
+		align-items: flex-start
+		+xl
+			padding: 20px 10px 20px 10px
+
+		.warning-text
+			&__icon
+				width: 42px
+				height: 42px
+				min-width: 42px
+				min-height: 42px
+				background: $accent
+				+xl
+					margin-right: 15px
+				svg
+					width: 16px
+					height: 14px
+					fill: #fff
+			&__desc
+				font-size: 14px
+				line-height: 18px
+				color: $c0
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 48px
+		height: 48px
+		background: #fff
+		min-width: 48px
+		min-height: 48px
+		border-radius: 50%
+		margin-right: 18px
+		+md
+			width: 40px
+			height: 40px
+			background: #fff
+			min-width: 40px
+			min-height: 40px
+
+		svg
+			fill: $c3
+			width: 22px
+			height: 20px
+			+md
+				width: 20px
+				height: 18px
+	&__desc
+		+md
+			font-size: 11px
+		p
+			margin-bottom: 0

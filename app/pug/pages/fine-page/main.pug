@@ -1,0 +1,152 @@
+.b-fine-page
+	a.b-header-back(href="check.html")
+		span._icon
+			+icon('triangle')
+		span._text Вернутся к списку штрафов
+	.container._container
+		.b-fine._fine#fine1
+			._header
+				._col.-left
+					._col
+						._icon
+								+icon('car')
+						._box
+							._car-name А823НВ 777
+							._date 1 августа 2019, 16:42
+					._box.--price
+						._price 250 руб.
+						._price-old 500 руб.
+				._col.-right
+					._box
+						.b-btn-add._btn 
+							._icon
+							._text Добавить к оплате
+						._discount
+							span Скидка действует до <span class="red">12.04.2020</span>
+							span._discount-icon
+								+icon('answer')
+							.b-answer-popup.-small._answer-popup
+								._title Скидка действует до
+								._desc C 1 января 2016 года при оплате штрафа не позднее 20 дней с даты вынесения постановления, штраф может быть уплачен в размере половины суммы. Федеральный закон от 22 декабря 2014 г. № 437-ФЗ.
+			._body
+				._body-left
+					h2._title Штраф 500 р.от 02.04.2020 (КоАП ст.12.4 п 2)
+					._group.-ellipsis
+						._name Статья
+						._value.overflow-text КоАП ст.12.4 п 2  - превышение установленной скорости движения транспортного средства на величину более 20, но не более 40 км/ч. влечет наложение административного штрафа в размере превышение установленной скорости движения транспортного средства на величину более 20, но не более 40 км/ч. влечет наложение административного штрафа в размере
+						a.b-link.-dashed.-show-text._link(href="#")
+							._text Полное описание штрафа
+							._icon
+								+icon('triangle')
+					._group
+						._name Номер постановления (УИН)
+						._value 03554310101180815000
+					._group
+						._name Кто выписал
+						._value
+							._logo
+								img(src="img/logo/gis-small-logo.png", alt="ГИС лого")
+							span ДЮБО Р. А., тел: +7(499)583-04-15//МОСП по ВАШ №3 (код отдела: 77047)
+					._group
+						._name Нарушение зафиксировано:
+						._value Камерой автоматической фиксации
+					._group
+						._name Дата постановления
+						._value 19 июля 2019
+					._group
+						._name Следует оплатить до
+							._icon-name
+								+icon('answer')
+							.b-answer-popup.-small._answer-popup
+								._title Следует оплатить до
+								._desc Оплатить штраф по льготной ставке, можно только в течении 20 дней с момента получения уведомления.
+						._value 19 октября 2019
+				._body-right
+					.b-show-photo._show-photo
+						._image
+							img(src="img/statistics/item.jpg", alt="")
+						a.btn._btn.js-popup(href="#slider-popup") Показать фото
+					.b-warning-small._warning-small
+						._icon
+							+icon('warning')
+						._title Взыскание!
+						._desc Если вы уже оплачивали штраф, который взыскивают, обратитесь в отдел судебных приставов с документом об оплате, иначе они могут арестовать ваши банковские счета и имущество.
+					.b-window._window
+						._title Как оспорить штраф?
+						._desc Инструкция как можно оспорить штраф онлайн...
+						a.link._link(href="#") Подробнее
+				._body-main
+					._group
+						._name Дата постановления
+						._value г.Москва, МКАД 67км 460м Г-опора внешняя сторона
+						.showHide.showHide--map
+							a.b-link.-dashed.-js._link(href="#")
+								._text Посмотреть на карте
+								._icon
+									+icon('triangle')
+							.hide-block
+								._map#fineMap1
+					.b-warning-box._warning-box
+						._header Дело перешло приставам
+						._title Исполнительное производство Федеральной Службы Судебных Приставов 379218/18/77047-ИП от 02.11.2018
+						._group
+							._name Должник
+							._value Губич Сорайа Иеда
+						._group
+							._name УИН
+							._value 32277047180379218007
+						._group
+							._name Сумма взыскания
+							._value 3500 руб
+						._group
+							._name Отдел судебных приставов
+							._value
+								._logo
+									img(src="img/logo/gis-small-logo.png", alt="ГИС лого")
+								span ДЮБО Р. А., тел: +7(499)583-04-15//МОСП по ВАШ №3 (код отдела: 77047)
+					.showHide.showHide--information
+						a.b-link.-dashed.-js._link(href="#")
+							span._text Показать реквизиты получателя
+							span._icon
+								+icon('triangle')
+						.hide-block
+							.b-information._information
+								._row
+									._name Получатель платежа:
+									._value Администратор Московского парковочного пространства (ГКУ АМПП)
+								._row
+									._name Регион:
+									._value Москва
+								._row
+									._name Подразделение
+									._value Штраф за нарушение правил пользования городскими платными парковками в г. Москве.
+								._row
+									._name ОКТМО:
+									._value 45334000
+								._row
+									._name ИНН:
+									._value 7714887870
+								._row
+									._name КПП:
+									._value 771401001
+								._row
+									._name Расчетный счет:
+									._value 40101810045250010041
+								._row
+									._name Банк:
+									._value ГУ Банка России по ЦФО
+								._row
+									._name БИК:
+									._value 044525000
+			._footer
+				._footer--wrap
+					.b-status._status
+						._icon
+							+icon('receipt')
+						._text Штраф уже оплачен
+					.b-view
+						._icon
+							+icon('view')
+						a.link._link(href="#fine1") Вернуть к оплате
+
+

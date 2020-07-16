@@ -1,0 +1,40 @@
+.simple-list
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		+lg
+			padding: 21px 15px
+			border: 1px solid #C8CBD3
+			border-radius: 3px
+		&:nth-child(odd)
+			.simple-list
+				&__col
+					&:last-child
+						+min_lg
+							background: rgba($c4, 0.57)
+		&:not(:last-child)
+			+lg
+				margin-bottom: 15px
+
+	&__col
+		&:first-child
+			padding: 11px 0 9px
+			flex-basis: 55%
+			max-width: 55%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+		&:last-child
+			padding: 11px 0 9px 15px
+			flex-basis: 45%
+			max-width: 45%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+				background: rgba($c4, 0.57)
+
+	&__title
+		font-size: 14px
+		line-height: 20px
+		color: $c0

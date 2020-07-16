@@ -1,0 +1,161 @@
+.penalty-item-content
+	
+	&__header
+		&--bordered
+			border-bottom: 1px solid $c0
+			+min_md
+				padding-bottom: 20px
+
+	&__body
+		// margin-bottom: 30px
+
+	&__footer
+		margin-top: 30px
+
+	&__header-row
+		display: flex
+		align-items: center
+
+	&__header-col
+		padding: 0 15px
+		+md
+			display: none
+		&:nth-child(1)
+			flex-basis: 13.4%
+			max-width: 13.4%
+			+xl
+				flex-basis: 15.5%
+				max-width: 15.5%
+		&:nth-child(2)
+			flex-basis: 56.5%
+			max-width: 56.5%
+		&:nth-child(3)
+			flex-basis: 30.1%
+			max-width: 30.1%
+			+xl
+				flex-basis: 28%
+				max-width: 28%
+
+	&__header-title
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		color: $c0
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		+md
+			padding: 15px 15px
+		&:not(:last-child)
+			border-bottom: 1px solid #D8DCE4
+		&:nth-child(even)
+			background: rgba($c4, 0.5)
+			border-bottom: 1px solid #D8DCE4
+ 
+	&__col
+		+min_md
+			padding: 15px 15px
+		&:not(:last-child)
+			margin-bottom: 10px
+		&:nth-child(1)
+			flex-basis: 13.4%
+			max-width: 13.4%
+			.penalty-item-content__title
+				+min_md
+					font-weight: 500
+			+xl
+				flex-basis: 15.5%
+				max-width: 15.5%
+			+md
+				flex-basis: 100%
+				max-width: 100%
+		&:nth-child(2)
+			flex-basis: 56.5%
+			max-width: 56.5%
+			+min_md
+				background: rgba(#000, 0.03)
+			+md
+				flex-basis: 100%
+				max-width: 100%
+				margin-bottom: 25px
+				.penalty-item-content__title
+					font-weight: 500
+		&:nth-child(3)
+			flex-basis: 30.1%
+			max-width: 30.1%
+			+xl
+				flex-basis: 28%
+				max-width: 28%
+			+md
+				flex-basis: 100%
+				max-width: 100%
+
+	&__title
+		font-size: 14px
+		line-height: 22px
+		color: $c0
+		+md
+			// line-height: 20px
+		&--bolder
+			font-weight: 500
+		&--mb
+			margin-bottom: 42px
+		b
+			background: rgba(#FFD90F, 0.15)
+			font-weight: normal
+		i
+			display: inline-block
+			font-size: 12px
+			line-height: 18px
+			color: $c3
+			span
+				color: $c0
+		br
+			+min_xl
+				display: none
+			+md
+				display: none
+	&__title-italic
+		max-width: 300px
+		&--mt
+			margin-top: 42px
+
+	&__desc
+		font-size: 16px
+		line-height: 26px
+		color: $c0
+		b
+			background: rgba(#FFD90F, 0.15)
+			font-weight: normal
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 26px
+				+sm
+					margin-bottom: 20px
+
+	&__img
+		&-wrap
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 21.25rem
+			+sm
+				height: auto
+	&__icon
+		&-wrap
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 5.625rem
+			height: 4.4375rem
+			+xsm
+				width: 38px
+				height: 30px

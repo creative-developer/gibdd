@@ -1,0 +1,57 @@
+body
+	min-width: 320px
+	position: relative
+	font-family: $deff
+	line-height: 1.65
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	&::-webkit-scrollbar
+		width: 0
+		-ms-overflow-style: none
+		overflow: -moz-scrollbars-none
+		
+html,
+body
+	font-size: 16px
+	+xxl
+		font-size: 15px
+	+xl
+		font-size: 14px
+	+lg
+		font-size: 12px
+	// +sm
+
+.hide-block
+	display: none
+
+.page
+	overflow-x: hidden
+
+.baron__bar
+	z-index: 3
+
+.nowrap
+	white-space: nowrap
+
+.fancybox-slide
+	+sm
+		padding: 15px
+	
+.fancybox-thumbs__list a::before
+	border: 2px solid $c1
+
+.fancybox-progress
+	background: $c1
+.owl-nav-style
+	+lg
+		.owl-prev,
+		.owl-next
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15)
+		.owl-prev
+			left: 0 !important
+			transform: translate(-50%, -50%)
+		.owl-next
+			right: 0 !important
+			transform: translate(50%, -50%)
+////////// Modules
+@import ./_layout-import

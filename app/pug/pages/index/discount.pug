@@ -1,0 +1,75 @@
+section.b-discount
+	._container.container
+		._wrap
+			h2._title Оплатите штрафы с
+				b 50% скидкой
+			._desc
+				p Напоминаем что согласно Федеральному закону от 22 декабря 2014 г. N 437-ФЗ "О внесении изменений в Кодекс Российской Федерации об административных правонарушениях в части совершенствования взыскания штрафов за административные правонарушения в области дорожного движения" вы вправе оплатить штрафы со скидкой. 
+			._small-title.md-desc Популярные штрафы для оплаты со скидкой:
+			._row.-parent
+				._col.-left
+					._row.-small
+						._col.-small
+							.b-icon-card
+								._icon-wrap
+									._icon
+										+icon('phone')
+									._title Телефон
+								._desc.xsm-desc
+									p При пользовании смартфоном во время движения. 
+										a(href="#") КоАП РФ Статья 12.36.1.
+						._col.-small
+							.b-icon-card
+								._icon-wrap
+									._icon
+										+icon('crossroads')
+									._title Перекрестки
+								._desc.xsm-desc
+									p При невключении поворотников на маневре или неправильном пересечении перекрестка, 
+										a(href="#") статья 12.14 ч.1 КОАП
+						._col.-small
+							.b-icon-card
+								._icon-wrap
+									._icon
+										+icon('speed')
+									._title Скорость
+								._desc.xsm-desc
+									p При нарушении режима скорости (превышение на 40 километров в час) 
+										a(href="#") Статья 12.9 КоАП РФ.
+										| Превышение установленной скорости движения
+						._col.-small
+							.b-icon-card
+								._icon-wrap
+									._icon
+										+icon('tinting')
+									._title Тонировка
+								._desc.xsm-desc
+									p Если автомобиль не соответствует правилам эксплуатации, например, вследствие тонировки стекол.<br>
+										a(href="#") Статья 12.5 КоАП РФ
+				._col.-right
+					form.b-small-gray-card
+						._line.-top
+							._col
+								.b-input.-small
+									._title Номер автомобиля
+									._wrap
+										input(type="text" name="licensePlateStart" placeholder="A 007 AA")
+										span._icon
+							._col
+								.b-input.-small
+									._title Регион
+									._wrap
+										input(type="text" name="licensePlateEnd" placeholder="197")
+										span._icon
+						._line.-bottom
+							label.b-checkbox.-start._checkbox
+								input._input(type="checkbox" name="agreement" checked)
+								span._icon
+									+icon('check')
+								span._text Я согласен на обработку 
+									a(href="#") персональных данных
+							button._btn.btn Проверить
+			a._link.link(href="#")
+				span._link-text Полный список правонарушений
+				span._link-icon
+					+icon('arrow-right')

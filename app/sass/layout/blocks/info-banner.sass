@@ -1,0 +1,75 @@
+.info-banner
+	background: #fff
+	+lg
+		border-bottom: 1px solid $c4
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+
+	&__col
+		&--left
+			flex-basis: 61%
+			max-width: 61%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+		&--right
+			flex-basis: 39%
+			max-width: 39%
+			+lg
+				flex-basis: 100%
+				max-width: 100%
+
+	&__content
+		&--left
+			padding: 30px
+			+min_lg
+				border-right: 1px solid $c4
+			+lg
+				margin-bottom: 25px
+				padding-bottom: 0
+			+sm
+				padding: 0
+		&--right
+			height: 100%
+	
+	&__date
+		font-size: 12px
+		line-height: 21px
+		color: $c3
+		margin-bottom: 17px
+
+	&__img-grid
+		margin-bottom: 21px
+
+	&__car-emblem
+		width: 100%
+		height: 100%
+		&-wrap
+			margin-right: 16px
+			width: 48px
+			height: 33px
+			min-width: 48px
+			min-height: 33px
+
+
+	&__car-info-item-wrap
+		display: flex
+		align-items: center
+		+lg
+			flex-direction: column
+			align-items: flex-start
+			// padding-left: 66px
+
+	&__car-title-wrap
+		display: flex
+		align-items: center
+		margin-bottom: 10px
+		+sm
+			align-items: flex-start
+
+	&__title
+		margin-bottom: 0
+		+lg
+			font-weight: bold

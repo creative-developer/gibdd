@@ -1,0 +1,114 @@
+section.b-info
+	._container.container
+		h2._title Как проверить штрафы ГИБДД онлайн?
+		._row
+			._col
+				a._img-wrap(href="https://www.youtube.com/watch?v=rntTlHwDM5Q" data-fancybox)
+					img._img(src="img/info/video.jpg", alt="")
+					span._icon-wrap
+						img._icon(src="img/icons/youtube.svg", alt="")
+			._col
+				.b-info-card
+					._title.md-title Проверить штрафы ГИБДД можно по номеру СТС (свидетельству <br>о регистрации), по постановлению <br>и водительскому удостоверению.
+					._desc.md-desc
+						p Введите гос. номер автомобиля и номер свидетельства о регистрации (СТС).
+						p По номеру свидетельства транспортного средства мы найдем штрафы с камер, а по номеру машины - фотографии нарушений. Введите номер прав: так мы найдем все постановления, выписанные инспектором
+		form._step-form
+			._step-row
+				._step-col
+					._step-title.sm-title Шаг - 1
+					.b-step-card
+						.b-input.-small._input
+							._title-wrap
+								._title Госномер
+								span._answer-icon
+									+icon('answer')
+								.b-answer-popup
+									._left-col
+										._top-line
+											._warning-icon
+												img._icon(src="img/icons/warning.png" alt="")
+											._title.lg-title Госномер
+										._desc.xsm-desc Индивидуальный регистрационный знак (номер) автомобиля. Состоит из буквенно-цифрового сочетания и регионального кода.
+										._small-title
+											| Например:
+											span A 007 AA | 197
+									._right-col
+										._img-wrap
+											img._img(src="img/documents/license.png" alt="")
+							._wrap
+								input(type="text" name="licensePlate" placeholder="A 007 AA | 197")
+								span._icon
+								.b-car-checker-popup.-small
+									._top-line
+										._row
+											._col
+												._title Авто:
+											._col
+												._value BMW 375E
+										._row
+											._col
+												._title Гос. номер:
+											._col
+												._value А001АА97
+										._row
+											._col
+												._title СТС:
+											._col
+												._value 33******94
+									._bottom-line
+										._small-title.sm-title Это ваша машина?
+										._btn-wrap
+											a.b-trs-btn.-bolder._trs-btn(href="#") Другое авто
+											a.b-btn.-bolder._btn(href="#") Да, верно
+						._small-title.sm-title Введите удостоверение водителя
+				._step-col
+					._step-title.sm-title Шаг - 2
+					.b-step-card
+						.b-input.-small._input
+							._title-wrap
+								._title СТС
+								span._answer-icon
+									+icon('answer')
+								.b-answer-popup
+									._left-col
+										._top-line
+											._warning-icon
+												img._icon(src="img/icons/warning.png" alt="")
+											._title.lg-title СТС
+										._desc.xsm-desc Свидетельство о регистрации ТС документ выдаваемый при постановке транспортного средства на учет.
+										._small-title
+											| Например:
+											span 12 АА 654111
+									._right-col
+										._img-wrap
+											img._img(src="img/documents/vehicle-certificate.jpg" alt="")
+							._wrap
+								input(type="text" name="certificate" placeholder="00 АБ 000000")
+								span._icon
+						._small-title.sm-title Введите<br> свидетельство ТС
+				._step-col
+					._step-title.sm-title Шаг - 3
+					.b-step-card
+						.b-feedback-input
+							._top-line
+								nav._nav
+									ul._list
+										li._item.tab--active
+											a._link(href="#card-email" data-toggle="tab") E-mail
+										li._item
+											a._link(href="#card-phone" data-toggle="tab") Телефон
+							.b-input.-small.js-tab.tab--active.card-email(style="display: block")
+								._wrap
+									input(type="text" name="email" placeholder="ivanov@yandex.ru")
+									span._icon
+							.b-input.-small.js-tab.card-phone
+								._wrap
+									input(type="tel" name="phone" placeholder="+7 (___) ___-__-__" disabled)
+									span._icon
+						._small-title.sm-title Введите email <br>или номер телефона
+				._step-col
+					._step-title.sm-title Шаг - 4
+					.b-step-card
+						button(type="submit")._btn.btn Проверить штрафы
+						._small-title.sm-title Нажмите на кнопку <br>“<em>Проверить штрафы</em>”

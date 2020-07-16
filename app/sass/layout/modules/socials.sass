@@ -1,0 +1,67 @@
+.socials
+	display: flex
+	align-items: center
+	&--light
+		.socials
+			&__item
+			&__link
+				width: 34px
+				height: 34px
+				border: 1px solid $c4
+				background: #fff
+				&:hover
+					border-color: $c3
+					background: $c3
+					.icon
+						fill: #fff
+				.icon
+					fill: $c3
+					&--vk
+						width: 14px
+						height: 8px
+					&--fb
+						width: 7px
+						height: 12px
+					&--ok
+						width: 8px
+						height: 14px
+					&--twi
+						width: 13px
+						height: 10px
+
+	&__item
+		&:not(:last-child)
+			margin-right: 10px
+
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 32px
+		height: 32px
+		min-width: 32px
+		border-radius: 50%
+		background: $c3
+		&:hover
+			opacity: 0.9
+		.icon
+			fill: #fff
+			transition: all 0.3s ease
+			&--vk
+				width: 18px
+				height: 11px
+			&--youtube
+				width: 18px
+				height: 12px
+			&--fb
+				width: 8px
+				height: 15px
+			&--ok
+				width: 11px
+				height: 18px
+			&--twi
+				width: 15px
+				height: 12px
+			&--insta
+				width: 15px
+				height: 15px

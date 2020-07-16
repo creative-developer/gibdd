@@ -1,0 +1,106 @@
+.small-gray-card
+	background: rgba($c4, 0.55)
+	border: 1px solid $c3
+	border-radius: 3px
+	padding: 65px 46px 64px
+	+xl
+		padding: 55px 20px 55px
+	+lg
+		padding: 45px 20px 45px
+		background: rgba(#F2F7FF, 0.55)
+		border: 1px solid rgba($accent, 0.55)
+		border-radius: 3px
+	+md
+		padding: 35px 20px 35px
+	+sm
+		padding: 20px
+	&--vertical
+		padding: 24px 26px 31px
+		.small-gray-card
+			&__title
+				position: relative
+				margin-bottom: 48px
+				&:after
+					content: ''
+					position: absolute
+					bottom: -20px
+					left: 0
+					width: 100%
+					height: 1px
+					background: #B9BCC4
+			&__line
+				&--bottom
+					flex-direction: column
+				&--top
+					margin-bottom: 17px
+			&__btn
+				order: 0
+				width: 100%
+				margin-bottom: 12px
+			&__checkbox
+				order: 1
+			.input__title
+				font-size: 16px
+				line-height: 17px
+	&--white
+		background: #fff
+		border: none
+		padding: 38px 42px 32px
+		+xl
+			padding: 20px
+
+		.small-gray-card
+			&__line
+				&--bottom
+					align-items: flex-start
+
+	&__line
+		display: flex
+		align-items: center
+		&--top
+			margin-bottom: 15px
+		&--bottom
+			display: flex
+			align-items: center
+			justify-content: space-between
+			+sm
+				flex-direction: column
+				align-items: flex-start
+
+	&__btn
+		padding: 15px 33.45px
+		font-size: 16px
+		line-height: 16px
+		+xl
+			padding: 14px 22px
+		+sm
+			order: -1
+			width: 100%
+	.input
+		&__title
+			color: $c0
+			margin-bottom: 10px
+	&__col
+		&:first-child
+			flex-basis: 73.6%
+			max-width: 73.6%
+			.input
+				input
+					border-right: 0
+					border-top-right-radius: 0
+					border-bottom-right-radius: 0
+		&:last-child
+			flex-basis: calc( 26.4% + 2px )
+			max-width: calc( 26.4% + 2px )
+			margin-left: -2px
+
+	.checkbox
+		&__icon
+			margin-top: 7px
+			margin-right: 10px
+
+		&__text
+			font-size: 12px
+			margin-top: 8px
+			a
+				font-size: 12px

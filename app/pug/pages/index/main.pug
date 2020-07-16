@@ -1,0 +1,246 @@
+section.b-main
+	._container.container
+		._row
+			._col
+				._top-line
+					.b-tab-card
+						h1._title Проверить штрафы ГИБДД онлайн с фото нарушения
+						nav.b-tab-nav
+							ul._list
+								li._item.tab--active
+									a._link(href="#certificate" data-toggle="tab") По СТС
+								li._item
+									a._link(href="#uin" data-toggle="tab") По постановлении
+								li._item
+									a._link(href="#driver-license" data-toggle="tab") Водитель. удостов.
+					.b-tab-content
+						form._form
+							._wrap
+								._certificate.js-tab.tab--active.certificate(style="display: flex")
+									._col
+										.b-input
+											._title Госномер
+											._wrap
+												input(type="text" name="licensePlate" placeholder="A 007 AA | 197")
+												span._icon
+												span._answer-icon
+													+icon('answer')
+												.b-car-checker-popup
+													._top-line
+														._row
+															._col
+																._title Авто:
+															._col
+																._value BMW 375E
+														._row
+															._col
+																._title Гос. номер:
+															._col
+																._value А001АА97
+														._row
+															._col
+																._title СТС:
+															._col
+																._value 33******94
+													._bottom-line
+														._small-title.sm-title Это ваша машина?
+														._btn-wrap
+															a.b-trs-btn.-bolder._trs-btn(href="#") Другое авто
+															a.b-btn.-bolder._btn(href="#") Да, верно
+												.b-answer-popup
+													._left-col
+														._top-line
+															._warning-icon
+																img._icon(src="img/icons/warning.png" alt="")
+															._title.lg-title Госномер
+														._desc.xsm-desc Индивидуальный регистрационный знак (номер) автомобиля. Состоит из буквенно-цифрового сочетания и регионального кода.
+														._small-title
+															| Например:
+															span A 007 AA | 197
+													._right-col
+														._img-wrap
+															img._img(src="img/documents/license.jpg" alt="")
+									._col
+										.b-input
+											._title СТС
+											._wrap
+												input(type="text" name="certificate" placeholder="00 АБ 000000")
+												span._icon
+												span._answer-icon
+													+icon('answer')
+												.b-answer-popup
+													._left-col
+														._top-line
+															._warning-icon
+																img._icon(src="img/icons/warning.png" alt="")
+															._title.lg-title СТС
+														._desc.xsm-desc Свидетельство о регистрации ТС документ выдаваемый при постановке транспортного средства на учет.
+														._small-title
+															| Например:
+															span 12 АА 654111
+													._right-col
+														._img-wrap
+															img._img(src="img/documents/vehicle-certificate.jpg" alt="")
+								._uin.js-tab.uin
+									.b-input
+										._title Укажите номер квитанции (УИН)
+										._wrap
+											input(type="text" name="receiptNumber" placeholder="18810100000000001234" disabled)
+											span._icon
+											span._answer-icon
+												+icon('answer')
+											.b-answer-popup
+												._left-col
+													._top-line
+														._warning-icon
+															img._icon(src="img/icons/warning.png" alt="")
+														._title.lg-title Номер квитанции
+													._desc.xsm-desc Уникальный идентификатор начисления (или сокращенно УИН) предназначен для быстрой и точной идентификации платежа и плательщика.
+													._small-title
+														| Например:
+														span 12 АА 654111
+												._right-col
+													._img-wrap
+														img._img(src="img/documents/license-number.jpg" alt="")
+								._driver-license.js-tab.driver-license
+									.b-input
+										._title.-desktop Укажите номер водительского удостоверения
+										._title.-mobile Номер водительского удостоверения
+										._wrap
+											input(type="text" name="driverLicense" placeholder="77 01 397000" disabled)
+											span._icon
+											span._answer-icon
+												+icon('answer')
+											.b-answer-popup
+												._left-col
+													._top-line
+														._warning-icon
+															img._icon(src="img/icons/warning.png" alt="")
+														._title.lg-title Водительское удостоверение
+													._desc.xsm-desc водительское удостоверение — документ, подтверждающий право на управление транспортным средством. 
+													._small-title
+														| Например:
+														span 77 01 397000
+												._right-col
+													._img-wrap
+														img._img(src="img/documents/driver-license.jpg" alt="")
+							.b-feedback-input
+								._top-line
+									nav._nav
+										ul._list
+											li._item.tab--active
+												a._link(href="#email" data-toggle="tab") E-mail
+											li._item
+												a._link(href="#phone" data-toggle="tab") Телефон
+									label.b-checkbox._checkbox
+										input._input(type="checkbox" name="notification" checked)
+										span._icon
+											+icon('check')
+										span._text Уведомлять о штрафах
+								.b-input.js-tab.tab--active.email(style="display: block")
+									._wrap
+										input(type="text" name="email" placeholder="ivanov@yandex.ru")
+										span._icon
+								.b-input.js-tab.phone
+									._wrap
+										input(type="tel" name="phone" placeholder="+7 (___) ___-__-__")
+										span._icon
+							.b-sources
+								._title.md-title Источники:
+								._icons-wrap
+									.b-source-icon
+										._img
+											img(src="img/logo/gibdd.png" alt="")
+										._title.sm-title ГИБДД
+									.b-source-icon
+										._img
+											img(src="img/logo/gis.png" alt="")
+										._title.sm-title ГИС ГМП
+									.b-source-icon.-more
+										._img
+											img(src="img/logo/moscow-department.png" alt="")
+										._title.-desktop.sm-title Департамент Москвы
+										._title.-mobile.sm-title Деп.Москвы
+							.b-agreement
+								label.b-checkbox.-start._checkbox
+									input._input(type="checkbox" name="agreement" checked)
+									span._icon
+										+icon('check')
+									span._text Соглашаюсь на <a href="#">персон. данных</a> и<br> <a href="#">пользовательских соглашений</a> .
+								button.b-btn.js-search-btn._btn(type="submit")
+									span._text Проверить штрафы
+									span._icon
+										+icon('arrow-right')
+									span.b-btn-search-content
+										span._overlay
+										span._search-text Идет поиск
+										span.b-progress
+											+icon('progress')
+				._bottom-line
+					.b-warning-text
+						._icon
+							+icon('warning')
+						._desc.xsm-title
+							p Проверка штрафов ГИБДД, АМПП и МАДИ выписанных за превышение скорости, неправильную парковку и другие нарушения. Проверка штрафов ГИБДД производится бесплатно, согласно Федеральному Закону № 437 от 22 декабря 2014 г. оплатить штраф ГИБДД водитель вправе со скидкой 50%.
+			._col
+				.b-small-card
+					._row.-top
+						._small-title.xsm-title Ваш регион:
+						._title.md-title Москва и Московская область
+						a.b-link._link.js-popup(href="#choose-country")
+							span._text Другой регион
+							span._icon
+								+icon('triangle')
+					._row.-center
+						._small-title.xsm-title Подразделение:
+						._title.md-title Управление ГИБДД ГУ МВД России по городу Москва
+						a.b-link.js-popup(href="#choose-department")
+							span._text Выбрать подразделение
+							span._icon
+								+icon('triangle')
+					._row.-bottom
+						.b-phone.-more._phone
+							._icon
+								+icon('phone')
+							._links-wrap
+								._link-wrap
+									a._link.sm-title(href="tel:+74956237070") (495) 623-70-70
+									._text.xsm-title (Дежурная часть)
+								._link-wrap
+									a._link.sm-title(href="tel:+74956237070") (495) 623-70-70
+									._text.xsm-title (При ДДП)
+						.b-address
+							._icon
+								+icon('baloon')
+							._text.sm-title г. Москва, ул. Садовая-Самотечная, д. 1
+				.b-advantages-card
+					.b-advantages-item
+						._col
+							._icon
+								+icon('discount')
+						._col
+							._title.md-title Оплата штрафов<br> со скидкой в 50%
+							._small-title.xsm-title Скидка для всех граждан
+					.b-advantages-item
+						._col
+							._icon
+								+icon('picture')
+						._col
+							._title.md-title Штрафы с фотографиями
+							._small-title.xsm-title Просмотр  фотографии с нарушением
+					.b-advantages-item
+						._col
+							._icon
+								+icon('reload')
+						._col
+							._title.md-title Автоматическая загрузка СТС
+							._small-title.xsm-title Сервис найдет Ваш СТС в базе ГИБДД
+					.b-advantages-item
+						._col
+							._icon
+								+icon('search')
+						._col
+							._title.md-title Проверка по 4 оф. базам
+							._small-title.xsm-title ГИБДД, ФССП, Деп. Москвы, ГИС ГМП
+	._mobile-bottom-content
+		._mobile-container.container

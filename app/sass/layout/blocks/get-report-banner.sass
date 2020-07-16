@@ -1,0 +1,51 @@
+.get-report-banner
+	background: #FBFCFB
+	border: 1px solid #009335
+	border-radius: 3px
+	padding: 12px 15px 12px 20px
+	display: flex
+	align-items: center
+	+md
+		flex-wrap: wrap
+		padding: 20px
+		margin-bottom: 25px
+
+	&__icon-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 20px
+		width: 42px
+		height: 42px
+		min-width: 42px
+		min-height: 42px
+		border-radius: 50%
+		background: #009335
+		+md
+			flex-basis: 42px
+			max-width: 42px
+		.icon
+			width: 16px
+			height: 16px
+			fill: #fff
+
+	&__desc
+		font-size: 14px
+		line-height: 18px
+		color: $c3
+		max-width: 315px
+		+md
+			flex-basis: calc(100% - 62px)
+			max-width: calc(100% - 62px)
+			br
+				display: none
+
+	&__btn
+		font-size: 16px
+		line-height: 16px
+		padding: 15px 27.7px
+		+min_md
+			margin-left: auto
+		+md
+			width: 100%
+			margin-top: 20px

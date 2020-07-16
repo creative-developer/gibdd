@@ -1,0 +1,44 @@
+.fines-found
+	padding: 22px 25px 30px 20px
+	position: relative
+	background: #fff
+	+md 
+		br 
+			display: none
+	&__title
+		font-weight: normal
+		line-height: 25px
+		margin-bottom: 0
+		font-size: 20px
+		&--small
+			line-height: 23px
+			font-size: 16px
+		.line
+			position: relative
+			font-weight: bold
+			&::after
+				content: ''
+				width: 100%
+				height: 1px
+				background: $c0
+				position: absolute
+				right: 0
+				bottom: -2px
+				opacity: 0.25
+	&__line
+		margin-top: 25px
+		margin-bottom: 25px
+		background: $c4
+		width: 100%
+		height: 1px
+	&__description
+		font-size: 14px
+		line-height: 17px
+		margin-top: 15px
+		margin-bottom: 16px
+		color: $c3
+	&__btn
+		padding: 16.5px 56.5px
+		font-size: 16px
+		font-weight: normal
+
